@@ -12,6 +12,7 @@ html {
     width: 100%;
     height: 100vh;
     background-color: #888;
+    font-size: 5rem;
 }
 
 #background header {
@@ -19,6 +20,31 @@ html {
     width: 100%;
     background-color: white;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding-inline: 4rem;
+    padding-inline: 2rem;
+}
+
+#background header input[type="text"] {
+    width: 250px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding-left: 3.5rem;
+    font-size: 1.8rem;
+}
+
+#background header label[for="search"] {
+    font-size: 1.6rem;
+    position: absolute;
+    left: 3.4rem;
+    top: 2.1rem;
+    color: gray;
+}
+
+#background header ul {
+    display: flex;
+    gap: 10rem;
+    list-style: none;
+    font-size: 3.5rem;
 }
