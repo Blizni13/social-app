@@ -15,6 +15,8 @@ html {
     font-size: 5rem;
 }
 
+/* header style */
+
 #background header {
     height: 60px;
     width: 100%;
@@ -44,7 +46,50 @@ html {
 
 #background header ul {
     display: flex;
-    gap: 10rem;
+    gap: 6rem;
     list-style: none;
-    font-size: 3.5rem;
+}
+
+#background header ul .fas {
+    font-size: 3rem;
+    position: relative;
+    top: -0.3rem;
+    right: 2.5rem;
+    cursor: pointer;
+}
+
+#background header input[type="file"] {
+    position: relative;
+    right: -79rem;
+}
+
+#background header label[for="photo-video"] {
+    position: relative;
+    background-color: black;
+    z-index: 1;
+    width: 250px;
+    height: 45px;
+    border-radius: 50px;
+    right: -20rem;
+    transition: 0.5s;
+    color: linen;
+    font-size: 2.2rem;
+    padding-top: 1.1rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+#background header label[for="photo-video"]:hover {
+    background-color: hsl(240, 0%, 20%);
+    cursor: pointer;
+}
+
+#background header ul #photo-wrapper {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+    top: 1.5rem;
+    right: 2.5rem;
 }

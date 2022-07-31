@@ -7,16 +7,16 @@
         <script src="https://kit.fontawesome.com/a18d53579f.js" crossorigin="anonymous"></script>
         <title>Posts</title>
     </head>
-    <body>
+    <body class="preload">
         <main>
             <div id="background">
                 <header>
                     <input type="text" placeholder="Search for username..." id="search"><label for="search"><i class="fas fa-magnifying-glass"></i></label>
-                    <input type="file">
+                    <input type="file" accept=".jpg, .vid" id="photo-video"><label for="photo-video">Upload photo/video</label>
                     <ul>
                         <li><i class="fas fa-bell"></i></li>
                         <li><i class="fas fa-message"></i></li>
-                        <li><div id="photo-wrapper"></div></li>
+                        <li><div id="photo-wrapper"><image></image></div></li>
                     </ul>
                 </header>
             </div>
