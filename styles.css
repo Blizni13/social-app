@@ -102,4 +102,24 @@ body {
     top: 12rem;
     background-color: white;
     border-radius: 2rem;
+    padding: 1rem;
+}
+
+#follow-users h3, #follow-users p {
+    color: gray;
+}
+
+#follow-users h3 {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    padding-top: 0.4rem;
+}
+
+#follow-users p {
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    right: 4rem;
+    top: 1.8rem;
+    cursor: pointer;
 }
