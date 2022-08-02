@@ -112,7 +112,7 @@ body {
 #follow-users h3 {
     font-size: 2.5rem;
     padding-left: 1rem;
-    padding-top: 0.4rem;
+    padding-top: 0.7rem;
 }
 
 #follow-users p[id="refresh"]{
@@ -120,7 +120,7 @@ body {
     display: block;
     position: absolute;
     right: 4rem;
-    top: 1.8rem;
+    top: 2rem;
     cursor: pointer;
 }
 
@@ -174,12 +174,26 @@ body {
     font-size: 1.2rem;
     position: relative;
     bottom: 40%;
-    left: 20%;
+    left: 18.3%;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+    width: 87px;
+}
+
+#follow-users #users-card #invisible {
+    opacity: 0;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#follow-users #users-card .followers:hover #invisible {
+    opacity: 1;
 }
 
 #follow-users #users-card .followers.new {
-    left: 25%;
-    bottom: 41%;
+    cursor: text;
+    width: 50px;
 }
 
 #follow-users #users-card button {
@@ -201,3 +215,4 @@ body {
     box-shadow: 0px 0px 5px 2px gray,
     0px 0px 6px 4px gray; 
 }
+
