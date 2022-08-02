@@ -115,7 +115,7 @@ body {
     padding-top: 0.4rem;
 }
 
-#follow-users p {
+#follow-users p[id="refresh"]{
     font-size: 2rem;
     display: block;
     position: absolute;
@@ -152,11 +152,20 @@ body {
 }
 
 #follow-users #users-card #photo-wrapper {
+    position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    position: relative;
     border: 2px solid black;
     top: 50%;
     transform: translate(50%, -50%)
 }
+
+#follow-users #users-card p {
+    position: relative;
+    font-size: 1.5rem;
+    color: black;
+    bottom: 50%;
+    transform: translate(18%, 10%)
+}
+
