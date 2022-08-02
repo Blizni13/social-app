@@ -161,11 +161,35 @@ body {
     transform: translate(50%, -50%)
 }
 
-#follow-users #users-card p {
+#follow-users #users-card p[id="name"] {
     position: relative;
     font-size: 1.5rem;
     color: black;
     bottom: 50%;
     transform: translate(18%, 10%)
+}
+
+#follow-users #users-card #followers {
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 40%;
+    left: 20%;
+}
+
+#follow-users #users-card button {
+    position: relative;
+    width: 11rem;
+    height: 3.5rem;
+    border-radius: 2rem;
+}
+
+#follow-users #users-card button {
+    position: relative;
+    bottom: 110%;
+    left: 65%;
+}
+
+#follow-users #users-card .last {
+    bottom: 120%;
 }
 
