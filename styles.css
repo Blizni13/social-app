@@ -96,7 +96,7 @@ body {
 
 #follow-users {
     width: 400px;
-    height: 300px;
+    height: 310px;
     position: relative;
     left: 120rem;;
     top: 12rem;
@@ -135,6 +135,7 @@ body {
     opacity: 0.5;
     bottom: 0rem;
     right: 0.05rem;
+    padding-bottom: 0.5rem;
 }
 
 #follow-users #users-card .user {
@@ -151,7 +152,7 @@ body {
     width: 100%;
 }
 
-#follow-users #users-card #photo-wrapper {
+#follow-users #users-card .photo-wrapper {
     position: relative;
     width: 40px;
     height: 40px;
@@ -169,27 +170,34 @@ body {
     transform: translate(18%, 10%)
 }
 
-#follow-users #users-card #followers {
+#follow-users #users-card .followers {
     font-size: 1.2rem;
     position: relative;
     bottom: 40%;
     left: 20%;
 }
 
+#follow-users #users-card .followers.new {
+    left: 25%;
+    bottom: 41%;
+}
+
 #follow-users #users-card button {
     position: relative;
     width: 11rem;
     height: 3.5rem;
-    border-radius: 2rem;
-}
-
-#follow-users #users-card button {
-    position: relative;
-    bottom: 110%;
+    bottom: 135%;
     left: 65%;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    border-radius: 2rem;
+    border: none;
+    transition: 1s;
 }
 
-#follow-users #users-card .last {
-    bottom: 120%;
+#follow-users #users-card button:hover {
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    box-shadow: 0px 0px 5px 2px gray,
+    0px 0px 6px 4px gray; 
 }
-
