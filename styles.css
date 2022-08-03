@@ -84,11 +84,14 @@ body {
     cursor: pointer;
 }
 
-#background header ul #photo-wrapper {
-    width: 30px;
-    height: 30px;
+#photo-wrapper, .photo-wrapper, #profile-wrapper {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid black;
+}
+
+#background header ul #photo-wrapper {
     position: relative;
     top: 1.4rem;
     right: 2.5rem;
@@ -98,11 +101,11 @@ body {
     width: 400px;
     height: 310px;
     position: relative;
-    left: 120rem;;
     top: 12rem;
     background-color: hsl(240, 5%, 90%);
     border-radius: 2rem;
     padding: 1rem;
+    left: 60%
 }
 
 #follow-users h3, #follow-users p {
@@ -154,10 +157,6 @@ body {
 
 #follow-users #users-card .photo-wrapper {
     position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid black;
     top: 50%;
     transform: translate(50%, -50%)
 }
@@ -216,3 +215,34 @@ body {
     0px 0px 6px 4px gray; 
 }
 
+#posts-container {
+    position: relative;
+    width: 430px;
+    min-height: 90vh;
+    left: 25%;
+    bottom: 18.5rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#posts-container header {
+    width: 100%;
+    height: 60px;
+    background-color: hsl(240, 5%, 90%);
+    padding: 1rem;
+}
+
+#posts-container header p {
+    font-size: 1.7rem;
+    margin-top: -2.9rem;
+    margin-left: 5.4rem;
+}
+
+#posts-container header i {
+    position: absolute;
+    font-size: 3rem;
+    right: 3rem;
+    top: 1.55rem;
+    cursor: pointer;
+}
