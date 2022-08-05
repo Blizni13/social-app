@@ -12,7 +12,7 @@
             <div id="background">
                 <header>
                     <input type="text" placeholder="Search for username..." id="search"><label for="search"><i class="fas fa-magnifying-glass"></i></label>
-                    <input type="file" accept=".jpg, .vid" id="photo-video"><label for="photo-video">Upload photo/video</label>
+                    <input type="file" accept=".jpg, .mp4" id="photo-video"><label for="photo-video">Upload photo/video</label>
                     <ul>
                         <li><i class="fas fa-bell"></i></li>
                         <li><i class="fas fa-message"></i></li>
@@ -76,12 +76,20 @@
                     </div>
                     <div id="interactions">
                         <i class="fas fa-thumbs-up"></i>
-                        <label for="comment"><i class="fas fa-message"></i></label>
+                        <label for="comment-input"><i class="fas fa-message"></i></label>
                         <i class="fas fa-share"></i>
                     </div>
                     <div id="comments">
-                        <div id="comment-message"></div>
-                        <input type="text" placeholder="post a comment" id="comment">
+                        <div id="comment-messages">
+                            <div id="comment"></div>
+                            <div id="comment"></div>
+                            <div id="comment"></div>
+                        </div>
+                        <input type="text" placeholder="post a comment" id="comment-input">
+                        <input type="file" accept=".jpg" id="image">
+                        <input type="file" accept=".mp4" id="video">
+                        <label for="image"><i class="fas fa-image"></i></label>
+                        <label for="video"><i class="fas fa-video"></i></label>
                     </div>
                 </div>
         </main>

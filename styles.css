@@ -323,6 +323,7 @@ body {
     position: relative;
     left: -14rem;
     font-size: 2.7rem;
+    cursor: pointer;
 }
 
 /* COMMENTS SECTION */
@@ -344,4 +345,51 @@ body {
     padding: 0.5rem;
     border-radius: 1rem;
     font-size: 1.7rem;
+}
+
+#posts-container #comments #comment-messages {
+    width: 100%;
+    background-color: red;
+    height: 10rem;
+    display: flex;
+    flex-flow: column;
+    overflow: hidden;
+}
+
+#posts-container #comments #comment-messages #comment {
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+}
+
+#posts-container #comments input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    bottom: 1.4rem;
+    width: 2rem;
+}
+
+#posts-container #comments input[id="image"] {
+    right: 8rem;
+}
+
+#posts-container #comments input[id="video"] {
+    right: 4rem;
+}
+
+#posts-container #comments .fas {
+    position: absolute;
+    right: 0;
+    font-size: 2rem;
+    bottom: 1.4rem;
+    cursor: pointer;
+}
+
+#posts-container #comments .fa-image {
+    right: 8rem;
+}
+
+#posts-container #comments .fa-video {
+    right: 4rem;
 }
