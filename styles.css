@@ -97,6 +97,8 @@ body {
     right: 2.5rem;
 }
 
+/* FOLLOW USERS SECTION */
+
 #follow-users {
     width: 400px;
     height: 310px;
@@ -215,6 +217,8 @@ body {
     0px 0px 6px 4px gray; 
 }
 
+/* POST SECTION */
+
 #posts-container {
     position: relative;
     width: 500px;
@@ -243,7 +247,7 @@ body {
     position: absolute;
     font-size: 3rem;
     right: 3rem;
-    top: 1.55rem;
+    top: 1.25rem;
     cursor: pointer;
 }
 
@@ -254,4 +258,73 @@ body {
 
 #posts-container #image-wrapper img {
     width: 100%;
+}
+
+#posts-container #reactions {
+    width: 100%;
+    background-color: hsl(240, 5%, 92%);
+    height: 6.4rem;
+    margin-top: 8rem;
+    border-bottom: 0.2px solid hsl(240, 5%, 85%);
+    padding-top: 2rem;
+}
+
+#posts-container #comments {
+    width: 100%;
+    height: 20rem;
+    background-color: white;
+}
+
+#posts-container .fas.fa-ellipse {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+#posts-container #profiles-wrapper {
+    display: flex;
+    margin-left: 1rem;
+}
+
+#posts-container #profile-wrapper {
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+#posts-container #profile-wrapper:nth-child(2) {
+    left: -1rem;
+    background-color: red;
+}
+
+#posts-container #profile-wrapper:nth-child(3) {
+    left: -2rem;
+    background-color: green;
+}
+
+#posts-container #bold {
+    font-weight: bold;
+}
+
+#posts-container p {
+    position: absolute;
+    font-size: 2rem;
+    margin-left: 7.5rem;
+}
+
+#posts-container #interactions {
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    background-color: hsl(240, 5%, 92%);
+    align-items: center;
+    font-size: 3rem;
+    text-shadow: 0px 0px 2px gray;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+
+#posts-container #interactions .fa-message {
+    position: relative;
+    left: -14rem;
+    font-size: 2.7rem;
 }
