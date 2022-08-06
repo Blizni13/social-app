@@ -109,7 +109,7 @@ body {
     content: '';
     height: 3px;
     width: 100%;
-    background: linear-gradient(90deg, transparent 50%, aqua);
+    background: linear-gradient(90deg, transparent 50%, hsl(240, 0%, 80%));
     top: 0;
     left: -100%;
 }
@@ -119,7 +119,7 @@ body {
     content: '';
     height: 3px;
     width: 100%;
-    background: linear-gradient(90deg, aqua, transparent 50%);
+    background: linear-gradient(90deg, hsl(240, 0%, 80%), transparent 50%);
     bottom: 0;
     right: -100%;
 }
@@ -137,9 +137,9 @@ body {
 
 #background header label[for="photo-video"]:hover {
     transition-delay: 0.6s;
-    box-shadow: 0px 0px 5px 1px aqua,
-    0px 0px 10px 2px aqua;
-    background-color: aqua;
+    box-shadow: 0px 0px 5px 1px hsl(240, 0%, 80%),
+    0px 0px 10px 2px hsl(240, 0%, 80%);
+    background-color: hsl(240, 0%, 80%);
     letter-spacing: 0.5px;
 }
 
@@ -149,13 +149,26 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid black;
+}
+
+#photo-wrapper img, .photo-wrapper img, #profile-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
 }
 
 #background header ul #photo-wrapper {
     position: relative;
     top: 1rem;
     right: 2.5rem;
+}
+
+#background header ul #photo-wrapper img {
+    width: 100%;
+    border-radius: 50px;
+    height: 100%;
+    position: absolute;
 }
 
 /* FOLLOW USERS SECTION */
@@ -199,7 +212,6 @@ body {
     width: 100%;
     border-radius: 0px 0px 2rem 2rem;
     background-color: var(--user-card-color);
-    opacity: 0.5;
     bottom: 0rem;
     right: 0.05rem;
     padding-bottom: 0.5rem;
@@ -301,7 +313,7 @@ body {
 
 #posts-container {
     position: relative;
-    width: 500px;
+    width: 550px;
     min-height: 90vh;
     left: 25%;
     bottom: 18.5rem;
@@ -362,12 +374,10 @@ body {
 
 #posts-container #profile-wrapper:nth-child(2) {
     left: -1rem;
-    background-color: red;
 }
 
 #posts-container #profile-wrapper:nth-child(3) {
     left: -2rem;
-    background-color: green;
 }
 
 #posts-container p {
@@ -467,7 +477,7 @@ body {
 
 #comment-content #profile-wrapper {
     position: relative;
-    bottom: -2.2rem;
+    bottom: -2.7rem;
     margin-left: 2.5rem;
 }
 
@@ -486,4 +496,34 @@ body {
     bottom: -0.25rem;
     border-radius: 10px;
     border-top: 1px solid gray;
+}
+
+/* APPEARING WINDOW - POST*/
+#posts-container #post #post-options {
+    position: absolute;
+    height: 150px;
+    width: 250px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    top: 6rem;
+    right: 2.6rem;
+    display: none;
+}
+
+#posts-container #post #post-options i {
+    color: rgb(240, 240, 240);
+    position: absolute;
+    right: 1rem;
+    font-size: 2rem;
+    transform: rotate(-90deg);
+    top: -1rem;
+}
+
+#posts-container #post #post-options #close-sign {
+    position: absolute;
+    right: 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    cursor: pointer;
 }
