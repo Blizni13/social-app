@@ -335,10 +335,10 @@ body {
 }
 
 #posts-container header i {
-    position: absolute;
+    position: relative;
     font-size: 3rem;
-    right: 3rem;
-    top: 1.15rem;
+    left: 48rem;
+    top: -4.7rem;
     cursor: pointer;
 }
 
@@ -498,12 +498,12 @@ body {
     border-top: 1px solid gray;
 }
 
-/* APPEARING WINDOW - POST*/
+/* APPEARING WINDOW - POST1*/
 
 #posts-container #post #post-options {
     position: absolute;
     height: 50px;
-    width: 250px;
+    width: 200px;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     top: 6rem;
@@ -540,17 +540,23 @@ body {
     border-radius: 20px;
     padding: 1rem;
     font-size: 1.8rem;
+    width: 150px;
+}
+
+#posts-container #post {
+    margin-bottom: 3rem;
 }
 
 #report-background {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100%;
+    height: 200vh;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     z-index: 2;
+    display: none;
+    padding-top: 32rem
 }
 
 #report-message {
@@ -571,4 +577,5 @@ body {
 
 #report-background #report-message p {
     margin-top: 6rem;
+    cursor: default;
 }

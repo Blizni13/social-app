@@ -1,6 +1,11 @@
-document.getElementById('button').addEventListener('click',
+document.querySelector('#button').addEventListener('click',
 function() {
     document.querySelector('#post-options').style.display = 'block'
+})
+
+document.querySelector('#button2').addEventListener('click',
+function() {
+    document.querySelector('#post-options2').style.display = 'block'
 })
 
 document.querySelector('#close-sign').addEventListener('click',
