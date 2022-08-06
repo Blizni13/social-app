@@ -7,9 +7,9 @@
 :root {
     --background-color: rgb(0, 0, 0, 0.1);
     --header-color: rgb(245, 245, 245);
-    --users-follow-color: #000;
-    --user-card-color: #000;
-    --follow-button-color: #000;
+    --users-follow-color: rgb(240, 240, 240);
+    --user-card-color: white;
+    --follow-button-color: rgb(235, 235, 235);
     --posts-header-color: rgb(240, 240, 240);
     --reactions-color: rgb(240, 240, 240);
     --interactions-color: rgb(240, 240, 240);
