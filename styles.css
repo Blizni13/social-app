@@ -499,15 +499,17 @@ body {
 }
 
 /* APPEARING WINDOW - POST*/
+
 #posts-container #post #post-options {
     position: absolute;
-    height: 150px;
+    height: 50px;
     width: 250px;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     top: 6rem;
     right: 2.6rem;
     display: none;
+    flex-flow: column;
 }
 
 #posts-container #post #post-options i {
@@ -521,9 +523,52 @@ body {
 
 #posts-container #post #post-options #close-sign {
     position: absolute;
+    top: 0;
     right: 1rem;
     font-size: 3rem;
     font-weight: bold;
     transform: rotate(45deg);
     cursor: pointer;
+}
+
+#posts-container #post #post-options button {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    border: none;
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+#report-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: 2;
+}
+
+#report-message {
+    text-align: center;
+    width: 450px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+#report-background #report-message i {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%)
+}
+
+#report-background #report-message p {
+    margin-top: 6rem;
 }
