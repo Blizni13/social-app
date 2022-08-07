@@ -176,13 +176,14 @@ body {
 #follow-users {
     width: 400px;
     height: 350px;
-    position: relative;
+    position: absolute;
     top: 16rem;
     background-color: var(--users-follow-color);
     border-radius: 2rem;
     padding: 1rem;
-    left: 60%;
+    left: 115rem;
     box-shadow: 0px 0px 15px black;
+
 }
 
 #follow-users h3, #follow-users p {
@@ -312,13 +313,11 @@ body {
 /* POSTS SECTION */
 
 #posts-container {
-    position: relative;
+    position: absolute;
     width: 550px;
-    min-height: 90vh;
-    left: 25%;
-    bottom: 18.5rem;
+    left: 48rem;
+    top: 16rem;
     border-radius: 1rem;
-    overflow: hidden;
 }
 
 #posts-container header {
@@ -334,24 +333,26 @@ body {
     margin-left: 4rem;
 }
 
-#posts-container header i {
-    position: relative;
+#posts-container header .fas.fa-ellipsis {
+    position: absolute;
     font-size: 3rem;
-    left: 48rem;
-    top: -4.7rem;
+    right: 3rem;
+    top: 1rem;
     cursor: pointer;
 }
 
 #posts-container #image-wrapper {
-    width: 100%;
-    height: 100%
+    height: 450px;
+    overflow: hidden;
 }
 
 #posts-container #image-wrapper img {
+    object-position: 0px -250px;
     width: 100%;
 }
 
 #posts-container #reactions {
+    position: relative;
     width: 100%;
     background-color: var(--reactions-color);
     height: 5rem;
@@ -397,6 +398,7 @@ body {
     background-color: var(--interactions-color);
     font-size: 2.5rem;
     padding-inline: 2rem;
+    position: relative;
 }
 
 #posts-container #interactions .fa-message {
@@ -545,6 +547,7 @@ body {
 
 #posts-container #post {
     margin-bottom: 3rem;
+    position: relative;
 }
 
 #report-background {
@@ -578,4 +581,102 @@ body {
 #report-background #report-message p {
     margin-top: 6rem;
     cursor: default;
+}
+
+/* RESPONSIVE WEBPAGE*/
+
+@media screen and (max-width: 1574px) {
+    #posts-container {
+        left: 22rem;
+    }
+    #follow-users {
+        left: 87rem;
+    }
+}
+
+@media screen and (max-width: 1310px) {
+    #posts-container {
+        left: 5rem;
+    }
+
+    #follow-users {
+        left: 70rem;
+    }
+}
+
+@media screen and (max-width: 1121px) {
+    #posts-container {
+        left: 3rem;
+        width: 350px;
+        position: relative;
+    }
+
+    #posts-container #image-wrapper {
+        height: 280px;
+    }
+
+    #posts-container #image-wrapper img {
+        object-position: 0px -165px;
+    }
+
+    #follow-users {
+        top: 30.8rem;
+        left: 45rem;
+        width: 300px;
+        height: 250px;
+    }
+
+    #follow-users #users-card {
+        height: 83%;
+    }
+
+    #follow-users .photo-wrapper {
+        width: 25px;
+        height: 25px;
+    }
+
+    #follow-users header h3 {
+        font-size: 2rem;
+    }
+
+    #follow-users header #refresh {
+        font-size: 1.5rem;
+        top: 1.7rem;
+    }
+
+    #follow-users #users-card #name {
+        font-size: 1.6rem;
+        left: 0;
+    }
+    
+    #follow-users #users-card .followers {
+        font-size: 1.3rem;
+        left: 4.5rem;
+    }
+
+    #follow-users #users-card .user button {
+        width: 80px;
+        height: 25px;
+        font-size: 1.5rem;
+    }
+
+    #follow-users #users-card .user.first button{
+        top: 1.5rem;
+    }
+
+    #follow-users #users-card .user.second button{
+        top: 6.6rem;
+    }
+
+    #follow-users #users-card .user.third button{
+        bottom: 6.3rem;
+    }
+
+    #follow-users #users-card .user.fourth button{
+        bottom: 1.2rem;
+    }
+
+    #follow-users #users-card button:hover {
+        box-shadow: 0px 0px 10px 1px gray!important; 
+    }
 }
