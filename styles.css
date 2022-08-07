@@ -53,6 +53,7 @@ body {
     border: none;
     border-radius: 20px;
     padding-left: 3.5rem;
+    padding-right: 1rem;
     font-size: 1.8rem;
     outline: none;
     background-color: var(--search-color);
@@ -604,7 +605,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1121px) {
+@media screen and (max-width: 1145px) {
     #posts-container {
         left: 10rem;
         width: 350px;
@@ -682,7 +683,7 @@ body {
     }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 890px) {
     #posts-container {
         left: 3rem;
     }
@@ -804,6 +805,7 @@ body {
 
     #follow-users {
         left: 8.5rem;
+        top: 9.5rem;
     }
 
     #background header {
