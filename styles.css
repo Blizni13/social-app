@@ -606,9 +606,10 @@ body {
 
 @media screen and (max-width: 1121px) {
     #posts-container {
-        left: 3rem;
+        left: 10rem;
         width: 350px;
         position: relative;
+        top: 6rem;
     }
 
     #posts-container #image-wrapper {
@@ -620,8 +621,8 @@ body {
     }
 
     #follow-users {
-        top: 30.8rem;
-        left: 45rem;
+        top: 14.2rem;
+        left: 55rem;
         width: 300px;
         height: 250px;
     }
@@ -678,5 +679,180 @@ body {
 
     #follow-users #users-card button:hover {
         box-shadow: 0px 0px 10px 1px gray!important; 
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #posts-container {
+        left: 3rem;
+    }
+
+    #follow-users {
+        left: 44rem;
+    }
+
+    #background header label[for="photo-video"] {
+        width: 160px;
+        font-size: 1.5rem;
+        height: 40px;  
+        right: 22rem;
+        }
+
+    #background header input[type="text"] {
+        width: 200px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+    
+    #background header label[for="search"] {
+        font-size: 1.2rem;
+        left: 3.4rem;
+        top: 3.3rem;
+        color: gray;
+    }
+
+    #background header ul .fas {
+        font-size: 2.4rem;
+        top: -0.7rem;
+        right: 2.5rem;
+        cursor: pointer;
+    }
+
+    #background header ul {
+        gap: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #posts-container {
+        top: 35rem;
+        left: 18rem;
+        width: 430px;
+    }
+
+    #posts-container #image-wrapper img {
+        object-position: 0px -200px;
+    }
+
+    #follow-users {
+        top: 11.5rem;
+        left: 23.5rem;
+        width: 320px;
+        height: 280px;
+    }
+
+    #follow-users header h3 {
+        font-size: 2rem;
+    }
+
+    #follow-users header #refresh {
+        font-size: 1.5rem;
+        top: 1.7rem;
+    }
+
+    #follow-users #users-card #name {
+        bottom: 1.5rem;
+        left: 1rem;
+        font-size: 1.8rem;
+    }
+
+    #follow-users #users-card .user:hover #name {
+        bottom: 42%;
+    }
+
+    #follow-users #users-card .user:hover .followers {
+        transition-delay: 0.2s;
+    }
+    
+    #follow-users #users-card .followers {
+        font-size: 1.3rem;
+        left: 5.8rem;
+        bottom: 2.1rem
+    }
+
+    #follow-users #users-card .user button {
+        width: 90px;
+        height: 30px;
+    }
+
+    #follow-users #users-card .user.first button{
+        top: 1.5rem;
+    }
+
+    #follow-users #users-card .user.second button{
+        top: 7.4rem;
+    }
+
+    #follow-users #users-card .user.third button{
+        bottom: 7rem;
+    }
+
+    #follow-users #users-card .user.fourth button{
+        bottom: 1.4rem;
+    }
+
+    #follow-users #users-card .photo-wrapper {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #posts-container {
+        left: 3rem;
+    }
+
+    #follow-users {
+        left: 8.5rem;
+    }
+
+    #background header {
+        height: 60px;
+    }
+
+    #background header label[for="photo-video"] {
+        width: 140px;
+        font-size: 1.3rem;
+        height: 35px;  
+        right: 14rem;
+        }
+
+    #background header input[type="text"] {
+        width: 160px;
+        height: 35px;
+        font-size: 1.2rem;
+        margin-left: -0.7rem;
+        padding-left: 2.5rem;
+    }
+    
+    #background header label[for="search"] {
+        font-size: 1.2rem;
+        left: 2.2rem;
+        top: 2.3rem;
+        color: gray;
+    }
+
+    #background header ul .fas {
+        font-size: 2rem;
+        top: -0.8rem;
+        right: 1.5rem;
+        cursor: pointer;
+    }
+
+    #background header ul {
+        gap: 2.7rem;
+        margin-right: -3rem;
+    }
+
+    #background header #photo-wrapper {
+        width: 25px;
+        height: 25px;
+        top: 3rem;
+    }
+
+    #background header #photo-wrapper img{
+        width: 25px;
+        height: 25px;
+        top: 0.8rem;
     }
 }
