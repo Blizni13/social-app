@@ -613,7 +613,7 @@ body {
         left: 10rem;
         width: 350px;
         position: relative;
-        top: 6rem;
+        top: 14rem;
     }
 
     #posts-container #image-wrapper {
@@ -729,7 +729,7 @@ body {
 
 @media screen and (max-width: 770px) {
     #posts-container {
-        top: 35rem;
+        top: 44rem;
         left: 18rem;
         width: 430px;
     }
@@ -804,6 +804,7 @@ body {
 @media screen and (max-width: 630px) {
     #posts-container {
         left: 3rem;
+        top: 42rem;
     }
 
     #follow-users {
