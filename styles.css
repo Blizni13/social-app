@@ -38,6 +38,7 @@ body {
 /* header style */
 
 #background header {
+    position: fixed;
     height: 80px;
     width: 100%;
     background: var(--header-color);
@@ -45,6 +46,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-inline: 2rem;
+    z-index: 2;
 }
 
 #background header input[type="text"] {
@@ -505,8 +507,8 @@ body {
 
 #posts-container #post #post-options {
     position: absolute;
-    height: 50px;
-    width: 200px;
+    height: 40px;
+    width: 150px;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     top: 6rem;
@@ -537,13 +539,14 @@ body {
 #posts-container #post #post-options button {
     cursor: pointer;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 10%);
+    left: 40%;
+    transform: translate(-50%, 0%);
     border: none;
     border-radius: 20px;
     padding: 1rem;
     font-size: 1.8rem;
-    width: 150px;
+    width: 107px;
+    background-color: transparent;
 }
 
 #posts-container #post {
