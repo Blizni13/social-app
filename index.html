@@ -9,7 +9,6 @@
     </head>
     <body class="preload">
         <main>
-
             <div id="background">
                 <header>
                     <h3>Fakebook</h3>
@@ -17,10 +16,23 @@
                     <input type="file" accept=".jpg, .mp4" id="photo-video"><label for="photo-video">Upload photo/video</label>
                     <ul>
                         <li><i class="fas fa-bell"></i></li>
-                        <li><i class="fas fa-message"><div id="notification"></div></i></li>
+                        <li>
+                            <i class="fas fa-message" id="message">
+                                <div id="notification"></div>
+                            </i>
+                            <div id="messages">
+                                <h2>Chats</h2>
+                                <i>+</i>
+                                <div id="message">
+                                    <img id="profile-wrapper" src="images/pexels-andrea-piacquadio-837358.jpg">
+                                    <h4>Andrea</h4>
+                                    <p id="message-content">Hello, how are you?</p>
+                                    <i class="circle"></i>
+                                </div>
+                            </div>
+                        </li>
                         <li><div id="photo-wrapper"><img src="images/Gryz-Szymon.jpeg"></div></li>
                     </ul>
-                    
                 </header>
             </div>
 
