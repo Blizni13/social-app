@@ -124,6 +124,7 @@ body {
     padding: 1rem;
     font-size: 2rem;
     font-family: none;
+    display: none;
 }
 
 #background header #messages i {
@@ -147,7 +148,7 @@ body {
 }
 
 #background header #messages h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.7rem;
 }
 
 #background header #messages #message #profile-wrapper {
