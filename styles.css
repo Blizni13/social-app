@@ -47,6 +47,7 @@ body {
     justify-content: space-between;
     padding-inline: 2rem;
     z-index: 2;
+    padding-left: 28rem;
 }
 
 #background header input[type="text"] {
@@ -64,7 +65,7 @@ body {
 #background header label[for="search"] {
     font-size: 1.6rem;
     position: absolute;
-    left: 3.2rem;
+    left: 29.4rem;
     top: 3.1rem;
     color: gray;
 }
@@ -87,6 +88,12 @@ body {
     display: none;
 }
 
+#background header h3 {
+    position: absolute;
+    left: 2rem;
+    font-size: 5.2rem;
+}
+
 /* UPLOAD BUTTON EFFECTS AND APPEARANCE */
 
 #background header label[for="photo-video"] {
@@ -96,7 +103,7 @@ body {
     width: 225px;
     height: 45px;
     border-radius: 50px;
-    right: 35rem;
+    right: 30rem;
     transition: 0.5s;
     color: black;
     font-size: 2rem;
@@ -685,6 +692,41 @@ body {
     #follow-users #users-card button:hover {
         box-shadow: 0px 0px 10px 1px gray!important; 
     }
+
+    #background header label[for="photo-video"] {
+        width: 175px;
+        height: 45px;
+        font-size: 1.7rem;
+        right: 23rem;
+        padding-top: 1.3rem;
+    }
+
+    #background header ul .fas {
+        font-size: 2.4rem;
+    }
+
+    #background header h3 {
+        font-size: 4rem;
+    }
+
+    #background header input[type="text"] {
+        width: 230px;
+        height: 40px;
+        font-size: 1.7rem;
+        margin-left: -7rem;
+    }
+    
+    #background header label[for="search"] {
+        font-size: 1.2rem;
+        top: 3.3rem;
+        color: gray;
+        left: 22.5rem;
+    }
+
+    #background header ul .fas {
+        top: -0.8rem;
+        margin-right: -3rem;
+    }
 }
 
 @media screen and (max-width: 890px) {
@@ -697,22 +739,23 @@ body {
     }
 
     #background header label[for="photo-video"] {
-        width: 160px;
-        font-size: 1.5rem;
+        width: 145px;
+        font-size: 1.4rem;
         height: 40px;  
-        right: 22rem;
-        }
+        right: 14.5rem;
+    }
 
     #background header input[type="text"] {
-        width: 200px;
+        width: 180px;
         height: 40px;
         font-size: 1.4rem;
+        padding-left: 2.8rem;
     }
     
     #background header label[for="search"] {
-        font-size: 1.2rem;
-        left: 3.4rem;
-        top: 3.3rem;
+        font-size: 1.1rem;
+        left: 22rem;
+        top: 3.4rem;
         color: gray;
     }
 
@@ -724,7 +767,8 @@ body {
     }
 
     #background header ul {
-        gap: 3.4rem;
+        gap: 4rem;
+        margin-right: -3.5rem;
     }
 
     #report-message {
