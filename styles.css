@@ -51,7 +51,7 @@ body {
 }
 
 #background header input[type="text"] {
-    width: 200px;
+    width: 210px;
     height: 50px;
     border: none;
     border-radius: 20px;
@@ -94,6 +94,29 @@ body {
     font-size: 5.2rem;
 }
 
+/*MESSAGE PANEL*/
+
+#background header .fas.fa-message {
+    position: relative;
+}
+
+#background header #notification {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 1.7rem;
+    color: white;
+    font-family: consolas;
+    text-align: center;
+    top: -1rem;
+    right: -1rem;
+}
+
+#background header #notification::after {
+    content: '1';
+}
 /* UPLOAD BUTTON EFFECTS AND APPEARANCE */
 
 #background header label[for="photo-video"] {
