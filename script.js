@@ -17,3 +17,14 @@ document.querySelector('#report-background').addEventListener('click',
 function() {
     document.querySelector('#report-background').style.display = 'none'
 })
+
+document.getElementById('message').addEventListener('click',
+function() {
+    document.querySelector('#notification').style.display = 'none'
+    document.querySelector('#messages').style.display = 'block'
+})
+
+document.querySelector('#close-messages').addEventListener('click',
+function() {
+    document.querySelector('#messages').style.display = 'none'
+})
