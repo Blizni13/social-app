@@ -18,7 +18,9 @@ function() {
 
 // messages window at index.html
 
-document.getElementById('message').addEventListener('click',
+const message = document.getElementsByClassName('message')
+
+document.getElementById('message-icon').addEventListener('click',
 function() {
     document.querySelector('#notification').style.display = 'none'
     document.querySelector('#messages').style.display = 'block'
@@ -29,10 +31,13 @@ function() {
     document.querySelector('#messages').style.display = 'none'
 })
 
-document.querySelector('#message').addEventListener('click',
-function() {
-    document.querySelector('#message-content').style.fontWeight = 400
-})
+for (let n = 0; n < message.length; n++) {
+    message[n].addEventListener('click', () => {
+        document.querySelector('.message-content').style.fontWeight = 'normal'
+        document.querySelector('.message-content').style.color = 'black'
+        document.querySelector('.circle').style.display = 'none'
+    })
+}
 
 // like animation
 
