@@ -56,19 +56,33 @@ body {
     height: 45px;
     border: none;
     border-radius: 60px;
-    padding-left: 4rem;
+    padding-left: 3.6rem;
     padding-right: 2rem;
     font-size: 1.8rem;
     outline: none;
     background-color: var(--search-color);
+    font-family: var(--header-font);
 }
 
 #background header label[for="search"] {
-    font-size: 1.6rem;
     position: absolute;
-    left: 29.4rem;
-    top: 3.1rem;
+    width: 225px;
+    height: 45px;
+    border-radius: 60px;
+    cursor: text; 
+}
+
+#background header label[for="search"] i {
+    position: absolute;
+    left: 1.3rem;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: gray;
+}
+
+#background header input[type="file"] {
+    display: none;
 }
 
 #background header ul {
@@ -83,10 +97,6 @@ body {
     top: -0.4rem;
     right: 2.5rem;
     cursor: pointer;
-}
-
-#background header input[type="file"] {
-    display: none;
 }
 
 #background header h3 {
@@ -196,17 +206,14 @@ body {
 #background header label[for="photo-video"] {
     position: absolute;
     background-color: var(--upload-file-color);
-    z-index: 1;
     width: 225px;
     height: 45px;
     border-radius: 50px;
     right: 30rem;
     transition: 0.5s;
-    color: black;
     font-size: 2rem;
     padding-top: 0.5rem;
     text-align: center;
-    font-family: sans-serif;
     overflow: hidden;
     cursor: pointer;
     font-family: var(--header-font)
