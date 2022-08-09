@@ -778,6 +778,18 @@ body {
         height: 250px;
     }
 
+    #follow-users header h3 {
+        font-size: 1.9rem;
+        margin-left: -0.5rem;
+        margin-top: -0.3rem;
+    }
+
+    #follow-users header #refresh {
+        top: 0.74rem;
+        font-size: 1.9rem;
+        right: 2rem;
+    }
+
     #follow-users #users-card {
         height: 83%;
     }
@@ -787,15 +799,6 @@ body {
         height: 25px;
     }
 
-    #follow-users header h3 {
-        font-size: 2rem;
-    }
-
-    #follow-users header #refresh {
-        font-size: 1.5rem;
-        top: 1.7rem;
-    }
-
     #follow-users #users-card #name {
         font-size: 1.6rem;
         left: 0;
@@ -803,7 +806,7 @@ body {
     
     #follow-users #users-card .followers {
         font-size: 1.3rem;
-        left: 4.5rem;
+        left: 4.7rem;
     }
 
     #follow-users #users-card .user button {
@@ -833,11 +836,10 @@ body {
     }
 
     #background header label[for="photo-video"] {
-        width: 175px;
-        height: 45px;
+        width: 180px;
         font-size: 1.7rem;
         right: 23rem;
-        padding-top: 1.3rem;
+        padding-top: 0.9rem;
     }
 
     #background header ul .fas {
@@ -856,10 +858,9 @@ body {
     }
     
     #background header label[for="search"] {
-        font-size: 1.2rem;
-        top: 3.3rem;
         color: gray;
-        left: 22.5rem;
+        width: 190px;
+        left: 21rem
     }
 
     #background header ul .fas {
@@ -897,10 +898,12 @@ body {
     }
     
     #background header label[for="search"] {
-        font-size: 1.1rem;
-        left: 19rem;
-        top: 3.4rem;
-        color: gray;
+        left: 17.8rem;
+        width: 160px;
+    }
+
+    #background header label[for="search"] i{
+        font-size: 1.2rem;
     }
 
     #background header ul .fas {
@@ -914,7 +917,7 @@ body {
         gap: 4rem;
         margin-right: -3.5rem;
     }
-
+    
     #report-message {
         width: 350px;
         height: 175px;
@@ -932,7 +935,7 @@ body {
 @media screen and (max-width: 770px) {
     #posts-container {
         top: 44rem;
-        left: 20%; /* left 18rem */
+        left: 20%;
         width: 430px;
     }
 
@@ -947,23 +950,22 @@ body {
         height: 280px;
     }
 
-    #follow-users header h3 {
-        font-size: 2rem;
+    #follow-users header #refresh {
+        top: 1rem;
     }
 
-    #follow-users header #refresh {
-        font-size: 1.5rem;
-        top: 1.7rem;
+    #follow-users header h3 {
+        margin-top: 0;
     }
 
     #follow-users #users-card #name {
-        bottom: 1.5rem;
-        left: 1rem;
+        bottom: 35%;
+        left: 0.3rem;
         font-size: 1.8rem;
     }
 
     #follow-users #users-card .user:hover #name {
-        bottom: 42%;
+        bottom: 53%;
     }
 
     #follow-users #users-card .user:hover .followers {
@@ -972,13 +974,13 @@ body {
     
     #follow-users #users-card .followers {
         font-size: 1.3rem;
-        left: 5.8rem;
-        bottom: 2.1rem
+        left: 5.3rem;
     }
 
     #follow-users #users-card .user button {
         width: 90px;
         height: 30px;
+        left: 66%
     }
 
     #follow-users #users-card .user.first button{
@@ -1024,7 +1026,7 @@ body {
     }
 
     #background header label[for='search'] {
-        left: 16rem;
+        left: 14.7rem;
     }
 
     #background header label[for='photo-video'] {
@@ -1071,7 +1073,7 @@ body {
         font-size: 1.2rem;
         height: 30px;  
         right: 11rem;
-        padding-top: 0.8rem;
+        padding-top: 0.5rem;
         }
 
     #background header input[type="text"] {
@@ -1080,13 +1082,15 @@ body {
         font-size: 1.2rem;
         padding-left: 2rem;
         margin-left: -16.5rem;
+        padding-right: 1rem;
     }
     
     #background header label[for="search"] {
+        left: 10.8rem;
+    }
+
+    #background header label[for="search"] i {
         font-size: 1rem;
-        top: 2.4rem;
-        color: gray;
-        left: 12.2rem;
     }
 
     #background header ul .fas {
@@ -1108,13 +1112,12 @@ body {
     #background header #photo-wrapper {
         width: 25px;
         height: 25px;
-        margin-top: 0; 
+        margin-top: 0.7rem; 
     }
 
     #background header #photo-wrapper img{
         width: 25px;
         height: 25px;
-        top: 0.8rem;
     }
 
     #report-message {
