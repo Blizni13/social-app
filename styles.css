@@ -137,7 +137,7 @@ body {
     cursor: pointer;
 }
 
-#background header #messages #message {
+#background header #messages .message {
     width: 100%;
     position: relative;
     cursor: pointer;
@@ -151,18 +151,18 @@ body {
     margin-bottom: 0.7rem;
 }
 
-#background header #messages #message #profile-wrapper {
+#background header #messages .message #profile-wrapper {
     width: 40px;
     height: 40px;
 }
 
-#background header #messages #message h4 {
+#background header #messages .message h4 {
     position: absolute;
     top: 0.9rem;
     left: 5.7rem;
 }
 
-#background header #messages #message p {
+#background header #messages .message p {
     position: absolute;
     top: 3.3rem;
     left: 5.7rem;
@@ -171,7 +171,7 @@ body {
     font-weight: bold;
 }
 
-#background header #messages #message .circle {
+#background header #messages .message .circle {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -183,7 +183,7 @@ body {
 
 /* MESSAGES ANIMATIONS */
 
-#background header #messages #message:hover {
+#background header #messages .message:hover {
     background-color: hsl(240, 0%, 93%)
 }
 
