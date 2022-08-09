@@ -691,6 +691,37 @@ body {
     font-size: 4rem;
 }
 
+/* ANIMATION OF LIKE */
+
+#posts-container #interactions #like {
+    transition: 0.5s;
+    cursor: pointer;
+    color: black;
+    animation-name: like-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: center left;
+}
+
+@keyframes like-animation {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(0.7)
+    }
+
+    100% {
+        transform: rotate(0deg);
+        color: blue;
+    }
+}
+
+/**/
+
 /* RESPONSIVE WEBPAGE*/
 
 @media screen and (max-width: 1574px) {
