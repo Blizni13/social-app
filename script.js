@@ -24,11 +24,13 @@ document.getElementById('message-icon').addEventListener('click',
 function() {
     document.querySelector('#notification').style.display = 'none'
     document.querySelector('#messages').style.display = 'block'
+    document.querySelector('#message-icon').style.opacity = '0.6'
 })
 
 document.querySelector('#close-messages').addEventListener('click',
 function() {
     document.querySelector('#messages').style.display = 'none'
+    document.querySelector('#message-icon').style.opacity = "1"
 })
 
 for (let n = 0; n < message.length; n++) {
