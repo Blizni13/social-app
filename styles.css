@@ -18,7 +18,7 @@
     --comment-color: rgb(235, 235, 235);
     --upload-file-color: rgb(235, 235, 235);
     --search-color: rgb(235, 235, 235);
-    --header-font: 'Kanit', sans=serif;
+    --header-font: 'Kanit', sans-serif;
 }
 
 html {
@@ -52,12 +52,12 @@ body {
 }
 
 #background header input[type="text"] {
-    width: 210px;
-    height: 50px;
+    width: 225px;
+    height: 45px;
     border: none;
-    border-radius: 20px;
-    padding-left: 3.5rem;
-    padding-right: 1rem;
+    border-radius: 60px;
+    padding-left: 4rem;
+    padding-right: 2rem;
     font-size: 1.8rem;
     outline: none;
     background-color: var(--search-color);
@@ -204,11 +204,12 @@ body {
     transition: 0.5s;
     color: black;
     font-size: 2rem;
-    padding-top: 1.1rem;
+    padding-top: 0.5rem;
     text-align: center;
     font-family: sans-serif;
     overflow: hidden;
     cursor: pointer;
+    font-family: var(--header-font)
 }
 
 #background header label[for="photo-video"]::before {
@@ -435,9 +436,10 @@ body {
 }
 
 #posts-container header p {
-    font-size: 1.7rem;
-    margin-top: -2.2rem;
+    font-size: 1.8rem;
+    margin-top: -2.8rem;
     margin-left: 4rem;
+    font-family: var(--header-font)
 }
 
 #posts-container header .fas.fa-ellipsis {
