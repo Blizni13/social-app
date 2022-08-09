@@ -608,7 +608,7 @@ body {
 
 /* APPEARING WINDOW - POST1*/
 
-#posts-container #post #post-options {
+#posts-container #post .post-options {
     position: absolute;
     height: 40px;
     width: 150px;
@@ -620,7 +620,7 @@ body {
     flex-flow: column;
 }
 
-#posts-container #post #post-options i {
+#posts-container #post .post-options i {
     color: rgb(240, 240, 240);
     position: absolute;
     right: 1rem;
@@ -629,7 +629,7 @@ body {
     top: -1rem;
 }
 
-#posts-container #post #post-options #close-sign {
+#posts-container #post .post-options .close-sign {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -639,7 +639,7 @@ body {
     cursor: pointer;
 }
 
-#posts-container #post #post-options button {
+#posts-container #post .post-options button {
     cursor: pointer;
     position: absolute;
     left: 40%;
@@ -693,16 +693,18 @@ body {
 
 /* ANIMATION OF LIKE */
 
-#posts-container #interactions #like {
-    transition: 0.5s;
+#posts-container #interactions .fa-thumbs-up {
     cursor: pointer;
     color: black;
+    transform-origin: center left;
+}
+
+.animation-like {
     animation-name: like-animation;
-    animation-duration: 1s;
-    animation-timing-function: linear;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    transform-origin: center left;
 }
 
 @keyframes like-animation {
@@ -711,7 +713,7 @@ body {
     }
 
     50% {
-        transform: rotate(-45deg) scale(0.7)
+        transform: rotate(-20deg) scale(1.1)
     }
 
     100% {
