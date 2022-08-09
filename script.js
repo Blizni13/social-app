@@ -1,9 +1,11 @@
 // report window posts-container
 
-document.querySelector('#button').addEventListener('click',
-function() {
-    document.querySelector('#post-options').style.display = 'block'
-})
+const reportButton = document.getElementsByClassName('fa-ellipsis')
+const postOptions = document.getElementsByClassName('post-options') 
+
+for (let z = 0; z < reportButton.length; z++) {
+    reportButton[z].addEventListener('click', () => postOptions[z].style.display ='block')
+}
 
 document.querySelector('#close-sign').addEventListener('click',
 function() {
