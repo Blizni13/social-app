@@ -18,6 +18,7 @@
     --comment-color: rgb(235, 235, 235);
     --upload-file-color: rgb(235, 235, 235);
     --search-color: rgb(235, 235, 235);
+    --header-font: 'Kanit', sans=serif;
 }
 
 html {
@@ -289,7 +290,7 @@ body {
     padding: 1rem;
     left: 115rem;
     box-shadow: 0px 0px 15px black;
-
+    font-family: 'Kanit', sans-serif;
 }
 
 #follow-users h3, #follow-users p {
@@ -299,7 +300,7 @@ body {
 #follow-users h3 {
     font-size: 2.5rem;
     padding-left: 1rem;
-    padding-top: 0.3rem;
+    margin-top: -0.5rem;
 }
 
 #follow-users p[id="refresh"]{
@@ -307,7 +308,7 @@ body {
     display: block;
     position: absolute;
     right: 4rem;
-    top: 1.5rem;
+    top: 1rem;
     cursor: pointer;
 }
 
@@ -340,7 +341,7 @@ body {
     position: relative;
     font-size: 2rem;
     color: black;
-    bottom: 22%;
+    bottom: 28%;
     left: 3%;
     transform: translate(18%, 10%);
     transition: 0.5s;
@@ -355,8 +356,8 @@ body {
 #follow-users #users-card .followers {
     font-size: 1.5rem;
     position: relative;
-    bottom: 30%;
-    left: 18.3%;
+    bottom: 50%;
+    left: 18.7%;
     cursor: default;
     font-weight: bold;
     color: black;
@@ -398,7 +399,7 @@ body {
 /* FOLLOW-USERS EFFECTS*/
 
 #follow-users #users-card .user:hover p[id="name"] {
-    bottom: 40%;
+    bottom: 50%;
 }
 
 #follow-users #users-card .user:hover .followers {
