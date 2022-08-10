@@ -1051,11 +1051,11 @@ body {
         height: 40px;
         font-size: 1.4rem;
         padding-left: 2.8rem;
-        margin-left: -10rem;
+        margin-left: -8.5rem;
     }
     
     #background header label[for="search"] {
-        left: 17.8rem;
+        left: 19.2rem;
         width: 160px;
     }
 
@@ -1098,6 +1098,15 @@ body {
 
     #posts-container #image-wrapper img {
         object-position: 0px -200px;
+    }
+
+    #background header input[type="text"] {
+        margin-left: -8.3rem;
+        width: 160px;
+    }
+
+    #background header label[for="search"] {
+        left: 19.5rem;
     }
 
     #follow-users {
