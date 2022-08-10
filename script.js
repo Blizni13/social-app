@@ -41,6 +41,11 @@ for (let n = 0; n < message.length; n++) {
     })
 }
 
+// notifications window at index.html
+
+document.getElementById('close-notifications').addEventListener('click', () => {document.querySelector('#info').style.display = 'none'})
+document.getElementById('notification-open').addEventListener('click', () => document.getElementById('info').style.display = 'block')
+
 // like animation
 
 const likesList = document.getElementsByClassName('fa-thumbs-up')
