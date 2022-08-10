@@ -19,32 +19,52 @@ function() {
 // messages window at index.html
 
 const message = document.getElementsByClassName('message')
+const circles = document.getElementsByClassName('circle')
 
 document.getElementById('message-icon').addEventListener('click',
 function() {
     document.querySelector('#notification').style.display = 'none'
     document.querySelector('#messages').style.display = 'block'
-    document.querySelector('#message-icon').style.opacity = '0.6'
+    document.querySelector('#message-icon').style.color = 'gray'
 })
 
 document.querySelector('#close-messages').addEventListener('click',
 function() {
     document.querySelector('#messages').style.display = 'none'
-    document.querySelector('#message-icon').style.opacity = "1"
+    document.querySelector('#message-icon').style.color = "black"
 })
 
 for (let n = 0; n < message.length; n++) {
     message[n].addEventListener('click', () => {
         document.querySelector('.message-content').style.fontWeight = 'normal'
         document.querySelector('.message-content').style.color = 'black'
-        document.querySelector('.circle').style.display = 'none'
+        circles[1].style.display = 'none'
     })
 }
 
 // notifications window at index.html
 
-document.getElementById('close-notifications').addEventListener('click', () => {document.querySelector('#info').style.display = 'none'})
-document.getElementById('notification-open').addEventListener('click', () => document.getElementById('info').style.display = 'block')
+const notificationSign = document.getElementById('notification-open') 
+const infoTexts = document.getElementsByClassName('info-text')
+const infoContent = document.getElementsByClassName('info-content')
+
+notificationSign.addEventListener('click', () => {
+    document.getElementById('info').style.display = 'block'
+    document.getElementById('notification-icon').style.display = 'none'
+    notificationSign.style.color = 'gray'
+})
+
+document.getElementById('close-notifications').addEventListener('click', () => {
+    document.querySelector('#info').style.display = 'none'
+    notificationSign.style.color = "black"
+})
+
+for (let i = 0; i < infoTexts.length; i++) {
+    infoTexts[i].addEventListener('click', () => {
+        circles[0].style.display = 'none'
+        infoContent[i].style.fontWeight = 'normal'
+    })
+}
 
 // like animation
 
