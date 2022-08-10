@@ -155,7 +155,7 @@ body {
 #background header #info .info-text p {
     position: absolute;
     top: 1.2rem;
-    width: 120px;
+    width: 115px;
     right: 5rem;
     height: 4rem;
     font-weight: bold;
@@ -842,6 +842,71 @@ body {
 }
 
 @media screen and (max-width: 1145px) {
+    #background header #notification-icon, #background header #notification {
+        width: 15px;
+        height: 15px;
+        font-size: 1.4rem;
+        padding: 0.2rem;
+        padding-top: 0.1rem;
+    }
+
+    #background header #notification {
+        right: -0.7rem;
+        top: -0.7rem;
+    }
+
+    #background header #messages {
+        right: 12rem;
+        width: 220px;
+        font-size: 1.5rem;
+    }
+
+    #background header #messages #close-messages{
+        top: 0.8rem;
+        font-size: 2.6rem;
+    }
+
+    #background header #messages .message #profile-wrapper{
+        width: 30px;
+        height: 30px;
+    }
+
+    #background header #messages .message p {
+        font-size: 1.3rem;
+        left: 5rem;
+        top: 2.7rem;
+    }
+
+    #background header #messages .message h4 {
+        left: 5rem;
+    }
+
+    #background header #info {
+        width: 220px;
+        font-size: 1.5rem;
+        right: 18rem;
+    }
+
+    #background header #info .info-text .profile-wrapper {
+        width: 30px;
+        height: 30px;
+    }
+
+    #background header #info .info-text p {
+        font-size: 1.3rem;
+        right: 3.1rem;
+    }
+
+    #background header #info .info-text .circle-notification {
+        font-size: 1.5rem;
+        right: 3rem;
+    }
+
+    #background header #info #close-notifications {
+        top: 0.8rem;
+        font-size: 2.6rem;
+    }
+
     #posts-container {
         left: 10rem;
         width: 350px;
@@ -964,8 +1029,14 @@ body {
         left: 44rem;
     }
 
-    #background header h3 {
-        font-size: 3.5rem;
+    #background header #messages {
+        right: 6rem;
+    }
+
+    #background header #info {
+        width: 220px;
+        font-size: 1.5rem;
+        right: 10rem;
     }
 
     #background header label[for="photo-video"] {
@@ -1105,7 +1176,6 @@ body {
 }
 
 @media screen and (max-width: 680px) {
-
     #background header input[type="text"] {
         margin-left: -13rem;
         width: 160px;
@@ -1133,6 +1203,17 @@ body {
         height: 25px;
         margin-top: 0.8rem;
     }
+
+    #background header #notification-icon, #background header #notification {
+        width: 13px;
+        height: 13px;
+        font-size: 1rem;
+        padding-right: 0.3rem;
+    }
+
+    #background header #notification {
+        padding-right: 0.2rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1144,6 +1225,76 @@ body {
     #follow-users {
         left: 8.5rem;
         top: 9.5rem;
+    }
+
+    #background header #messages {
+        font-size: 1.4rem;
+        right: 4rem;
+        width: 170px;
+        top: 5rem;
+    }
+
+    #background header #messages #close-messages{
+        top: 0.8rem;
+        font-size: 2.6rem;
+    }
+
+    #background header #messages .message #profile-wrapper{
+        width: 25px;
+        height: 25px;
+        margin-left: -1rem;
+    }
+
+    #background header #messages .message p {
+        font-size: 1.2rem;
+        left: 3.2rem;
+        width: 120px;
+        top: 2.7rem;
+    }
+
+    #background header #messages .message h4 {
+        left: 3.2rem;
+    }
+
+    #background header #messages .message .circle-message {
+        right: 0.5rem;
+        width: 8px;
+        height: 8px;
+    }
+
+    #background header #info {
+        width: 170px;
+        font-size: 1.4rem;
+        right: 8rem;
+        top: 5rem;
+    }
+
+    #background header #messages .message {
+        width: 102%;
+        padding-left: 1.2rem;
+    }
+
+    #background header #info .info-text .profile-wrapper {
+        width: 25px;
+        height: 25px;
+        margin-left: -0.6rem;
+    }
+
+    #background header #info .info-text p {
+        font-size: 1.3rem;
+        right: 0.1rem;
+    }
+
+    #background header #info .info-text .circle-notification {
+        font-size: 1.5rem;
+        right: 1rem;
+        width: 8px;
+        height: 8px;
+    }
+
+    #background header #info #close-notifications {
+        top: 0.8rem;
+        font-size: 2.6rem;
     }
 
     #background header {
