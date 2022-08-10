@@ -161,7 +161,7 @@ body {
     font-weight: bold;
 }
 
-#background header #info .info-text .circle {
+#background header #info .info-text .circle-notification {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -268,7 +268,7 @@ body {
     font-weight: bold;
 }
 
-#background header #messages .message .circle {
+#background header #messages .message .circle-message {
     width: 10px;
     height: 10px;
     border-radius: 50%;
