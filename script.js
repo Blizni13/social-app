@@ -19,7 +19,7 @@ function() {
 // messages window at index.html
 
 const message = document.getElementsByClassName('message')
-const circles = document.getElementsByClassName('circle')
+const circlesMessage = document.getElementsByClassName('circle-message')
 
 document.getElementById('message-icon').addEventListener('click',
 function() {
@@ -38,21 +38,26 @@ for (let n = 0; n < message.length; n++) {
     message[n].addEventListener('click', () => {
         document.querySelector('.message-content').style.fontWeight = 'normal'
         document.querySelector('.message-content').style.color = 'black'
-        circles[1].style.display = 'none'
+        circlesMessage[n].style.display = 'none'
     })
 }
 
-// notifications window at index.html
+// NOTIFICATIONS WINDOW AT INDEX.HTML
 
 const notificationSign = document.getElementById('notification-open') 
 const infoTexts = document.getElementsByClassName('info-text')
 const infoContent = document.getElementsByClassName('info-content')
+const circlesNotification = document.getElementsByClassName('circle-notification')
+
+// displaying window
 
 notificationSign.addEventListener('click', () => {
     document.getElementById('info').style.display = 'block'
     document.getElementById('notification-icon').style.display = 'none'
     notificationSign.style.color = 'gray'
 })
+
+// closing window
 
 document.getElementById('close-notifications').addEventListener('click', () => {
     document.querySelector('#info').style.display = 'none'
@@ -61,7 +66,7 @@ document.getElementById('close-notifications').addEventListener('click', () => {
 
 for (let i = 0; i < infoTexts.length; i++) {
     infoTexts[i].addEventListener('click', () => {
-        circles[0].style.display = 'none'
+        circlesNotification[i].style.display = 'none'
         infoContent[i].style.fontWeight = 'normal'
     })
 }
