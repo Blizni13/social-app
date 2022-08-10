@@ -155,8 +155,37 @@ body {
 #background header #info .info-text p {
     position: absolute;
     top: 1.2rem;
-    width: 155px;
-    right: 2rem;
+    width: 120px;
+    right: 5rem;
+    height: 4rem;
+}
+
+#background header #info .info-text .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+#background header #notification-icon {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: red;
+        font-size: 1.7rem;
+        color: white;
+        font-family: consolas;
+        text-align: center;
+        top: -0.5rem;
+        right: -0.5rem;
+}
+
+#background header #notification-icon::after {
+    content: '1'
 }
 
 /* NOTIFICATION PANEL EFFECTS */
