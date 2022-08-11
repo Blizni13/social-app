@@ -66,15 +66,16 @@ body {
 
 #background header label[for="search"] {
     position: absolute;
-    width: 225px;
+    width: 35px;
     height: 45px;
-    border-radius: 60px;
-    cursor: text; 
+    border-radius: 90px;
+    cursor: default; 
+    left: 28.0rem;
 }
 
 #background header label[for="search"] i {
     position: absolute;
-    left: 1.3rem;
+    left: 1.2rem;
     font-size: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
@@ -1006,9 +1007,7 @@ body {
     }
     
     #background header label[for="search"] {
-        color: gray;
-        width: 190px;
-        left: 21rem
+        left: 21rem;
     }
 
     #background header ul .fas {
@@ -1052,12 +1051,14 @@ body {
     }
     
     #background header label[for="search"] {
-        left: 19.2rem;
-        width: 160px;
+        left: 19.5rem;
+        height: 40px;
+        width: 25px;
     }
 
     #background header label[for="search"] i{
         font-size: 1.2rem;
+        left: 1rem;
     }
 
     #background header ul .fas {
@@ -1103,7 +1104,8 @@ body {
     }
 
     #background header label[for="search"] {
-        left: 19.5rem;
+        left: 19.7rem;
+        height: 40px;
     }
 
     #follow-users {
@@ -1188,7 +1190,12 @@ body {
     }
 
     #background header label[for='search'] {
-        left: 14.7rem;
+        left: 15.3rem;
+        height: 36px;
+    }
+
+    #background header label[for="search"] i {
+        left: 0.7rem;
     }
 
     #background header label[for='photo-video'] {
@@ -1330,7 +1337,9 @@ body {
     }
     
     #background header label[for="search"] {
-        left: 10.8rem;
+        left: 11.5rem;
+        height: 30px;
+        width: 20px;
     }
 
     #background header label[for="search"] i {
