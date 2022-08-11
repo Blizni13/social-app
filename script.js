@@ -1,4 +1,4 @@
-// report window posts-container
+// REPORT WINDOW
 
 const reportButton = document.getElementsByClassName('fa-ellipsis')
 const postOptions = document.getElementsByClassName('post-options') 
@@ -16,10 +16,25 @@ function() {
     document.querySelector('#report-background').style.display = 'none'
 })
 
-// messages window at index.html
+// MESSAGE NOTIFICATION COUNTER
 
-const message = document.getElementsByClassName('message')
+let numOfMessages = 0
+let allMessages = document.getElementsByClassName('message')
+
+for (let i = 0; i < allMessages.length; i++) {
+    allMessages[i].style.fontWeight = 'bold'
+}
+
+for (let i = 0; i < allMessages.length; i++) {
+    if (allMessages[i].style.fontWeight === 'bold') numOfMessages += 1
+}
+
+document.getElementById('notification').textContent = numOfMessages
+
+// MESSAGE WINDOW AT INDEX.HTML
+
 const circlesMessage = document.getElementsByClassName('circle-message')
+const messagesContent = document.getElementsByClassName('message-content')
 
 document.getElementById('message-icon').addEventListener('click',
 function() {
@@ -34,13 +49,34 @@ function() {
     document.querySelector('#message-icon').style.color = "black"
 })
 
-for (let n = 0; n < message.length; n++) {
-    message[n].addEventListener('click', () => {
-        document.querySelector('.message-content').style.fontWeight = 'normal'
-        document.querySelector('.message-content').style.color = 'black'
-        circlesMessage[n].style.display = 'none'
+for (let i = 0; i < allMessages.length; i++) {
+    allMessages[i].addEventListener('click', () => {
+        allMessages[i].style.fontWeight = 'normal'
+        messagesContent[i].style.color = 'black'
+        circlesMessage[i].style.display = 'none'
+        if (numOfMessages > 0) {
+        numOfMessages -= 1
+        }
     })
 }
+
+// COUNT NUMBER OF NOTIFICATIONS
+
+let numOfNotifications = 0
+// 
+let notificationNumber = document.getElementsByClassName('info-content')
+
+for (let i = 0; i < notificationNumber.length; i++) {
+    notificationNumber[i].style.fontWeight = 'bold'
+}
+
+for(let i = 0; i < notificationNumber.length; i++) {
+    if (notificationNumber[i].style.fontWeight === 'bold') {
+        numOfNotifications += 1 
+    }
+}
+
+document.getElementById('notification-icon').innerText = numOfNotifications
 
 // NOTIFICATIONS WINDOW AT INDEX.HTML
 
@@ -68,10 +104,13 @@ for (let i = 0; i < infoTexts.length; i++) {
     infoTexts[i].addEventListener('click', () => {
         circlesNotification[i].style.display = 'none'
         infoContent[i].style.fontWeight = 'normal'
+        if (numOfNotifications > 0) {
+        numOfNotifications -= 1
+        }
     })
 }
 
-// like animation
+// LIKE ANIMATION
 
 const likesList = document.getElementsByClassName('fa-thumbs-up')
 
