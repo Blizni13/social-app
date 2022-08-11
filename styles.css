@@ -158,7 +158,6 @@ body {
     width: 115px;
     right: 5rem;
     height: 4rem;
-    font-weight: bold;
 }
 
 #background header #info .info-text .circle-notification {
@@ -183,10 +182,6 @@ body {
         text-align: center;
         top: -0.5rem;
         right: -0.5rem;
-}
-
-#background header #notification-icon::after {
-    content: '1'
 }
 
 /* NOTIFICATION PANEL EFFECTS */
@@ -265,7 +260,6 @@ body {
     left: 5.7rem;
     font-size: 1.4rem;
     color: blue;
-    font-weight: bold;
 }
 
 #background header #messages .message .circle-message {
@@ -284,9 +278,6 @@ body {
     background-color: hsl(240, 0%, 93%)
 }
 
-#background header #notification::after {
-    content: '1';
-}
 /* UPLOAD BUTTON EFFECTS AND APPEARANCE */
 
 #background header label[for="photo-video"] {
