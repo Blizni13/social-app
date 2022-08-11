@@ -143,7 +143,7 @@ body {
     padding-inline: 0.9rem;
     padding-bottom: 0.7rem;
     border-radius: 5px;
-    padding-top: 1.1rem;
+    padding-top: 0.6rem;
 }
 
 #background header #info .info-text .profile-wrapper {
@@ -153,16 +153,14 @@ body {
 }
 
 #background header #info .info-text p {
-    position: absolute;
-    top: 1.2rem;
-    width: 115px;
-    right: 5rem;
-    height: 4rem;
+    font-size: 1.5rem;
+    margin-top: -3.7rem;
+    margin-left: 4.5rem;
 }
 
 #background header #info .info-text .circle-notification {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: blue;
     position: absolute;
@@ -237,6 +235,7 @@ body {
     padding-bottom: 0.7rem;
     border-radius: 5px;
     padding-top: 1.1rem;
+    margin-top: 0.5rem;
 }
 
 #background header #messages h2 {
@@ -255,9 +254,8 @@ body {
 }
 
 #background header #messages .message p {
-    position: absolute;
-    top: 3.3rem;
-    left: 5.7rem;
+    margin-top: -2.3rem;
+    margin-left: 4.7rem;
     font-size: 1.4rem;
     color: blue;
 }
@@ -863,13 +861,20 @@ body {
     }
 
     #background header #messages .message p {
-        font-size: 1.3rem;
-        left: 5rem;
-        top: 2.7rem;
+        margin-top: -1.8rem;
+        margin-left: 3.7rem;
+        font-size: 1.4rem;
+        color: blue;
     }
 
     #background header #messages .message h4 {
-        left: 5rem;
+        margin-left: -1.2rem;
+    }
+
+    #background header #messages .message .circle-message {
+        right: 0.7rem;
+        width: 8px;
+        height: 8px;
     }
 
     #background header #info {
@@ -884,8 +889,9 @@ body {
     }
 
     #background header #info .info-text p {
-        font-size: 1.3rem;
-        right: 3.1rem;
+        font-size: 1.5rem;
+        margin-left: 3.7rem;
+        margin-top: -3.55rem;
     }
 
     #background header #info .info-text .circle-notification {
@@ -1246,20 +1252,20 @@ body {
     }
 
     #background header #messages .message p {
-        font-size: 1.2rem;
-        left: 3.2rem;
-        width: 120px;
-        top: 2.7rem;
+        font-size: 1.15rem;
+        margin-left: 2.2rem;
+        margin-top: -1.6rem;
     }
 
     #background header #messages .message h4 {
-        left: 3.2rem;
+        margin-left: -2.3rem;
+        margin-top: -0.2rem;
     }
 
     #background header #messages .message .circle-message {
-        right: 0.5rem;
-        width: 8px;
-        height: 8px;
+        right: 0.3rem;
+        width: 7px;
+        height: 7px;
     }
 
     #background header #info {
@@ -1282,7 +1288,8 @@ body {
 
     #background header #info .info-text p {
         font-size: 1.3rem;
-        right: 0.1rem;
+        margin-left: 2.6rem;
+        margin-top: -3.2rem;
     }
 
     #background header #info .info-text .circle-notification {
