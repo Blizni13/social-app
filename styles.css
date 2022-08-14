@@ -703,7 +703,6 @@ body {
     top: 6rem;
     right: 2.6rem;
     display: none;
-    flex-flow: column;
 }
 
 #posts-container #post .post-options i {
