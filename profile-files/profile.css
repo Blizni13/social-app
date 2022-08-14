@@ -8,6 +8,16 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    --posts-header-color: rgb(240, 240, 240);
+    --reactions-color: rgb(240, 240, 240);
+    --interactions-color: rgb(240, 240, 240);
+    --comments-color: rgb(251, 251, 251);
+    --enter-comment-color: rgb(235, 235, 235);
+    --comment-color: rgb(235, 235, 235);
+    --upload-file-color: rgb(235, 235, 235);
+}
+
 .bold {
     font-weight: 800;
 }
@@ -17,6 +27,7 @@ html {
     margin-inline: auto;
     height: 250px;
     background-color: red;
+    position: relative;
 }
 
 #foreground-image {
@@ -95,10 +106,10 @@ header #sections p:hover {
     background-color: hsl(240, 0%, 90%)
 }
 
-header {
+#first-header {
     border-bottom: 1px solid gray;
     padding-bottom: 2rem;
-    background: linear-gradient(180deg, black 0%, hsl(240, 10%, 0%) 20%,  white 60%)
+    background: linear-gradient(180deg, black 0%, hsl(240, 10%, 0%) 20%,  white 60%);
 }
 
 #container-posts-section {
@@ -132,7 +143,7 @@ header {
 #container-posts-section #user-info .fas {
     font-size: 2rem;
     position: relative;
-    top: 2.7rem;
+    top: 3rem;
 }
 
 #container-posts-section #user-info .fas.fa-location-dot {
@@ -219,19 +230,32 @@ header {
     padding: 1rem;
 }
 
+/* PHOTOS */
+
+#photo-wrapper, .photo-wrapper, #profile-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#photo-wrapper img, .photo-wrapper img, #profile-wrapper img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+}
+
 /* POSTS-SECTION */
 
 #posts-container {
     position: absolute;
-    width: 550px;
-    left: 48rem;
-    top: 16rem;
+    width: 542px;
+    right: 10rem;
     border-radius: 1rem;
 }
 
 #posts-container header {
     width: 100%;
-    height: 5rem;
     padding: 1.3rem;
     background-color: var(--posts-header-color);
 }
@@ -240,7 +264,6 @@ header {
     font-size: 1.8rem;
     margin-top: -2.8rem;
     margin-left: 4rem;
-    font-family: var(--header-font)
 }
 
 #posts-container header .fas.fa-ellipsis {
@@ -262,13 +285,10 @@ header {
 }
 
 #posts-container #reactions {
-    position: relative;
-    width: 100%;
-    background-color: var(--reactions-color);
     height: 5rem;
     border-bottom: 0.2px solid hsl(240, 5%, 85%);
     padding-top: 1.3rem;
-    margin-top: -1.1rem;
+    background-color: var(--reactions-color)
 }
 
 #posts-container #profiles-wrapper {
@@ -308,7 +328,6 @@ header {
     background-color: var(--interactions-color);
     font-size: 2.5rem;
     padding-inline: 2rem;
-    position: relative;
 }
 
 #posts-container #interactions .fa-message {
@@ -325,8 +344,6 @@ header {
     width: 100%;
     height: 22rem;
     background-color: var(--comments-color);
-    position: relative;
-    border-radius: 0px 0px 1rem 1rem;
 }
 
 #posts-container #comments input[type='text'] {
@@ -360,14 +377,6 @@ header {
 
 #posts-container #comments input[type="file"] {
     display: none;
-}
-
-#posts-container #comments input[id="image"] {
-    right: 8rem;
-}
-
-#posts-container #comments input[id="video"] {
-    right: 4rem;
 }
 
 #posts-container #comments .fas {
@@ -419,7 +428,6 @@ header {
     top: 6rem;
     right: 2.6rem;
     display: none;
-    flex-flow: column;
 }
 
 #posts-container #post .post-options i {
@@ -447,7 +455,6 @@ header {
     left: 40%;
     transform: translate(-50%, 0%);
     border: none;
-    border-radius: 20px;
     padding: 1rem;
     font-size: 1.8rem;
     width: 107px;
@@ -463,12 +470,13 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 200vh;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     z-index: 2;
     display: none;
-    padding-top: 32rem
+    padding-top: 32rem;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 #report-message {
