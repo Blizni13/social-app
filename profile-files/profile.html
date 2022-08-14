@@ -42,14 +42,24 @@
                 <p>Hobbies: <span id="from-place" class="bold">football, gaming</span></p>
             </div>
             <div id="add-post">
-                <img id="profile">
-                <input type="text">
+                <img id="profile" src="https://scontent-waw1-1.xx.fbcdn.net/v/t1.6435-9/67308354_2076925369277865_5351762411705597952_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=LuBWMhRIEgsAX--RB1L&_nc_ht=scontent-waw1-1.xx&oh=00_AT_SH1Dt-tsFuxR73JcJM9nKRp3luHI1MY_JFZ9LiitsXw&oe=631E362E">
+                <input type="text" placeholder="Do you want to write something?">
                 <hr>
-                <i></i>
-                <i></i>
+                <div id="add-interactions">
+                    <label for="image">
+                        <i class="fas fa-image"></i>
+                        <p>Image</p>
+                    </label>
+                    <label for="video">
+                        <i class="fas fa-video"></i>
+                        <p>Video</p>
+                    </labeL>
+                    <input type="file" accept=".jpg" id="image">
+                    <input type="file" accept=".mp4" id="video">
+                </div>
             </div>
             <div id="user-posts">
-                <h2>Users posts</h2>
+                <h2>Your posts</h2>
             </div>
         </div>
         <script type="text/javascript" src="profile.js"></script>
