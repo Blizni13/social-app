@@ -54,3 +54,15 @@ html {
 #informations .profile-friend:not(:first-of-type) {
     margin-left: -1rem;
 }
+
+header button[type="submit"] {
+    position: absolute;
+    right: 25rem;
+    top: 28.5rem;
+    width: 215px;
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 2.6rem;
+    cursor: pointer;
+}
