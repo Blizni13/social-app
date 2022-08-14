@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 62.5%;
+}
+
+#background-image {
+    width: 100%;
+    margin-inline: auto;
+    height: 250px;
+    background-color: red;
+}
+
+#foreground-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: green;
+    position: relative;
+    left: 25rem;
+    top: -8rem;
+}
