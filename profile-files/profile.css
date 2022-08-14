@@ -22,5 +22,35 @@ html {
     background-color: green;
     position: relative;
     left: 25rem;
-    top: -8rem;
+    top: -5rem;
+}
+
+#informations {
+    position: absolute;
+    left: 45rem;
+    width: 300px;
+    top: 26rem;
+    font-size: 2.5rem;
+}
+
+#informations p {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+#informations #profiles-wrapper {
+    display: flex;
+    margin-top: 1rem;
+}
+
+#informations .profile-friend {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: pink;
+}
+
+#informations .profile-friend:not(:first-of-type) {
+    margin-left: -1rem;
 }
