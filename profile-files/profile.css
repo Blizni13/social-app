@@ -58,11 +58,32 @@ html {
 header button[type="submit"] {
     position: absolute;
     right: 25rem;
-    top: 28.5rem;
+    top: 29rem;
     width: 215px;
     height: 50px;
     background-color: red;
     border-radius: 10px;
     font-size: 2.6rem;
     cursor: pointer;
+}
+
+header hr {
+    width: 80%;
+    margin-inline: auto;
+    margin-top: -2.5rem;
+}
+
+header #sections {
+    display: flex;
+    gap: 5rem;
+    font-size: 2.8rem;
+    margin-left: 23rem;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+header {
+    border-bottom: 1px solid black;
+    padding-bottom: 2rem;
+    background: linear-gradient(180deg, black 0%, hsl(240, 10%, 0%) 20%,  white 60%)
 }
