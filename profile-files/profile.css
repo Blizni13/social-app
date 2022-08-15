@@ -100,13 +100,14 @@ header #sections {
 header #sections p {
     cursor: pointer;
     padding: 0.5rem;
+    font-weight: bold;
 }
 
 header #sections hr {
-    width: 85px;
     position: absolute;
+    width: 85px;
     height: 7px;
-    background-color: blue;
+    background-color: hsl(220, 60%, 35%);
     bottom: -10px;
     border-radius: 100px;
 }
@@ -120,16 +121,16 @@ header #sections hr:nth-of-type(1) {
 }
 
 header #sections hr:nth-of-type(2) {
-    left: 120px;
+    left: 126px;
 }
 
 header #sections hr:nth-of-type(3) {
-    left: 254px;
+    left: 264px;
 }
 
-header #sections p:hover {
+header #sections p:active {
     border-radius: 10px;
-    background-color: hsl(240, 0%, 90%)
+    background-color: hsl(240, 0%, 90%);
 }
 
 #first-header {
