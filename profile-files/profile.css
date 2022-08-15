@@ -38,10 +38,10 @@ html {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    background-color: green;
     position: relative;
     left: 25rem;
     top: -5rem;
+    border: 5px solid white;
 }
 
 #foreground-image img {
@@ -65,21 +65,42 @@ html {
 #informations #profiles-wrapper {
     display: flex;
     margin-top: 1rem;
+    width: 163px;
+    position: relative;
+}
+
+#informations #profiles-wrapper .fas.fa-ellipsis-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    transform: rotate(90deg);
+    color: gray;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 #informations .profile-friend {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid white;
-    background-color: pink;
+    border: 2px solid white;
+}
+
+#informations .profile-friend #curtain {
+    position: absolute;
+    width: 100%;
 }
 
 #informations .profile-friend:not(:first-of-type) {
     margin-left: -1rem;
 }
 
-header button[type="submit"] {
+#first-header button[type="submit"] {
     position: absolute;
     right: 25rem;
     top: 30rem;
@@ -91,13 +112,13 @@ header button[type="submit"] {
     cursor: pointer;
 }
 
-header hr {
+#first-header hr {
     width: 80%;
     margin-inline: auto;
     margin-top: -2.5rem;
 }
 
-header #sections {
+#first-header #sections {
     display: flex;
     gap: 5rem;
     font-size: 2.8rem;
@@ -106,13 +127,13 @@ header #sections {
     position: relative;
 }
 
-header #sections p {
+#first-header #sections p {
     cursor: pointer;
     padding: 0.5rem;
     font-weight: bold;
 }
 
-header #sections hr {
+#first-header #sections hr {
     position: absolute;
     width: 85px;
     height: 7px;
@@ -121,23 +142,23 @@ header #sections hr {
     border-radius: 100px;
 }
 
-header #sections hr:nth-of-type(1), header #sections hr:nth-of-type(2), header #sections hr:nth-of-type(3) {
+#first-header #sections hr:nth-of-type(1), header #sections hr:nth-of-type(2), header #sections hr:nth-of-type(3) {
     display: none;
 }
 
-header #sections hr:nth-of-type(1) {
+#first-header #sections hr:nth-of-type(1) {
     left: -7px;
 }
 
-header #sections hr:nth-of-type(2) {
+#first-header #sections hr:nth-of-type(2) {
     left: 126px;
 }
 
-header #sections hr:nth-of-type(3) {
+#first-header #sections hr:nth-of-type(3) {
     left: 264px;
 }
 
-header #sections p:active {
+#first-header #sections p:active {
     border-radius: 10px;
     background-color: hsl(240, 0%, 90%);
 }
@@ -145,12 +166,10 @@ header #sections p:active {
 #first-header {
     border-bottom: 1px solid gray;
     padding-bottom: 2rem;
-    background: linear-gradient(180deg, black 0%, hsl(240, 10%, 0%) 20%,  white 60%);
 }
 
 #container-posts-section {
     position: relative;
-    background-color: red;
     width: 1200px;
     margin-inline: auto;
     padding: 1rem;
@@ -159,10 +178,11 @@ header #sections p:active {
 
 #container-posts-section #user-info {
     width: 450px;
-    background-color: green;
-    padding: 0.5rem;
+    padding: 2rem;
     border-radius: 10px;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
+    background-color: white;
+    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
 }
 
 #container-posts-section #user-info h2 {
@@ -197,12 +217,12 @@ header #sections p:active {
 #container-posts-section #add-post {
     position: absolute;
     right: 10rem;
-    border: 2px solid black;
     top: 2rem;
     padding-inline: 2.7rem;
     padding-bottom: 2rem;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0px 0.9px 2px 1px hsl(0, 0%, 80%);
 }
 
 #container-posts-section #add-post #profile {
@@ -222,6 +242,11 @@ header #sections p:active {
     font-size: 1.7rem;
     outline: none;
     border: none;
+    background-color: hsl(0, 10%, 95%);
+}
+
+#container-posts-section #add-post input[type="text"]:hover {
+    background-color: hsl(0, 0%, 92%)
 }
 
 #container-posts-section #add-post hr {
@@ -231,10 +256,11 @@ header #sections p:active {
 }
 
 #container-posts-section #add-interactions {
-    width: 70%;
+    width: 69%;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
+    height: 15px;
 }
 
 #container-posts-section #add-interactions label {
@@ -247,11 +273,11 @@ header #sections p:active {
 }
 
 #container-posts-section #add-post i {
-    font-size: 3rem;
+    font-size: 2.4rem;
 }
 
 #container-posts-section #add-post p {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 #container-posts-section input[type="file"] {
@@ -286,8 +312,9 @@ header #sections p:active {
 #posts-container {
     position: absolute;
     width: 542px;
-    right: 10rem;
+    right: 9.7rem;
     border-radius: 1rem;
+    top: 19rem;
 }
 
 #posts-container header {
@@ -298,7 +325,7 @@ header #sections p:active {
 
 #posts-container header p {
     font-size: 1.8rem;
-    margin-top: -2.8rem;
+    margin-top: -2.4rem;
     margin-left: 4rem;
 }
 
@@ -500,6 +527,7 @@ header #sections p:active {
 #posts-container #post {
     margin-bottom: 3rem;
     position: relative;
+    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
 }
 
 #report-background {
