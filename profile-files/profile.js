@@ -29,7 +29,28 @@ for (let i = 0; i < likesList.length; i++) {
 let posts = document.getElementById("posts")
 let photos = document.getElementById("photos")
 let about = document.getElementById("about")
+let underlines = document.getElementsByClassName('underline')
 
-posts.addEventListener('click', () => document.getElementById("posts-underline").style.display = 'block')
-photos.addEventListener('click', () => document.getElementById("photos-underline").style.display = 'block')
-about.addEventListener('click', () => document.getElementById('about-underline').style.display = 'block')
+posts.addEventListener('click', () => {
+    document.getElementById("posts-underline").style.display = 'block';
+    underlines[1].style.display = 'none';
+    underlines[2].style.display = 'none'
+    document.getElementById('container-posts-section').style.display = 'block'
+    document.getElementById('posts-container').style.display = 'block' 
+})
+
+photos.addEventListener('click', () => {
+    document.getElementById("photos-underline").style.display = 'block';
+    underlines[0].style.display = 'none';
+    underlines[2].style.display = 'none';
+    document.getElementById('container-posts-section').style.display = 'none'
+    document.getElementById('posts-container').style.display = 'none'
+})
+
+about.addEventListener('click', () => {
+    document.getElementById('about-underline').style.display = 'block';
+    underlines[0].style.display = 'none';
+    underlines[1].style.display = 'none'
+    document.getElementById('container-posts-section').style.display = 'none'
+    document.getElementById('posts-container').style.display = 'none'
+})
