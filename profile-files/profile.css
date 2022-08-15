@@ -94,15 +94,41 @@ header #sections {
     font-size: 2.8rem;
     margin-left: 23rem;
     margin-top: 2rem;
+    position: relative;
 }
 
 header #sections p {
     cursor: pointer;
     padding: 0.5rem;
-    border-radius: 10px;
+}
+
+header #sections hr {
+    width: 85px;
+    position: absolute;
+    height: 7px;
+    background-color: blue;
+    bottom: -10px;
+    border-radius: 100px;
+}
+
+header #sections hr:nth-of-type(1), header #sections hr:nth-of-type(2), header #sections hr:nth-of-type(3) {
+    display: none;
+}
+
+header #sections hr:nth-of-type(1) {
+    left: -7px;
+}
+
+header #sections hr:nth-of-type(2) {
+    left: 120px;
+}
+
+header #sections hr:nth-of-type(3) {
+    left: 254px;
 }
 
 header #sections p:hover {
+    border-radius: 10px;
     background-color: hsl(240, 0%, 90%)
 }
 
