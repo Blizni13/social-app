@@ -33,6 +33,10 @@ let underlines = document.getElementsByClassName('underline')
 let postsSection = document.getElementById('container-posts-section')
 let aboutSection = document.getElementById('about-section')
 
+posts.style.color = 'blue'
+underlines[0].style.display = 'block'
+aboutSection.style.display = 'none'
+
 posts.addEventListener('click', () => {
     underlines[0].style.display = 'block';
     underlines[1].style.display = 'none';

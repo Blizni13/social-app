@@ -698,47 +698,87 @@ html {
     background-color: hsl(0, 0%, 86%)
 }
 
-#friends-under-section {
+#friends-about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 45%;
     box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
     margin-inline: auto;
     border-radius: 10px;
     margin-top: 2.3rem;
-    padding: 1.5rem;
-    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-block: 4rem;
 }
 
-#friends-under-section h2 {
+#friends-about-section h2 {
+    position: absolute;
     font-size: 3rem;
-    margin-bottom: -1.5rem;
+    margin-left: -1.7rem;
+    margin-top: -3rem;
 }
 
-#friends-under-section .friend:first-of-type {
-    margin-top: 4rem;
-}
-
-#friends-under-section .friend {
+#friends-about-section .friend {
     position: relative;
-    width: 250px;
+    width: 380px;
+    margin-top: 3.5rem;
 }
 
-#friends-under-section .friend img {
+#friends-about-section .friend img {
     width: 85px;
     height: 75px;
     border-radius: 5px;
 }
 
-#friends-under-section .friend h4 {
+#friends-about-section .friend h4 {
     position: absolute;
     font-size: 2.3rem;
     left: 10rem;
     top: 20%
 }
 
-#friends-under-section .friend p {
+#friends-about-section .friend p {
     position: absolute;
     font-size: 1.4rem;
     left: 9.9rem;
     top: 55%;
     color: hsl(0, 0%, 60%);
+}
+
+#friends-about-section .fas.fa-ellipsis-vertical {
+    position: absolute;
+    right: 2rem;
+    transform: rotate(90deg);
+    top: 2.5rem;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+#photos-about-section {
+    display: flex;
+    width: 45%;
+    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    padding-top: 7.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-inline: auto;
+    margin-top: 2.3rem;
+    border-radius: 5px;
+    padding-inline: 3rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+#photos-about-section h2 {
+    position: absolute;
+    font-size: 3rem;
+    margin-top: -6rem;
+    margin-left: -1.7rem;
+}
+
+#photos-about-section img {
+    width: 23%;;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 1px gray;
 }
