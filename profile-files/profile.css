@@ -697,3 +697,48 @@ html {
 #about-section #personal-info .right:hover {
     background-color: hsl(0, 0%, 86%)
 }
+
+#friends-under-section {
+    width: 45%;
+    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    margin-inline: auto;
+    border-radius: 10px;
+    margin-top: 2.3rem;
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+#friends-under-section h2 {
+    font-size: 3rem;
+    margin-bottom: -1.5rem;
+}
+
+#friends-under-section .friend:first-of-type {
+    margin-top: 4rem;
+}
+
+#friends-under-section .friend {
+    position: relative;
+    width: 250px;
+}
+
+#friends-under-section .friend img {
+    width: 85px;
+    height: 75px;
+    border-radius: 5px;
+}
+
+#friends-under-section .friend h4 {
+    position: absolute;
+    font-size: 2.3rem;
+    left: 10rem;
+    top: 20%
+}
+
+#friends-under-section .friend p {
+    position: absolute;
+    font-size: 1.4rem;
+    left: 9.9rem;
+    top: 55%;
+    color: hsl(0, 0%, 60%);
+}
