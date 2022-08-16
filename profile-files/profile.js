@@ -33,6 +33,9 @@ let underlines = document.getElementsByClassName('underline')
 
 posts.addEventListener('click', () => {
     document.getElementById("posts-underline").style.display = 'block';
+    posts.style.color = 'hsl(220, 60%, 35%)';
+    about.style.color = 'black'
+    photos.style.color = 'black'
     underlines[1].style.display = 'none';
     underlines[2].style.display = 'none'
     document.getElementById('container-posts-section').style.display = 'block'
@@ -41,6 +44,9 @@ posts.addEventListener('click', () => {
 
 photos.addEventListener('click', () => {
     document.getElementById("photos-underline").style.display = 'block';
+    photos.style.color = 'hsl(220, 60%, 35%)'
+    posts.style.color = 'black'
+    about.style.color = 'black'
     underlines[0].style.display = 'none';
     underlines[2].style.display = 'none';
     document.getElementById('container-posts-section').style.display = 'none'
@@ -49,6 +55,9 @@ photos.addEventListener('click', () => {
 
 about.addEventListener('click', () => {
     document.getElementById('about-underline').style.display = 'block';
+    about.style.color = 'hsl(220, 60%, 35%)'
+    posts.style.color = 'black'
+    photos.style.color = 'black'
     underlines[0].style.display = 'none';
     underlines[1].style.display = 'none'
     document.getElementById('container-posts-section').style.display = 'none'

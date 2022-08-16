@@ -135,10 +135,10 @@ html {
 
 #first-header #sections hr {
     position: absolute;
-    width: 85px;
-    height: 7px;
+    width: 115px;
+    height: 5px;
     background-color: hsl(220, 60%, 35%);
-    bottom: -10px;
+    bottom: -19px;
     border-radius: 100px;
 }
 
@@ -147,15 +147,15 @@ html {
 }
 
 #first-header #sections hr:nth-of-type(1) {
-    left: -7px;
+    left: -20px;
 }
 
 #first-header #sections hr:nth-of-type(2) {
-    left: 126px;
+    left: 111px;
 }
 
 #first-header #sections hr:nth-of-type(3) {
-    left: 264px;
+    left: 250px;
 }
 
 #first-header #sections p:active {
@@ -165,7 +165,7 @@ html {
 
 #first-header {
     border-bottom: 1px solid gray;
-    padding-bottom: 2rem;
+    padding-bottom: 1.6rem;
 }
 
 #container-posts-section {
