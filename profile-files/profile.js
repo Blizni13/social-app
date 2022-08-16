@@ -30,36 +30,41 @@ let posts = document.getElementById("posts")
 let photos = document.getElementById("photos")
 let about = document.getElementById("about")
 let underlines = document.getElementsByClassName('underline')
+let postsSection = document.getElementById('container-posts-section')
+let aboutSection = document.getElementById('about-section')
 
 posts.addEventListener('click', () => {
-    document.getElementById("posts-underline").style.display = 'block';
+    underlines[0].style.display = 'block';
+    underlines[1].style.display = 'none';
+    underlines[2].style.display = 'none'
     posts.style.color = 'hsl(220, 60%, 35%)';
     about.style.color = 'black'
     photos.style.color = 'black'
-    underlines[1].style.display = 'none';
-    underlines[2].style.display = 'none'
-    document.getElementById('container-posts-section').style.display = 'block'
+    postsSection.style.display = 'block'
     document.getElementById('posts-container').style.display = 'block' 
+    document.getElementById('about-section').style.display = 'none'
 })
 
 photos.addEventListener('click', () => {
-    document.getElementById("photos-underline").style.display = 'block';
+    underlines[0].style.display = 'none';
+    underlines[1].style.display = 'block';
+    underlines[2].style.display = 'none';
     photos.style.color = 'hsl(220, 60%, 35%)'
     posts.style.color = 'black'
     about.style.color = 'black'
-    underlines[0].style.display = 'none';
-    underlines[2].style.display = 'none';
-    document.getElementById('container-posts-section').style.display = 'none'
+    postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
+    document.getElementById('about-section').style.display = 'none'
 })
 
 about.addEventListener('click', () => {
-    document.getElementById('about-underline').style.display = 'block';
+    underlines[0].style.display = 'none';
+    underlines[1].style.display = 'none'
+    underlines[2].style.display = 'block';
     about.style.color = 'hsl(220, 60%, 35%)'
     posts.style.color = 'black'
     photos.style.color = 'black'
-    underlines[0].style.display = 'none';
-    underlines[1].style.display = 'none'
-    document.getElementById('container-posts-section').style.display = 'none'
+    postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
+    document.getElementById('about-section').style.display = 'block'
 })
