@@ -792,3 +792,50 @@ html {
     border-radius: 4px;
     box-shadow: 0px 0px 4px 0px hsla(0, 0%, 20%, 0.8);
 }
+
+#container-posts-section #photos-about-section {
+    width: 450px;
+    margin-left: 0;
+}
+
+#container-posts-section #photos-about-section img {
+    width: 116px;
+}
+
+#container-posts-section #friends-about-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    margin-left: 0;
+    column-gap: 1.4rem;
+    padding-bottom: 3rem;
+}
+
+#container-posts-section #friends-about-section .friend {
+    position: relative;
+    width: 120px;    
+    margin-top: 3rem;
+}
+
+#container-posts-section #friends-about-section .friend img {
+    width: 120px;
+    height: 125px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px hsla(0, 0%, 20%, 0.8);
+    object-fit: cover;
+}
+
+#container-posts-section #friends-about-section .friend h4 {
+    position: absolute;
+    font-size: 1.5rem;
+    left: 0.5rem;
+    top: 13rem;
+}
+
+#container-posts-section #friends-about-section .friend p {
+    display: none;
+}
+
+#container-posts-section #friends-about-section .fas.fa-ellipsis-vertical {
+    display: none;
+}
