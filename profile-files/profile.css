@@ -321,6 +321,8 @@ html {
     right: 9.7rem;
     border-radius: 1rem;
     top: 19rem;
+    overflow: visible;
+    float: right;
 }
 
 #posts-container header {
@@ -716,14 +718,31 @@ html {
     margin-inline: auto;
     border-radius: 10px;
     margin-top: 2.3rem;
-    padding: 3rem 0 2rem 3rem
+    padding: 5rem 0 2rem 3rem
 }
 
 #friends-about-section h2 {
     position: absolute;
     font-size: 3rem;
     margin-left: -1.7rem;
+    margin-top: -3.5rem;
+}
+
+#friends-about-section #friends-num {
+    position: absolute;
+    font-size: 1.7rem;
+    margin-left: -1.7rem;
+    margin-top: 0rem;
+    color: gray;
+}
+
+#friends-about-section #all {
+    color: hsl(220, 100%, 65%);
+    position: absolute;
+    margin-left: 56%;
     margin-top: -1.7rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 #friends-about-section .friend {
@@ -773,7 +792,7 @@ html {
     margin-inline: auto;
     margin-top: 2.3rem;
     border-radius: 5px;
-    padding-inline: 3rem;
+    padding-left: 3.5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
 }
@@ -809,12 +828,17 @@ html {
     margin-left: 0;
     column-gap: 1.4rem;
     padding-bottom: 3rem;
+    top: 80rem;
 }
 
 #container-posts-section #friends-about-section .friend {
     position: relative;
     width: 120px;    
     margin-top: 3rem;
+}
+
+#container-posts-section #friends-about-section #all {
+    margin-left: 23%;
 }
 
 #container-posts-section #friends-about-section .friend img {
