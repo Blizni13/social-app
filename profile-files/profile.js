@@ -32,10 +32,12 @@ let about = document.getElementById("about")
 let underlines = document.getElementsByClassName('underline')
 let postsSection = document.getElementById('container-posts-section')
 let aboutSection = document.getElementById('about-section')
+let photosSection = document.getElementById('photos-section')
 
 posts.style.color = 'blue'
 underlines[0].style.display = 'block'
 aboutSection.style.display = 'none'
+photosSection.style.display = 'none'
 
 posts.addEventListener('click', () => {
     underlines[0].style.display = 'block';
@@ -47,6 +49,7 @@ posts.addEventListener('click', () => {
     postsSection.style.display = 'block'
     document.getElementById('posts-container').style.display = 'block' 
     document.getElementById('about-section').style.display = 'none'
+    photosSection.style.display = 'none'
 })
 
 photos.addEventListener('click', () => {
@@ -58,7 +61,8 @@ photos.addEventListener('click', () => {
     about.style.color = 'black'
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
-    document.getElementById('about-section').style.display = 'none'
+    aboutSection.style.display = 'none'
+    photosSection.style.display = 'block'
 })
 
 about.addEventListener('click', () => {
@@ -71,4 +75,5 @@ about.addEventListener('click', () => {
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
     document.getElementById('about-section').style.display = 'block'
+    photosSection.style.display = 'none'
 })
