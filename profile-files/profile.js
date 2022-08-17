@@ -8,12 +8,18 @@ const reportText = document.getElementsByClassName('report')
 for (let z = 0; z < reportButton.length; z++) {
     reportButton[z].addEventListener('click', () => postOptions[z].style.display ='block')
     closeSign[z].addEventListener('click', () => postOptions[z].style.display = 'none')
-    reportText[z].addEventListener('click', () => document.querySelector('#report-background').style.display = 'flex')
+    reportText[z].addEventListener('click', () => {
+    document.querySelector('#report-background').style.display = 'flex'
+    document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
+    document.getElementsByTagName('body')[0].style.paddingRight = '17px'
+})
 }
 
 document.querySelector('#report-background').addEventListener('click',
 function() {
     document.querySelector('#report-background').style.display = 'none'
+    document.getElementsByTagName('body')[0].style.overflowY = 'scroll'
+    document.getElementsByTagName('body')[0].style.paddingRight = '0'
 })
 
 // LIKE ANIMATION
