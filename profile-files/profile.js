@@ -91,4 +91,20 @@ about.addEventListener('click', () => {
 
 // input in about section
 
-document.getElementById('change-live-place').value = document.getElementById('current-place').innerText
+let saveButton = document.getElementsByClassName('save')
+let closeButton = document.getElementsByClassName('close')
+let changeDiv = document.getElementsByClassName('change-value')
+let currValue = document.getElementsByClassName('current-value')
+let newChanges = document.getElementsByClassName('new-changes')
+
+
+for (let i = 0; i < newChanges.length; i++) {
+    newChanges[i].value = currValue[i].innerText
+}
+
+for (let i = 0; i < saveButton.length; i++) {
+    saveButton[i].addEventListener('click', () => {
+        currValue[i].innerText = newChanges[i].value;
+        changeDiv[i].style.display = 'none'
+    })
+}
