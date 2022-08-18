@@ -181,13 +181,15 @@ html {
     margin-top: 1rem;
 }
 
-#container-posts-section #user-info {
+#container-posts-section #additional-info-posts-section #user-info {
     width: 450px;
     padding: 2rem;
     border-radius: 10px;
     padding-bottom: 2.5rem;
     background-color: white;
     box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    position: sticky;
+    top: 1rem;
 }
 
 #container-posts-section #user-info h2 {
@@ -226,7 +228,6 @@ html {
     padding-inline: 2.7rem;
     padding-bottom: 2rem;
     border-radius: 15px;
-    overflow: hidden;
     box-shadow: 0px 0.9px 2px 1px hsl(0, 0%, 80%);
 }
 
@@ -320,8 +321,6 @@ html {
     right: 9.7rem;
     border-radius: 1rem;
     top: 19rem;
-    overflow: visible;
-    float: right;
 }
 
 #posts-container header {
@@ -826,24 +825,34 @@ html {
     background-color: rgba(0, 0, 0, 0.1)
 }
 
-#container-posts-section #photos-about-section {
+#container-posts-section #additional-info-posts-section {
+    width: 450px;
+    height: 200vh;
+}
+
+#container-posts-section #additional-info-posts-section #photos-about-section {
     width: 450px;
     margin-left: 0;
+    position: sticky;
+    top: 26.4rem;
 }
 
-#container-posts-section #photos-about-section span {
-    width: 115px;
-}
-
-#container-posts-section #friends-about-section {
+#container-posts-section #additional-info-posts-section #friends-about-section {
     display: flex;
     flex-wrap: wrap;
     width: 450px;
     margin-left: 0;
     column-gap: 1.4rem;
     padding-bottom: 3rem;
-    top: 80rem;
+    position: sticky;
+    top: 57.8rem;
 }
+
+#container-posts-section #photos-about-section span {
+    width: 115px;
+}
+
+
 
 #container-posts-section #friends-about-section .friend {
     position: relative;
