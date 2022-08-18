@@ -293,7 +293,6 @@ html {
 #container-posts-section #user-posts {
     position: absolute;
     right: 10rem;
-    background-color: pink;
     border-radius: 10px;
     padding: 1rem;
 }
@@ -827,7 +826,6 @@ html {
 
 #container-posts-section #additional-info-posts-section {
     width: 450px;
-    height: 200vh;
 }
 
 #container-posts-section #additional-info-posts-section #photos-about-section {
@@ -841,17 +839,15 @@ html {
     display: flex;
     flex-wrap: wrap;
     width: 450px;
-    margin-left: 0;
     column-gap: 1.4rem;
-    padding-bottom: 3rem;
     position: sticky;
-    top: 57.8rem;
+    top: 57rem;
+    padding-bottom: 2.5rem;
 }
 
 #container-posts-section #photos-about-section span {
     width: 115px;
 }
-
 
 
 #container-posts-section #friends-about-section .friend {
@@ -861,7 +857,7 @@ html {
 }
 
 #container-posts-section #friends-about-section #all {
-    margin-left: 23%;
+    margin-left: 60%;
 }
 
 #container-posts-section #friends-about-section .friend img {
