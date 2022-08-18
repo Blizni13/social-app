@@ -1,7 +1,6 @@
 // Settings posts wrapper to appropriate height
 
 let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight  + 35
-
 document.getElementById('additional-info-posts-section').style.height = `${additionalHeight}px`
 
 // REPORT WINDOW
@@ -89,3 +88,7 @@ about.addEventListener('click', () => {
     document.getElementById('about-section').style.display = 'block'
     photosSection.style.display = 'none'
 })
+
+// input in about section
+
+document.getElementById('change-live-place').value = document.getElementById('current-place').innerText
