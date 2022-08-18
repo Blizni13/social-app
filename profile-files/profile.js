@@ -96,15 +96,29 @@ let closeButton = document.getElementsByClassName('close')
 let changeDiv = document.getElementsByClassName('change-value')
 let currValue = document.getElementsByClassName('current-value')
 let newChanges = document.getElementsByClassName('new-changes')
-
+let openWindow = document.getElementsByClassName('open-window')
+let leftIcons = document.getElementsByClassName('left')
+let personalInfo = document.getElementsByClassName('personal-info')
 
 for (let i = 0; i < newChanges.length; i++) {
     newChanges[i].value = currValue[i].innerText
+    openWindow[i].addEventListener('click', () => {
+        changeDiv[i].style.display = 'block'
+        leftIcons[i].style.display = 'none'
+        personalInfo[i].style.display = 'none'
+    })
 }
 
 for (let i = 0; i < saveButton.length; i++) {
     saveButton[i].addEventListener('click', () => {
         currValue[i].innerText = newChanges[i].value;
-        changeDiv[i].style.display = 'none'
+        changeDiv[i].style.display = 'none';
+        leftIcons[i].style.display = 'inline-block';
+        personalInfo[i].style.display = 'block'
+    })
+    closeButton[i].addEventListener('click', () => {
+        changeDiv[i].style.display = 'none';
+        leftIcons[i].style.display = 'inline-block';
+        personalInfo[i].style.display = 'block'
     })
 }

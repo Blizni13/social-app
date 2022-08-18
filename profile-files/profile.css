@@ -882,3 +882,9 @@ html {
 #container-posts-section #friends-about-section .fas.fa-ellipsis-vertical {
     display: none;
 }
+
+/* CHANGING VALUE OF ABOUT INFORMATIONS */
+
+#about-section #personal-info .change-value {
+    display: none;
+}
