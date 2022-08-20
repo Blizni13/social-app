@@ -45,6 +45,8 @@ let underlines = document.getElementsByClassName('underline')
 let postsSection = document.getElementById('container-posts-section')
 let photosSection = document.getElementById('photos-section')
 let aboutSection = document.getElementById('about-section')
+let friendsSection = document.getElementById('friends-section')
+let allFriends = document.getElementsByClassName('all')
 
 posts.style.color = 'blue'
 underlines[0].style.display = 'block'
@@ -64,6 +66,7 @@ posts.addEventListener('click', () => {
     document.getElementById('posts-container').style.display = 'block' 
     photosSection.style.display = 'none'
     aboutSection.style.display = 'none'
+    friendsSection.style.display = 'none'
 })
 
 photos.addEventListener('click', () => {
@@ -79,6 +82,7 @@ photos.addEventListener('click', () => {
     document.getElementById('posts-container').style.display = 'none'
     photosSection.style.display = 'block'
     aboutSection.style.display = 'none'
+    friendsSection.style.display = 'none'
 })
 
 about.addEventListener('click', () => {
@@ -94,22 +98,29 @@ about.addEventListener('click', () => {
     document.getElementById('posts-container').style.display = 'none'
     photosSection.style.display = 'none'
     aboutSection.style.display = 'block'
+    friendsSection.style.display = 'none'
 })
 
-friends.addEventListener('click', () => {
-    underlines[0].style.display = 'none'
-    underlines[1].style.display = 'none'
-    underlines[2].style.display = 'none'
-    underlines[3].style.display = 'block'
-    posts.style.color = 'black'
-    photos.style.color = 'black'
-    about.style.color = 'black'
-    friends.style.color = 'hsl(220, 60%, 35%)'
-    postsSection.style.display = 'none'
-    document.getElementById('posts-container').style.display = 'none'
-    photosSection.style.display = 'none'
-    aboutSection.style.display = 'none'
-})
+let friendsDirection = [friends, allFriends[0], allFriends[1]]
+
+for (let i = 0; i < friendsDirection.length; i++) {
+    friendsDirection[i].addEventListener('click', () => {
+            underlines[0].style.display = 'none'
+            underlines[1].style.display = 'none'
+            underlines[2].style.display = 'none'
+            underlines[3].style.display = 'block'
+            posts.style.color = 'black'
+            photos.style.color = 'black'
+            about.style.color = 'black'
+            friends.style.color = 'hsl(220, 60%, 35%)'
+            postsSection.style.display = 'none'
+            document.getElementById('posts-container').style.display = 'none'
+            photosSection.style.display = 'none'
+            aboutSection.style.display = 'none'
+            friendsSection.style.display = 'block'
+            document.documentElement.scrollTop = 0
+    })
+}
 
 // input in about section
 

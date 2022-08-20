@@ -823,8 +823,7 @@ html {
     font-size: 1.1rem;
 }
 
-
-/**/
+/* FRIENDS SECTION */
 
 #friends-about-section {
     display: grid;
@@ -852,14 +851,22 @@ html {
     color: gray;
 }
 
-#friends-about-section #all {
-    color: hsl(220, 100%, 65%);
+#friends-about-section .all {
+    color: blue;
     position: absolute;
     margin-left: 56%;
     margin-top: -1.7rem;
     font-size: 2rem;
     cursor: pointer;
 }
+
+#friends-about-section .all:hover {
+    background-color: hsl(0, 0%, 92%);
+    padding: 1rem;
+    transform: translateY(-10px) translateX(-10px);
+    border-radius: 10px;
+}
+
 
 #friends-about-section .friend {
     position: relative;
