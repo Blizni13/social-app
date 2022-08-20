@@ -121,4 +121,7 @@ for (let i = 0; i < saveButton.length; i++) {
         leftIcons[i].style.display = 'inline-block';
         personalInfo[i].style.display = 'block'
     })
+    if (i === 5) {
+        saveButton[i].addEventListener('click', () => currValue[i].innerText = document.getElementsByTagName('select')[0].value != 'Select your option' ? document.getElementsByTagName('select')[0].value : '')
+    }
 }
