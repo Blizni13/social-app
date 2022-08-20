@@ -703,11 +703,75 @@ html {
     margin-left: 4rem;
 }
 
+/* CHANGING VALUE OF INFO IN ABOUT SECTION (WINDOW APPEARANCE) */
+
+#about-section #personal-info .change-value {
+    position: relative;
+    bottom: -1rem;
+    width: 250px;
+    margin-left: 10rem;
+    height: 60px;
+    display: none;
+}
+
+#about-section #personal-info .change-value input[type='text'] {
+    position: relative;
+    height: 45px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 90%);
+    outline-color: hsl(200, 0%, 80%);
+    border: none;
+    padding-inline: 1rem;
+    bottom: -1.3rem;
+    font-size: 1.5rem;
+}
+
+#about-section #personal-info .change-value span {
+    position: absolute;
+    left: 1rem;
+    top: 2.2rem;
+    font-size: 2rem;
+    pointer-events: none;
+    color: gray;
+    transition: 0.5s;
+}
+
+#about-section #personal-info .change-value input[value = 'Save'], #about-section #personal-info .change-value input[value = 'Close'] {
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+#about-section #personal-info .change-value input[value = 'Save'] {
+    right: -1.5rem;
+    bottom: -0.3rem;
+    padding-inline: 0.7rem;
+}
+
+#about-section #personal-info .change-value input[value = "Close"] {
+    right: -1.5rem;
+    bottom: 2.8rem;
+}
+
+.new-changes.unused {
+    display: none;
+}
+
+
 /* ABOUT SECTION EDIT EFFECT */
 
 #about-section #personal-info .right:hover {
     background-color: hsl(0, 0%, 86%)
 }
+
+#about-section #personal-info .change-value input[type='text']:valid ~ span, #about-section #personal-info .change-value input[type='text']:focus ~ span {
+    transform: translate(-1px, -7px);
+    font-size: 1.1rem;
+}
+
 
 /**/
 
@@ -886,15 +950,5 @@ html {
 }
 
 #container-posts-section #friends-about-section .fas.fa-ellipsis-vertical {
-    display: none;
-}
-
-/* CHANGING VALUE OF ABOUT INFORMATIONS */
-
-#about-section #personal-info .change-value {
-    display: none;
-}
-
-.new-changes.unused {
     display: none;
 }

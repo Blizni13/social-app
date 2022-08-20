@@ -1,6 +1,6 @@
 // Settings posts wrapper to appropriate height
 
-let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight  + 35
+let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 35
 document.getElementById('additional-info-posts-section').style.height = `${additionalHeight}px`
 
 // REPORT WINDOW
@@ -101,11 +101,11 @@ let leftIcons = document.getElementsByClassName('left')
 let personalInfo = document.getElementsByClassName('personal-info')
 
 for (let i = 0; i < newChanges.length; i++) {
-    newChanges[i].value = currValue[i].innerText
     openWindow[i].addEventListener('click', () => {
         changeDiv[i].style.display = 'block'
-        leftIcons[i].style.display = 'none'
+        leftIcons[i].style.display = 'none';
         personalInfo[i].style.display = 'none'
+        openWindow[i].style.display ='none'
     })
 }
 
@@ -113,13 +113,15 @@ for (let i = 0; i < saveButton.length; i++) {
     saveButton[i].addEventListener('click', () => {
         currValue[i].innerText = newChanges[i].value;
         changeDiv[i].style.display = 'none';
-        leftIcons[i].style.display = 'inline-block';
+        leftIcons[i].style.display = 'inline-block'
         personalInfo[i].style.display = 'block'
+        openWindow[i].style.display = 'inline-block'
     })
     closeButton[i].addEventListener('click', () => {
         changeDiv[i].style.display = 'none';
-        leftIcons[i].style.display = 'inline-block';
+        leftIcons[i].style.display = 'inline-block'
         personalInfo[i].style.display = 'block'
+        openWindow[i].style.display = 'inline-block'
     })
     if (i === 0) {
         saveButton[i].addEventListener('click', () => document.getElementById('live-place').innerText = newChanges[i].value)
