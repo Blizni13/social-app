@@ -107,7 +107,7 @@ for (let i = 0; i < newChanges.length; i++) {
         })
     }
     if (i === 0) {
-            openWindow[i].addEventListener('click', () => leftIcons[i + 1].style.left = '6.85rem')
+        openWindow[i].addEventListener('click', () => leftIcons[i + 1].style.left = '6.85rem')
     } else if (i === 2) {
         openWindow[i].addEventListener('click', () => leftIcons[i + 1].style.left = '6.55rem')
     } else if (i === 4) {
@@ -123,6 +123,11 @@ for (let i = 0; i < newChanges.length; i++) {
         leftIcons[i].style.display = 'none';
         personalInfo[i].style.display = 'none'
         openWindow[i].style.display ='none'
+        for (let j = 0; j < openWindow.length; j++) {
+            if (j !== i) {
+                openWindow[j].style.pointerEvents = 'none'
+            }
+        }
     })
 }
 
@@ -150,12 +155,22 @@ for (let i = 0; i < saveButton.length; i++) {
         leftIcons[i].style.display = 'inline-block'
         personalInfo[i].style.display = 'block'
         openWindow[i].style.display = 'inline-block'
+        for (let j = 0; j < openWindow.length; j++) {
+            if (j !== i) {
+                openWindow[j].style.pointerEvents = 'auto'
+            }
+        }
     })
     closeButton[i].addEventListener('click', () => {
         changeDiv[i].style.display = 'none';
         leftIcons[i].style.display = 'inline-block'
         personalInfo[i].style.display = 'block'
         openWindow[i].style.display = 'inline-block'
+        for (let j = 0; j < openWindow.length; j++) {
+            if (j !== i) {
+                openWindow[j].style.pointerEvents = 'auto'
+            }
+        }
     })
     
     if (i === 6) {
