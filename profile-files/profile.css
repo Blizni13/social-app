@@ -726,6 +726,28 @@ html {
     font-size: 1.5rem;
 }
 
+#about-section #personal-info .change-value input[type='date'] {
+    position: relative;
+    height: 45px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 90%);
+    outline-color: hsl(200, 0%, 80%);
+    border: none;
+    padding-inline: 1rem;
+    bottom: 2.2rem;
+    font-size: 1.5rem;
+}
+
+#about-section #personal-info .change-value .save.date {
+    bottom: 3.1rem;
+    right: 5.2rem;
+}
+
+#about-section #personal-info .change-value .close.date {
+    bottom: 6.1rem;
+    right: 5.2rem;
+}
+
 #about-section #personal-info .change-value span {
     position: absolute;
     left: 1rem;
@@ -756,8 +778,36 @@ html {
     bottom: 2.8rem;
 }
 
-.new-changes.unused {
+#about-section #personal-info .new-changes.unused {
     display: none;
+}
+
+#about-section #personal-info .change-value.last {
+    bottom: 2.5rem !important;
+}
+
+#about-section #personal-info select {
+    position: relative;
+    height: 45px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 90%);
+    outline-color: hsl(200, 0%, 80%);
+    border: none;
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+    bottom: -1rem;
+}
+
+#about-section #personal-info .change-value .save.select {
+    right: 3.4rem;
+}
+
+#about-section #personal-info .change-value .close.select {
+    right: 3.4rem;
+}
+
+#about-section #personal-info .change-value.other-place {
+    bottom: 2rem; 
 }
 
 
