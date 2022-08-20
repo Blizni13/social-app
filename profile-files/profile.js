@@ -40,10 +40,11 @@ for (let i = 0; i < likesList.length; i++) {
 let posts = document.getElementById("posts")
 let photos = document.getElementById("photos")
 let about = document.getElementById("about")
+let friends = document.getElementById('friends')
 let underlines = document.getElementsByClassName('underline')
 let postsSection = document.getElementById('container-posts-section')
-let aboutSection = document.getElementById('about-section')
 let photosSection = document.getElementById('photos-section')
+let aboutSection = document.getElementById('about-section')
 
 posts.style.color = 'blue'
 underlines[0].style.display = 'block'
@@ -51,42 +52,63 @@ aboutSection.style.display = 'none'
 photosSection.style.display = 'none'
 
 posts.addEventListener('click', () => {
-    underlines[0].style.display = 'block';
-    underlines[1].style.display = 'none';
+    underlines[0].style.display = 'block'
+    underlines[1].style.display = 'none'
     underlines[2].style.display = 'none'
-    posts.style.color = 'hsl(220, 60%, 35%)';
-    about.style.color = 'black'
+    underlines[3].style.display = 'none'
+    posts.style.color = 'hsl(220, 60%, 35%)'
     photos.style.color = 'black'
+    about.style.color = 'black'
+    friends.style.color = 'black'
     postsSection.style.display = 'block'
     document.getElementById('posts-container').style.display = 'block' 
-    document.getElementById('about-section').style.display = 'none'
     photosSection.style.display = 'none'
+    aboutSection.style.display = 'none'
 })
 
 photos.addEventListener('click', () => {
     underlines[0].style.display = 'none';
     underlines[1].style.display = 'block';
     underlines[2].style.display = 'none';
-    photos.style.color = 'hsl(220, 60%, 35%)'
+    underlines[3].style.display = 'none';
     posts.style.color = 'black'
+    photos.style.color = 'hsl(220, 60%, 35%)'
     about.style.color = 'black'
+    friends.style.color = 'black'
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
-    aboutSection.style.display = 'none'
     photosSection.style.display = 'block'
+    aboutSection.style.display = 'none'
 })
 
 about.addEventListener('click', () => {
     underlines[0].style.display = 'none';
     underlines[1].style.display = 'none'
     underlines[2].style.display = 'block';
-    about.style.color = 'hsl(220, 60%, 35%)'
+    underlines[3].style.display = 'none';
     posts.style.color = 'black'
     photos.style.color = 'black'
+    about.style.color = 'hsl(220, 60%, 35%)'
+    friends.style.color = 'black'
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
-    document.getElementById('about-section').style.display = 'block'
     photosSection.style.display = 'none'
+    aboutSection.style.display = 'block'
+})
+
+friends.addEventListener('click', () => {
+    underlines[0].style.display = 'none'
+    underlines[1].style.display = 'none'
+    underlines[2].style.display = 'none'
+    underlines[3].style.display = 'block'
+    posts.style.color = 'black'
+    photos.style.color = 'black'
+    about.style.color = 'black'
+    friends.style.color = 'hsl(220, 60%, 35%)'
+    postsSection.style.display = 'none'
+    document.getElementById('posts-container').style.display = 'none'
+    photosSection.style.display = 'none'
+    aboutSection.style.display = 'none'
 })
 
 // input in about section
