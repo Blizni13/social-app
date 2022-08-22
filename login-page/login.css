@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: hsl(200, 50%, 10%);
+    --login-font: 'Libre Baskerville', 'cursive';
+    --login-effect-color: hsl(200, 100%, 65%)
+}
+
+
 body {
-    background-color: hsl(200, 0%, 25%);
+    background-color: var(--main-color)
 }
 
 header {
@@ -32,4 +39,85 @@ header i {
 
 header i:hover {
     transform: rotate(0deg)
+}
+
+#background {
+    display: flex;
+    height: 100vh;
+    margin-top: -60px;
+    justify-content: center;
+    align-items: center;
+}
+
+#background form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    border: 2px solid black;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    width: 525px;
+    height: 600px;
+    border-radius: 15px;
+}
+
+#background form input {
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    padding-inline: 1rem;
+    background-color: var(--main-color);
+    border: 1px solid gray;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    outline: none;
+    color: white;
+}
+
+#background form button {
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-family: var(--login-font);
+    width: 250px;
+}
+
+#background span {
+    position: absolute;
+    color: gray;
+    pointer-events: none;
+    font-size: 1.4rem;
+    font-family: var(--login-font);
+    transition: 0.7s;
+    padding-inline: 0.3rem;
+    left: 6rem;
+}
+
+#background span:nth-of-type(1) {
+    bottom: 22.6rem;
+}
+
+#background span:nth-of-type(2) {
+    bottom: 17.6rem;
+}
+
+/* LOGIN PANEL EFFECTS */
+
+#background form input:focus {
+    border-color: hsl(200, 100%, 65%);
+}
+
+#background form input:nth-of-type(1):valid ~span:nth-of-type(1),
+#background form input:nth-of-type(2):valid ~span:nth-of-type(2), 
+#background form input:nth-of-type(1):focus ~span:nth-of-type(1),
+#background form input:nth-of-type(2):focus ~span:nth-of-type(2){
+    font-size: 0.8rem;
+    transform: translate(-2px, -32px);
+    border-left: 1px solid var(--login-effect-color);
+    border-right: 1px solid var(--login-effect-color);
+    color: var(--login-effect-color);
+    background-color: var(--main-color);
 }

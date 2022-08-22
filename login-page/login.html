@@ -6,6 +6,9 @@
         <script src="https://kit.fontawesome.com/a18d53579f.js" crossorigin="anonymous"></script>
         <link href="login.css" rel="stylesheet">
         <title>Login</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff&family=Libre+Baskerville&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -14,11 +17,20 @@
         </header>
         <main id="background">
             <form id="login-section">
-                <input type="email" required minlength="8" maxlength="60">
-                <span>email/login</span>
-                <input type="password" required minlength="4" maxlength="6">
-                <span>password</span>
-                <button>Log In</button>
+                <input type="text" required minlength="8" maxlength="60">
+                <span>Username / Email</span>
+                <input type="password" required minlength="4" maxlength="50">
+                <span>Password</span>
+                <button>Login</button>
+            </form>
+            <form id="registration-section">
+                <input type="text">
+                <span>Username</span>
+                <input type="email">
+                <span>Email</span>
+                <input type="password">
+                <span>Password</span>
+                <button>Register</button>
             </form>
         </main>
     </body>
