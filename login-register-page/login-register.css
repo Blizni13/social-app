@@ -51,6 +51,15 @@ header i:hover {
     align-items: center;
 }
 
+#background fieldset {
+    width: 399px;
+    height: 449px;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
 #background form {
     display: flex;
     position: relative;
@@ -59,9 +68,6 @@ header i:hover {
     align-items: center;
     padding: 5rem;
     border: 2px solid black;
-    background-color: hsla(0, 0%, 100%, 0.35);
-    width: 425px;
-    height: 500px;
     border-radius: 15px;
 }
 
@@ -75,7 +81,7 @@ header i:hover {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     outline: none;
-    color: white;
+    color: black;
 }
 
 #background form button {
@@ -94,50 +100,55 @@ header i:hover {
 #background #registration-section {
     background-color: var(--registration-section-color);
     position: absolute;
+    border: none;
 }
 
 #background #login-section {
     position: absolute;
-    overflow: hidden;
-    height: 10px;
-    bottom: 0;
+    bottom: -18rem;
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 70px 70px 15px 15px;
+    transition: 0.9s;
+    transition-timing-function: ease-in-out;
+    border: none;
 }
 
+/* LOGIN / REGISTER TITLES */
 
-/* SPAN POSITION BOTH SECTIONS */
-
-#background span {
-    position: absolute;
-    color: gray;
-    pointer-events: none;
-    font-size: 1.1rem;
-    font-family: var(--login-font);
-    transition: 0.7s;
-    padding-inline: 0.3rem;
-    left: 6rem;
-}
-
-#background form input:focus {
-    border-color: hsl(200, 100%, 65%);
-}
-
-/* CHANGE WINDOW */
-
-#change-window-to-login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    font-size: 2.6rem;
-    font-family: 'Impact';
-    letter-spacing: 2px;
+#background #login-section label {
+    color:hsl(250, 100%, 25%);
+    text-shadow: none;
     cursor: pointer;
+    font-size: 1rem;
+    transition: 0.7s;
+    margin-top: -4.4rem;
+    margin-bottom: 2rem;
 }
 
-#change-window-to-login {
-    background-color: var(--login-section-color);
-    bottom: 0;
-    border-radius: 100px 100px 0px 0px;
+#background #registration-section h1 {
+    font-size: 2.7rem;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    transition: 0.7s;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
+/* APPEAR LOGIN WINDOW */
+
+#on-off:checked ~ #login-section {
+    bottom: -2rem;
+}
+
+#on-off:checked ~ #registration-section h1 {
+    transform: scale(0.7)
+}
+
+#on-off:checked ~ #login-section label {
+    font-size: 1.5rem;
+    margin-top: -3.5rem;
+}
+
+input[type='checkbox'] {
+    display: none;
 }

@@ -16,20 +16,27 @@
             <i class="fa-solid fa-circle-half-stroke"></i>
         </header>
         <main id="background">
+            <fieldset>
+                <input type="checkbox" id="on-off">
+                
+                <form id="registration-section">
+                    <h1>Register</h1>
+                    <input type="text" required maxlength="50" placeholder="Username">
+                    <input type="text" required maxlength="50" placeholder="Email">               
+                    <input type="password" required maxlength="50" placeholder="Password">
+                    <button>Register</button>
+                </form>
 
-            <form id="registration-section">
-                <h1>Sign up</h1>
-                <input type="text" required maxlength="50" placeholder="Username">
-                <input type="text" required maxlength="50" placeholder="Email">               
-                <input type="password" required maxlength="50" placeholder="Password">
-                <button>Register</button>
-            </form>
-
-            <form id="login-section">
-                <input type="text" required maxlength="50" placeholder="Username / Email">
-                <input type="password" required maxlength="50" placeholder="Password">
-                <button>Login</button>
-            </form>
+                <form id="login-section">
+                    <label for="on-off">
+                        <h1>Login</h1>
+                    </label>
+                    <input type="text" required maxlength="50" placeholder="Username / Email">
+                    <input type="password" required maxlength="50" placeholder="Password">
+                    <button>Login</button>
+                </form>
+            </fieldset>
+            
         </main>
         <script type="text/javascript" src="login-register.js"></script>
     </body>
