@@ -7,7 +7,9 @@
 :root {
     --main-color: hsl(200, 50%, 10%);
     --login-font: 'Libre Baskerville', 'cursive';
-    --login-effect-color: hsl(200, 100%, 65%)
+    --login-effect-color: hsl(200, 100%, 65%);
+    --registration-section-color: hsl(0, 0%, 82%);
+    --login-section-color: hsla(0, 0%, 100%, 0.35);
 }
 
 
@@ -57,7 +59,7 @@ header i:hover {
     align-items: center;
     padding: 5rem;
     border: 2px solid black;
-    background-color: hsla(0, 0%, 100%, 0.1);
+    background-color: hsla(0, 0%, 100%, 0.35);
     width: 525px;
     height: 600px;
     border-radius: 15px;
@@ -83,7 +85,20 @@ header i:hover {
     font-size: 1.6rem;
     font-family: var(--login-font);
     width: 250px;
+    border: none;
 }
+
+#background #registration-section {
+    background-color: hsl(0, 0%, 82%);
+    position: absolute;
+}
+
+#background #login-section {
+    display: none;
+}
+
+
+/* SPAN POSITION BOTH SECTIONS */
 
 #background span {
     position: absolute;
@@ -96,28 +111,84 @@ header i:hover {
     left: 6rem;
 }
 
-#background span:nth-of-type(1) {
+
+#background #login-section span:nth-of-type(1) {
     bottom: 22.6rem;
 }
 
-#background span:nth-of-type(2) {
+#background #login-section span:nth-of-type(2) {
     bottom: 17.6rem;
 }
 
-/* LOGIN PANEL EFFECTS */
+#background #registration-section span:nth-of-type(1) {
+    bottom: 25.3rem;
+}
+
+#background #registration-section span:nth-of-type(2) {
+    bottom: 20.1rem;
+}
+
+#background #registration-section span:nth-of-type(3) {
+    bottom: 15rem;
+}
 
 #background form input:focus {
     border-color: hsl(200, 100%, 65%);
 }
 
-#background form input:nth-of-type(1):valid ~span:nth-of-type(1),
-#background form input:nth-of-type(2):valid ~span:nth-of-type(2), 
-#background form input:nth-of-type(1):focus ~span:nth-of-type(1),
-#background form input:nth-of-type(2):focus ~span:nth-of-type(2){
+/* LOGIN PANEL EFFECTS */
+
+#background #login-section input:nth-of-type(1):valid ~span:nth-of-type(1),
+#background #login-section input:nth-of-type(2):valid ~span:nth-of-type(2), 
+#background #login-section input:nth-of-type(1):focus ~span:nth-of-type(1),
+#background #login-section input:nth-of-type(2):focus ~span:nth-of-type(2){
     font-size: 0.8rem;
     transform: translate(-2px, -32px);
     border-left: 1px solid var(--login-effect-color);
     border-right: 1px solid var(--login-effect-color);
     color: var(--login-effect-color);
     background-color: var(--main-color);
+}
+
+/* REGISTER PANEL EFFECTS */
+
+#background #registration-section input:nth-of-type(1):focus ~span:nth-of-type(1),
+#background #registration-section input:nth-of-type(2):focus ~span:nth-of-type(2),
+#background #registration-section input:nth-of-type(3):focus ~span:nth-of-type(3),
+#background #registration-section input:nth-of-type(1):valid ~span:nth-of-type(1),
+#background #registration-section input:nth-of-type(2):valid ~span:nth-of-type(2),
+#background #registration-section input:nth-of-type(3):valid ~span:nth-of-type(3) {
+    font-size: 0.8rem;
+    transform: translate(-2px, -32px);
+    border-left: 1px solid var(--login-effect-color);
+    border-right: 1px solid var(--login-effect-color);
+    color: var(--login-effect-color);
+    background-color: var(--main-color);
+}
+
+/* CHANGE WINDOW */
+
+#change-window-to-login, #change-window-to-registration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    font-size: 2.6rem;
+    font-family: 'Impact';
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#change-window-to-login {
+    background-color: var(--login-section-color);
+    bottom: 0;
+    border-radius: 100px 100px 0px 0px;
+}
+
+#change-window-to-registration {
+    top: 0;
+    border-radius: 0px 0px 100px 100px;
+    background-color: var(--registration-section-color);
 }

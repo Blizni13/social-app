@@ -8,7 +8,7 @@
         <title>Login</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff&family=Libre+Baskerville&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DynaPuff&family=Libre+Baskerville&family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -16,22 +16,31 @@
             <i class="fa-solid fa-circle-half-stroke"></i>
         </header>
         <main id="background">
+
             <form id="login-section">
-                <input type="text" required minlength="8" maxlength="60">
+                <input type="text" required maxlength="50">
                 <span>Username / Email</span>
-                <input type="password" required minlength="4" maxlength="50">
+                <input type="password" required maxlength="50">
                 <span>Password</span>
                 <button>Login</button>
+                <div id="change-window-to-registration">
+                    <p>Sign up</p>
+                </div>
             </form>
+
             <form id="registration-section">
-                <input type="text">
+                <input type="text" required maxlength="50">
                 <span>Username</span>
-                <input type="email">
+                <input type="text" required maxlength="50">
                 <span>Email</span>
-                <input type="password">
+                <input type="password" required maxlength="50">
                 <span>Password</span>
                 <button>Register</button>
+                <div id="change-window-to-login">
+                    <p>Login</p>
+                </div>
             </form>
         </main>
+        <script type="text/javascript" src="login.js"></script>
     </body>
 </html>
