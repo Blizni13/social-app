@@ -18,16 +18,25 @@
                 <input type="text" id="search" placeholder="Search fakebook">
             </div>
             <i class="fas fa-bell"></i>
-            <img id="profile" src="/images/Gryz-Szymon.jpeg">
+            <img class="profile" src="/images/Gryz-Szymon.jpeg">
         </header>
         <main>
             <div id="settings-content">
                 <div id="navigation">
                     <h3>Basic Info</h3>
+                    <h3>Location</h3>
                     <h3>Hobby and education</h3>
                     <h3>Contact</h3>
                     <h3>People</h3>
                 </div>
+
+                <form id="change-profile">
+                    <img src="/images/Gryz-Szymon.jpeg" class="profile">
+                    <div id="change-profile-info">
+                        <p>Szymon Gryz</p>
+                        <p>Change your profile</p>
+                    </div>
+                </form>
 
                 <form id="basic-info">
 
@@ -40,16 +49,6 @@
                         <p>Last Name</p>
                         <input type="text">
                     </div>
-                    
-                    <div class="info">
-                        <p>Live Place</p>
-                        <input type="text">
-                    </div>
-
-                    <div class="info">
-                        <p>From</p>
-                        <input type="text">
-                    </div>
 
                     <div class="info">
                         <p>Gender</p>
@@ -58,6 +57,20 @@
 
                     <div class="info">
                         <p>Birth date</p>
+                        <input type="text">
+                    </div>
+
+                </form>
+
+                <form id="live-places">
+
+                    <div class="info">
+                        <p>Live place</p>
+                        <input type="text">
+                    </div>
+
+                    <div class="info">
+                        <p>From</p>
                         <input type="text">
                     </div>
 
@@ -108,5 +121,6 @@
             </div>
 
         </main>
+        <script type="text/javascript" src="settings.js"></script>
     </body>
 </html>
