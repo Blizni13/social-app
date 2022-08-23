@@ -1,0 +1,16 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+#profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
