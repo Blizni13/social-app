@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/a18d53579f.js" crossorigin="anonymous"></script>
         <link href="login-register.css" rel="stylesheet">
-        <title>Login</title>
+        <title>Registration page</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -19,9 +19,9 @@
                 <input type="checkbox" id="on-off">      
                 <form id="registration-section">
                     <h1>Register</h1>
-                    <input type="text" required maxlength="50" placeholder="Username">
-                    <input type="text" required maxlength="50" placeholder="Email">               
-                    <input type="password" required maxlength="50" placeholder="Password">
+                    <input type="text" required minlength='4' maxlength="50" placeholder="Username">
+                    <input type="text" required minlength='8' maxlength="50" placeholder="Email">               
+                    <input type="password" required minlength='6' maxlength="50" placeholder="Password">
                     <button>Register</button>
                 </form>
 
@@ -35,6 +35,5 @@
                 </form>
             </fieldset> 
         </main>
-        <script type="text/javascript" src="login-register.js"></script>
     </body>
 </html>
