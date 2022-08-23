@@ -4,13 +4,64 @@
     padding: 0
 }
 
+html {
+    font-size: 62.5%;
+    background-color: hsl(0, 0%, 93%);
+}
+
 header {
     display: flex;
     align-items: center;
+    background-color: white;
+    height: 80px;
+    position: relative;
+    padding-inline: 2rem;
 }
 
-#profile {
+header h1 {
+    font-family: 'Poppins';
+    font-size: 3.5rem;
+}
+
+header #search-wrapper {
+    position: relative;
+    margin-left: 1rem;
+}
+
+header .fas.fa-magnifying-glass {
+    position: absolute;
+    font-size: 1.7rem;
+    color: gray;
+    left: 2.9rem;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+header #search  {
+    height: 45px;
+    width: 250px;
+    border-radius: 15px;
+    padding-left: 3.5rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+    border: none;
+    outline: none;
+    background-color: hsl(0, 0%, 94%);
+    font-size: 2rem;
+    font-family: 'Open Sans'
+}
+
+header .fas.fa-bell {
+    position: absolute;
+    right: 12rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+header #profile {
+    position: absolute;
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    right: 4rem;
 }
