@@ -52,6 +52,7 @@ posts.style.color = 'blue'
 underlines[0].style.display = 'block'
 aboutSection.style.display = 'none'
 photosSection.style.display = 'none'
+friendsSection.style.display = 'none'
 
 posts.addEventListener('click', () => {
     underlines[0].style.display = 'block'
