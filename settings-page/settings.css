@@ -154,17 +154,17 @@ main {
 }
 
 #settings-content .info p {
-    font-family: 'Open Sans';
+    font-family: 'Lato';
     display: inline-block;
     vertical-align: top;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-weight: 700;
+    font-size: 1.9rem;
 }
 
 #settings-content .info input {
-    padding-inline: 1.5rem;
+    padding-inline: 1rem;
     vertical-align: top;
-    margin-top: 0.3rem;
     width: 200px;
     height: 30px;
     border: none;
@@ -172,6 +172,10 @@ main {
     background-color: white;
     border-radius: 2px;
     border: 1px solid rgb(220, 220, 220);
+}
+
+#settings-content .info input[type='number']::-webkit-inner-spin-button {
+    display: none;
 }
 
 #settings-content form input[type='submit'] {
