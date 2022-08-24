@@ -336,7 +336,7 @@ body {
 
 /* END OF CHANGES IN UPLOAD BUTTON */
 
-#photo-wrapper, .photo-wrapper, #profile-wrapper {
+#photo-wrapper, .photo-wrapper, #profile-wrapper, #photo-wrapper-onclick {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -349,18 +349,22 @@ body {
     border-radius: 50%;
 }
 
-#background header ul #photo-wrapper {
+#background header ul #photo-wrapper-onclick {
     position: relative;
-    top: 1rem;
+    top: -1.5rem;
     right: 2.5rem;
+    border: none;
+    cursor: pointer;
 }
 
-#background header ul #photo-wrapper img {
+#background header ul #photo-wrapper-onclick img {
     width: 100%;
     border-radius: 50px;
     height: 100%;
     position: absolute;
-    cursor: pointer;
+    pointer-events: none;
+    top: 0;
+    left: 0;
 }
 
 /* CHANGE PAGE OPTION */
@@ -1267,7 +1271,7 @@ body {
         font-size: 2.1rem;
     }
 
-    #background header #photo-wrapper {
+    #background header #photo-wrapper-onclick {
         width: 25px;
         height: 25px;
         margin-top: 0.8rem;
@@ -1418,13 +1422,13 @@ body {
         margin-right: -4rem;
     }
 
-    #background header #photo-wrapper {
+    #background header #photo-wrapper-onclick {
         width: 25px;
         height: 25px;
         margin-top: 0.7rem; 
     }
 
-    #background header #photo-wrapper img{
+    #background header #photo-wrapper-onclick img{
         width: 25px;
         height: 25px;
     }
