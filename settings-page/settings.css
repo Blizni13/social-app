@@ -79,6 +79,7 @@ main {
     position: relative;
     padding-left: 28rem;
     font-size: 2.4rem;
+    min-height: 280px;
 }
 
 #settings-content #change-profile {
@@ -157,6 +158,19 @@ main {
     height: 30px;
     border: none;
     outline: none;
-    background-color: hsl(0, 0%, 87%);
-    border-radius: 5px;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+#settings-content form input[type='submit'] {
+    padding-inline: 1rem;
+    width: 80px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    background-color: hsla(200, 100%, 55%, 0.5);
+    margin-left: 14.5rem; 
+    margin-bottom: min(20px)
 }
