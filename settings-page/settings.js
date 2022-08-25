@@ -174,3 +174,18 @@ for (let i = 0; i < infoTexts.length; i++) {
         }
     })
 }
+
+// APPEARING WINDOW WITH OTHER PAGES AFTER CLICK OVER PROFILE 
+
+let otherPagesWindow = document.getElementById('other-pages')
+let openPagesWindow = document.getElementById('photo-wrapper-onclick')
+
+openPagesWindow.onclick = function() {
+    otherPagesWindow.style.display = 'block'
+}
+
+window.onclick = function(event) {
+    if(event.target != openPagesWindow) {
+        otherPagesWindow.style.display = 'none'
+    }
+}
