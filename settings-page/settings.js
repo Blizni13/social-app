@@ -77,6 +77,21 @@ for (let i = 0 ; i < peopleInfoToChange.length; i++) {
 
 submitButton[4].style.marginLeft = `${Math.max(...elementLength) + 15}px`
 
+// for change password
+
+let changePasswordInfo = document.getElementsByClassName('change-password-info')
+elementLength = []
+
+for (let i = 0; i < changePasswordInfo.length; i++) {
+    elementLength.push(changePasswordInfo[i].offsetWidth)
+}
+
+for (let i = 0 ; i < changePasswordInfo.length; i++) {
+    changePasswordInfo[i].style.width = `${Math.max(...elementLength) + 10}px`
+}
+
+submitButton[5].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+
 // DISPLAYING DIFFERENT PARTS OF PAGE AT ONE TIME
 
 let basicInfo = document.getElementById('basic-info')
@@ -84,6 +99,7 @@ let places = document.getElementById('live-places')
 let hobbyEducation = document.getElementById('hobby-education')
 let contact = document.getElementById('contact')
 let closePeople = document.getElementById('close-people')
+let changePassword = document.getElementById('change-password')
 let forms = document.getElementsByClassName('forms')
 let activateForm = document.getElementsByClassName('activate-form')
 
@@ -92,6 +108,7 @@ places.style.display = 'none'
 hobbyEducation.style.display = 'none'
 contact.style.display = 'none'
 closePeople.style.display = 'none'
+changePassword.style.display = 'none'
 activateForm[0].style.borderLeft = '2px solid black'
 activateForm[0].style.fontWeight = 'bold'
 
