@@ -124,3 +124,53 @@ for (let i = 0 ; i < forms.length; i++) {
         activateForm[i].style.fontWeight = 'bold'
     })
 }
+
+// COUNT NUMBER OF NOTIFICATIONS
+
+let numOfNotifications = 0
+// 
+let notificationNumber = document.getElementsByClassName('info-content')
+
+for (let i = 0; i < notificationNumber.length; i++) {
+    notificationNumber[i].style.fontWeight = 'bold'
+}
+
+for(let i = 0; i < notificationNumber.length; i++) {
+    if (notificationNumber[i].style.fontWeight === 'bold') {
+        numOfNotifications += 1 
+    }
+}
+
+document.getElementById('notification-icon').innerText = numOfNotifications
+
+// NOTIFICATIONS WINDOW AT INDEX.HTML
+
+const notificationSign = document.getElementById('notification-open') 
+const infoTexts = document.getElementsByClassName('info-text')
+const infoContent = document.getElementsByClassName('info-content')
+const circlesNotification = document.getElementsByClassName('circle-notification')
+
+// displaying window
+
+notificationSign.addEventListener('click', () => {
+    document.getElementById('info').style.display = 'block'
+    document.getElementById('notification-icon').style.display = 'none'
+    notificationSign.style.color = 'gray'
+})
+
+// closing window
+
+document.getElementById('close-notifications').addEventListener('click', () => {
+    document.querySelector('#info').style.display = 'none'
+    notificationSign.style.color = "black"
+})
+
+for (let i = 0; i < infoTexts.length; i++) {
+    infoTexts[i].addEventListener('click', () => {
+        circlesNotification[i].style.display = 'none'
+        infoContent[i].style.fontWeight = 'normal'
+        if (numOfNotifications > 0) {
+        numOfNotifications -= 1
+        }
+    })
+}
