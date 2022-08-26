@@ -78,11 +78,16 @@ header a {
 
 .navigation p {
     font-size: 2rem;
-    margin-left: 1.5rem;
+    margin-left: 1.3rem;
+    font-family: 'Open Sans'
 }
 
-.navigation:hover {
+#home:hover {
     width: 130px;
+}
+
+#settings:hover {
+    width: 150px;
 }
 
 #informations {

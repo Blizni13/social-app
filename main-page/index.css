@@ -82,10 +82,6 @@ body {
     color: gray;
 }
 
-#background header input[type="file"] {
-    display: none;
-}
-
 #background header ul {
     display: flex;
     gap: 6rem;
@@ -279,7 +275,7 @@ body {
 
 /* UPLOAD BUTTON EFFECTS AND APPEARANCE */
 
-#background header label[for="photo-video"] {
+#background header button[id="upload"] {
     position: absolute;
     background-color: var(--upload-file-color);
     width: 225px;
@@ -288,14 +284,14 @@ body {
     right: 30rem;
     transition: 0.5s;
     font-size: 2rem;
-    padding-top: 0.5rem;
     text-align: center;
     overflow: hidden;
     cursor: pointer;
-    font-family: var(--header-font)
+    font-family: var(--header-font);
+    border: none;
 }
 
-#background header label[for="photo-video"]::before {
+#background header button[id="upload"]::before {
     position: absolute;
     content: '';
     height: 3px;
@@ -305,7 +301,7 @@ body {
     left: -100%;
 }
 
-#background header label[for="photo-video"]::after {
+#background header button[id="upload"]::after {
     position: absolute;
     content: '';
     height: 3px;
@@ -315,18 +311,18 @@ body {
     right: -100%;
 }
 
-#background header label[for="photo-video"]:hover::after {
+#background header button[id="upload"]:hover::after {
     right: 100% ;
     transition: 1s;
     transition-delay: 0.25s;
 }
 
-#background header label[for="photo-video"]:hover::before {
+#background header button[id="upload"]:hover::before {
     left: 100% ;
     transition: 1s;
 }
 
-#background header label[for="photo-video"]:hover {
+#background header button[id="upload"]:hover {
     transition-delay: 0.6s;
     box-shadow: 0px 0px 5px 1px hsl(240, 0%, 80%),
     0px 0px 10px 2px hsl(240, 0%, 80%);
@@ -334,7 +330,38 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* END OF CHANGES IN UPLOAD BUTTON */
+/* WINDOW AFTER CLICKING UPLOAD BUTTON */
+
+#background header #upload-files {
+    background-color: hsl(0, 0%, 85%);
+    padding: 1rem;
+    border-radius: 5px;
+    position: absolute;
+    right: 30rem;
+    top: 7.5rem;
+    display: none;
+}
+
+#background header #upload-files form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#background header #upload-files form textarea {
+    width: 200px;
+    height: 75px;
+    padding: 0.4rem;
+}
+
+#background header #upload-files form button[type='submit'] {
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
 
 #photo-wrapper, .photo-wrapper, #profile-wrapper, #photo-wrapper-onclick {
     width: 40px;
@@ -1109,7 +1136,7 @@ body {
         box-shadow: 0px 0px 10px 1px gray!important; 
     }
 
-    #background header label[for="photo-video"] {
+    #background header button[id="upload"] {
         width: 180px;
         font-size: 1.7rem;
         right: 23rem;
@@ -1160,7 +1187,7 @@ body {
         right: 10rem;
     }
 
-    #background header label[for="photo-video"] {
+    #background header button[id="upload"] {
         width: 145px;
         font-size: 1.4rem;
         height: 40px;  
@@ -1333,7 +1360,7 @@ body {
         left: 0.7rem;
     }
 
-    #background header label[for='photo-video'] {
+    #background header button[id="upload"] {
         right: 12.5rem;
     }
 
@@ -1455,7 +1482,7 @@ body {
         font-size: 2.3rem;
     }
 
-    #background header label[for="photo-video"] {
+    #background header label[id="upload"] {
         width: 123px;
         font-size: 1.2rem;
         height: 30px;  
