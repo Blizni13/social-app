@@ -352,7 +352,7 @@ body {
 #background header ul #photo-wrapper-onclick {
     position: relative;
     top: -1.5rem;
-    right: 2.5rem;
+    right: 3rem;
     border: none;
     cursor: pointer;
 }
@@ -419,6 +419,47 @@ body {
 #background header #other-pages i {
     font-size: 1.5rem;
     margin-right: 0.5rem;
+}
+
+/* HOVER ICONS APPEARING WINDOWS */
+
+#background header #hover-notifications, #background header #hover-messages, #background header #hover-account {
+    font-size: 1.5rem;
+    background-color: black;
+    color: hsl(0, 0%, 84%);
+    padding-inline: 0.7rem;
+    padding-block: 0.4rem;
+    border-radius: 5px;
+    position: absolute;
+    top: 6.5rem;
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.26, 0.78, 0.8, 0.99);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#background header #hover-notifications {
+    right: 20rem;
+}
+
+#background header #hover-messages {
+    right: 12rem;
+}
+
+#background header #hover-account {
+    right: 4rem;
+}
+
+#background header #notification-open:hover ~ #hover-notifications {
+    opacity: 1;
+}
+
+#background header #message-icon:hover ~ #hover-messages {
+    opacity: 1;
+}
+
+#background header #photo-wrapper-onclick:hover ~ #hover-account {
+    opacity: 1;
 }
 
 

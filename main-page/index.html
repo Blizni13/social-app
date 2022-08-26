@@ -19,7 +19,7 @@
                     <input type="file" accept=".jpg, .mp4" id="photo-video"><label for="photo-video">Upload photo/video</label>
                     <ul>
                         <li>
-                            <i class="fas fa-bell" id="notification-open"><span id="notification-icon"></span></i>                            
+                            <i class="fas fa-bell" id="notification-open"><span id="notification-icon"></span></i>                         
                             <div id="info">
                                 <h2>Notifications</h2>
                                 <i id="close-notifications">+</i>                               
@@ -34,11 +34,14 @@
                                     <i class="circle-notification"></i>
                                 </div>
                             </div>
+                            <span id="hover-notifications">Notifications</span>
                         </li>
+
                         <li>
                             <i class="fas fa-message" id="message-icon">
-                                <div id="notification"></div>
+                                <div id="notification"></div>                                
                             </i>
+                            <span id="hover-messages">Messages</span>
                             <div id="messages">
                                 <h2>Chats</h2>
                                 <i id="close-messages">+</i>
@@ -59,11 +62,17 @@
                                     <h4>Natalie</h4>
                                     <p class="message-content">Are you interested in football?</p>
                                     <i class="circle-message"></i>
-                                </div>
+                                </div>                                
                             </div>
                         </li>
-                        <li><button id="photo-wrapper-onclick"><img src="/images/Gryz-Szymon.jpeg"></button></li>
+                        <li>
+                            <button id="photo-wrapper-onclick"><img src="/images/Gryz-Szymon.jpeg"></button>
+                            <span id="hover-account">Account</span>
+                        </li>
+                        
                     </ul>
+
+                    
 
                     <div id="other-pages">
                         <i class="fas fa-caret-up"></i>

@@ -53,16 +53,12 @@ header #search  {
 
 header .fas.fa-bell {
     position: absolute;
-    right: 12rem;
+    right: 13rem;
     font-size: 3rem;
     cursor: pointer;
 }
 
-header #notification-open:hover ~ #hover-notifications {
-    opacity: 1;
-}
-
-header #hover-notifications {
+header #hover-notifications, header #hover-account {
     font-size: 1.5rem;
     background-color: black;
     color: hsl(0, 0%, 84%);
@@ -77,7 +73,19 @@ header #hover-notifications {
 }
 
 header #hover-notifications {
-    right: 8.5rem;
+    right: 9.5rem;
+}
+
+header #hover-account {
+    right: 2.5rem;
+}
+
+header #notification-open:hover ~ #hover-notifications {
+    opacity: 1;
+}
+
+header #photo-wrapper-onclick:hover ~ #hover-account {
+    opacity: 1;
 }
 
 header #photo-wrapper-onclick {
