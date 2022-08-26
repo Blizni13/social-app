@@ -408,7 +408,8 @@ body {
 
 #background header #other-pages p {
     display: inline-block;
-    font-family: 'Lato'
+    font-family: 'Lato';
+    vertical-align: top;
 }
 
 #background header a {
@@ -419,6 +420,12 @@ body {
 #background header #other-pages i {
     font-size: 1.5rem;
     margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+#background header #other-pages .fas.fa-door-open {
+    margin-right: 0.3rem;
+    margin-left: -0.15rem;
 }
 
 /* HOVER ICONS APPEARING WINDOWS */
