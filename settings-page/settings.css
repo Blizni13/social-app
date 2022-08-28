@@ -378,3 +378,55 @@ header #info .info-text:hover {
 #settings-content form input[value="Change password"] {
     width: 140px;
 }
+
+@media only screen and (max-width: 850px) {
+
+    /* SETTINGS CONTENT NAVIGATION (LEFT SIDE)*/
+
+    #settings-content {
+        width: 450px;
+        padding-left: 145px;
+    }
+
+    #settings-content #navigation h3:nth-of-type(3) {
+        padding-top: 0.3rem;
+    }
+
+    #settings-content #navigation h3 {
+        font-size: 2rem;
+        width: 140px;
+    }
+
+    /* SETTINGS CONTENT RIGHT SIDE, INFORMATIONS RESPONSIVE SETTINGS*/
+
+    #settings-content .info {
+        width: 205px;
+    }
+
+    #settings-content .info p {
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+        margin-right: -2rem;
+    }
+
+    #settings-content .info input {
+        margin-top: -1rem;
+    }
+
+    /* SETTINGS CONTENT RIGHT SIDE, CHANGE PROFILE RESPONSIVE SETTINGS*/
+
+    #settings-content #change-profile #change-profile-info p:nth-of-type(1) {
+        font-size: 2rem;
+    }
+
+    #settings-content #change-profile #change-profile-info p:nth-of-type(2) {
+        font-size: 1.5rem;
+        margin-top: 0.2rem;
+    }
+
+    #settings-content #change-profile img {
+        width: 40px;
+        height: 40px;
+    }
+
+}
