@@ -340,6 +340,7 @@ body {
     right: 30rem;
     top: 7.5rem;
     display: none;
+    padding-block: 1.5rem;
 }
 
 #background header #upload-files form {
@@ -350,17 +351,45 @@ body {
     align-items: center;
 }
 
+#background header #upload-files input[id='photo-video'] {
+    display: none;
+}
+
+#background header #upload-files label[for="photo-video"] {
+    background-color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    position: relative;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+#background header #upload-files label[for="photo-video"]::after {
+    content: 'Choose File';
+    font-size: 1.7rem;
+}
+
 #background header #upload-files form textarea {
-    width: 200px;
+    width: 180px;
     height: 75px;
-    padding: 0.4rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-inline: 1.2rem;
 }
 
 #background header #upload-files form button[type='submit'] {
-    width: 100px;
+    width: 70px;
     height: 30px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 #photo-wrapper, .photo-wrapper, #profile-wrapper, #photo-wrapper-onclick {

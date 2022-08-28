@@ -23,7 +23,9 @@
 
                     <div id="upload-files">
                         <form action="upload" method="POST" enctype="multipart/form-data">
-                            <input type="file" accept=".jpg, .mp4">
+                            <label for="photo-video">
+                                <input id="photo-video" type="file" accept=".jpg, .mp4">
+                            </label>
                             <textarea placeholder="Caption..." style="resize: none;"></textarea>
                             <button type="submit">Upload</button>
                         </form>
