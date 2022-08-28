@@ -214,8 +214,8 @@ for (let i = 0; i < saveButton.length; i++) {
 
 // FRIENDS ABOUT SECTION - FRIENDS LIST OPTIONS
 
-let friendOptionsButton = document.getElementsByClassName('friend-options-on')
-let friendOptionsWindow = document.getElementsByClassName('friend-options-window')
+let friendOptionsButton = [...document.getElementsByClassName('friend-options-on')]
+let friendOptionsWindow = [...document.getElementsByClassName('friend-options-window')]
 let favouriteOption = document.getElementsByClassName('favourite')
 let followOption = document.getElementsByClassName('follow-option')
 let followText = document.getElementsByClassName('follow-text')
@@ -228,9 +228,11 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
         friendOptionsWindow[i].style.display = 'flex'
     }
     window.onclick = function(event) {
-        if (event.target !== friendOptionsWindow[i] && event.target !== friendOptionsButton[i]) {
-            console.log(event.target)
-            friendOptionsWindow[i].style.display = 'none'
+        if (friendOptionsButton.every(el => el !== event.target) && friendOptionsWindow.every(el => el !== event.target)) {
+            console.log('Siema')
+            for (let i = 0; i < friendOptionsWindow.length; i++) {
+                friendOptionsWindow[i].style.display = 'none'
+            }
         }
     }
     favouriteOption[i].addEventListener('click', () => favouriteHearts[i].style.color === 'red' ? favouriteHearts[i].style.color = 'black' : favouriteHearts[i].style.color = 'red')
