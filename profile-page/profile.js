@@ -211,3 +211,30 @@ for (let i = 0; i < saveButton.length; i++) {
         saveButton[i].addEventListener('click', () => currValue[i].innerText = document.getElementsByTagName('select')[0].value !== 'Select your option' ? document.getElementsByTagName('select')[0].value : '')
     }
 }
+
+// FRIENDS ABOUT SECTION - FRIENDS LIST OPTIONS
+
+let friendOptionsButton = document.getElementsByClassName('friend-options-on')
+let friendOptionsWindow = document.getElementsByClassName('friend-options-window')
+let favouriteOption = document.getElementsByClassName('favourite')
+let followOption = document.getElementsByClassName('follow-option')
+let followText = document.getElementsByClassName('follow-text')
+let unfriendOption = document.getElementsByClassName('unfriend')
+let favouriteHearts = document.getElementsByClassName('fas fa-heart')
+let addFriendButton = document.getElementsByClassName('add-friend')
+
+for (let i = 0; i < friendOptionsButton.length; i++) {
+    friendOptionsButton[i].onclick = function() {
+        friendOptionsWindow[i].style.display = 'flex'
+    }
+    window.onclick = function(event) {
+        if (event.target !== friendOptionsWindow[i] && event.target !== friendOptionsButton[i]) {
+            console.log(event.target)
+            friendOptionsWindow[i].style.display = 'none'
+        }
+    }
+    favouriteOption[i].addEventListener('click', () => favouriteHearts[i].style.color === 'red' ? favouriteHearts[i].style.color = 'black' : favouriteHearts[i].style.color = 'red')
+    followOption[i].addEventListener('click', () => followText[i].innerText === 'Unfollow' ? followText[i].innerText = 'Follow' : followText[i].innerText = 'Unfollow')
+    unfriendOption[i].addEventListener('click', () => addFriendButton[i].style.display = 'block')
+    addFriendButton[i].addEventListener('click', () => addFriendButton[i].innerText === 'Cancel Request' ? addFriendButton[i].innerText = 'Add Friend' : addFriendButton[i].innerText = 'Cancel Request')
+}

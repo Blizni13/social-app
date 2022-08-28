@@ -1,1 +1,2 @@
 # social-app
+This page is one of my frontend projects. I created this because i want to do something similar to facebook. It is just something like social app and all deeper backend functions are here just only to imitate real backend functions. Like for example changing informations in about sections or adding friends. I wanted to show my skills in creating appearance and structures for pages and also i wanted to show my ability to make my code easy to read.
