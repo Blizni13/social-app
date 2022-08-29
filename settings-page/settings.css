@@ -96,7 +96,6 @@ header #photo-wrapper-onclick {
     right: 4rem;
     overflow: hidden;
     border: none;
-    background-color: red;
     cursor: pointer;
 }
 
@@ -452,6 +451,106 @@ header #info .info-text:hover {
     #settings-content #change-profile img {
         width: 40px;
         height: 40px;
+    }
+
+    /* HEADER RESPONSIVE SETTINGS */
+
+    header h1 {
+        font-size: 2.7rem;
+    }
+
+    header #search-wrapper {
+        width: 240px;
+    }
+
+    header #search-wrapper input[type="text"] {
+        width: 220px;
+        height: 36px;
+        font-size: 1.7rem;
+    }
+
+    header .fas.fa-magnifying-glass {
+        font-size: 1.4rem;
+        color: gray;
+        left: 3.2rem;
+        top: 53%;
+        transform: translateY(-50%)
+    }
+
+    header .fas.fa-bell {
+        font-size: 2.6rem;
+    }
+
+    header .fas.fa-bell #notification-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 1.5rem;
+    }
+
+    header #photo-wrapper-onclick {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* HEADER OTHER PAGES WINDOW RESPONSIVE SETTINGS */
+    header #other-pages .window p {
+        font-size: 1.5rem;
+        margin-top: 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* HEADER RESPONSIVE SETTINGS */
+
+    header .fas.fa-bell {
+        margin-right: -4rem;
+    }
+
+    header #photo-wrapper-onclick {
+        margin-right: -1rem;
+    }
+
+    header #search-wrapper {
+        width: 200px;
+    }
+
+    header #search-wrapper input[type="text"] {
+        width: 180px;
+        font-size: 1.52rem;
+    }
+
+    header #search-wrapper i {
+        font-size: 1.25rem;
+        margin-left: 0.2rem;
+    }
+
+    /* HEADER APPEARING WINDOWS RESPONSIVE SETTINGS */
+
+    header #other-pages {
+        right: 2.9rem;
+    }
+
+    header #info {
+        right: 8rem;
+        font-size: 1.6rem;
+    }
+
+    header #info .info-text p {
+        font-size: 1.5rem;
+        margin-left: 5rem;
+        width: 130px;
+    }
+    
+    header #info .info-text .circle-notification {
+        margin-right: 1rem;
+    }
+
+    header #hover-notifications {
+        right: 6rem;
+    }
+
+    header #hover-account {
+        right: 1.4rem;
     }
 }
 
