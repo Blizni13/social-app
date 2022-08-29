@@ -1,6 +1,6 @@
 // Settings posts wrapper to appropriate height
 
-let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 35
+let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 55
 document.getElementById('additional-info-posts-section').style.height = `${additionalHeight}px`
 
 // REPORT WINDOW

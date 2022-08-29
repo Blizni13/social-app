@@ -8,6 +8,10 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     --posts-header-color: rgb(240, 240, 240);
     --reactions-color: rgb(240, 240, 240);
@@ -361,7 +365,7 @@ header a {
 
 #posts-container {
     position: absolute;
-    width: 542px;
+    max-width: 542px;
     right: 9.7rem;
     border-radius: 1rem;
     top: 19rem;
@@ -388,13 +392,12 @@ header a {
 }
 
 #posts-container #image-wrapper {
-    height: 450px;
     overflow: hidden;
 }
 
 #posts-container #image-wrapper img {
-    object-position: 0px -250px;
     width: 100%;
+    object-fit: cover;
 }
 
 #posts-container #reactions {
@@ -1028,7 +1031,7 @@ header a {
     margin-inline: auto;
     margin-top: 2.3rem;
     border-radius: 5px;
-    padding-left: 3.5rem;
+    padding-inline: 3.5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
 }
@@ -1122,4 +1125,379 @@ header a {
 
 #container-posts-section #friends-about-section .fas.fa-ellipsis-vertical {
     display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+    #photos-about-section span {
+        width: 48%
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #posts-container {
+        width: 450px;
+        right: 24rem;
+    }
+
+    #container-posts-section #add-post {
+        width: 450px;
+        right: 24rem;
+    }
+
+    #container-posts-section #add-post input[type="text"] {
+        width: 30rem;
+        margin-left: 1rem;
+    }
+
+    #posts-container #post #image-wrapper img {
+        object-fit: cover;
+    }
+
+    /* RESPONSIVE FOR HEADER IN PROFILE.HTML */
+
+    #first-header hr {
+        margin-top: 18rem;
+        width: 650px;
+        margin-left: 21.5rem;
+    }
+
+    #first-header #sections {
+        margin-left: 29rem;
+    }
+
+    #first-header #sections .underline {
+        margin-left: 0;
+    }
+
+    #first-header button[type="submit"] {
+        left: 43.5rem;
+        top: 53.5rem;
+    }
+
+    #first-header #foreground-image {
+        left: 45rem;
+    }
+
+    #first-header #informations {
+        /* background-color: red; */
+        top: 40rem;
+        left: 45.5rem;
+    }
+
+    #first-header #informations p{
+        margin-left: 3.2rem;
+    }
+
+    /* HEADER NAVIGATION SETTINGS */
+
+    #first-header #home {
+        left: 77rem;
+        top: 53.5rem;
+    }
+
+    #first-header #settings {
+        left: 26rem;
+        top: 53.5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #first-header #sections {
+        margin-left: 29rem;
+    }
+
+    #first-header hr {
+        margin-left: 15rem;
+    }
+
+
+    #first-header #foreground-image {
+        left: 38rem;
+    }
+
+    #first-header #informations {
+        top: 40rem;
+        left: 39rem;
+    }
+
+    #first-header button[type="submit"] {
+        left: 36.5rem;
+    }
+
+    #first-header #sections {
+        margin-left: 22.5rem;
+    }
+
+    /* HEADER NAVIGATION SETTINGS */
+
+    #first-header #home {
+        left: 68rem;
+        top: 53.5rem;
+    }
+
+    #first-header #settings {
+        left: 19rem;
+        top: 53.5rem;
+    }
+
+    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    
+    #container-posts-section #additional-info-posts-section {
+        left: 50%;
+        transform: translate(-80%);
+        position: absolute;
+    }
+    
+    #container-posts-section #additional-info-posts-section #user-info {
+        position: absolute;
+        width: 500px;
+    }
+    
+    #container-posts-section #additional-info-posts-section #photos-about-section {
+        position: absolute;
+        top: 23.5rem;
+        width: 500px;
+    }
+
+    #container-posts-section #additional-info-posts-section #friends-about-section{
+        position: absolute;
+        top: 55rem;
+        width: 500px;
+    }
+
+
+    #container-posts-section #add-post {
+        width: 500px;
+        top: 100rem;
+        left: 24rem;
+    }
+
+    #posts-container {
+        width: 500px;
+        top: 117rem;
+        left: 24rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #first-header #sections {
+        margin-left: 19rem;
+    }
+
+    #first-header hr {
+        margin-left: 13.5rem;
+        margin-top: 25rem;
+        width: 550px;
+    }
+
+    #first-header #foreground-image {
+        left: 31.5rem;
+    }
+
+    #first-header #informations {
+        left: 32rem;
+    }
+
+    #first-header button[type="submit"] {
+        left: 29.5rem;
+    }
+
+    #first-header #sections {
+        margin-left: 16.5rem;
+    }
+
+    /* HEADER NAVIGATION SETTINGS */
+
+    #first-header #home {
+        left: 50rem;
+        top: 60.5rem;
+    }
+
+    #first-header #settings {
+        left: 26rem;
+        top: 60.5rem;
+    }
+
+    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    
+    #container-posts-section #additional-info-posts-section {
+        left: 49%;
+    }
+    
+    #container-posts-section #additional-info-posts-section #photos-about-section {
+        width: 400px;
+    }
+    
+    #container-posts-section #additional-info-posts-section #user-info {
+        width: 400px;
+    }
+
+    #container-posts-section #additional-info-posts-section #friends-about-section{
+        top: 65rem;
+        width: 400px;
+    }
+
+    #container-posts-section #add-post {
+        width: 400px;
+        top: 109rem;
+        left: 22.7rem;
+    }
+
+    #container-posts-section #add-post input[type="text"] {
+        width: 275px;
+    }
+
+    #posts-container {
+        width: 400px;
+        left: 22.7rem;
+        top: 125rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #first-header #sections {
+        margin-left: 14rem;
+        font-size: 2.4rem;
+    }
+
+    #first-header hr {
+        margin-left: 11rem;
+        width: 450px;
+    }
+
+    #first-header #foreground-image {
+        left: 25rem;
+    }
+
+    #first-header #informations {
+        left: 26rem;
+    }
+
+    #first-header button[type="submit"] {
+        left: 22.9rem;
+    }
+
+    #first-header #sections p {
+        margin-right: -2rem;
+    }
+
+    #first-header #sections hr {
+        width: 90px;
+    }
+
+    #first-header #sections hr:nth-of-type(1) {
+        left: -1.3rem;
+    }
+
+    #first-header #sections hr:nth-of-type(2) {
+        left: 8.9rem;
+    }
+    
+    #first-header #sections hr:nth-of-type(3) {
+        left: 19.6rem;
+    }
+    
+    #first-header #sections hr:nth-of-type(4) {
+        width: 100px;
+        left: 30.2rem;
+    }
+
+    /* HEADER NAVIGATION SETTINGS */
+
+    #first-header #home {
+        left: 42rem;
+        top: 60.5rem;
+    }
+
+    #first-header #settings {
+        left: 20rem;
+        top: 60.5rem;
+    }
+
+    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    
+    #container-posts-section #additional-info-posts-section {
+        left: 42%;
+    }
+
+    #container-posts-section #add-post {
+        left: 14.3rem;
+    }
+
+    #posts-container {
+        left: 14.3rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    #first-header hr {
+        margin-left: 4rem;
+        margin-top: 24rem;
+        width: 400px;
+    }
+
+    #first-header #foreground-image {
+        left: 14rem;
+    }
+
+    #first-header #informations {
+        left: 15rem;
+    }
+
+    #first-header button[type="submit"] {
+        left: 12.5rem;
+    }
+
+    #first-header #sections {
+        margin-left: 4.5rem;
+    }
+
+    /* HEADER NAVIGATION SETTINGS */
+
+    #first-header #home {
+        left: 32rem;
+        top: 60.5rem;
+    }
+
+    #first-header #settings {
+        left: 10rem;
+        top: 60.5rem;
+    }
+
+    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    
+    #container-posts-section #additional-info-posts-section {
+        left: 33%;
+    }
+    
+    #container-posts-section #additional-info-posts-section #photos-about-section {
+        width: 400px;
+    }
+    
+    #container-posts-section #additional-info-posts-section #user-info {
+        width: 400px;
+    }
+
+    #container-posts-section #additional-info-posts-section #friends-about-section{
+        top: 65rem;
+        width: 400px;
+    }
+
+    #container-posts-section #add-post {
+        width: 400px;
+        top: 109rem;
+        left: 3.5rem;
+    }
+
+    #container-posts-section #add-post input[type="text"] {
+        width: 275px;
+    }
+
+    #posts-container {
+        width: 400px;
+        left: 3.5rem;
+        top: 125rem;
+    }
 }
