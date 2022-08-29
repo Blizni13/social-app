@@ -409,8 +409,33 @@ header #info .info-text:hover {
         margin-right: -2rem;
     }
 
+    #settings-content .info p {
+        min-width: 100px;
+    }
+
+    #settings-content .info .info-to-change-hobby-education {
+        min-width: 70px
+    }
+
+    #settings-content .info .info-to-change-contact {
+        min-width: 80px;
+    }
+
+    #settings-content .info .info-to-change-people {
+        min-width: 150px;
+    }
+
+    #settings-content .info .change-password-info{
+        min-width: 160px;
+    }
+
     #settings-content .info input {
         margin-top: -1rem;
+    }
+
+    #settings-content form input[type='submit'] {
+        margin-left: 0px !important;
+        margin-top: 1rem;
     }
 
     /* SETTINGS CONTENT RIGHT SIDE, CHANGE PROFILE RESPONSIVE SETTINGS*/
@@ -428,5 +453,26 @@ header #info .info-text:hover {
         width: 40px;
         height: 40px;
     }
+}
 
+@media only screen and (min-width: 851px) {
+    #settings-content .info p {
+        min-width: 100px;
+    }
+
+    #settings-content .info .info-to-change-hobby-education {
+        min-width: 70px
+    }
+
+    #settings-content .info .info-to-change-contact {
+        min-width: 80px;
+    }
+
+    #settings-content .info .info-to-change-people {
+        min-width: 150px;
+    }
+
+    #settings-content .info .change-password-info{
+        min-width: 160px;
+    }
 }
