@@ -84,7 +84,7 @@ header a {
 
 .navigation p {
     font-size: 2rem;
-    margin-left: 1.3rem;
+    margin-left: 4.7rem;
     font-family: 'Open Sans'
 }
 
@@ -661,6 +661,8 @@ header a {
     margin-top: 2.3rem;
     padding-inline: 1rem;
     padding-top: 1.5rem;
+    position: relative;
+    padding-bottom: 2.5rem;
 }
 
 #about-section #personal-info h2 {
@@ -671,7 +673,7 @@ header a {
 
 .fas {
     font-size: 3rem;
-    position: relative;
+    position: absolute;
 }
 
 #about-section #personal-info .left {
@@ -684,59 +686,62 @@ header a {
     background-color: hsl(0, 0%, 91%);
     padding: 0.8rem;
     border-radius: 50%;
-    top: -3.2rem;
     font-size: 2.2rem;
     cursor: pointer;
+    margin-top: -2.8rem;
+}
+
+/* ABOUT SECTION ICONS LEFT */
+
+#about-section #personal-info .fas.fa-house {
+    left: 7rem;
+    top: 11.6rem;
 }
 
 #about-section #personal-info .fas.fa-location-dot {
-    left: 2.8rem;
-    bottom: -3.2rem;
+    left: 7.5rem;
+    top: 17rem;
 }
 
-#about-section #personal-info .fas.fa-envelope {
-    left: 2.1rem;
-    bottom: -3.35rem;
-}
-
-#about-section #personal-info .fas.fa-cake-candles {
-    left: 1.95rem;
-    bottom: -3.2rem;
-}
-
-#about-section #personal-info .fas.fa-children {
-    bottom: -3.3rem;
-    left: 1.45rem;
-}
-
-#about-section #personal-info .fas.fa-person {
-    left: 6.5rem;
+#about-section #personal-info .fas.fa-school {
+    left: 7rem;
+    top: 28rem;
 }
 
 #about-section #personal-info .fas.fa-scroll {
-    left: 2.5rem;
-    bottom: -3.25rem;
+    left: 7rem;
+    top: 33.5rem;
 }
 
-#about-section #personal-info #birth {
-    top: -4.4rem;
+#about-section #personal-info .fas.fa-phone {
+    left: 7.5rem;
+    top: 44.5rem;
 }
 
-#about-section #personal-info #school {
-    top: -2.9rem;
+#about-section #personal-info .fas.fa-envelope {
+    left: 7.5rem;
+    top: 50rem;
 }
 
-#about-section #personal-info #email {
-    top: -2.9rem;
+#about-section #personal-info .fas.fa-person {
+    left: 7rem;
+    top: 61rem;
 }
 
-#about-section #personal-info #number {
-    top: -3.7rem;
+#about-section #personal-info .fas.fa-cake-candles {
+    left: 6.6rem;
+    top: 66rem;
+}
+
+#about-section #personal-info .fas.fa-children {
+    left: 6.1rem;
+    top: 71.5rem
 }
 
 #about-section #personal-info p {
     font-size: 2rem;
     margin-left: 11.6rem;
+    margin-top: 3rem;
 }
 
 #about-section #personal-info span {
@@ -753,12 +758,48 @@ header a {
 /* CHANGING VALUE OF INFO IN ABOUT SECTION (WINDOW APPEARANCE) */
 
 #about-section #personal-info .change-value {
-    position: relative;
-    bottom: -1rem;
+    position: absolute;
     width: 250px;
-    margin-left: 10rem;
+    margin-left: 11.5rem;
     height: 60px;
     display: none;
+}
+/* CHANGE VALUE IN ABOUT WINDOWS POSITION */
+
+#about-section #personal-info .change-value:nth-of-type(1) {
+    top: 10rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(2) {
+    top: 15rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(3) {
+    top: 26.5rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(4) {
+    top: 31.8rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(5) {
+    top: 42.5rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(6) {
+    top: 48rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(7) {
+    top: 59rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(8) {
+    top: 68rem;
+}
+
+#about-section #personal-info .change-value:nth-of-type(9) {
+    top: 70rem;
 }
 
 #about-section #personal-info .change-value input[type='text'] {
@@ -1501,6 +1542,10 @@ header a {
         margin-left: 16.3rem;
     }
 
+    #about-section #personal-info p {
+        font-size: 1.8rem;
+    }
+
     #about-section #personal-info .right {
         left: 43rem;
     }
@@ -1517,32 +1562,40 @@ header a {
         left: 4rem;
     }
 
-    #about-section #personal-info .personal-info {
-        margin-left: 9rem;
+    #about-section #personal-info .fas.fa-house {
+        top: 11.6rem;
     }
 
     #about-section #personal-info .fas.fa-location-dot {
-        left: 0.4rem;
+        top: 16.8rem;
+    }
+
+    #about-section #personal-info .fas.fa-school {
+        top: 27.3rem;
     }
 
     #about-section #personal-info .fas.fa-scroll {
-        left: 0.2rem;
+        top: 33rem;
+    }
+
+    #about-section #personal-info .fas.fa-phone {
+        top: 43.9rem;
     }
 
     #about-section #personal-info .fas.fa-envelope {
-        left: 0rem;
+        top: 48.7rem;
     }
 
     #about-section #personal-info .fas.fa-person {
-        left: 4.7rem;
+        top: 59.7rem;
     }
-    
-    #about-section #personal-info .fas.fas.fa-cake-candles {
-        left: 0.3rem;
+
+    #about-section #personal-info .fas.fa-cake-candles {
+        top: 64.5rem;
     }
-    
+
     #about-section #personal-info .fas.fa-children {
-        left: -0.2rem;
+        top: 69.7rem
     }
 
     #friends-about-section {
@@ -1755,10 +1808,61 @@ header a {
     }
     
     #about-section #personal-info .right {
-        left: 35rem;
-        font-size: 1.7rem;
+        font-size: 1.8rem !important;
         padding: 0.6rem;
-        top: -2.6rem;
+        margin-left: -8rem;
+        margin-top: -2.5rem;
+    }
+
+    /* ABOUT SECTION ICONS LEFT */
+
+    #about-section #personal-info .fas {
+        font-size: 2.7rem;
+    }
+
+    #about-section #personal-info .fas.fa-house {
+        left: 3rem;
+        top: 11.6rem;
+    }
+
+    #about-section #personal-info .fas.fa-location-dot {
+        left: 3.5rem;
+        top: 16.5rem;
+    }
+
+    #about-section #personal-info .fas.fa-school {
+        left: 3rem;
+        top: 26.8rem;
+    }
+
+    #about-section #personal-info .fas.fa-scroll {
+        left: 3rem;
+        top: 32rem;
+    }
+
+    #about-section #personal-info .fas.fa-phone {
+        left: 3.5rem;
+        top: 42.5rem;
+    }
+
+    #about-section #personal-info .fas.fa-envelope {
+        left: 3.5rem;
+        top: 47.3rem;
+    }
+
+    #about-section #personal-info .fas.fa-person {
+        left: 3.8rem;
+        top: 57.7rem;
+    }
+
+    #about-section #personal-info .fas.fa-cake-candles {
+        left: 3.4rem;
+        top: 62.5rem;
+    }
+
+    #about-section #personal-info .fas.fa-children {
+        left: 2.9rem;
+        top: 67.3rem
     }
 
 
@@ -1768,41 +1872,6 @@ header a {
 
     #about-section #personal-info h3 {
         margin-left: 1rem;
-    }
-    
-    #about-section #personal-info .left {
-        left: 2rem;
-        top: 2.5rem;
-    }
-
-    #about-section #personal-info .fas.fa-school {
-        top: 2.3rem;
-    }
-
-    #about-section #personal-info .fas.fa-location-dot {
-        left: -0.7rem;
-    }
-
-    #about-section #personal-info .fas.fa-scroll {
-        left: -1.1rem;
-        top: 2.9rem;
-    }
-
-    #about-section #personal-info .fas.fa-envelope {
-        left: -1.2rem;
-        top: 2.9rem;
-    }
-
-    #about-section #personal-info .fas.fa-person {
-        left: 2.1rem;
-    }
-
-    #about-section #personal-info .fas.fas.fa-cake-candles {
-        left: -1.5rem;
-    }
-    
-    #about-section #personal-info .fas.fas.fa-children {
-        left: -2.1rem;
     }
 
     #about-section #personal-info .personal-info {
@@ -1817,5 +1886,4 @@ header a {
     #friends-about-section .friend {
         width: 320px;
     }
-
 }

@@ -135,27 +135,10 @@ let leftIcons = document.getElementsByClassName('left')
 let personalInfo = document.getElementsByClassName('personal-info')
 
 for (let i = 0; i < newChanges.length; i++) {
-    if ((i % 2 === 0 && i < 9) || i === 7) {
-        openWindow[i].addEventListener('click', () => {
-            leftIcons[i + 1].style.top = '2.6rem'
-        })
-    }
-    if (i === 0) {
-        openWindow[i].addEventListener('click', () => leftIcons[i + 1].style.left = '6.85rem')
-    } else if (i === 2) {
-        openWindow[i].addEventListener('click', () => leftIcons[i + 1].style.left = '6.55rem')
-    } else if (i === 4) {
-        openWindow[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '6.15rem'; leftIcons[i + 1].style.top = '2.72rem'})
-    } else if (i === 6) {
-        openWindow[i].addEventListener('click', () => leftIcons[i + 1].style.left = '6rem')
-    } else if (i === 7) {
-        openWindow[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '5.48rem'; leftIcons[i + 1].style.top = '-0.355rem';  document.getElementsByClassName('relation')[0].style.marginTop = '-29px'})
-    }
-
     openWindow[i].addEventListener('click', () => {
         changeDiv[i].style.display = 'block'
         leftIcons[i].style.display = 'none';
-        personalInfo[i].style.display = 'none'
+        personalInfo[i].style.opacity = '0'
         openWindow[i].style.display ='none'
         for (let j = 0; j < openWindow.length; j++) {
             if (j !== i) {
@@ -166,28 +149,11 @@ for (let i = 0; i < newChanges.length; i++) {
 }
 
 for (let i = 0; i < saveButton.length; i++) {
-    if (i === 0) {
-        saveButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '2.8rem'; leftIcons[i + 1].style.top = '3.2rem'});
-        closeButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '2.8rem'; leftIcons[i + 1].style.top = '3.2rem'})
-    } else if (i === 2) {
-        saveButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '2.5rem'; leftIcons[i + 1].style.top = '3.3rem'});
-        closeButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '2.5rem'; leftIcons[i + 1].style.top = '3.3rem'})
-    } else if (i === 4) {
-        saveButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '2.1rem'; leftIcons[i + 1].style.top = '3.4rem'});
-        closeButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '2.1rem'; leftIcons[i + 1].style.top = '3.4rem'})
-    } else if (i === 6) {
-        saveButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '1.95rem'; leftIcons[i + 1].style.top = '3.2rem'});
-        closeButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '1.95rem'; leftIcons[i + 1].style.top = '3.2rem'})
-    } else if (i === 7) {
-        saveButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '1.45rem'; leftIcons[i + 1].style.top = '3.2rem'; document.getElementsByClassName('relation')[0].style.marginTop = '0px'});
-        closeButton[i].addEventListener('click', () => {leftIcons[i + 1].style.left = '1.45rem'; leftIcons[i + 1].style.top = '3.2rem'; document.getElementsByClassName('relation')[0].style.marginTop = '0px'});
-    }
-
     saveButton[i].addEventListener('click', () => {
         currValue[i].innerText = newChanges[i].value;
         changeDiv[i].style.display = 'none';
         leftIcons[i].style.display = 'inline-block'
-        personalInfo[i].style.display = 'block'
+        personalInfo[i].style.opacity = '1'
         openWindow[i].style.display = 'inline-block'
         for (let j = 0; j < openWindow.length; j++) {
             if (j !== i) {
@@ -198,7 +164,7 @@ for (let i = 0; i < saveButton.length; i++) {
     closeButton[i].addEventListener('click', () => {
         changeDiv[i].style.display = 'none';
         leftIcons[i].style.display = 'inline-block'
-        personalInfo[i].style.display = 'block'
+        personalInfo[i].style.opacity = '1'
         openWindow[i].style.display = 'inline-block'
         for (let j = 0; j < openWindow.length; j++) {
             if (j !== i) {
