@@ -23,8 +23,9 @@
 
                     <div id="upload-files">
                         <form action="upload" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <label for="photo-video">
-                                <input id="photo-video" type="file" accept=".jpg, .mp4">
+                                <input id="photo-video" type="file" accept=".jpg, .mp4" name="image_upload">
                             </label>
                             <textarea placeholder="Caption..." style="resize: none;"></textarea>
                             <button type="submit">Upload</button>
