@@ -333,6 +333,7 @@ header a {
 
 #container-posts-section #add-post p {
     font-size: 2.4rem;
+    margin-left: 3.8rem;
 }
 
 #container-posts-section input[type="file"] {
@@ -452,6 +453,10 @@ header a {
     transform: translate(0, -50%);
     font-size: 2.3rem;
     cursor: pointer;
+}
+
+#posts-container #interactions .fas.fa-share {
+    right: 3rem;
 }
 
 /* COMMENTS SECTION */
@@ -663,6 +668,10 @@ header a {
     padding-top: 1.5rem;
     position: relative;
     padding-bottom: 2.5rem;
+}
+
+#about-section #friends-about-section .all {
+    margin-left: 100rem !important;
 }
 
 #about-section #personal-info h2 {
@@ -943,7 +952,7 @@ header a {
 #friends-about-section .all {
     color: blue;
     position: absolute;
-    margin-left: 100rem;
+    margin-left: 26rem;
     margin-top: -1.7rem;
     font-size: 2rem;
     cursor: pointer;
@@ -1198,8 +1207,8 @@ header a {
         left: 100rem;
     }
 
-    #friends-about-section .all {
-        margin-left: 90rem;
+    #about-section #friends-about-section .all {
+        margin-left: 90rem !important;
     }
 
     #friends-about-section .friend {
@@ -1295,8 +1304,8 @@ header a {
         left: 75rem;
     }
 
-    #friends-about-section .all {
-        margin-left: 66rem;
+    #about-section #friends-about-section .all {
+        margin-left: 66rem !important;
     }
 
     #friends-about-section .friend {
@@ -1414,6 +1423,10 @@ header a {
 
     #about-section #personal-info .right {
         left: 60rem;
+    }
+
+    #about-section #friends-about-section .all {
+        margin-left: 52rem !important; 
     }
 
     #friends-about-section .all {
@@ -1612,7 +1625,7 @@ header a {
     }
 
     #about-section #personal-info .change-value input[type='text']:focus ~ span,
-    #about-section #personal-info .change-value input[type='text']:target ~ span{
+    #about-section #personal-info .change-value input[type='text']:valid ~ span{
         transform: translate(-2px, -10px)
     } 
 
@@ -1657,6 +1670,10 @@ header a {
     
     #about-section #personal-info .change-value:nth-of-type(9) {
         top: 68rem;
+    }
+
+    #about-section #friends-about-section .all {
+        margin-left: 32rem !important; 
     }
 
     #friends-about-section {
@@ -1940,16 +1957,17 @@ header a {
         width: 160px;
         height: 55px;
         left: -3.6rem;
-        display: block;
     }
     
-    #about-section #personal-info .change-value input[type='text'], #about-section #personal-info .change-value select,#about-section #personal-info .change-value input[type='date'] {
+    #about-section #personal-info .change-value input[type='text'], #about-section #personal-info .change-value select, #about-section #personal-info .change-value input[type='date'] {
         width: 120px;
         height: 35px;
+        font-size: 1.3rem;
+        padding-top: 0.4rem;
     }
 
     #about-section #personal-info .change-value input[type='text']:focus ~ span,
-    #about-section #personal-info .change-value input[type='text']:target ~ span{
+    #about-section #personal-info .change-value input[type='text']:valid ~ span{
         transform: translate(-2px, -8.5px);
         font-size: 0.9rem;
     } 
@@ -1990,8 +2008,8 @@ header a {
         font-size: 1.6rem;
     }
 
-    #friends-about-section .all {
-        margin-left: 22rem;
+    #about-section #friends-about-section .all {
+        margin-left: 21rem !important;
     }
 
     #friends-about-section .friend {
