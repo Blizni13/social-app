@@ -23,6 +23,11 @@ header h1 {
     font-size: 3.5rem;
 }
 
+header h1 a {
+    color: black;
+    text-decoration: none;
+}
+
 header #search-wrapper {
     position: relative;
     margin-left: 1rem;
@@ -286,10 +291,60 @@ header #info .info-text:hover {
     margin-left: 6.5rem;
 }
 
-#settings-content #change-profile #change-profile-info p:nth-of-type(2) {
-    color: hsl(200, 100%, 55%);
+#settings-content #change-profile #change-profile-info p {
+    margin-bottom: -0.3rem;
+}
+
+#settings-content #change-profile #change-profile-info button {
+    background-color: hsl(0, 0%, 98%);
+    border: none;
+    color: hsla(200, 100%, 55%, 1);
     cursor: pointer;
-    font-size: 1.7rem;
+}
+
+/* WINDOW WITH OPTION TO CHANGE PROFILE */
+
+#settings-content #change-profile-image-window {
+    background-color: hsl(0, 0%, 84%);
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#settings-content #change-profile-image-window label input {
+    display: none;
+}
+
+#settings-content #change-profile-image-window label {
+    background-color: hsla(200, 100%, 55%, 0.5);
+    width: 100px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#settings-content #change-profile-image-window label::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    content: 'Choose image';
+    font-size: 1.6rem;
+}
+
+#settings-content #change-profile-image-window input[type='submit'] {
+    margin: 0;
+    padding: 0;
 }
 
 #settings-content #navigation {
@@ -394,6 +449,7 @@ header #info .info-text:hover {
     #settings-content #navigation h3 {
         font-size: 2rem;
         width: 140px;
+        padding-top: 1.3rem;
     }
 
     /* SETTINGS CONTENT RIGHT SIDE, INFORMATIONS RESPONSIVE SETTINGS*/

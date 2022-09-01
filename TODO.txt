@@ -1,3 +1,2 @@
--- RESPONSIVE SETTINGS FOR: 
-- SETTINGS PAGE
-- PROFILE PAGE
+-- Option in settings to change profile image
+-- Option to delete post

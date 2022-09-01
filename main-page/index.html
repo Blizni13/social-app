@@ -7,14 +7,14 @@
         <script src="https://kit.fontawesome.com/a18d53579f.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans:wght@500&family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Open+Sans:wght@500&family=Lato&family=Poppins&display=swap" rel="stylesheet">
         <title>Posts</title>
     </head>
     <body>
         <main>
             <div id="background">
                 <header>
-                    <h3>Fakebook</h3>
+                    <h3><a href="/main-page/index.html">Fakebook</a></h3>
                     <input type="text" placeholder="Search fakebook" id="search"><label for="search"><i class="fas fa-magnifying-glass"></i></label>
                     
                     <!-- UPLOAD WINDOW -->
@@ -23,7 +23,6 @@
 
                     <div id="upload-files">
                         <form action="upload" method="POST" enctype="multipart/form-data">
-                            {% csrf_token %}
                             <label for="photo-video">
                                 <input id="photo-video" type="file" accept=".jpg, .mp4" name="image_upload">
                             </label>

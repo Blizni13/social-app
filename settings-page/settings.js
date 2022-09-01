@@ -189,3 +189,21 @@ window.onclick = function(event) {
         otherPagesWindow.style.display = 'none'
     }
 }
+
+
+// APPEARING WINDOW WITH OPTION TO CHANGE PROFILE 
+
+let changeProfileWindow = document.getElementById('change-profile-image-window')
+let changeProfileButton = document.getElementById('change-profile-image-button')
+let uploadButton = document.getElementById('upload-image')
+let chooseImageLabel = document.getElementById('choose-image-label')
+let chooseImageInput = document.getElementById('choose-image')
+
+let changeProfileWindowItems = [changeProfileWindow, uploadButton, chooseImageLabel, chooseImageInput, changeProfileButton]
+
+changeProfileButton.onclick = () => changeProfileWindow.style.display = 'flex'
+
+window.onclick = function(event) {
+    if (changeProfileWindowItems.every(el => el !== event.target)) changeProfileWindow.style.display = 'none';
+    console.log(event.target)
+}
