@@ -1,23 +1,38 @@
+// REFRESHING WINDOW PAGE POSITION SET TO TOP
+
+window.onbeforeunload = () => window.scrollTo(0, 0)
+
 // Settings posts wrapper to appropriate height
 
-let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 55
+let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 35
+
+console.log(document.getElementById('posts-container').offsetHeight)
+console.log(document.getElementById('add-post').offsetHeight)
 document.getElementById('additional-info-posts-section').style.height = `${additionalHeight}px`
 
 // REPORT WINDOW
 
-const reportButton = document.getElementsByClassName('fa-ellipsis')
-const postOptions = document.getElementsByClassName('post-options') 
-const closeSign = document.getElementsByClassName('close-sign')
+const reportButton = document.getElementsByClassName('post-options-button')
+const postOptions = document.getElementsByClassName('post-options')
 const reportText = document.getElementsByClassName('report')
 
+
 for (let z = 0; z < reportButton.length; z++) {
-    reportButton[z].addEventListener('click', () => postOptions[z].style.display ='block')
-    closeSign[z].addEventListener('click', () => postOptions[z].style.display = 'none')
+    reportButton[z].onclick = () => postOptions[z].style.display ='flex';
     reportText[z].addEventListener('click', () => {
+    postOptions[z].style.display = 'none'
     document.querySelector('#report-background').style.display = 'flex'
     document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     document.getElementsByTagName('body')[0].style.paddingRight = '17px'
 })
+}
+
+window.onclick = function(event) {
+    if ([...postOptions].every(el => el !== event.target) && [...reportButton].every(el => el !== event.target)) {
+        for (let i = 0; i < postOptions.length; i++) {
+            postOptions[i].style.display = 'none'
+        }
+    }
 }
 
 document.querySelector('#report-background').addEventListener('click',
@@ -193,14 +208,14 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
     friendOptionsButton[i].onclick = function() {
         friendOptionsWindow[i].style.display = 'flex'
     }
-    window.onclick = function(event) {
-        if (friendOptionsButton.every(el => el !== event.target) && friendOptionsWindow.every(el => el !== event.target)) {
-            console.log('Siema')
-            for (let i = 0; i < friendOptionsWindow.length; i++) {
-                friendOptionsWindow[i].style.display = 'none'
-            }
-        }
-    }
+    // window.onclick = function(event) {
+    //     if (friendOptionsButton.every(el => el !== event.target) && friendOptionsWindow.every(el => el !== event.target)) {
+    //         console.log('Siema')
+    //         for (let i = 0; i < friendOptionsWindow.length; i++) {
+    //             friendOptionsWindow[i].style.display = 'none'
+    //         }
+    //     }
+    // }
     favouriteOption[i].addEventListener('click', () => favouriteHearts[i].style.color === 'red' ? favouriteHearts[i].style.color = 'black' : favouriteHearts[i].style.color = 'red')
     followOption[i].addEventListener('click', () => followText[i].innerText === 'Unfollow' ? followText[i].innerText = 'Follow' : followText[i].innerText = 'Unfollow')
     unfriendOption[i].addEventListener('click', () => addFriendButton[i].style.display = 'block')

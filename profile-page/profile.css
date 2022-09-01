@@ -378,18 +378,27 @@ header a {
     background-color: var(--posts-header-color);
 }
 
+#posts-container .post header button {
+    width: 31px;
+    height: 12px;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+#posts-container header .fas.fa-ellipsis {
+    font-size: 3rem;
+    top: -1rem;
+    right: 0.10rem;
+    pointer-events: none;
+}
+
 #posts-container header p {
     font-size: 1.8rem;
     margin-top: -2.4rem;
     margin-left: 4rem;
-}
-
-#posts-container header .fas.fa-ellipsis {
-    position: absolute;
-    font-size: 3rem;
-    right: 3rem;
-    top: 1rem;
-    cursor: pointer;
 }
 
 #posts-container #image-wrapper {
@@ -540,18 +549,22 @@ header a {
     border-top: 1px solid gray;
 }
 
-#posts-container #post .post-options {
+#posts-container .post .post-options {
     position: absolute;
-    height: 40px;
-    width: 150px;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     top: 6rem;
-    right: 2.6rem;
+    right: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    align-items: center;
+    gap: 1.3rem;
     display: none;
 }
 
-#posts-container #post .post-options i {
+#posts-container .post .post-options i {
     color: rgb(240, 240, 240);
     position: absolute;
     right: 1rem;
@@ -560,7 +573,7 @@ header a {
     top: -1rem;
 }
 
-#posts-container #post .post-options .close-sign {
+#posts-container .post .post-options .close-sign {
     position: absolute;
     top: 0;
     right: 1rem;
@@ -570,19 +583,19 @@ header a {
     cursor: pointer;
 }
 
-#posts-container #post .post-options button {
+#posts-container .post .post-options button {
     cursor: pointer;
-    position: absolute;
-    left: 40%;
-    transform: translate(-50%, 0%);
     border: none;
-    padding: 1rem;
     font-size: 1.8rem;
-    width: 107px;
-    background-color: transparent;
+    height: 35px;
+    width: 146%;
 }
 
-#posts-container #post {
+#posts-container .post .post-options button:hover {
+    background-color: hsl(0, 0%, 87%)
+}
+
+#posts-container .post {
     margin-bottom: 3rem;
     position: relative;
     box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
@@ -1129,7 +1142,7 @@ header a {
     width: 450px;
     margin-left: 0;
     position: sticky;
-    top: 26.4rem;
+    top: 26.5rem;
     padding-left: 2.2rem;
 }
 
@@ -1139,8 +1152,13 @@ header a {
     width: 450px;
     column-gap: 1.4rem;
     position: sticky;
-    top: 57rem;
-    padding-bottom: 2.5rem;
+    top: 59rem;
+    padding-bottom: 0;
+}
+
+#container-posts-section #additional-info-posts-section #user-info {
+    position: sticky;
+    top: 1rem;
 }
 
 #container-posts-section #photos-about-section span {
@@ -1232,7 +1250,7 @@ header a {
         margin-left: 1rem;
     }
 
-    #posts-container #post #image-wrapper img {
+    #posts-container .post #image-wrapper img {
         object-fit: cover;
     }
 
