@@ -17,7 +17,26 @@ function() {
     document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 })
 
-// MESSAGE NOTIFICATION COUNTER
+// ALL ICONS WITH NUMBERS 
+
+const displayNumberIcons = document.getElementsByClassName('notification-icon')
+
+// COUNT NUMBER OF NOTIFICATIONS
+
+let numOfNotifications = 0
+let notificationNumber = document.getElementsByClassName('info-content')
+
+for (let i = 0; i < notificationNumber.length; i++) {
+    notificationNumber[i].style.fontWeight = 'bold'
+}
+
+for(let i = 0; i < notificationNumber.length; i++) {
+    if (notificationNumber[i].style.fontWeight === 'bold') numOfNotifications += 1
+}
+
+displayNumberIcons[0].innerText = numOfNotifications
+
+// COUNT NUMBER OF MESSAGES
 
 let numOfMessages = 0
 let allMessages = document.getElementsByClassName('message')
@@ -30,7 +49,7 @@ for (let i = 0; i < allMessages.length; i++) {
     if (allMessages[i].style.fontWeight === 'bold') numOfMessages += 1
 }
 
-document.getElementById('notification').textContent = numOfMessages
+displayNumberIcons[1].innerText = numOfMessages
 
 // MESSAGE WINDOW AT INDEX.HTML
 
@@ -39,7 +58,7 @@ const messagesContent = document.getElementsByClassName('message-content')
 
 document.getElementById('message-icon').addEventListener('click',
 function() {
-    document.querySelector('#notification').style.display = 'none'
+    document.querySelector('.notification-icon')[1].style.display = 'none'
     document.querySelector('#messages').style.display = 'block'
     document.querySelector('#message-icon').style.color = 'gray'
 })
@@ -60,24 +79,6 @@ for (let i = 0; i < allMessages.length; i++) {
         }
     })
 }
-
-// COUNT NUMBER OF NOTIFICATIONS
-
-let numOfNotifications = 0
-// 
-let notificationNumber = document.getElementsByClassName('info-content')
-
-for (let i = 0; i < notificationNumber.length; i++) {
-    notificationNumber[i].style.fontWeight = 'bold'
-}
-
-for(let i = 0; i < notificationNumber.length; i++) {
-    if (notificationNumber[i].style.fontWeight === 'bold') {
-        numOfNotifications += 1 
-    }
-}
-
-document.getElementById('notification-icon').innerText = numOfNotifications
 
 // NOTIFICATIONS WINDOW AT INDEX.HTML
 
