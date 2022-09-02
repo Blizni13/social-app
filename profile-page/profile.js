@@ -148,6 +148,7 @@ let newChanges = document.getElementsByClassName('new-changes')
 let openWindow = document.getElementsByClassName('open-window')
 let leftIcons = document.getElementsByClassName('left')
 let personalInfo = document.getElementsByClassName('personal-info')
+let postsSectionUserInfo = [document.getElementById('live-place'), document.getElementById('from-place'), document.getElementById('hobby')]
 
 for (let i = 0; i < newChanges.length; i++) {
     openWindow[i].addEventListener('click', () => {
@@ -175,7 +176,13 @@ for (let i = 0; i < saveButton.length; i++) {
                 openWindow[j].style.pointerEvents = 'auto'
             }
         }
+        if (i === 0 || i === 1) {
+            postsSectionUserInfo[i].innerText = newChanges[i].value
+        } else if (i === 3) {
+            postsSectionUserInfo[2].innerText = newChanges[i].value
+        }
     })
+    
     closeButton[i].addEventListener('click', () => {
         changeDiv[i].style.display = 'none';
         leftIcons[i].style.display = 'inline-block'
