@@ -640,12 +640,17 @@ header a {
     cursor: pointer;
     color: black;
     transform-origin: center left;
+    border-radius: 50%;
+    margin-left: -0.2rem;
+    padding: 0.2rem 0.2rem 0.4rem 0.4rem;
+    margin-bottom: -0.2rem;
+    font-size: 2.5rem;
 }
 
 .animation-like {
     animation-name: like-animation;
     animation-duration: 0.4s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: cubic-bezier(0.68, 1.15, 0.82, 0.93);
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -656,7 +661,12 @@ header a {
     }
 
     50% {
-        transform: rotate(-20deg) scale(1.1)
+        transform: rotate(-20deg) scale(1.1);
+        box-shadow: 0px 0px 15px 0px blue;
+    }
+
+    75% {
+        filter: blur(0.5px)
     }
 
     100% {
