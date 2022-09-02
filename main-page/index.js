@@ -56,17 +56,17 @@ displayNumberIcons[1].innerText = numOfMessages
 const circlesMessage = document.getElementsByClassName('circle-message')
 const messagesContent = document.getElementsByClassName('message-content')
 
-document.getElementById('message-icon').addEventListener('click',
+document.getElementById('message-open').addEventListener('click',
 function() {
-    document.querySelector('.notification-icon')[1].style.display = 'none'
+    displayNumberIcons[1].style.display = 'none'
     document.querySelector('#messages').style.display = 'block'
-    document.querySelector('#message-icon').style.color = 'gray'
+    document.querySelector('#message-open').style.color = 'gray'
 })
 
 document.querySelector('#close-messages').addEventListener('click',
 function() {
     document.querySelector('#messages').style.display = 'none'
-    document.querySelector('#message-icon').style.color = "black"
+    document.querySelector('#message-open').style.color = "black"
 })
 
 for (let i = 0; i < allMessages.length; i++) {
@@ -91,7 +91,7 @@ const circlesNotification = document.getElementsByClassName('circle-notification
 
 notificationSign.addEventListener('click', () => {
     document.getElementById('info').style.display = 'block'
-    document.getElementById('notification-icon').style.display = 'none'
+    displayNumberIcons[0].style.display = 'none'
     notificationSign.style.color = 'gray'
 })
 
@@ -123,7 +123,7 @@ for (let i = 0; i < likesList.length; i++) {
 // APPEARING WINDOW WITH OTHER PAGES AFTER CLICK OVER PROFILE 
 
 let otherPagesWindow = document.getElementById('other-pages')
-let openPagesWindow = document.getElementById('photo-wrapper-onclick')
+let openPagesWindow = document.getElementById('other-pages-open')
 
 openPagesWindow.onclick = function() {
     otherPagesWindow.style.display = 'block'
