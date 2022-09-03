@@ -139,14 +139,14 @@ html {
     font-size: 2rem;
 }
 
-#first-header #informations #profiles-wrapper {
+#first-header #informations .profiles-wrapper {
     display: flex;
     margin-top: 1rem;
     width: 163px;
     position: relative;
 }
 
-#first-header #informations #profiles-wrapper .fas.fa-ellipsis-vertical {
+#first-header #informations .profiles-wrapper .fas.fa-ellipsis-vertical {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +161,7 @@ html {
     cursor: pointer;
 }
 
-#first-header #informations #profiles-wrapper .profile-friend {
+#first-header #informations .profiles-wrapper .profile-friend {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -280,75 +280,20 @@ html {
 
 #container-posts-section #additional-info-posts-section {
     position: sticky;
-    top: 1rem;
+    top: 0.6rem;
     width: 450px;
     height: 915px;
 }
 
-
-#container-posts-section #additional-info-posts-section #user-info {
-    width: 450px;
-    padding: 2rem;
-    border-radius: 10px;
-    padding-bottom: 2.5rem;
-    background-color: white;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
-    top: 1rem;
-}
-
-#container-posts-section #additional-info-posts-section #photos-about-section {
-    margin-left: 0;
-    padding-left: 2.2rem;
-    width: 450px;
-}
-
+#container-posts-section #additional-info-posts-section #user-info,
+#container-posts-section #additional-info-posts-section #photos-about-section,
 #container-posts-section #additional-info-posts-section #friends-about-section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 450px;
-    column-gap: 1.4rem;
-    top: 59rem;
-    padding-top: 7rem;
-    padding-bottom: 4rem;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
 }
 
-#container-posts-section #additional-info-posts-section #friends-about-section h2 {
-    margin-top: -5.5rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section #friends-num {
-    margin-top: -2.3rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section .all {
-    top: 5rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section img{
-    width: 110px;
-    height: 100px;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section h4 {
-    margin-top: -2.2rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) img,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) img,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) img {
-    margin-top: -1.5rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) h4,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) h4,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) h4 {
-    margin-top: -4rem;
-}
-
-#container-posts-section #additional-info-posts-section #user-info {
-    position: sticky;
-    top: 1.2rem;
-}
+/* USER INFO IN POSTS SECTION */
 
 #container-posts-section #user-info h2 {
     font-size: 3rem;
@@ -378,6 +323,63 @@ html {
 #container-posts-section #user-info .fas.fa-scroll {
     left: 0.2rem;
 }
+
+#container-posts-section #additional-info-posts-section #user-info {
+    padding: 2rem;
+}
+
+/* PHOTOS INFO IN POSTS SECTION */
+
+#container-posts-section #additional-info-posts-section #photos-about-section {
+    padding-left: 2.2rem;
+    margin-top: 1.5rem;
+}
+
+/* FRIENDS INFO IN POSTS SECTION*/
+
+#container-posts-section #additional-info-posts-section #friends-about-section {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.4rem;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    margin-top: -0.5rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section h2 {
+    margin-top: -5.5rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section #friends-num {
+    margin-top: -2.3rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section .all {
+    margin-top: -3.7rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section img{
+    width: 110px;
+    height: 100px;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section h4 {
+    margin-top: -2.2rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) img,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) img,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) img {
+    margin-top: -1.5rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) h4,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) h4,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) h4 {
+    margin-top: -4rem;
+}
+
+/* ADD POST OPTION IN POSTS SECTION */
 
 #container-posts-section #add-post {
     position: absolute;
@@ -437,35 +439,22 @@ html {
     border-radius: 10px;
 }
 
-#container-posts-section #add-post i {
+#container-posts-section #add-post #add-interactions  i {
     font-size: 2.4rem;
 }
 
-#container-posts-section #add-post p {
+#container-posts-section #add-post #add-interactions  p {
     font-size: 2.4rem;
     margin-left: 3.8rem;
 }
 
-#container-posts-section input[type="file"] {
+#container-posts-section #add-post input[type="file"] {
     display: none;
-}
-
-#container-posts-section #user-posts {
-    position: absolute;
-    right: 10rem;
-    border-radius: 10px;
-    padding: 1rem;
 }
 
 /* PHOTOS */
 
-#photo-wrapper, .photo-wrapper, #profile-wrapper {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-#photo-wrapper img, .photo-wrapper img, #profile-wrapper img {
+.profile-wrapper img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -474,7 +463,7 @@ html {
 
 /* POSTS-SECTION */
 
-#posts-container {
+#container-posts-section #posts-container {
     position: absolute;
     max-width: 542px;
     right: 9.7rem;
@@ -482,83 +471,102 @@ html {
     top: 19rem;
 }
 
-#posts-container header {
+#container-posts-section #posts-container .post {
+    margin-bottom: 3rem;
+    position: relative;
+    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+}
+
+/* ELEMENTS IN POST HEADER */
+
+#container-posts-section #posts-container .post header {
+    position: relative;
     width: 100%;
     padding: 1.3rem;
     background-color: var(--posts-header-color);
 }
 
-#posts-container .post header button {
-    width: 31px;
-    height: 12px;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    cursor: pointer;
-    border: none;
+#container-posts-section #posts-container .post header .profile-wrapper {
+    position: relative;
+    width: 25px;
+    height: 25px;
 }
 
-#posts-container header .fas.fa-ellipsis {
-    font-size: 3rem;
-    top: -1rem;
-    right: 0.10rem;
-    pointer-events: none;
-}
-
-#posts-container header p {
+#container-posts-section #posts-container .post header p {
     font-size: 1.8rem;
     margin-top: -2.4rem;
     margin-left: 4rem;
 }
 
-#posts-container #image-wrapper {
-    overflow: hidden;
+#container-posts-section #posts-container .post header button {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    padding: 1.85rem;
 }
 
-#posts-container #image-wrapper img {
+#container-posts-section #posts-container .post header .fas.fa-ellipsis {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+#container-posts-section #posts-container .post header button:hover {
+    background-color: hsl(0, 0%, 89%)
+}
+
+/* UPLOADED IMAGE WRAPPER IN POST */
+
+#container-posts-section #posts-container .post .image-wrapper img {
     width: 100%;
-    object-fit: cover;
 }
 
-#posts-container #reactions {
+/* REACTIONS SECTION IN POST */
+
+#container-posts-section #posts-container .post #reactions {
     height: 5rem;
     border-bottom: 0.2px solid hsl(240, 5%, 85%);
     padding-top: 1.3rem;
     background-color: var(--reactions-color)
 }
 
-#posts-container #profiles-wrapper {
+#container-posts-section #posts-container .post #reactions .profiles-wrapper {
     display: flex;
     margin-left: 1rem;
 }
 
-#posts-container #profile-wrapper {
+#container-posts-section #posts-container .post #reactions .profile-wrapper {
     position: relative;
     width: 25px;
     height: 25px;
-    bottom: 1px;
 }
 
-#posts-container #profile-wrapper:nth-child(2) {
+#container-posts-section #posts-container .post #reactions .profile-wrapper:nth-child(2) {
     left: -1rem;
 }
 
-#posts-container #profile-wrapper:nth-child(3) {
+#container-posts-section #posts-container .post #reactions .profile-wrapper:nth-child(3) {
     left: -2rem;
 }
 
-#posts-container p {
+#container-posts-section #posts-container #reactions p {
     position: absolute;
     font-size: 2rem;
     margin-left: 7.5rem;
 }
 
-/* INTERACTIONS SECTION */
+/* INTERACTIONS SECTION IN POST*/
 
-#posts-container #interactions {
+#container-posts-section #posts-container #interactions {
     display: flex;
     width: 100%;
-    height: 4.5rem;
+    height: 5rem;
     align-items: center;
     justify-content: space-between;
     background-color: var(--interactions-color);
@@ -566,41 +574,29 @@ html {
     padding-inline: 2rem;
 }
 
-#posts-container #interactions .fa-message {
-    position: absolute;
-    left: 8rem;
-    transform: translate(0, -50%);
-    font-size: 2.3rem;
+#container-posts-section #posts-container #interactions .fas {
     cursor: pointer;
 }
 
-#posts-container #interactions .fas.fa-share {
+#container-posts-section #posts-container #interactions .fas.fa-message {
+    left: 8rem;
+    transform: translate(0, -50%);
+    font-size: 2.3rem;
+}
+
+#container-posts-section #posts-container #interactions .fas.fa-share {
     right: 3rem;
 }
 
-/* COMMENTS SECTION */
+/* COMMENTS SECTION IN POST */
 
-#posts-container #comments {
+#container-posts-section #posts-container .comments {
     width: 100%;
     height: 22rem;
     background-color: var(--comments-color);
 }
 
-#posts-container #comments input[type='text'] {
-    position: absolute;
-    width: 90%;
-    bottom: 1rem;
-    left: 50%;
-    transform: translate(-50%, -6%);
-    height: 4rem;
-    padding: 1.8rem;
-    border-radius: 1.5rem;
-    font-size: 1.7rem;
-    background-color: var(--enter-comment-color);
-    border: none;
-}
-
-#posts-container #comments #comment-messages {
+#container-posts-section #posts-container .comments .comment-messages {
     width: 100%;
     height: 15.4rem;
     display: flex;
@@ -611,70 +607,89 @@ html {
     position: relative;
 }
 
-#posts-container #comments #comment-messages::-webkit-scrollbar {
-    display: none;
+#container-posts-section #posts-container .post .comments .profile-wrapper {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    bottom: -2.7rem;
+    margin-left: 2.5rem;
 }
 
-#posts-container #comments input[type="file"] {
-    display: none;
-}
-
-#posts-container #comments .fas {
+#container-posts-section #posts-container .post .comments .comment-messages p {
     position: absolute;
+    font-size: 2rem;
+    margin-left: 7.5rem;
+    z-index: 1;
+}
+
+.comments .comment-messages .comment .comment-content p::before {
+    content: '';
+    position: absolute;
+    background-color: var(--comment-color);
+    width: calc(100% + 2rem);
+    height: calc(100% + 0.5rem);
+    left: -1rem;
+    z-index: -1;
+    bottom: -0.25rem;
+    border-radius: 10px;
+    border-top: 1px solid rgba(180, 180, 180, 0.5);
+}
+
+#container-posts-section #posts-container .comments .comment-messages::-webkit-scrollbar {
+    display: none;
+}
+
+/* ADD COMMENT SECTION IN COMMENTS SECTION */
+
+#container-posts-section #posts-container .comments input[type='text'] {
+    position: absolute;
+    width: 90%;
+    bottom: 1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4rem;
+    padding: 1.8rem;
+    border-radius: 1.5rem;
+    font-size: 1.7rem;
+    background-color: var(--enter-comment-color);
+    border: none;
+}
+
+#container-posts-section #posts-container .comments input[type="file"] {
+    display: none;
+}
+
+#container-posts-section #posts-container .comments .fas {
     bottom: 2.2rem;
     font-size: 2rem;
     cursor: pointer;
 }
 
-#posts-container #comments .fa-image {
+#container-posts-section #posts-container .comments .fa-image {
     right: 8rem;
 }
 
-#posts-container #comments .fa-video {
+#container-posts-section #posts-container .comments .fa-video {
     right: 4rem;
 }
 
-/* COMMENTS */
+/* POST OPTIONS IN POSTS SECTION */
 
-#comment-content #profile-wrapper {
-    position: relative;
-    bottom: -2.7rem;
-    margin-left: 2.5rem;
-}
-
-#comments #comment-messages #comment #comment-content p{
-    z-index: 1;
-}
-
-#comments #comment-messages #comment #comment-content p::before{
-    content: '';
-    position: absolute;
-    background-color: var(--comment-color);
-    width: calc(100% + 2rem);
-    left: -1rem;
-    height: calc(100% + 0.5rem);
-    z-index: -1;
-    bottom: -0.25rem;
-    border-radius: 10px;
-    border-top: 1px solid gray;
-}
-
-#posts-container .post .post-options {
+#container-posts-section #posts-container .post .post-options {
     position: absolute;
     background-color: rgb(240, 240, 240);
     border-radius: 10px;
     top: 6rem;
     right: 1.7rem;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem;
     align-items: center;
+    padding: 2rem;
     gap: 1.3rem;
     display: none;
 }
 
-#posts-container .post .post-options i {
+#container-posts-section #posts-container .post .post-options i {
     color: rgb(240, 240, 240);
     position: absolute;
     right: 1rem;
@@ -683,17 +698,7 @@ html {
     top: -1rem;
 }
 
-#posts-container .post .post-options .close-sign {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    font-size: 3rem;
-    font-weight: bold;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
-#posts-container .post .post-options button {
+#container-posts-section #posts-container .post .post-options button {
     cursor: pointer;
     border: none;
     font-size: 1.8rem;
@@ -701,23 +706,16 @@ html {
     width: 146%;
 }
 
-#posts-container .post .post-options button:hover {
+#container-posts-section #posts-container .post .post-options button:hover {
     background-color: hsl(0, 0%, 87%)
 }
 
-#posts-container .post {
-    margin-bottom: 3rem;
-    position: relative;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
-}
-
 #report-background {
-    display: flex;
     justify-content: center;
+    align-items: center;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
-    padding-top: 32rem;
     z-index: 2;
     inset: 0;
 }
@@ -746,7 +744,9 @@ html {
 
 /* ANIMATION OF LIKE */
 
-#posts-container #interactions .fa-thumbs-up {
+/* CONTINUE HERE */
+
+#container-posts-section #posts-container #interactions .fa-thumbs-up {
     cursor: pointer;
     color: black;
     transform-origin: center left;
@@ -1328,7 +1328,7 @@ html {
 }
 
 @media only screen and (max-width: 1150px) {
-    #posts-container {
+    #container-posts-section #posts-container {
         width: 450px;
         right: 24rem;
     }
@@ -1341,10 +1341,6 @@ html {
     #container-posts-section #add-post input[type="text"] {
         width: 30rem;
         margin-left: 1rem;
-    }
-
-    #posts-container .post #image-wrapper img {
-        object-fit: cover;
     }
 
     #additional-info-posts-section #friends-about-section {
@@ -1507,7 +1503,7 @@ html {
         left: 24rem;
     }
 
-    #posts-container {
+    #container-posts-section #posts-container {
         width: 500px;
         top: 117rem;
         left: 24rem;
@@ -1643,7 +1639,7 @@ html {
         width: 275px;
     }
 
-    #posts-container {
+    #container-posts-section #posts-container {
         width: 400px;
         left: 22.7rem;
         top: 107.5rem;
@@ -1886,7 +1882,7 @@ html {
         left: 14.3rem;
     }
 
-    #posts-container {
+    #container-posts-section #posts-container {
         left: 14.3rem;
     }
 
@@ -1975,7 +1971,7 @@ html {
         width: 275px;
     }
 
-    #posts-container {
+    #container-posts-section #posts-container {
         width: 400px;
         left: 3.5rem;
         top: 108rem;

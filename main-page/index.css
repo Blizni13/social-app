@@ -863,8 +863,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
     display: none;
