@@ -117,56 +117,57 @@ html {
     opacity: 1
 }
 
-#informations {
+/* INFO SECTION IN FIRST HEADER */
+
+#first-header #informations {
     position: absolute;
     left: 45rem;
     width: 300px;
     top: 26rem;
+}
+
+#first-header #informations h3 {
     font-size: 2.5rem;
 }
 
-#informations p {
+#first-header #informations p {
     font-size: 2rem;
-    margin-top: 0.5rem;
 }
 
-#informations #profiles-wrapper {
+#first-header #informations #profiles-wrapper {
     display: flex;
     margin-top: 1rem;
     width: 163px;
     position: relative;
 }
 
-#informations #profiles-wrapper .fas.fa-ellipsis-vertical {
+#first-header #informations #profiles-wrapper .fas.fa-ellipsis-vertical {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 0;
+    right: 0.3rem;
     transform: rotate(90deg);
     color: gray;
     background-color: rgba(0, 0, 0, 0.5);
-    width: 40px;
-    height: 40px;
+    width: 39px;
+    height: 39px;
     border-radius: 50%;
     cursor: pointer;
 }
 
-#informations .profile-friend {
+#first-header #informations #profiles-wrapper .profile-friend {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 2px solid white;
 }
 
-#informations .profile-friend #curtain {
-    position: absolute;
-    width: 100%;
-}
-
-#informations .profile-friend:not(:first-of-type) {
+#first-header #informations .profile-friend:not(:first-of-type) {
     margin-left: -1rem;
 }
+
+/* EDIT PROFILE BUTTON WITH TRANSITIONS */
 
 #first-header button[type="submit"] {
     position: absolute;
@@ -174,15 +175,38 @@ html {
     top: 30rem;
     width: 215px;
     height: 50px;
-    background-color: hsl(0, 0%, 92%);
+    background-color: hsl(0, 0%, 90%);
     border-radius: 10px;
     font-size: 2.6rem;
     cursor: pointer;
     border: none;
+    transition-duration: 0.3s;
+}
+
+#first-header button[type="submit"]::after, #first-header button[type="submit"]::before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: inherit;
+    z-index: -1;
+    transition-duration: 0.3s;
+    background-color: inherit;
+    opacity: 0.4
 }
 
 #first-header button[type="submit"]:hover {
-    background-color: hsl(0, 0%, 88%)
+    transform: translate(-10px, -10px)
+}
+
+#first-header button[type="submit"]:hover::after {
+    transform: translate(5px, 5px)
+}
+
+#first-header button[type="submit"]:hover::before {
+    transform: translate(10px, 10px);
 }
 
 #first-header hr {
