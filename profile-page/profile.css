@@ -8,10 +8,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 :root {
     --posts-header-color: rgb(240, 240, 240);
     --reactions-color: rgb(240, 240, 240);
@@ -28,14 +24,12 @@ body {
 
 #background-image {
     width: 100%;
-    margin-inline: auto;
     height: 250px;
 }
 
 #background-image img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
 }
 
 #foreground-image {
@@ -46,16 +40,16 @@ body {
     left: 25rem;
     top: -5rem;
     border: 5px solid white;
+    overflow: hidden;
 }
 
 #foreground-image img {
     width: 100%;
-    border-radius: 50%;
 }
 
 /* HEADER NAVIGATION */
 
-header a {
+#first-header a {
     text-decoration: none;
     color: black;
 }
@@ -74,6 +68,11 @@ header a {
     transition-duration: 0.5s;
 }
 
+.navigation .fas.fa-house, .navigation .fas.fa-gear {
+    opacity: 1;
+    transition-duration: 1s;
+}
+
 #home {
     top: 27rem;
 }
@@ -84,16 +83,38 @@ header a {
 
 .navigation p {
     font-size: 2rem;
-    margin-left: 4.7rem;
-    font-family: 'Open Sans'
+    font-family: 'Open Sans';
+    font-weight: bold;
+    opacity: 0;
+    transition-duration: 0.5s;
 }
 
+.navigation #home-text {
+    margin-left: 2rem;
+}
+
+.navigation #settings-text {
+    margin-left: 1.5rem;
+}
+
+/* NAVIGATION EFFECTS */
+
 #home:hover {
-    width: 130px;
+    width: 110px;
 }
 
 #settings:hover {
-    width: 150px;
+    width: 120px;
+}
+
+#home:hover .fas.fa-house , #settings:hover .fas.fa-gear {
+    opacity: 0;
+    transition-delay: 0ms;
+    transition-duration: 0.3s;
+}
+
+#home:hover p, #settings:hover p {
+    opacity: 1
 }
 
 #informations {
