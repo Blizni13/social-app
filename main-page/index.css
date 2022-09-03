@@ -516,17 +516,17 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     top: -1rem;
 }
 
-#follow-users h3, #follow-users p {
+#follow-users header h3, #follow-users header p {
     color: gray;
 }
 
-#follow-users h3 {
+#follow-users header h3 {
     font-size: 2.3rem;
     margin-left: -1.5rem;
     margin-top: 0.2rem;
 }
 
-#follow-users p[id="refresh"]{
+#follow-users header p {
     font-size: 2rem;
     position: absolute;
     right: 2rem;
@@ -957,11 +957,35 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
 @media screen and (max-width: 1145px) {
 
-    /* RESPONSIVE SETTINGS UPLOAD PHOTO - VIDEO */
+    /*HEADER ELEMENTS RESPONSIVE SETTINGS */
 
-    header #upload {
-        padding-top: 0rem;
+    header button[id="upload"] {
+        width: 180px;
+        font-size: 1.7rem;
+        right: 23rem;
     }
+
+    header ul .fas {
+        font-size: 2.4rem;
+        top: -0.8rem;
+        margin-right: -3rem;
+    }
+
+    header input[type="text"] {
+        font-size: 1.7rem;
+        margin-left: 18.8rem;
+        width: 190px;
+    }
+    
+    header label[for="search"] {
+        left: 21rem;
+    }
+
+    header h3 {
+        font-size: 3.1rem;
+    }
+
+    /* UPLOAD PHOTO - VIDEO RESPONSIVE SETTINGS */
 
     header #upload-files {
         width: 180px;
@@ -972,17 +996,14 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.4rem;
     }
 
-    header #notification-icon,  header #notification {
+    /* NOTIFICATIONS AND MESSAGES RESPONSIVE SETTINGS */
+
+    header .notification-icon {
         width: 15px;
         height: 15px;
         font-size: 1.4rem;
         padding: 0.2rem;
         padding-top: 0.1rem;
-    }
-
-    header #notification {
-        right: -0.7rem;
-        top: -0.7rem;
     }
 
     header #messages {
@@ -996,7 +1017,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 2.6rem;
     }
 
-    header #messages .message .profile-wrapper{
+    header #messages .message .profile-wrapper {
         width: 30px;
         height: 30px;
     }
@@ -1004,12 +1025,10 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header #messages .message p {
         margin-top: -1.8rem;
         margin-left: 3.7rem;
-        font-size: 1.4rem;
-        color: blue;
     }
 
     header #messages .message h4 {
-        margin-left: -1.2rem;
+       left: 4.6rem;
     }
 
     header #messages .message .circle-message {
@@ -1020,30 +1039,33 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header #info {
         width: 220px;
-        font-size: 1.5rem;
         right: 18rem;
     }
+
+     header #info h2 {
+        font-size: 2.3rem; 
+    } 
 
     header #info .info-text .profile-wrapper {
         width: 30px;
         height: 30px;
+        margin-top: 0.6rem;
     }
 
     header #info .info-text p {
-        font-size: 1.5rem;
         margin-left: 3.7rem;
-        margin-top: -3.55rem;
+        margin-top: -3.2rem;
     }
 
     header #info .info-text .circle-notification {
-        font-size: 1.5rem;
         right: 3rem;
     }
 
     header #info #close-notifications {
-        top: 0.8rem;
         font-size: 2.6rem;
     }
+
+    /* OTHER PAGES WINDOW RESPONSIVE SETTINGS*/
     
     header ul #other-pages-open {
         width: 30px;
@@ -1058,14 +1080,27 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         width: 120px;
     }
 
-    header #other-pages .window {
-        width: 120px;
+    header #hover-notifications {
+        font-size: 1.3rem;
+        right: 6.8rem;
     }
+    
+    header #hover-messages {
+        font-size: 1.3rem;
+        right: 3.7rem;
+    }
+    
+    header #hover-account {
+        right: 0rem;
+        font-size: 1.3rem;
+        padding-inline: 0.5rem;
+    }
+
+    /* POST SECTION AND FOLLOW SECTION RESPONSIVE SETTINGS */
 
     #posts-container {
         left: 10rem;
         width: 350px;
-        position: relative;
         top: 14rem;
     }
 
@@ -1076,35 +1111,37 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         height: 250px;
     }
 
-#follow-users header h3 {
-        font-size: 1.9rem;
-        margin-left: -0.5rem;
-        margin-top: -0.3rem;
+    #follow-users header h3 {
+        font-size: 1.75rem;
+        margin-left: -2.2rem;
+        margin-top: -0.5rem;
     }
 
-#follow-users header #refresh {
-        top: 0.74rem;
-        font-size: 1.9rem;
-        right: 2rem;
+    #follow-users header p {
+        font-size: 1.75rem;
+        right: 1.5rem;
+        top: 1rem
     }
 
     #follow-users #users-card {
-        height: 83%;
+        height: 207px;
     }
 
-    #follow-users .photo-wrapper {
+    #follow-users #users-card .photo-wrapper {
         width: 25px;
         height: 25px;
     }
 
     #follow-users #users-card .name {
         font-size: 1.6rem;
-        left: 0;
+        left: 4.7rem;
+        bottom: 1.4rem;
     }
     
     #follow-users #users-card .followers {
         font-size: 1.3rem;
         left: 4.7rem;
+        bottom: 2.7rem;
     }
 
     #follow-users #users-card .user button {
@@ -1113,107 +1150,14 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.5rem;
     }
 
-    #follow-users #users-card .user.first button{
-        top: 1.5rem;
-    }
-
-    #follow-users #users-card .user.second button{
-        top: 6.6rem;
-    }
-
-    #follow-users #users-card .user.third button{
-        bottom: 6.3rem;
-    }
-
-    #follow-users #users-card .user.fourth button{
-        bottom: 1.2rem;
-    }
-
     #follow-users #users-card button:hover {
         box-shadow: 0px 0px 10px 1px gray!important; 
-    }
-
-    header button[id="upload"] {
-        width: 180px;
-        font-size: 1.7rem;
-        right: 23rem;
-        padding-top: 0.9rem;
-    }
-
-    header ul .fas {
-        font-size: 2.4rem;
-    }
-
-    header h3 {
-        font-size: 4rem;
-    }
-
-    header input[type="text"] {
-        height: 40px;
-        font-size: 1.7rem;
-        margin-left: 18.8rem;
-        width: 190px;
-    }
-    
-    header label[for="search"] {
-        left: 21rem;
-    }
-
-    header ul .fas {
-        top: -0.8rem;
-        margin-right: -3rem;
-    }
-
-    header h3 {
-        font-size: 3.1rem;
     }
 }
 
 @media screen and (max-width: 890px) {
-    /* RESPONSIVE SETTINGS UPLOAD PHOTO - VIDEO */
 
-    header #upload-files {
-        right: 14.3rem;
-        width: 150px;
-    }
-
-    header #upload-files form label[for="photo-video"]::after {
-        font-size: 1.3rem;
-    }
-
-    header #upload-files form label[for="photo-video"] {
-        width: 58%;
-    }
-
-    header #upload-files form button[type="submit"] {
-        font-size: 1.3rem;
-        width: 40%;
-    }
-
-    #posts-container {
-        left: 3rem;
-    }
-
-    #follow-users {
-        left: 44rem;
-    }
-
-    header #messages {
-        right: 6rem;
-    }
-
-    header #info {
-        width: 220px;
-        font-size: 1.5rem;
-        right: 10rem;
-    }
-
-    header button[id="upload"] {
-        width: 145px;
-        font-size: 1.4rem;
-        height: 40px;  
-        right: 14.5rem;
-    }
+    /* HEADER RESPONSIVE SETTINGS  */
 
     header input[type="text"] {
         width: 160px;
@@ -1234,11 +1178,40 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         left: 1rem;
     }
 
-    header ul .fas {
-        font-size: 2.4rem;
-        top: -0.7rem;
-        right: 2.5rem;
-        cursor: pointer;
+    /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
+
+    header button[id="upload"] {
+        width: 145px;
+        font-size: 1.4rem;
+        height: 40px;  
+        right: 14.5rem;
+    }
+
+    header #upload-files {
+        right: 14.3rem;
+        width: 150px;
+    }
+
+    header #upload-files form label[for="photo-video"]::after {
+        font-size: 1.3rem;
+    }
+
+    header #upload-files form label[for="photo-video"] {
+        width: 58%;
+    }
+
+    header #upload-files form button[type="submit"] {
+        width: 40%;
+    }
+
+    /* ICONS AND OTHER WINDOWS IN HEADER RESPONSIVE SETTINGS */
+
+    header #messages {
+        right: 6rem;
+    }
+
+    header #info {
+        right: 10rem;
     }
 
     header ul {
@@ -1246,16 +1219,27 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         margin-right: -3.5rem;
     }
 
+    header ul .fas {
+        top: -0.7rem;
+        right: 2.5rem;
+    }
+
     header #other-pages {
         right: 0.7rem;
         font-size: 1.5rem;
         width: 110px;
     }
-
-    header #other-pages .window {
-        width: 110px;
-    }
     
+    /* POSTS, FOLLOW SECTION AND REPORT MESSAGE RESPONSIVE SETTINGS */
+
+    #posts-container {
+        left: 3rem;
+    }
+
+    #follow-users {
+        left: 44rem;
+    }
+  
     #report-message {
         width: 350px;
         height: 175px;
@@ -1271,75 +1255,64 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 }
 
 @media screen and (max-width: 770px) {
+
+    /* OTHER PAGES INFO WINDOWS RESPONSIVE SETTINGS */
+
+    header #hover-notifications {
+        right: 6.5rem;
+    }
+    
+    header #hover-messages {
+        right: 3.3rem;
+    }
+
+    /* POST SECTION, FOLLOW SECTION AND REPORT MESSAGE RESPONSIVE SETTINGS */
+
     #posts-container {
         top: 44rem;
         left: 20%;
         width: 430px;
     }
 
-    header input[type="text"] {
-        width: 160px;
-    }
-
-    header label[for="search"] {
-        left: 19.7rem;
-        height: 40px;
-    }
-
     #follow-users {
         top: 11.5rem;
-        left: 28%; /* 23.5 rem*/
+        left: 28%;
         width: 320px;
         height: 280px;
     }
 
-#follow-users header #refresh {
-        top: 1rem;
+    #follow-users #users-card {
+        height: 232px;
     }
 
-#follow-users header h3 {
+    #follow-users header p {
+        top: 1.2rem;
+    }
+
+    #follow-users header h3 {
         margin-top: 0;
     }
 
     #follow-users #users-card .name {
-        bottom: 35%;
-        left: 0.3rem;
+        bottom: 1.7rem;
+        left: 5.4rem;
         font-size: 1.8rem;
     }
 
     #follow-users #users-card .user:hover .name {
-        bottom: 53%;
-    }
-
-    #follow-users #users-card .user:hover .followers {
-        transition-delay: 0.2s;
+        bottom: 2.7rem;
     }
     
     #follow-users #users-card .followers {
         font-size: 1.3rem;
-        left: 5.3rem;
+        left: 5.4rem;
+        bottom: 3rem;
     }
 
     #follow-users #users-card .user button {
         width: 90px;
         height: 30px;
-        left: 66%
-    }
-
-    #follow-users #users-card .user.first button{
-        top: 1.5rem;
-    }
-
-    #follow-users #users-card .user.second button{
-        top: 7.4rem;
-    }
-
-    #follow-users #users-card .user.third button{
-        bottom: 7rem;
-    }
-
-    #follow-users #users-card .user.fourth button{
-        bottom: 1.4rem;
+        left: 68%
     }
 
     #follow-users #users-card .photo-wrapper {
@@ -1363,10 +1336,11 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
 @media screen and (max-width: 680px) {
 
-    /* RESPONSIVE SETTINGS PHOTO - VIDEO UPLOAD*/
+    /* HEADER RESPONSIVE SETTINGS */
 
-    header #upload-files {
-        right: 12rem;
+    header h3 {
+        font-size: 2.4rem;
+        left: 1.8rem;
     }
 
     header input[type="text"] {
@@ -1376,21 +1350,23 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header label[for='search'] {
         left: 15.3rem;
-        height: 36px;
     }
 
     header label[for="search"] i {
         left: 0.7rem;
     }
 
+    /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
+
     header button[id="upload"] {
         right: 12.5rem;
     }
-
-    header h3 {
-        font-size: 2.4rem;
-        left: 1.8rem;
+    
+    header #upload-files {
+        right: 12rem;
     }
+
+    /* OTHER ELEMENTS IN HEADER RESPONSIVE SETTINGS */
 
     header ul .fas {
         font-size: 2.1rem;
@@ -1402,23 +1378,168 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         top: -1.5rem;
     }
 
-    header #notification-icon,  header #notification {
+    header .notification-icon {
         width: 13px;
         height: 13px;
         font-size: 1rem;
         padding-right: 0.3rem;
     }
 
-    header #notification {
-        padding-right: 0.2rem;
+    #follow-users header h3 {
+        margin-left: -1.2rem;
     }
 
 }
 
 @media screen and (max-width: 600px) {
-    /* RESPONSIVE SETTINGS FOR UPLOAD PHOTO - VIDEO */
 
-    header #upload {
+    /* HEADER RESPONSIVE SETTINGS*/
+
+    header {
+        height: 60px;
+    }
+
+    header h3 {
+        font-size: 1.8rem;
+        left: 1.4rem;
+    }
+
+    header input[type="text"] {
+        width: 124px;
+        height: 30px;
+        font-size: 1.2rem;
+        padding-left: 2rem;
+        margin-left: 9.5rem;
+        padding-right: 1rem;
+    }
+
+    header label[for="search"] {
+        left: 11.5rem;
+        height: 30px;
+        width: 20px;
+    }
+
+    header label[for="search"] i {
+        font-size: 1rem;
+    }
+
+    /* HEADER MESSAGES AND NOTIFICATIONS WINDOWS RESPONSIVE SETTINGS */
+
+    header #info {
+        width: 170px;
+        font-size: 1.4rem;
+        right: 8rem;
+        top: 5rem;
+    }
+
+    header #info h2 {
+        font-size: 2rem;
+    }
+
+    header #info .info-text .profile-wrapper {
+        width: 25px;
+        height: 25px;
+        margin-top: 1rem;
+    }
+
+    header #info .info-text p {
+        font-size: 1.3rem;
+        margin-left: 2.8rem;
+        margin-top: -3rem;
+    }
+
+    header #info .info-text .circle-notification {
+        right: 1rem;
+    }
+
+    header #messages {
+        right: 4rem;
+        width: 170px;
+        top: 5rem;
+    }
+
+    header #messages .message .profile-wrapper {
+        width: 25px;
+        height: 25px;
+        margin-left: -0.6rem;
+    }
+
+    header #messages .message p {
+        font-size: 1.15rem;
+        margin-left: 2.5rem;
+        margin-top: -1.6rem;
+    }
+
+    header #messages .message h4 {
+        left: 3.45rem;
+        margin-top: -0.3rem;
+    }
+
+    header #messages .message .circle-message {
+        right: 0.5rem;
+        width: 6px;
+        height: 6px;
+    }
+
+    header #messages .message {
+        width: 102%;
+    }
+
+    /* OTHER ELEMENTS IN HEADER RESPONSIVE SETTINGS */
+    
+    header ul .fas {
+        font-size: 2rem;
+        top: -0.8rem;
+        right: 1.5rem;
+        margin-right: -0.5rem;
+    }
+
+    header ul {
+        gap: 2.7rem;
+        margin-right: -4rem;
+    }
+
+    header #other-pages-open {
+        margin-left: 0.8rem;
+    }
+
+    header #other-pages {
+        font-size: 1.3rem;
+        width: 100px;
+        right: 0.2rem;
+        top: 6rem
+    }
+
+    header #other-pages .fas.fa-caret-up {
+        top: -1rem;
+    }
+
+    header #other-pages i {
+        font-size: 1.2rem;
+        margin-top: -0.2rem;
+    }
+
+    header #hover-notifications, header #hover-messages, header #hover-account {
+        top: 5.1rem;
+        font-size: 1.15rem;
+    }
+
+    header #hover-notifications {
+        right: 6.2rem;
+    }
+    
+    header #hover-messages {
+        right: 3.1rem;
+    }
+    
+    header #hover-account {
+        padding-inline: 0.3rem;
+        right: -0.2rem;
+    }
+
+    /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
+
+    header button[id="upload"] {
         font-size: 1rem;
         width: 110px;
         height: 30px;
@@ -1426,7 +1547,6 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header #upload-files {
         top: 5.5rem;
-        right: 12rem;
         width: 120px;
     }
 
@@ -1442,6 +1562,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         width: 55%;
     }
 
+    /* POSTS SECTION, FOLLOW SECTION AND REPORT MESSAGE RESPONSIVE SETTINGS */
+
     #posts-container {
         left: 7%;
         top: 42rem;
@@ -1450,156 +1572,6 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     #follow-users {
         left: 8.5rem;
         top: 9.5rem;
-    }
-
-    header #messages {
-        font-size: 1.4rem;
-        right: 4rem;
-        width: 170px;
-        top: 5rem;
-    }
-
-    header #messages #close-messages{
-        top: 0.8rem;
-        font-size: 2.6rem;
-    }
-
-    header #messages .message .profile-wrapper{
-        width: 25px;
-        height: 25px;
-        margin-left: -1rem;
-    }
-
-    header #messages .message p {
-        font-size: 1.15rem;
-        margin-left: 2.2rem;
-        margin-top: -1.6rem;
-    }
-
-    header #messages .message h4 {
-        margin-left: -2.3rem;
-        margin-top: -0.2rem;
-    }
-
-    header #messages .message .circle-message {
-        right: 0.3rem;
-        width: 7px;
-        height: 7px;
-    }
-
-    header #info {
-        width: 170px;
-        font-size: 1.4rem;
-        right: 8rem;
-        top: 5rem;
-    }
-
-    header #messages .message {
-        width: 102%;
-        padding-left: 1.2rem;
-    }
-
-    header #info .info-text .profile-wrapper {
-        width: 25px;
-        height: 25px;
-        margin-left: -0.6rem;
-    }
-
-    header #info .info-text p {
-        font-size: 1.3rem;
-        margin-left: 2.6rem;
-        margin-top: -3.2rem;
-    }
-
-    header #info .info-text .circle-notification {
-        font-size: 1.5rem;
-        right: 1rem;
-        width: 8px;
-        height: 8px;
-    }
-
-    header #info #close-notifications {
-        top: 0.8rem;
-        font-size: 2.6rem;
-    }
-
-    header {
-        height: 60px;
-    }
-
-    header h3 {
-        font-size: 1.8rem;
-        left: 1.4rem;
-    }
-
-    header label[id="upload"] {
-        width: 123px;
-        font-size: 1.2rem;
-        height: 30px;  
-        right: 11rem;
-        padding-top: 0.5rem;
-        }
-
-    header input[type="text"] {
-        width: 124px;
-        height: 30px;
-        font-size: 1.2rem;
-        padding-left: 2rem;
-        margin-left: 9.5rem;
-        padding-right: 1rem;
-    }
-    
-    header label[for="search"] {
-        left: 11.5rem;
-        height: 30px;
-        width: 20px;
-    }
-
-    header label[for="search"] i {
-        font-size: 1rem;
-    }
-
-    header ul .fas {
-        font-size: 2rem;
-        top: -0.8rem;
-        right: 1.5rem;
-        cursor: pointer;
-    }
-
-    header ul .fas {
-        margin-right: -0.5rem;
-    }
-
-    header ul {
-        gap: 2.7rem;
-        margin-right: -4rem;
-    }
-
-    header #other-pages-open {
-        width: 25px;
-        height: 25px;
-        margin-top: 0.7rem; 
-        margin-left: 1rem;
-    }
-
-    header #other-pages-open img{
-        width: 25px;
-        height: 25px;
-    }
-
-    header #other-pages {
-        font-size: 1.3rem;
-        width: 100px;
-        right: 0.2rem;
-        top: 6rem
-    }
-
-    header #other-pages .window {
-        width: 100px;
-    }
-
-    header #other-pages i {
-        font-size: 1.2rem;
     }
 
     #report-message {
