@@ -2,13 +2,11 @@
 
 window.onbeforeunload = () => window.scrollTo(0, 0)
 
-// Settings posts wrapper to appropriate height
+// CALCULATE HEIGHT FOR CONTAINER POSTS SECTION 
 
-let additionalHeight = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 35
-
-console.log(document.getElementById('posts-container').offsetHeight)
-console.log(document.getElementById('add-post').offsetHeight)
-document.getElementById('additional-info-posts-section').style.height = `${additionalHeight}px`
+window.onload = () => {
+    document.getElementById('container-posts-section').style.height = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 55 + 'px'
+}
 
 // REPORT WINDOW
 

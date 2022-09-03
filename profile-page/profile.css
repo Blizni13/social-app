@@ -54,6 +54,11 @@ html {
     color: black;
 }
 
+#first-header {
+    border-bottom: 1px solid gray;
+    padding-bottom: 1.6rem;
+}
+
 .navigation {
     display: flex;
     position: absolute;
@@ -215,6 +220,8 @@ html {
     margin-top: -2.5rem;
 }
 
+/* FIRST HEADER SECTIONS */
+
 #first-header #sections {
     display: flex;
     gap: 5rem;
@@ -227,7 +234,7 @@ html {
 #first-header #sections p {
     cursor: pointer;
     padding: 0.5rem;
-    font-weight: bold;
+    border-radius: 10px;
 }
 
 #first-header #sections hr {
@@ -257,22 +264,27 @@ html {
 }
 
 #first-header #sections p:active {
-    border-radius: 10px;
     background-color: hsl(240, 0%, 90%);
 }
 
-#first-header {
-    border-bottom: 1px solid gray;
-    padding-bottom: 1.6rem;
-}
+/* CONTAINER POSTS SECTION ELEMENTS */
 
 #container-posts-section {
     position: relative;
     width: 1200px;
     margin-inline: auto;
-    padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
+
+/* ADDITIONAL INFO POSTS SECTION */
+
+#container-posts-section #additional-info-posts-section {
+    position: sticky;
+    top: 1rem;
+    width: 450px;
+    height: 915px;
+}
+
 
 #container-posts-section #additional-info-posts-section #user-info {
     width: 450px;
@@ -281,8 +293,61 @@ html {
     padding-bottom: 2.5rem;
     background-color: white;
     box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
-    position: sticky;
     top: 1rem;
+}
+
+#container-posts-section #additional-info-posts-section #photos-about-section {
+    margin-left: 0;
+    padding-left: 2.2rem;
+    width: 450px;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    column-gap: 1.4rem;
+    top: 59rem;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section h2 {
+    margin-top: -5.5rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section #friends-num {
+    margin-top: -2.3rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section .all {
+    top: 5rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section img{
+    width: 110px;
+    height: 100px;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section h4 {
+    margin-top: -2.2rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) img,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) img,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) img {
+    margin-top: -1.5rem;
+}
+
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) h4,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) h4,
+#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) h4 {
+    margin-top: -4rem;
+}
+
+#container-posts-section #additional-info-posts-section #user-info {
+    position: sticky;
+    top: 1.2rem;
 }
 
 #container-posts-section #user-info h2 {
@@ -1187,67 +1252,6 @@ html {
 
 #photos-about-section span:hover::after {
     background-color: rgba(0, 0, 0, 0.1)
-}
-
-#container-posts-section #additional-info-posts-section {
-    width: 450px;
-}
-
-#container-posts-section #additional-info-posts-section #photos-about-section {
-    width: 450px;
-    margin-left: 0;
-    position: sticky;
-    top: 26.5rem;
-    padding-left: 2.2rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 450px;
-    column-gap: 1.4rem;
-    position: sticky;
-    top: 59rem;
-    padding-top: 7rem;
-    padding-bottom: 4rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section h2 {
-    margin-top: -5.5rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section #friends-num {
-    margin-top: -2.3rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section .all {
-    top: 5rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section img{
-    width: 110px;
-    height: 100px;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section h4 {
-    margin-top: -2.2rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) img,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) img,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) img {
-    margin-top: -1.5rem;
-}
-
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(1) h4,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(2) h4,
-#container-posts-section #additional-info-posts-section #friends-about-section .friend:nth-of-type(3) h4 {
-    margin-top: -4rem;
-}
-
-#container-posts-section #additional-info-posts-section #user-info {
-    position: sticky;
-    top: 1.2rem;
 }
 
 #container-posts-section #photos-about-section span {
