@@ -1273,9 +1273,16 @@ body {
         margin-left: 90rem;
     }
 
+    /* FRIENDS SECTION SETTINGS */
+
+    .friends-about-section {
+        width: 1100px;
+    }
+
     .friends-about-section .friend {
         width: 470px;
     }
+
 }
 
 @media only screen and (max-width: 1150px) {
@@ -1368,6 +1375,13 @@ body {
 
     #about-section .friends-about-section .all {
         margin-left: 66rem !important;
+    }
+
+    /* FRIENDS SECTION SETTINGS */
+
+    .friends-about-section {
+        width: 870px;
+        margin-left: 11rem;
     }
 
     .friends-about-section .friend {
@@ -1475,13 +1489,16 @@ body {
         margin-left: 52rem !important; 
     }
 
-    .friends-about-section .all {
-        margin-left: 50rem;
+    /* FRIENDS SECTION SETTINGS */
+
+    .friends-about-section {
+        width: 715px;
+        margin-left: 12rem;
     }
 
     .friends-about-section .friend {
         width: 285px;
-    }
+    }   
 }
 
 @media only screen and (max-width: 850px) {
@@ -1707,36 +1724,25 @@ body {
     }
 
     #about-section .friends-about-section .all {
-        margin-left: 32rem !important; 
+        right: 5rem;
+        width: 145px; 
     }
+
+    /* FRIENDS SECTION SETTINGS */
 
     .friends-about-section {
-        grid-template-columns: 1fr
-    }
-
-    .friends-about-section .all {
-        margin-left: 31rem;
+        grid-template-columns: 1fr;
+        width: 500px;
+        margin-left: 16.1rem;
     }
 
     .friends-about-section .friend {
         width: 400px;
     }
 
-    .friends-about-section .friend img {
-        width: 70px;
-        height: 60px;
+    .friends-about-section .friend .friend-options-on {
+        top: 2rem;
     }
-
-    .friends-about-section .friend h4 {
-        top: 1rem;
-        left: 8rem;
-    }
-
-    .friends-about-section .friend .number-of-friends {
-        top: 3.5rem;
-        left: 8rem;
-    }
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -1831,6 +1837,11 @@ body {
         margin-left: 9rem;
     }
 
+    /* FRIENDS SECTION SETTINGS */
+
+    .friends-about-section {
+        margin-left: 9.1rem;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -2034,5 +2045,12 @@ body {
 
     .friends-about-section .friend {
         width: 320px;
+    }
+
+    /* FRIEND SECTION SETTINGS */
+
+    .friends-about-section {
+        width: 400px;
+        margin-left: 3.75rem;
     }
 }
