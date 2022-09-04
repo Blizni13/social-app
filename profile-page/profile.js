@@ -26,7 +26,9 @@ for (let z = 0; z < reportButton.length; z++) {
 }
 
 window.onclick = function(event) {
+    console.log(event.target)
     if ([...postOptions].every(el => el !== event.target) && [...reportButton].every(el => el !== event.target)) {
+        console.log('EloEloElo')
         for (let i = 0; i < postOptions.length; i++) {
             postOptions[i].style.display = 'none'
         }
@@ -215,7 +217,6 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
     }
     window.onclick = function(event) {
         if (friendOptionsButton.every(el => el !== event.target) && friendOptionsWindow.every(el => el !== event.target)) {
-            console.log('Siema')
             for (let i = 0; i < friendOptionsWindow.length; i++) {
                 friendOptionsWindow[i].style.display = 'none'
             }

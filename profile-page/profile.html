@@ -108,29 +108,31 @@
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends">100 mutual friends</p>
-                        <i class="fas fa-ellipsis-vertical"></i>
                     </div>
 
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends">100 mutual friends</p>
-                        <i class="fas fa-ellipsis-vertical"></i>
                     </div>
 
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends">100 mutual friends</p>
-                        <i class="fas fa-ellipsis-vertical"></i>
                     </div>
 
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends">100 mutual friends</p>
-                        <i class="fas fa-ellipsis-vertical"></i>
+                    </div>
+                    
+                    <div class="friend">
+                        <img src="/images/pexels-pixabay-39866.jpg">
+                        <h4>Name</h4>
+                    </div>
+                    
+                    <div class="friend">
+                        <img src="/images/pexels-pixabay-39866.jpg">
+                        <h4>Name</h4>
                     </div>
                     
                 </div>
@@ -276,7 +278,7 @@
             </div>
         </div>
 
-        <!-- PHOTOS SECTION -->
+        <!-- PHOTOS MAIN SECTION -->
 
         <div id="photos-section">
             <div id="photos-about-section">
@@ -295,7 +297,7 @@
             </div>
         </div>
 
-        <!-- ABOUT SECTION -->
+        <!-- ABOUT MAIN SECTION -->
 
         <div id="about-section">
             <div id="personal-info">
@@ -314,7 +316,7 @@
                 <p class="personal-info">Live in <span class="bold current-value">Pilcza Żelichowska</span></p>
                 <i class="fas fa-pencil right open-window"></i>
 
-                <div class="change-value other-place">
+                <div class="change-value">
                     <input type="text" class="new-changes" required>
                     <input type="submit" value="Save" class="save">
                     <input type="submit" value="Close" class="close">
@@ -375,32 +377,31 @@
 
                 <h3>Basic info</h3>
 
-                <div class="change-value">
-                    <input class="new-changes unused">
-                    <select>
+                <div class="change-value select">
+                    <select class="new-changes">
                         <option disabled selected>Select your option</option>
                         <option>Male</option>
                         <option>Female</option>
                     </select>
-                    <input type="submit" value="Save" class="save select">
-                    <input type="submit" value="Close" class="close select">
+                    <input type="submit" value="Save" class="save">
+                    <input type="submit" value="Close" class="close">
                 </div>
                 
                 <i class="fas fa-person left"></i>
                 <p class="personal-info">Gender <span class="bold current-value"> Male</span></p>
                 <i class="fas fa-pencil right open-window"></i>
 
-                <div class="change-value">
+                <div class="change-value date">
                     <input type="date" class="new-changes">
-                    <input type="submit" value="Save" class="save date">
-                    <input type="submit" value="Close" class="close date">
+                    <input type="submit" value="Save" class="save">
+                    <input type="submit" value="Close" class="close">
                 </div>
                 
                 <i class="fas fa-cake-candles left"></i>
                 <p class="personal-info">Birth date <span class="bold current-value">20 February 2003</span></p>
                 <i class="fas fa-pencil right open-window"></i>
 
-                <div class="change-value last">
+                <div class="change-value">
                     <input type="text" class="new-changes" required>
                     <input type="submit" value="Save" class="save">
                     <input type="submit" value="Close" class="close">
@@ -417,6 +418,7 @@
                     <h2>Friends</h2>
                     <p id="friends-num">1.192 friends</p>
                     <p class="all">See All Friends</p>
+
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
@@ -440,10 +442,36 @@
                         </div>
                         <button class="add-friend">Add Friend</button>
                     </div>
+
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends" class="number-of-friends">100 mutual friends</p>
+                        <p class="number-of-friends">100 mutual friends</p>
+                        <button class="friend-options-on"><i class="fas fa-ellipsis-vertical"></i></button>
+
+                        <div class="friend-options-window">
+                            <div class="friend-option favourite">
+                                <i class="fas fa-heart"></i>
+                                <p>Favourite</p>
+                            </div>
+
+                            <div class="friend-option follow-option">
+                                <i class="fas fa-square-minus"></i>
+                                <p class="follow-text">Unfollow</p>
+                            </div>
+
+                            <div class="friend-option unfriend">
+                                <i class="fas fa-user-xmark"></i>
+                                <p>Unfriend</p>
+                            </div>
+                        </div>
+                        
+                        <button class="add-friend">Add Friend</button>
+                    </div>
+                    <div class="friend">
+                        <img src="/images/pexels-pixabay-39866.jpg">
+                        <h4>Name</h4>
+                        <p class="number-of-friends">100 mutual friends</p>
                         <button class="friend-options-on"><i class="fas fa-ellipsis-vertical"></i></button>
                         <div class="friend-options-window">
                             <div class="friend-option favourite">
@@ -463,10 +491,10 @@
                         </div>
                         <button class="add-friend">Add Friend</button>
                     </div>
-                    <div class="friend">
+                <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends" class="number-of-friends">100 mutual friends</p>
+                        <p class="number-of-friends">100 mutual friends</p>
                         <button class="friend-options-on"><i class="fas fa-ellipsis-vertical"></i></button>
                         <div class="friend-options-window">
                             <div class="friend-option favourite">
@@ -484,33 +512,10 @@
                                 <p>Unfriend</p>
                             </div>
                         </div>
-                        <button class="add-friend">Add Friend</button>
-                    </div>
-                    <div class="friend">
-                        <img src="/images/pexels-pixabay-39866.jpg">
-                        <h4>Name</h4>
-                        <p class="number-of-friends" class="number-of-friends">100 mutual friends</p>
-                        <button class="friend-options-on"><i class="fas fa-ellipsis-vertical"></i></button>
-                        <div class="friend-options-window">
-                            <div class="friend-option favourite">
-                                <i class="fas fa-heart"></i>
-                                <p>Favourite</p>
-                            </div>
-
-                            <div class="friend-option follow-option">
-                                <i class="fas fa-square-minus"></i>
-                                <p class="follow-text">Unfollow</p>
-                            </div>
-
-                            <div class="friend-option unfriend">
-                                <i class="fas fa-user-xmark"></i>
-                                <p>Unfriend</p>
-                            </div>
-                        </div>
-                        <button class="add-friend">Add Friend</button>
-                    </div>
+                    <button class="add-friend">Add Friend</button>
                 </div>
             </div>
+        </div>
 
             <!-- ALL FRIENDS SECTION -->
 
@@ -522,7 +527,7 @@
                     <div class="friend">
                         <img src="/images/pexels-pixabay-39866.jpg">
                         <h4>Name</h4>
-                        <p class="number-of-friends" class="number-of-friends">100 mutual friends</p>
+                        <p class="number-of-friends">100 mutual friends</p>
                         <button class="friend-options-on"><i class="fas fa-ellipsis-vertical"></i></button>
                         <div class="friend-options-window">
                             <div class="friend-option favourite">
