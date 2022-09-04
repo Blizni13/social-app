@@ -14,7 +14,6 @@ const reportButton = document.getElementsByClassName('post-options-button')
 const postOptions = document.getElementsByClassName('post-options')
 const reportText = document.getElementsByClassName('report')
 
-
 for (let z = 0; z < reportButton.length; z++) {
     reportButton[z].onclick = () => postOptions[z].style.display ='flex';
     reportText[z].addEventListener('click', () => {
@@ -25,21 +24,20 @@ for (let z = 0; z < reportButton.length; z++) {
 })
 }
 
-window.onclick = function(event) {
-    console.log(event.target)
-    if ([...postOptions].every(el => el !== event.target) && [...reportButton].every(el => el !== event.target)) {
-        console.log('EloEloElo')
-        for (let i = 0; i < postOptions.length; i++) {
-            postOptions[i].style.display = 'none'
-        }
-    }
-}
-
 document.querySelector('#report-background').addEventListener('click',
 function() {
     document.querySelector('#report-background').style.display = 'none'
     document.getElementsByTagName('body')[0].style.overflowY = 'scroll'
     document.getElementsByTagName('body')[0].style.paddingRight = '0'
+})
+
+window.addEventListener('click', () => {
+    if ([...reportButton].every(el => el !== event.target) && [...postOptions].every(el => el !== event.target)) {
+        console.log('SIEMA')
+        for (let i = 0; i < postOptions.length; i++) {
+            postOptions[i].style.display = 'none'
+        }
+    }
 })
 
 // LIKE ANIMATION
