@@ -55,7 +55,7 @@ body {
     width: 100%;
 }
 
-/* HEADER NAVIGATION */
+/* NAVIGATION IN FIRST HEADER */
 
 #first-header a {
     text-decoration: none;
@@ -111,7 +111,7 @@ body {
     margin-left: 1.5rem;
 }
 
-/* NAVIGATION EFFECTS */
+/* navigation effects */
 
 #home:hover {
     width: 110px;
@@ -182,7 +182,7 @@ body {
     margin-left: -1rem;
 }
 
-/* EDIT PROFILE BUTTON WITH TRANSITIONS */
+/* EDIT PROFILE BUTTON WITH TRANSITIONS IN FIRST HEADER */
 
 #first-header button[type="submit"] {
     position: absolute;
@@ -230,7 +230,7 @@ body {
     margin-top: -2.5rem;
 }
 
-/* FIRST HEADER SECTIONS */
+/* SECTIONS IN FIRST HEADER */
 
 #first-header #sections {
     display: flex;
@@ -277,7 +277,7 @@ body {
     background-color: hsl(240, 0%, 90%);
 }
 
-/* CONTAINER POSTS SECTION ELEMENTS */
+/* ELEMENTS IN CONTAINER POSTS SECTION*/
 
 #container-posts-section {
     position: relative;
@@ -286,7 +286,7 @@ body {
     margin-top: 2rem;
 }
 
-/* ADDITIONAL INFO POSTS SECTION */
+/* ADDITIONAL INFO IN CONTAINER POSTS SECTION */
 
 #container-posts-section #additional-info-posts-section {
     position: sticky;
@@ -303,57 +303,57 @@ body {
     box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
 }
 
-/* USER INFO IN POSTS SECTION */
-
-#container-posts-section #user-info h2 {
-    font-size: 3rem;
-    margin-bottom: -1rem;
-}
-
-#container-posts-section #user-info p {
-    font-size: 2.3rem;
-    margin-top: 0.8rem;
-    margin-left: 3.5rem;
-}
-
-#container-posts-section #user-info .fas {
-    font-size: 2rem;
-    position: relative;
-    top: 3rem;
-}
-
-#container-posts-section #user-info .fas.fa-location-dot {
-    left: 0.55rem;
-}
-
-#container-posts-section #user-info .fas.fa-house {
-    left: 0.2rem;
-}
-
-#container-posts-section #user-info .fas.fa-scroll {
-    left: 0.2rem;
-}
+/* user info in additional info */
 
 #container-posts-section #additional-info-posts-section #user-info {
     padding: 2rem;
 }
 
-/* PHOTOS INFO IN POSTS SECTION */
+#container-posts-section #additional-info-posts-section #user-info h2 {
+    font-size: 3rem;
+    margin-bottom: -1rem;
+}
+
+#container-posts-section #additional-info-posts-section #user-info p {
+    font-size: 2.3rem;
+    margin-top: 0.8rem;
+    margin-left: 3.5rem;
+}
+
+#container-posts-section #additional-info-posts-section #user-info .fas {
+    font-size: 2rem;
+    position: relative;
+    top: 3rem;
+}
+
+#container-posts-section #additional-info-posts-section #user-info .fas.fa-location-dot {
+    left: 0.55rem;
+}
+
+#container-posts-section #additional-info-posts-section #user-info .fas.fa-house {
+    left: 0.2rem;
+}
+
+#container-posts-section #additional-info-posts-section #user-info .fas.fa-scroll {
+    left: 0.2rem;
+}
+
+/* photos info in additional info */
 
 #container-posts-section #additional-info-posts-section .photos-about-section {
     padding-left: 2.2rem;
     margin-top: 1.5rem;
 }
 
-#container-posts-section .photos-about-section span {
+#container-posts-section #additional-info-posts-section .photos-about-section span {
     width: 125px;
 }
 
-#container-posts-section .photos-about-section h2 {
-    margin-left: -1.2rem;
+#container-posts-section #additional-info-posts-section .photos-about-section h2 {
+    left: 2.2rem;
 }
 
-/* FRIENDS INFO IN POSTS SECTION*/
+/* friends info in additional info */
 
 #container-posts-section #additional-info-posts-section .friends-about-section {
     position: relative;
@@ -374,7 +374,6 @@ body {
     margin-top: -1rem;
     margin-left: 0;
 }
-
 
 #container-posts-section #additional-info-posts-section .friends-about-section .all {
     right: 4rem;
@@ -398,7 +397,9 @@ body {
     top: 10.7rem;
 }
 
-/* ADD POST OPTION IN POSTS SECTION */
+/* ADD POST OPTION IN CONTAINER POSTS SECTION */
+
+/* add post section (upper) */
 
 #container-posts-section #add-post {
     position: absolute;
@@ -441,8 +442,10 @@ body {
     margin-block: 1.5rem;
 }
 
+/* add interactions section (lower) */
+
 #container-posts-section #add-interactions {
-    width: 69%;
+    width: 63%;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -458,20 +461,20 @@ body {
     border-radius: 10px;
 }
 
-#container-posts-section #add-post #add-interactions  i {
-    font-size: 2.4rem;
+#container-posts-section #add-post #add-interactions i {
+    font-size: 2.1rem;
 }
 
-#container-posts-section #add-post #add-interactions  p {
-    font-size: 2.4rem;
-    margin-left: 3.8rem;
+#container-posts-section #add-post #add-interactions p {
+    font-size: 2.2rem;
+    margin-left: 3.5rem;
 }
 
-#container-posts-section #add-post input[type="file"] {
+#container-posts-section #add-post #add-interactions input[type="file"] {
     display: none;
 }
 
-/* PHOTOS */
+/* CONTAINERS FOR IMAGES */
 
 .profile-wrapper img {
     width: 100%;
@@ -480,7 +483,7 @@ body {
     border-radius: 50%;
 }
 
-/* POSTS-SECTION */
+/* POSTS-SECTION IN CONTAINER POSTS SECTION */
 
 #container-posts-section #posts-container {
     position: absolute;
@@ -496,7 +499,7 @@ body {
     box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
 }
 
-/* ELEMENTS IN POST HEADER */
+/* post header elements */
 
 #container-posts-section #posts-container .post header {
     position: relative;
@@ -542,13 +545,13 @@ body {
     background-color: hsl(0, 0%, 89%)
 }
 
-/* UPLOADED IMAGE WRAPPER IN POST */
+/* uploaded image wrapper in post */
 
 #container-posts-section #posts-container .post .image-wrapper img {
     width: 100%;
 }
 
-/* REACTIONS SECTION IN POST */
+/* reaction section in post */
 
 #container-posts-section #posts-container .post #reactions {
     height: 5rem;
@@ -576,13 +579,13 @@ body {
     left: -2rem;
 }
 
-#container-posts-section #posts-container #reactions p {
+#container-posts-section #posts-container .post #reactions p {
     position: absolute;
     font-size: 2rem;
     margin-left: 7.5rem;
 }
 
-/* INTERACTIONS SECTION IN POST */
+/* interactions section in post */
 
 #container-posts-section #posts-container #interactions {
     display: flex;
@@ -609,7 +612,7 @@ body {
     right: 3rem;
 }
 
-/* COMMENTS SECTION IN POST */
+/* comments section in post  */
 
 #container-posts-section #posts-container .comments {
     width: 100%;
@@ -632,7 +635,7 @@ body {
     position: relative;
     width: 25px;
     height: 25px;
-    bottom: -2.7rem;
+    bottom: -2.55rem;
     margin-left: 2.5rem;
 }
 
@@ -660,7 +663,7 @@ body {
     display: none;
 }
 
-/* ADD COMMENT SECTION IN COMMENTS SECTION */
+/* add comment section in comments section */
 
 #container-posts-section #posts-container .comments input[type='text'] {
     position: absolute;
@@ -694,7 +697,7 @@ body {
     right: 4rem;
 }
 
-/* POST OPTIONS IN POSTS SECTION */
+/* post options in post */
 
 #container-posts-section #posts-container .post .post-options {
     position: absolute;
@@ -743,7 +746,7 @@ body {
 
 /* REPORT POST MESSAGE */
 
-#report-message {
+#report-background #report-message {
     text-align: center;
     width: 350px;
     height: 180px;
@@ -1077,26 +1080,13 @@ body {
 
 #about-section .friends-about-section .all {
     right: 3rem;
-    top: 2rem;
+    top: 2.6rem;
     margin-left: 0;
 }
 
 /* FRIENDS MAIN SECTION */
 
-/* .all settings for all friends main section in a file */
-
-.friends-about-section .all {
-    color: blue;
-    position: absolute;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 1rem;
-}
-
-.friends-about-section .all:hover {
-    background-color: hsl(0, 0%, 92%);
-    border-radius: 10px;
-}
+/* friends-about-section appearance and position */
 
 .friends-about-section {
     display: grid;
@@ -1123,6 +1113,21 @@ body {
     margin-left: 3rem;
     margin-top: 4.8rem;
     color: gray;
+}
+
+/* .all settings for all friends main section in a file */
+
+.friends-about-section .all {
+    color: blue;
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.friends-about-section .all:hover {
+    background-color: hsl(0, 0%, 92%);
+    border-radius: 10px;
 }
 
 .friends-about-section .all {
@@ -1246,6 +1251,8 @@ body {
     background-color: hsl(0, 0%, 90%)
 }
 
+/* RESPONSIVE SETTINGS */
+
 @media only screen and (max-width: 1300px) {
 
     /* PHOTOS SECTION SETTINGS */
@@ -1255,8 +1262,8 @@ body {
         padding-left: 2rem;
     }
 
-    #photos-section .photos-about-section h2 {
-        left: 1.7rem;
+    .photos-about-section h2 {
+        left: 2rem;
     }
 
     /* ABOUT SECTION SETTINGS */
@@ -1269,10 +1276,6 @@ body {
         left: 100rem;
     }
 
-    #about-section .friends-about-section .all {
-        margin-left: 90rem;
-    }
-
     /* FRIENDS SECTION SETTINGS */
 
     .friends-about-section {
@@ -1282,34 +1285,27 @@ body {
     .friends-about-section .friend {
         width: 470px;
     }
-
 }
 
 @media only screen and (max-width: 1150px) {
-    #container-posts-section #posts-container {
-        width: 450px;
-        right: 24rem;
+
+    /* HEADER SETTINGS */
+
+    #first-header #foreground-image {
+        left: 45rem;
     }
 
-    #container-posts-section #add-post {
-        width: 450px;
-        right: 24rem;
+    #first-header #informations {
+        top: 40rem;
+        left: 45.8rem;
+        width: 160px;
+        text-align: center;
     }
 
-    #container-posts-section #add-post input[type="text"] {
-        width: 30rem;
-        margin-left: 1rem;
+    #first-header button[type="submit"] {
+        left: 43.5rem;
+        top: 53.5rem;
     }
-
-    #container-posts-section #additional-info-posts-section .photos-about-section, #container-posts-section #additional-info-posts-section .friends-about-section {
-        margin-left: 0;
-    }
-
-    #container-posts-section #additional-info-posts-section {
-        margin-left: 2rem;
-    }
-
-    /* RESPONSIVE FOR HEADER IN PROFILE.HTML */
 
     #first-header hr {
         margin-top: 18rem;
@@ -1325,26 +1321,7 @@ body {
         margin-left: 0;
     }
 
-    #first-header button[type="submit"] {
-        left: 43.5rem;
-        top: 53.5rem;
-    }
-
-    #first-header #foreground-image {
-        left: 45rem;
-    }
-
-    #first-header #informations {
-        /* background-color: red; */
-        top: 40rem;
-        left: 45.5rem;
-    }
-
-    #first-header #informations p{
-        margin-left: 3.2rem;
-    }
-
-    /* HEADER NAVIGATION SETTINGS */
+    /* header navigation settings */
 
     #first-header #home {
         left: 77rem;
@@ -1356,10 +1333,36 @@ body {
         top: 53.5rem;
     }
 
+    /* POSTS SECTION CONTENT RESPONSIVE SETTINGS */
+
+    #container-posts-section #posts-container {
+        width: 450px;
+        right: 24rem;
+    }
+
+    #container-posts-section #add-post {
+        width: 450px;
+        right: 24rem;
+    }
+
+    #container-posts-section #add-post input[type="text"] {
+        width: 30rem;
+        margin-left: 1rem;
+    }
+
+    #container-posts-section #additional-info-posts-section .photos-about-section,
+    #container-posts-section #additional-info-posts-section .friends-about-section {
+        margin-left: 0;
+    }
+
+    #container-posts-section #additional-info-posts-section {
+        left: 2rem;
+    }
+
     /* PHOTOS SECTION SETTINGS */
     
     .photos-about-section {
-        margin-left: 13rem;
+        margin-left: 12rem;
     }
 
     /* ABOUT SECTION SETTINGS */
@@ -1373,9 +1376,10 @@ body {
         left: 75rem;
     }
 
-    #about-section .friends-about-section .all {
-        margin-left: 66rem !important;
-    }
+    .friends-about-section .friend h4 {
+        font-size: 2rem;
+        top: 22%;
+    } 
 
     /* FRIENDS SECTION SETTINGS */
 
@@ -1385,26 +1389,23 @@ body {
     }
 
     .friends-about-section .friend {
-        width: 360px;
+        width: 370px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
 
-    #first-header #sections {
-        margin-left: 29rem;
-    }
-
-    #first-header hr {
-        margin-left: 15rem;
-    }
+    /* HEADER SETTINGS */
 
     #first-header #foreground-image {
         left: 38rem;
     }
 
+    #first-header hr {
+        margin-left: 14rem;
+    }
+
     #first-header #informations {
-        top: 40rem;
         left: 39rem;
     }
 
@@ -1420,20 +1421,17 @@ body {
 
     #first-header #home {
         left: 68rem;
-        top: 53.5rem;
     }
 
     #first-header #settings {
         left: 19rem;
-        top: 53.5rem;
     }
 
     /* MAIN SECTION RESPONSIVE SETTINGS*/
     
     #container-posts-section #additional-info-posts-section {
         position: absolute;
-        margin: 0;
-        left: 20%;
+        left: 24rem;
         width: 500px;
     }
 
@@ -1447,31 +1445,30 @@ body {
 
     #container-posts-section #additional-info-posts-section .friends-about-section .all {
         right: 3rem;
-        width: 145px;
     }
 
     #container-posts-section #add-post {
         width: 500px;
-        top: 101rem;
+        top: 99rem;
         left: 24rem;
     }
 
     #container-posts-section #posts-container {
         width: 500px;
-        top: 117rem;
+        top: 115rem;
         left: 24rem;
     }
 
     /* PHOTOS SECTION SETTINGS */
     
     .photos-about-section {
-        margin-left: 12rem;
+        margin-left: 10.6rem;
         width: 720px;
         padding-left: 1.2rem;
     }
 
-    #photos-section .photos-about-section h2 {
-        left: 1.7rem;
+    .photos-about-section h2 {
+        left: 1.1rem;
     }
 
     /* ABOUT SECTION SETTINGS */
@@ -1485,10 +1482,6 @@ body {
         left: 60rem;
     }
 
-    #about-section .friends-about-section .all {
-        margin-left: 52rem !important; 
-    }
-
     /* FRIENDS SECTION SETTINGS */
 
     .friends-about-section {
@@ -1497,27 +1490,26 @@ body {
     }
 
     .friends-about-section .friend {
-        width: 285px;
+        width: 295px;
     }   
 }
 
 @media only screen and (max-width: 850px) {
-    #first-header #sections {
-        margin-left: 19rem;
+
+    /* HEADER SETTINGS */
+
+    #first-header #foreground-image {
+        left: 31rem;
+    }
+
+    #first-header #informations {
+        left: 32rem;
     }
 
     #first-header hr {
         margin-left: 13.5rem;
         margin-top: 25rem;
         width: 550px;
-    }
-
-    #first-header #foreground-image {
-        left: 31.5rem;
-    }
-
-    #first-header #informations {
-        left: 32rem;
     }
 
     #first-header button[type="submit"] {
@@ -1528,7 +1520,7 @@ body {
         margin-left: 16.5rem;
     }
 
-    /* HEADER NAVIGATION SETTINGS */
+    /* header navigation settings */
 
     #first-header #home {
         left: 50rem;
@@ -1540,19 +1532,60 @@ body {
         top: 60.5rem;
     }
 
-    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    /* MAIN SECTION SETTINGS*/
     
     #container-posts-section #additional-info-posts-section {
-        left: 18.9%;
+        left: 22.7rem;
         width: 400px;
+    }
+
+    /* user info in posts section settings */
+
+    #container-posts-section #additional-info-posts-section #user-info h2 {
+        font-size: 2.7rem;
+    }
+
+    #container-posts-section #additional-info-posts-section #user-info p {
+        font-size: 2rem;
+    }
+
+    #container-posts-section #additional-info-posts-section #user-info .fas {
+        top: 2.9rem;
+    }
+
+    #container-posts-section #additional-info-posts-section #user-info .fas.fa-scroll {
+        top: 3.1rem;
+    }
+
+    /* photos section in posts section settings */
+
+    #container-posts-section #additional-info-posts-section .photos-about-section h2 {
+        font-size: 2.8rem;
     }
 
     #container-posts-section #additional-info-posts-section .photos-about-section span {
         width: 110px;
     }
 
+    /* friends section in posts section settings */
+
+    #container-posts-section #additional-info-posts-section .friends-about-section h2,
+    #container-posts-section #additional-info-posts-section .friends-about-section #friends-num {
+        margin-left: -0.7rem;
+    }
+
+    #container-posts-section #additional-info-posts-section .friends-about-section h2 {
+        font-size: 2.8rem;
+    }
+
+    #container-posts-section #additional-info-posts-section .friends-about-section #friends-num {
+        font-size: 1.6rem;
+        margin-top: -1.2rem;
+    }
+
     #container-posts-section #additional-info-posts-section .friends-about-section .all {
         right: 1.7rem;
+        font-size: 1.9rem;
     }
 
     #container-posts-section #additional-info-posts-section .friends-about-section .friend {
@@ -1564,14 +1597,16 @@ body {
         margin-left: 1rem;
     }
     
-    #container-posts-section #additional-info-posts-section .friends-about-section .friend h4{
+    #container-posts-section #additional-info-posts-section .friends-about-section .friend h4 {
         top: 10.5rem;
     }
 
-    #container-posts-section #additional-info-posts-section .friends-about-section .friend img{
+    #container-posts-section #additional-info-posts-section .friends-about-section .friend img {
         width: 110px;
         height: 100px;
     }
+
+    /* add post and posts container in posts section settings */
 
     #container-posts-section #add-post {
         width: 400px;
@@ -1583,10 +1618,49 @@ body {
         width: 275px;
     }
 
+    #container-posts-section #add-post #add-interactions i {
+        font-size: 1.9rem;
+    }
+
+    #container-posts-section #add-post #add-interactions p {
+        font-size: 2rem;
+        margin-left: 2.8rem;
+    }
+
     #container-posts-section #posts-container {
         width: 400px;
         left: 22.7rem;
         top: 109.5rem;
+    }
+
+    #container-posts-section #posts-container .post #reactions p {
+        font-size: 1.7rem;
+        margin-top: 0.2rem;
+    }
+
+    #container-posts-section #posts-container .post #reactions .profile-wrapper {
+        width: 23px;
+        height: 23px;
+    } 
+
+    #container-posts-section #posts-container .post #interactions .fas {
+        font-size: 2.3rem;
+    }
+
+    /* report message settings */
+
+    #report-background #report-message {
+        width: 300px;
+        height: 160px;
+    }
+
+    #report-background #report-message p {
+        font-size: 3.4rem;
+    } 
+
+    #report-background #report-message i {
+        font-size: 4.2rem;
+        top: 1.3rem;
     }
 
     /* PHOTOS SECTION */
@@ -1608,15 +1682,9 @@ body {
         margin-left: 16.3rem;
     }
 
-    #about-section #personal-info p {
-        font-size: 1.8rem;
-    }
-
-    #about-section #personal-info .right {
-        left: 43rem;
-    }
-
     #about-section #personal-info h2 {
+        margin-top: 1rem;
+        margin-bottom: -2.7rem;
         margin-left: 0.5rem;
     }
 
@@ -1624,60 +1692,90 @@ body {
         margin-left: 1.5rem;
     }
 
-    #about-section #personal-info .left {
-        left: 4rem;
+    #about-section #personal-info p {
+        font-size: 1.8rem;
+        margin-left: 8.8rem;
+    }
+
+    #about-section #personal-info .right {
+        left: 43rem;
+        font-size: 1.8rem;
+        margin-top: -2.6rem;
     }
 
     #about-section #personal-info .fas.fa-house {
-        top: 11.6rem;
+        top: 11.35rem;
+        left: 4.5rem
     }
 
     #about-section #personal-info .fas.fa-location-dot {
-        top: 16.8rem;
+        top: 16.7rem;
+        left: 5.1rem;
     }
 
     #about-section #personal-info .fas.fa-school {
         top: 27.3rem;
+        left: 4.5rem;
     }
 
     #about-section #personal-info .fas.fa-scroll {
-        top: 33rem;
+        top: 32.8rem;
+        left: 4.7rem;
     }
 
     #about-section #personal-info .fas.fa-phone {
-        top: 43.9rem;
+        top: 43.7rem;
+        left: 5rem;
     }
 
     #about-section #personal-info .fas.fa-envelope {
         top: 48.7rem;
+        left: 5.1rem;
     }
 
     #about-section #personal-info .fas.fa-person {
-        top: 59.7rem;
+        top: 59.5rem;
+        left: 5.7rem;
     }
 
     #about-section #personal-info .fas.fa-cake-candles {
-        top: 64.5rem;
+        top: 64.4rem;
+        left: 5.35rem;
     }
 
     #about-section #personal-info .fas.fa-children {
-        top: 69.7rem
+        top: 69.7rem;
+        left: 4.9rem;
     }
 
     /* CHANGING VALUE OF INFO SETTINGS */
 
     #about-section #personal-info .change-value {
-        width: 205px;
+        width: 190px;
+        margin-left: 8.8rem;
+    }
+
+    #about-section #personal-info .change-value.select {
+        width: 190px;
+    }
+
+    #about-section #personal-info .change-value.date {
+        width: 190px;
     }
     
-    #about-section #personal-info .change-value input[type='text'], #about-section #personal-info .change-value select,#about-section #personal-info .change-value input[type='date'] {
-        width: 160px;
-        height: 45px;
+    #about-section #personal-info .change-value input[type='text'], 
+    #about-section #personal-info .change-value select,
+    #about-section #personal-info .change-value input[type='date'] {
+        width: 150px;
+        height: 40px;
+        bottom: -1.4rem;
+        font-size: 1.2rem;
     }
 
     #about-section #personal-info .change-value input[type='text']:focus ~ span,
     #about-section #personal-info .change-value input[type='text']:valid ~ span{
-        transform: translate(-2px, -10px)
+        transform: translate(-2px, -8px);
+        font-size: 0.9rem;
     } 
 
     #about-section #personal-info .change-value span {
@@ -1711,12 +1809,10 @@ body {
     
     #about-section #personal-info .change-value:nth-of-type(7) {
         top: 58rem;
-        width: 250px;
     }
     
     #about-section #personal-info .change-value:nth-of-type(8) {
         top: 66.3rem;
-        width: 270px;
     }
     
     #about-section #personal-info .change-value:nth-of-type(9) {
@@ -1724,8 +1820,7 @@ body {
     }
 
     #about-section .friends-about-section .all {
-        right: 5rem;
-        width: 145px; 
+        right: 1.5rem;
     }
 
     /* FRIENDS SECTION SETTINGS */
@@ -1737,7 +1832,7 @@ body {
     }
 
     .friends-about-section .friend {
-        width: 400px;
+        width: 420px;
     }
 
     .friends-about-section .friend .friend-options-on {
@@ -1746,15 +1841,8 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-    #first-header #sections {
-        margin-left: 14rem;
-        font-size: 2.4rem;
-    }
 
-    #first-header hr {
-        margin-left: 11rem;
-        width: 450px;
-    }
+    /* HEADER SETTINGS */
 
     #first-header #foreground-image {
         left: 25rem;
@@ -1764,8 +1852,18 @@ body {
         left: 26rem;
     }
 
+    #first-header #sections {
+        margin-left: 14rem;
+        font-size: 2.4rem;
+    }
+
     #first-header button[type="submit"] {
         left: 22.9rem;
+    }
+
+    #first-header hr {
+        margin-left: 11rem;
+        width: 450px;
     }
 
     #first-header #sections p {
@@ -1793,30 +1891,39 @@ body {
         left: 30.2rem;
     }
 
-    /* HEADER NAVIGATION SETTINGS */
+    /* header navigation settings */
 
     #first-header #home {
         left: 42rem;
-        top: 60.5rem;
     }
 
     #first-header #settings {
         left: 20rem;
-        top: 60.5rem;
     }
 
-    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    /* MAIN SECTION SETTINGS */
     
-    #container-posts-section #additional-info-posts-section {
-        left: 11.7%;
-    }
-
-    #container-posts-section #add-post {
-        left: 14.3rem;
-    }
-
+    #container-posts-section #additional-info-posts-section,
+    #container-posts-section #add-post,
     #container-posts-section #posts-container {
         left: 14.3rem;
+    }
+
+    /* report message settings */
+
+    #report-background #report-message {
+        width: 250px;
+        height: 130px;
+    }
+
+    #report-background #report-message p {
+        font-size: 2.6rem;
+        margin-top: 5.7rem;
+    }
+
+    #report-background #report-message i {
+        font-size: 3.7rem;
+        top: 1.3rem;
     }
 
     /* PHOTOS SECTION */
@@ -1828,30 +1935,26 @@ body {
     .photos-about-section {
         width: 450px;
         padding-right: 0rem;
-        margin-left: 11.2rem;
+        margin-left: 11rem;
     }
 
     /* ABOUT SECTION SETTINGS */
 
     #about-section #personal-info, #about-section .friends-about-section {
-        margin-left: 9rem;
+        margin-left: 8.7rem;
     }
 
     /* FRIENDS SECTION SETTINGS */
 
     .friends-about-section {
-        margin-left: 9.1rem;
+        margin-left: 8.7rem;
     }
 }
 
 @media only screen and (max-width: 640px) {
 
-    #first-header hr {
-        margin-left: 4rem;
-        margin-top: 24rem;
-        width: 400px;
-    }
-
+    /* HEADER SETTINGS */
+    
     #first-header #foreground-image {
         left: 14rem;
     }
@@ -1859,9 +1962,16 @@ body {
     #first-header #informations {
         left: 15rem;
     }
-
+    
     #first-header button[type="submit"] {
         left: 12.5rem;
+        top: 53rem;
+    }
+
+    #first-header hr {
+        margin-left: 4rem;
+        margin-top: 24rem;
+        width: 400px;
     }
 
     #first-header #sections {
@@ -1872,41 +1982,27 @@ body {
 
     #first-header #home {
         left: 32rem;
-        top: 60.5rem;
+        top: 60rem;
     }
 
     #first-header #settings {
         left: 10rem;
-        top: 60.5rem;
+        top: 60rem;
     }
 
-    /* MAIN SECTION RESPONSIVE SETTINGS*/
+    /* MAIN SECTION SETTINGS*/
     
-    #container-posts-section #additional-info-posts-section {
-        left: 4rem;
-        width: 400px;
-    }
-
-    #container-posts-section #add-post {
-        width: 400px;
-        left: 4rem;
-    }
-
-    #container-posts-section #add-post input[type="text"] {
-        width: 275px;
-    }
-
+    #container-posts-section #additional-info-posts-section,
+    #container-posts-section #add-post,
     #container-posts-section #posts-container {
-        width: 400px;
         left: 4rem;
     }
     
     /* PHOTOS SECTION */
 
-    #photos-section .photos-about-section {
-        margin-left: 2.7rem;
-        gap: 1.4rem;
-        padding-left: 1.4rem;
+    .photos-about-section {
+        margin-left: 1.8rem;
+        padding-left: 1.1rem;
     }
 
     /* ABOUT SECTION SETTINGS */
@@ -1915,136 +2011,177 @@ body {
         margin-left: 4rem;
         width: 400px;
     }
-    
-    #about-section #personal-info .right {
-        font-size: 1.8rem !important;
-        padding: 0.6rem;
-        margin-left: -8rem;
-        margin-top: -2.5rem;
-    }
-
-    /* ABOUT SECTION ICONS LEFT */
-
-    #about-section #personal-info .fas {
-        font-size: 2.7rem;
-    }
-
-    #about-section #personal-info .fas.fa-house {
-        left: 3rem;
-        top: 11.6rem;
-    }
-
-    #about-section #personal-info .fas.fa-location-dot {
-        left: 3.5rem;
-        top: 16.5rem;
-    }
-
-    #about-section #personal-info .fas.fa-school {
-        left: 3rem;
-        top: 26.8rem;
-    }
-
-    #about-section #personal-info .fas.fa-scroll {
-        left: 3rem;
-        top: 32rem;
-    }
-
-    #about-section #personal-info .fas.fa-phone {
-        left: 3.5rem;
-        top: 42.5rem;
-    }
-
-    #about-section #personal-info .fas.fa-envelope {
-        left: 3.5rem;
-        top: 47.3rem;
-    }
-
-    #about-section #personal-info .fas.fa-person {
-        left: 3.8rem;
-        top: 57.7rem;
-    }
-
-    #about-section #personal-info .fas.fa-cake-candles {
-        left: 3.4rem;
-        top: 62.5rem;
-    }
-
-    #about-section #personal-info .fas.fa-children {
-        left: 2.9rem;
-        top: 67.3rem
-    }
 
     #about-section #personal-info h2 {
-        margin-left: 0rem
+        margin-left: 0rem;
+        font-size: 2.75rem;
     }
 
     #about-section #personal-info h3 {
         margin-left: 1rem;
+        font-size: 2.1rem;
     }
 
-    /* CHANGING VALUE OF INFO SETTINGS */
+    #about-section #personal-info p {
+        margin-left: 6.5rem;
+        font-size: 1.6rem;
+    }
+    
+    #about-section #personal-info .right {
+        font-size: 1.8rem;
+        padding: 0.6rem;
+        margin-top: -2.3rem;
+        left: 35.5rem;
+    }
+
+    /* ABOUT SECTION SETTINGS */
+
+    /* left icons in about section settings */
+
+    #about-section #personal-info .left {
+        font-size: 2.4rem;
+    }
+
+    #about-section #personal-info .fas.fa-house {
+        left: 3rem;
+        top: 11rem;
+    }
+
+    #about-section #personal-info .fas.fa-location-dot {
+        left: 3.5rem;
+        top: 16rem;
+    }
+
+    #about-section #personal-info .fas.fa-school {
+        left: 3rem;
+        top: 26rem;
+    }
+
+    #about-section #personal-info .fas.fa-scroll {
+        left: 3rem;
+        top: 31.2rem;
+    }
+
+    #about-section #personal-info .fas.fa-phone {
+        left: 3.5rem;
+        top: 41.5rem;
+    }
+
+    #about-section #personal-info .fas.fa-envelope {
+        left: 3.5rem;
+        top: 46.2rem;
+    }
+
+    #about-section #personal-info .fas.fa-person {
+        left: 3.8rem;
+        top: 56.4rem;
+    }
+
+    #about-section #personal-info .fas.fa-cake-candles {
+        left: 3.4rem;
+        top: 61.1rem;
+    }
+
+    #about-section #personal-info .fas.fa-children {
+        left: 3rem;
+        top: 66rem
+    }
+
+    /* changing value of info in about section settings */
 
     #about-section #personal-info .change-value {
         width: 160px;
         height: 55px;
-        left: -3.6rem;
+        margin-left: 6.5rem;
+    }
+
+    #about-section #personal-info .change-value.select {
+        width: 170px;
+    }
+
+    #about-section #personal-info .change-value.date {
+        width: 170px;
     }
     
-    #about-section #personal-info .change-value input[type='text'], #about-section #personal-info .change-value select, #about-section #personal-info .change-value input[type='date'] {
+    #about-section #personal-info .change-value input[type='text'] {
         width: 120px;
         height: 35px;
-        font-size: 1.3rem;
         padding-top: 0.4rem;
+        font-size: 1.1rem;
+    }
+
+    #about-section #personal-info .change-value select {
+        width: 130px;
+        height: 35px;
+        padding-right: 0;
+        padding-left: 0.5rem;
+        bottom: -1.3rem;
+    }
+
+    #about-section #personal-info .change-value.date input[type='date'] {
+        width: 130px;
+        height: 35px;
     }
 
     #about-section #personal-info .change-value input[type='text']:focus ~ span,
     #about-section #personal-info .change-value input[type='text']:valid ~ span{
-        transform: translate(-2px, -8.5px);
+        transform: translate(-2px, -8px);
         font-size: 0.9rem;
     } 
 
     #about-section #personal-info .change-value span {
         font-size: 1.4rem;
-        margin-top: 0;
+    }
+
+    #about-section #personal-info .change-value:nth-of-type(2) {
+        top: 14.2rem;
+    }
+
+    #about-section #personal-info .change-value:nth-of-type(3) {
+        top: 24.6rem;
     }
     
     #about-section #personal-info .change-value:nth-of-type(4) {
-        top: 30.4rem;
+        top: 29.1rem;
     }
     
     #about-section #personal-info .change-value:nth-of-type(5) {
-        top: 41rem;
+        top: 39.7rem;
     }
     
     #about-section #personal-info .change-value:nth-of-type(6) {
-        top: 46rem;
+        top: 44.5rem;
     }
     
     #about-section #personal-info .change-value:nth-of-type(7) {
-        top: 56.5rem;
-        width: 210px;
+        top: 54.7rem;
     }
     
     #about-section #personal-info .change-value:nth-of-type(8) {
-        top: 64.3rem;
-        width: 250px;
+        top: 63.1rem;
     }
     
     #about-section #personal-info .change-value:nth-of-type(9) {
-        top: 66rem;
-    }
-
-    #about-section #personal-info .personal-info {
-        margin-left: 7rem;
-        font-size: 1.6rem;
-    }
-
-    #about-section .friends-about-section .all {
-        margin-left: 21rem !important;
+        top: 64rem;
     }
 
     .friends-about-section .friend {
-        width: 320px;
+        width: 330px;
+    }
+
+    /* friends section in about section settings */
+
+    #about-section .friends-about-section h2 {
+        font-size: 2.75rem;
+    }
+
+    #about-section .friends-about-section #friends-num {
+        font-size: 1.5rem;
+        margin-top: 4.7rem;
+    }
+
+    #about-section .friends-about-section .all {
+        font-size: 1.75rem;
     }
 
     /* FRIEND SECTION SETTINGS */
@@ -2052,5 +2189,5 @@ body {
     .friends-about-section {
         width: 400px;
         margin-left: 3.75rem;
-    }
+    } 
 }

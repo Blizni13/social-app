@@ -8,20 +8,25 @@ window.onload = () => {
     document.getElementById('container-posts-section').style.height = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 55 + 'px'
 }
 
-// REPORT WINDOW
+// REPORT AND DELETE OPTION
 
 const reportButton = document.getElementsByClassName('post-options-button')
 const postOptions = document.getElementsByClassName('post-options')
 const reportText = document.getElementsByClassName('report')
+const deleteText = document.getElementsByClassName('delete')
+const allPosts = document.getElementsByClassName('post')
 
 for (let z = 0; z < reportButton.length; z++) {
     reportButton[z].onclick = () => postOptions[z].style.display ='flex';
     reportText[z].addEventListener('click', () => {
-    postOptions[z].style.display = 'none'
     document.querySelector('#report-background').style.display = 'flex'
     document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
     document.getElementsByTagName('body')[0].style.paddingRight = '17px'
-})
+    })
+    deleteText[z].addEventListener('click', () => {
+        document.getElementById('container-posts-section').style.height = document.getElementById('container-posts-section').style.height.split('').slice(0, -2).join('') - allPosts[z].offsetHeight + 'px'
+        allPosts[z].style.display = 'none'
+    })
 }
 
 document.querySelector('#report-background').addEventListener('click',
@@ -31,9 +36,8 @@ function() {
     document.getElementsByTagName('body')[0].style.paddingRight = '0'
 })
 
-window.addEventListener('click', () => {
+window.addEventListener('click', (event) => {
     if ([...reportButton].every(el => el !== event.target) && [...postOptions].every(el => el !== event.target)) {
-        console.log('SIEMA')
         for (let i = 0; i < postOptions.length; i++) {
             postOptions[i].style.display = 'none'
         }
@@ -222,6 +226,6 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
     }
     favouriteOption[i].addEventListener('click', () => favouriteHearts[i].style.color === 'red' ? favouriteHearts[i].style.color = 'black' : favouriteHearts[i].style.color = 'red')
     followOption[i].addEventListener('click', () => followText[i].innerText === 'Unfollow' ? followText[i].innerText = 'Follow' : followText[i].innerText = 'Unfollow')
-    unfriendOption[i].addEventListener('click', () => addFriendButton[i].style.display = 'block')
+    unfriendOption[i].addEventListener('click', () => {addFriendButton[i].style.display = 'block'; friendOptionsButton[i].style.opacity = 0})
     addFriendButton[i].addEventListener('click', () => addFriendButton[i].innerText === 'Cancel Request' ? addFriendButton[i].innerText = 'Add Friend' : addFriendButton[i].innerText = 'Cancel Request')
 }
