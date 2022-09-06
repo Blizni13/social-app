@@ -1,15 +1,23 @@
 // REPORT WINDOW
 
-const reportButton = document.getElementsByClassName('fa-ellipsis')
-const postOptions = document.getElementsByClassName('post-options') 
-const closeSign = document.getElementsByClassName('close-sign')
+const reportButton = document.getElementsByClassName('post-options-button')
+const postOptions = document.getElementsByClassName('post-options')
 const reportText = document.getElementsByClassName('report')
 
 for (let z = 0; z < reportButton.length; z++) {
-    reportButton[z].addEventListener('click', () => postOptions[z].style.display ='block')
-    closeSign[z].addEventListener('click', () => postOptions[z].style.display = 'none')
+    reportButton[z].onclick = () => {
+        postOptions[z].style.display = 'flex'
+    }
     reportText[z].addEventListener('click', () => {document.querySelector('#report-background').style.display = 'flex'; document.getElementsByTagName('body')[0].style.overflowY = 'hidden'})
 }
+
+window.addEventListener('click', (event) => {
+    if ([...postOptions].every(el => el !== event.target) && [...reportButton].every(el => el !== event.target)) {
+        for (let i = 0; i < postOptions.length; i++) {
+            postOptions[i].style.display = 'none'
+        }
+    }
+})
 
 document.querySelector('#report-background').addEventListener('click',
 function() {

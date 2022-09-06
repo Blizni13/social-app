@@ -6,19 +6,19 @@
 
 :root {
     --background-color: rgb(0, 0, 0, 0.1);
---header-color: rgb(245, 245, 245);
+    --header-color: rgb(245, 245, 245);
     --users-follow-color: rgb(240, 240, 240);
     --user-card-color: white;
     --follow-button-color: rgb(235, 235, 235);
---posts-header-color: rgb(240, 240, 240);
+    --posts-header-color: rgb(240, 240, 240);
     --reactions-color: rgb(240, 240, 240);
     --interactions-color: rgb(240, 240, 240);
     --comments-color: rgb(245, 245, 245);
     --enter-comment-color: rgb(235, 235, 235);
     --comment-color: rgb(235, 235, 235);
-    --upload-file-color: rgb(235, 235, 235);
+    --upload-file-color: rgb(220, 220, 220);
     --search-color: rgb(235, 235, 235);
---header-font: 'Kanit', sans-serif;
+    --header-font: 'Kanit', sans-serif;
 }
 
 html {
@@ -104,6 +104,111 @@ header h3 {
     left: 3rem;
     font-size: 4.1rem;
     font-family: 'Poppins';
+}
+
+/* UPLOAD BUTTON APPEARANCE AND EFFECT */
+
+header button[id="upload"] {
+    position: absolute;
+    background-color: var(--upload-file-color);
+    width: 225px;
+    height: 45px;
+    border-radius: 6px;
+    right: 30rem;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    font-family: var(--header-font);
+    border: none;
+    transition-duration: 0.4s;
+}
+
+header button[id="upload"]::after, header button[id="upload"]::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: inherit;
+    border-radius: inherit;
+    opacity: 0.4;
+    transition-duration: 0.4s;
+}
+
+header button[id="upload"]:hover {
+    transform: translate(-8px, -8px)
+}
+
+header button[id="upload"]:hover::after {
+    transform: translate(4px, 4px);
+}
+
+header button[id="upload"]:hover::before {
+    transform: translate(8px, 8px);
+}
+
+/* WINDOW AFTER CLICKING UPLOAD BUTTON */
+
+header #upload-files {
+    position: absolute;
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 5px;
+    right: 30rem;
+    top: 7.5rem;
+    display: none;
+    padding-inline: 1rem;
+    padding-block: 1.5rem;
+    z-index: 2;
+}
+
+header #upload-files form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header #upload-files form input[id='photo-video'] {
+    display: none;
+}
+
+header #upload-files form label[for="photo-video"] {
+    border-radius: 5px;
+    width: 48%;
+    height: 35px;
+    position: relative;
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+header #upload-files form label[for="photo-video"]::after {
+    content: 'Choose File';
+    font-size: 1.7rem;
+}
+
+header #upload-files form textarea {
+    width: 83%;
+    height: 75px;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-inline: 1.2rem;
+}
+
+header #upload-files form button[type='submit'] {
+    width: 38%;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
 }
 
 /* NOTIFICATION PANEL */
@@ -254,126 +359,6 @@ header #info .info-text:hover, header #messages .message:hover {
     background-color: hsl(240, 0%, 93%)
 }
 
-
-/* UPLOAD BUTTON APPEARANCE AND EFFECT */
-
-header button[id="upload"] {
-    position: absolute;
-    background-color: var(--upload-file-color);
-    width: 225px;
-    height: 45px;
-    border-radius: 50px;
-    right: 30rem;
-    transition: 0.5s;
-    font-size: 2rem;
-    text-align: center;
-    overflow: hidden;
-    cursor: pointer;
-    font-family: var(--header-font);
-    border: none;
-}
-
-header button[id="upload"]::before {
-    position: absolute;
-    content: '';
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(90deg, transparent 50%, hsl(240, 0%, 80%));
-    top: 0;
-    left: -100%;
-}
-
-header button[id="upload"]::after {
-    position: absolute;
-    content: '';
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(90deg, hsl(240, 0%, 80%), transparent 50%);
-    bottom: 0;
-    right: -100%;
-}
-
-header button[id="upload"]:hover::after {
-    right: 100% ;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-
-header button[id="upload"]:hover::before {
-    left: 100% ;
-    transition: 1s;
-}
-
-header button[id="upload"]:hover {
-    transition-delay: 0.6s;
-    box-shadow: 0px 0px 5px 1px hsl(240, 0%, 80%),
-    0px 0px 10px 2px hsl(240, 0%, 80%);
-    background-color: hsl(240, 0%, 80%);
-    letter-spacing: 0.5px;
-}
-
-/* WINDOW AFTER CLICKING UPLOAD BUTTON */
-
-header #upload-files {
-    position: absolute;
-    background-color: hsl(0, 0%, 85%);
-    border-radius: 5px;
-    right: 30rem;
-    top: 7.5rem;
-    display: none;
-    padding-inline: 1rem;
-    padding-block: 1.5rem;
-    z-index: 2;
-}
-
-header #upload-files form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-}
-
-header #upload-files form input[id='photo-video'] {
-    display: none;
-}
-
-header #upload-files form label[for="photo-video"] {
-    border-radius: 5px;
-    width: 48%;
-    height: 35px;
-    position: relative;
-    background-color: hsl(0, 0%, 90%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.3rem;
-    cursor: pointer;
-}
-
-header #upload-files form label[for="photo-video"]::after {
-    content: 'Choose File';
-    font-size: 1.7rem;
-}
-
-header #upload-files form textarea {
-    width: 83%;
-    height: 75px;
-    padding: 0.5rem;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    margin-inline: 1.2rem;
-}
-
-header #upload-files form button[type='submit'] {
-    width: 38%;
-    height: 30px;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-}
-
 .photo-wrapper, .profile-wrapper, #other-pages-open {
     width: 40px;
     height: 40px;
@@ -502,7 +487,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     background-color: var(--users-follow-color);
     border-radius: 20px;
     padding: 1rem;
-    left: 115rem;
+    left: 110rem;
     box-shadow: 0px 0px 15px black;
     font-family: 'Kanit', sans-serif;
     overflow: hidden;
@@ -604,7 +589,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 /* FOLLOW-USERS EFFECTS*/
 
 #follow-users #users-card .user:hover .name {
-    bottom: 48%;
+    bottom: 43%;
 }
 
 #follow-users #users-card .user:hover .followers, #follow-users #users-card .user:hover button {
@@ -623,7 +608,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 #posts-container {
     position: absolute;
     width: 550px;
-    left: 48rem;
+    left: 45rem;
     top: 16rem;
 }
 
@@ -664,13 +649,26 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     pointer-events: auto;
 }
 
-#posts-container header .fas.fa-ellipsis {
+#posts-container .post header button {
     position: absolute;
-    font-size: 3rem;
-    right: 3rem;
-    top: 1rem;
+    border-radius: 50%;
+    padding: 0.4rem;
     cursor: pointer;
     pointer-events: auto;
+    border: none;
+    width: 35px;
+    height: 35px;
+    right: 2.5rem;
+    top: 0.7rem;
+}
+
+#posts-container header .fas.fa-ellipsis {
+    font-size: 2.7rem;
+    pointer-events: none;
+}
+
+#posts-container .post header button:hover {
+    background-color: hsl(0, 0%, 90%)
 }
 
 #posts-container .image-wrapper img {
@@ -821,13 +819,14 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
 #posts-container .post .post-options {
     position: absolute;
-    height: 40px;
     width: 150px;
+    height: 75px;
     background-color: rgb(240, 240, 240);
     border-radius: 7px;
     top: 6rem;
     right: 2.6rem;
     display: none;
+    align-items: center;
 }
 
 #posts-container .post .post-options i {
@@ -839,23 +838,16 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     top: -1rem;
 }
 
-#posts-container .post .post-options .close-sign {
-    position: absolute;
-    right: 1rem;
-    font-size: 3rem;
-    font-weight: bold;
-    transform: rotate(45deg);
-    cursor: pointer;
-}
-
 #posts-container .post .post-options button {
     cursor: pointer;
-    position: absolute;
-    left: 40%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     border: none;
     font-size: 1.8rem;
+    height: 35px;
+    width: 100%;
+}
+
+#posts-container .post .post-options button:hover {
+    background-color: hsl(0, 0%, 87%)
 }
 
 #report-background {
@@ -1184,6 +1176,18 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.4rem;
         height: 40px;  
         right: 14.5rem;
+    }
+
+    header button[id="upload"]:hover {
+        transform: translate(-3px, -3px)
+    }
+
+    header button[id="upload"]:hover::before {
+        transform: translate(6px, 6px)
+    }
+
+    header button[id="upload"]:hover::after {
+        transform: translate(3px, 3px)
     }
 
     header #upload-files {
