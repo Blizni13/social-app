@@ -194,15 +194,30 @@ window.addEventListener('click', (event) => {
 
 let changeProfileWindow = document.getElementById('change-profile-image-window')
 let changeProfileButton = document.getElementById('change-profile-image-button')
-let uploadButton = document.getElementById('upload-image')
 let chooseImageLabel = document.getElementById('choose-image-label')
 let chooseImageInput = document.getElementById('choose-image')
 
-let changeProfileWindowItems = [changeProfileWindow, uploadButton, chooseImageLabel, chooseImageInput, changeProfileButton]
+let changeProfileWindowItems = [changeProfileWindow, chooseImageLabel, chooseImageInput, changeProfileButton, document.getElementById('image-wrapper')]
 
-changeProfileButton.onclick = () => changeProfileWindow.style.display = 'flex'
+changeProfileButton.onclick = () => {
+    changeProfileWindow.style.display = 'flex';
+    document.getElementById('black-background').style.display = 'block'
+}
+
+// DISPLAY IMAGE AFTER CHOOSE
+
+let imageWrapper = document.getElementById('image-wrapper')
+
+let showImage = (event) => {
+    imageWrapper.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`
+}
+
+// CLOSE WINDOW
 
 window.onclick = function(event) {
-    if (changeProfileWindowItems.every(el => el !== event.target)) changeProfileWindow.style.display = 'none';
-    console.log(event.target)
+    if (changeProfileWindowItems.every(el => el !== event.target)) {
+        changeProfileWindow.style.display = 'none'
+        document.getElementById('black-background').style.display = 'none'
+        imageWrapper.style.backgroundImage = 'none'
+    };
 }

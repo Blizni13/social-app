@@ -91,12 +91,18 @@
                     </div>
                 </div>
                 
-                <form id="change-profile-image-window">
-                    <label for="choose-image" id="choose-image-label">
-                        <input type="file" accept=".jpg" id="choose-image">
-                    </label>
-                    <input type="submit" value="Upload" id="upload-image">
-                </form>
+                    <form id="change-profile-image-window">
+                        <div id="image-wrapper">
+
+                        </div>
+                        <label for="choose-image" id="choose-image-label">
+                            <i class="fas fa-cloud-arrow-up"></i>
+                            <input type="file" accept="image/*" id="choose-image" onchange="showImage(event)">
+                        </label>
+                        <input type="submit" value="Upload" id="upload-image">
+                    </form>
+
+                    <div id="black-background"></div>
 
                 <form id="basic-info" class="forms">
 
