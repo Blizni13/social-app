@@ -12,10 +12,10 @@ for (let i = 0; i < basicInfoToChange.length; i++) {
 }
 
 for (let i = 0; i < basicInfoToChange.length; i++) {
-    basicInfoToChange[i].style.width = `${Math.max(...elementLength) + 10}px`
+    basicInfoToChange[i].style.width = `${Math.max(...elementLength) + 15}px`
 }
 
-submitButton[0].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+submitButton[0].style.marginLeft = `${Math.max(...elementLength) + 20}px`
 
 // for places info
 
@@ -27,10 +27,10 @@ for (let i = 0; i < placeInfoToChange.length; i++) {
 }
 
 for (let i = 0 ; i < placeInfoToChange.length; i++) {
-    placeInfoToChange[i].style.width = `${Math.max(...elementLength) + 10}px`
+    placeInfoToChange[i].style.width = `${Math.max(...elementLength) + 15}px`
 }
 
-submitButton[1].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+submitButton[1].style.marginLeft = `${Math.max(...elementLength) + 20}px`
 
 // for education / hobby info
 
@@ -42,10 +42,10 @@ for (let i = 0; i < eduHobbyInfoToChange.length; i++) {
 }
 
 for (let i = 0 ; i < eduHobbyInfoToChange.length; i++) {
-    eduHobbyInfoToChange[i].style.width = `${Math.max(...elementLength) + 10}px`
+    eduHobbyInfoToChange[i].style.width = `${Math.max(...elementLength) + 15}px`
 }
 
-submitButton[2].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+submitButton[2].style.marginLeft = `${Math.max(...elementLength) + 20}px`
 
 // for contact info
 
@@ -57,10 +57,10 @@ for (let i = 0; i < contactInfoToChange.length; i++) {
 }
 
 for (let i = 0 ; i < contactInfoToChange.length; i++) {
-    contactInfoToChange[i].style.width = `${Math.max(...elementLength) + 10}px`
+    contactInfoToChange[i].style.width = `${Math.max(...elementLength) + 15}px`
 }
 
-submitButton[3].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+submitButton[3].style.marginLeft = `${Math.max(...elementLength) + 20}px`
 
 // for close people info
 
@@ -72,10 +72,10 @@ for (let i = 0; i < peopleInfoToChange.length; i++) {
 }
 
 for (let i = 0 ; i < peopleInfoToChange.length; i++) {
-    peopleInfoToChange[i].style.width = `${Math.max(...elementLength) + 10}px`
+    peopleInfoToChange[i].style.width = `${Math.max(...elementLength) + 15}px`
 }
 
-submitButton[4].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+submitButton[4].style.marginLeft = `${Math.max(...elementLength) + 20}px`
 
 // for change password
 
@@ -87,10 +87,10 @@ for (let i = 0; i < changePasswordInfo.length; i++) {
 }
 
 for (let i = 0 ; i < changePasswordInfo.length; i++) {
-    changePasswordInfo[i].style.width = `${Math.max(...elementLength) + 10}px`
+    changePasswordInfo[i].style.width = `${Math.max(...elementLength) + 15}px`
 }
 
-submitButton[5].style.marginLeft = `${Math.max(...elementLength) + 15}px`
+submitButton[5].style.marginLeft = `${Math.max(...elementLength) + 20}px`
 
 // DISPLAYING DIFFERENT PARTS OF PAGE AT ONE TIME
 
@@ -128,7 +128,7 @@ for (let i = 0 ; i < forms.length; i++) {
 // COUNT NUMBER OF NOTIFICATIONS
 
 let numOfNotifications = 0
-// 
+
 let notificationNumber = document.getElementsByClassName('info-content')
 
 for (let i = 0; i < notificationNumber.length; i++) {
@@ -177,19 +177,18 @@ for (let i = 0; i < infoTexts.length; i++) {
 
 // APPEARING WINDOW WITH OTHER PAGES AFTER CLICK OVER PROFILE 
 
-let otherPagesWindow = document.getElementById('other-pages')
 let openPagesWindow = document.getElementById('photo-wrapper-onclick')
+let otherPagesWindow = document.getElementById('other-pages')
 
-openPagesWindow.onclick = function() {
+openPagesWindow.onclick = () => {
     otherPagesWindow.style.display = 'block'
 }
 
-window.onclick = function(event) {
-    if(event.target != openPagesWindow) {
+window.addEventListener('click', (event) => {
+    if (event.target !== otherPagesWindow && event.target !== openPagesWindow) {
         otherPagesWindow.style.display = 'none'
     }
-}
-
+})
 
 // APPEARING WINDOW WITH OPTION TO CHANGE PROFILE 
 
