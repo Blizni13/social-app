@@ -84,7 +84,7 @@ header h1 {
 #background #login-section {
     position: absolute;
     bottom: -30.2rem;
-    background-color: hsl(0, 0%, 88%);
+    background-color: hsl(0, 0%, 85%);
     border-radius: 70px 70px 0 0;
     transition: 0.9s;
     transition-timing-function: ease-in-out;
