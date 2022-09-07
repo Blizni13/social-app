@@ -355,13 +355,8 @@ main {
     width: 475px;
 }
 
-#settings-content #change-profile-image-window h2 {
-    font-family: 'Kanit'
-}
-
-/* Open Sans, Kanit, Poppins, Lato*/
-
 #settings-content #change-profile-image-window #image-wrapper {
+    position: relative;
     border: 2px solid black;
     width: 200px;
     height: 200px;
@@ -370,19 +365,21 @@ main {
 }
 
 #settings-content #change-profile-image-window #image-wrapper #image-placeholder {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 100%;
     font-size: 3.4rem;
     gap: 1.5rem;
+    z-index: -1;
 }
 
 #settings-content #change-profile-image-window label {
     display: flex;
-    background-color: hsla(200, 100%, 55%, 0.5);
-    position: relative;
+    background-color: hsl(200, 100%, 55%);
     cursor: pointer;
     border-radius: 5px;
     padding: 1rem;
@@ -394,20 +391,11 @@ main {
     font-size: 3rem;
 }
 
-#settings-content #change-profile-image-window label .fas.fa-cloud-arrow-up {
-    pointer-events: none;
-}
-
-#settings-content #change-profile-image-window label input {
-    display: none;
-}
-
 #settings-content #change-profile-image-window input[type='submit'] {
     width: 175px;
     height: 50px;
     background-color: hsl(200, 100%, 55%);
     border: none;
-    padding: 0.7rem;
     border-radius: 3px;
     font-family: 'Kanit';
     font-weight: bold;
@@ -569,6 +557,37 @@ main {
     #settings-content #change-profile .profile {
         width: 40px;
         height: 40px;
+    }
+
+    #settings-content #change-profile-image-window {
+        width: 330px;
+    }
+
+    #settings-content #change-profile-image-window h2 {
+        font-size: 2.9rem;
+        width: 230px;
+    }
+    
+    #settings-content #change-profile-image-window #image-wrapper {
+        width: 180px;
+        height: 180px;
+    }
+
+    #settings-content #change-profile-image-window #image-wrapper #image-placeholder {
+        font-size: 2.7rem;
+        gap: 1rem;
+    }
+
+    #settings-content #change-profile-image-window label {
+        font-size: 2.5rem;
+        width: 60px;
+        height: 60px;
+    }
+
+    #settings-content #change-profile-image-window input[type='submit'] {
+        width: 140px;
+        height: 40px;
+        font-size: 1.9rem;
     }
 
     /* informations settings */

@@ -196,8 +196,16 @@ let changeProfileWindow = document.getElementById('change-profile-image-window')
 let changeProfileButton = document.getElementById('change-profile-image-button')
 let chooseImageLabel = document.getElementById('choose-image-label')
 let chooseImageInput = document.getElementById('choose-image')
+let imagePlaceholder = document.getElementById('image-placeholder')
 
-let changeProfileWindowItems = [changeProfileWindow, chooseImageLabel, chooseImageInput, changeProfileButton, document.getElementById('image-wrapper')]
+let changeProfileWindowItems = [
+    changeProfileWindow,
+    chooseImageLabel,
+    chooseImageInput,
+    changeProfileButton,
+    document.getElementById('image-wrapper'),
+    document.getElementById('change-profile-title'),
+    imagePlaceholder]
 
 changeProfileButton.onclick = () => {
     changeProfileWindow.style.display = 'flex';
@@ -209,7 +217,6 @@ changeProfileButton.onclick = () => {
 let imageWrapper = document.getElementById('image-wrapper')
 
 let showImage = (event) => {
-    document.getElementById('image-placeholder').style.display = 'none'
     imageWrapper.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`
 }
 
@@ -219,7 +226,6 @@ window.onclick = function(event) {
     if (changeProfileWindowItems.every(el => el !== event.target)) {
         changeProfileWindow.style.display = 'none'
         document.getElementById('black-background').style.display = 'none'
-        document.getElementById('image-placeholder').style.display = 'flex'
         imageWrapper.style.backgroundImage = 'none'
     };
 }

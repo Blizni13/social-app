@@ -92,17 +92,17 @@
                 </div>
                 
                     <form id="change-profile-image-window">
-                        <h2>Change your profile image</h2>
+                        <h2 style="font-family: 'Kanit'" id="change-profile-title">Change your profile image</h2>
                         <div id="image-wrapper">
-                            <h3 id="image-placeholder">
-                                <span>Your</span>
-                                <span>Image</span>
-                                <span>Here</span>
-                            </h3>
+                            <p id="image-placeholder">
+                                <span style="pointer-events: none">Your</span>
+                                <span style="pointer-events: none">Image</span>
+                                <span style="pointer-events: none">Here</span>
+                            </p>
                         </div>
                         <label for="choose-image" id="choose-image-label">
-                            <i class="fas fa-cloud-arrow-up"></i>
-                            <input type="file" accept="image/*" id="choose-image" onchange="showImage(event)">
+                            <i class="fas fa-cloud-arrow-up" style="pointer-events: none"></i>
+                            <input type="file" accept="image/*" id="choose-image" onchange="showImage(event)" style="display: none">
                         </label>
                         <input type="submit" value="Upload" id="upload-image">
                     </form>
