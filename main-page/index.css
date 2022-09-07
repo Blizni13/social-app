@@ -424,7 +424,7 @@ header #other-pages #last-window {
 }
 
 header #other-pages .window:hover {
-    background-color: hsl(0, 0%, 95%)
+    background-color: hsl(0, 0%, 85%)
 }
 
 header #other-pages p {
@@ -454,7 +454,7 @@ header #hover-notifications, header #hover-messages, header #hover-account {
     padding-block: 0.4rem;
     border-radius: 5px;
     position: absolute;
-    top: 6.5rem;
+    top: 7rem;
     transition: 0.5s;
     transition-timing-function: cubic-bezier(0.26, 0.78, 0.8, 0.99);
     opacity: 0;
@@ -462,11 +462,11 @@ header #hover-notifications, header #hover-messages, header #hover-account {
 }
 
 header #hover-notifications {
-    right: 20rem;
+    right: 20.2rem;
 }
 
 header #hover-messages {
-    right: 12.3rem;
+    right: 12.4rem;
 }
 
 header #hover-account {
@@ -890,9 +890,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     color: black;
     transform-origin: center left;
     border-radius: 50%;
-    margin-left: -0.2rem;
-    padding: 0.2rem 0.2rem 0.4rem 0.4rem;
-    margin-bottom: -0.2rem
+    margin-top: -0.2rem;
 }
 
 .animation-like {
@@ -910,11 +908,11 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     50% {
         transform: rotate(-20deg) scale(1.1);
-        box-shadow: 0px 0px 15px 0px blue;
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 255, 0.1);
     }
 
     75% {
-        filter: blur(0.5px)
+        filter: blur(0.8px)
     }
 
     100% {
