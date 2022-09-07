@@ -209,6 +209,7 @@ changeProfileButton.onclick = () => {
 let imageWrapper = document.getElementById('image-wrapper')
 
 let showImage = (event) => {
+    document.getElementById('image-placeholder').style.display = 'none'
     imageWrapper.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`
 }
 
@@ -218,6 +219,7 @@ window.onclick = function(event) {
     if (changeProfileWindowItems.every(el => el !== event.target)) {
         changeProfileWindow.style.display = 'none'
         document.getElementById('black-background').style.display = 'none'
+        document.getElementById('image-placeholder').style.display = 'flex'
         imageWrapper.style.backgroundImage = 'none'
     };
 }

@@ -345,40 +345,53 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 1rem;
+    padding: 3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 2rem;
     z-index: 1;
+    width: 475px;
 }
 
-#black-background {
-    display: none;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    opacity: 0.3;
-    top: 0;
-    left: 0;
+#settings-content #change-profile-image-window h2 {
+    font-family: 'Kanit'
 }
+
+/* Open Sans, Kanit, Poppins, Lato*/
 
 #settings-content #change-profile-image-window #image-wrapper {
     border: 2px solid black;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background-size: cover;
 }
 
+#settings-content #change-profile-image-window #image-wrapper #image-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 3.4rem;
+    gap: 1.5rem;
+}
+
 #settings-content #change-profile-image-window label {
+    display: flex;
     background-color: hsla(200, 100%, 55%, 0.5);
     position: relative;
     cursor: pointer;
     border-radius: 5px;
     padding: 1rem;
     border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
 }
 
 #settings-content #change-profile-image-window label .fas.fa-cloud-arrow-up {
@@ -390,14 +403,27 @@ main {
 }
 
 #settings-content #change-profile-image-window input[type='submit'] {
+    width: 175px;
+    height: 50px;
     background-color: hsl(200, 100%, 55%);
     border: none;
     padding: 0.7rem;
     border-radius: 3px;
-    width: 90px;
-    font-family: 'consolas';
+    font-family: 'Kanit';
     font-weight: bold;
+    font-size: 2.1rem;
     cursor: pointer;
+}
+
+#black-background {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
 }
 
 /* FORMS WITH OPTION TO CHANGE INFO ABOUT PERSON IN SETTINGS CONTENT */
