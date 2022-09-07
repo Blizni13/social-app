@@ -143,8 +143,9 @@ for(let i = 0; i < notificationNumber.length; i++) {
 
 document.getElementById('notification-icon').innerText = numOfNotifications
 
-// NOTIFICATIONS WINDOW AT INDEX.HTML
+// NOTIFICATIONS WINDOW
 
+const notificationWindow = document.getElementById('info')
 const notificationSign = document.getElementById('notification-open') 
 const infoTexts = document.getElementsByClassName('info-text')
 const infoContent = document.getElementsByClassName('info-content')
@@ -153,7 +154,7 @@ const circlesNotification = document.getElementsByClassName('circle-notification
 // displaying window
 
 notificationSign.addEventListener('click', () => {
-    document.getElementById('info').style.display = 'block'
+    notificationWindow.style.display = 'block'
     document.getElementById('notification-icon').style.display = 'none'
     notificationSign.style.color = 'gray'
 })
@@ -161,7 +162,8 @@ notificationSign.addEventListener('click', () => {
 // closing window
 
 document.getElementById('close-notifications').addEventListener('click', () => {
-    document.querySelector('#info').style.display = 'none'
+    notificationWindow.style.display = 'none'
+    document.getElementById('other-pages').style.display = 'none'
     notificationSign.style.color = "black"
 })
 
@@ -175,17 +177,21 @@ for (let i = 0; i < infoTexts.length; i++) {
     })
 }
 
-// APPEARING WINDOW WITH OTHER PAGES AFTER CLICK OVER PROFILE 
+// OTHER PAGES WINDOW
 
 let openPagesWindow = document.getElementById('photo-wrapper-onclick')
 let otherPagesWindow = document.getElementById('other-pages')
 
 openPagesWindow.onclick = () => {
     otherPagesWindow.style.display = 'block'
+    document.getElementById('info').style.display = 'none'
+    if (document.getElementById('notification-open').style.color !== 'black') {
+        document.getElementById('notification-open').style.color = 'black'
+    }
 }
 
 window.addEventListener('click', (event) => {
-    if (event.target !== otherPagesWindow && event.target !== openPagesWindow) {
+    if (event.target !== openPagesWindow) {
         otherPagesWindow.style.display = 'none'
     }
 })
