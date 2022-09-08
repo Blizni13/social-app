@@ -1167,7 +1167,7 @@ body {
     margin-inline: auto;
     border-radius: 10px;
     margin-top: 2.3rem;
-    padding: 5rem 0 2rem 3rem;
+    padding: 13rem 0 2rem 3rem;
     position: relative;
 }
 
@@ -1204,6 +1204,40 @@ body {
 .friends-about-section .all {
     margin: 0;
     top: 3.6rem;
+}
+
+.friends-about-section #friends-section-undersections {
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    top: 9rem;
+    color: gray;
+    font-weight: bold;
+    left: 3rem;
+}
+
+.friends-about-section #friends-section-undersections p {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+
+.friends-about-section #friends-section-undersections p:active {
+    background-color: hsl(0, 0%, 89%)
+}
+
+.friends-about-section #friends-section-undersections p:nth-of-type(1) {
+    width: 110px;
+}
+
+.friends-about-section #friends-section-undersections p:nth-of-type(2) {
+    width: 160px;
+}
+
+.friends-about-section #friends-section-undersections p:nth-of-type(3) {
+    width: 100px;
 }
 
 .friends-about-section .friend {

@@ -52,7 +52,7 @@ for (let i = 0; i < likesList.length; i++) {
     likesList[i].addEventListener('click', () => likesList[i].classList.toggle('animation-like'))
 }
 
-// SECTIONS SELECT ANIMATIONS
+// SELECT SECTION IN POSTS SECTION
 
 let posts = document.getElementById("posts")
 let photos = document.getElementById("photos")
@@ -139,6 +139,34 @@ for (let i = 0; i < friendsDirection.length; i++) {
             document.documentElement.scrollTop = 0
     })
 }
+
+// SELECT SECTION IN FRIENDS SECTION
+
+let allInFriendsSection = document.getElementById('all-friends')
+let familyMembers = document.getElementById('family-members') 
+let sameCity = document.getElementById('same-city')
+let borderBottomOn = '3px solid rgb(36, 71, 143)'
+let borderBottomOff = 'none'
+
+allInFriendsSection.style.borderBottom = borderBottomOn
+
+allInFriendsSection.addEventListener('click', () => {
+    allInFriendsSection.style.borderBottom = borderBottomOn
+    familyMembers.style.borderBottom = borderBottomOff
+    sameCity.style.borderBottom = borderBottomOff
+})
+
+familyMembers.addEventListener('click', () => {
+    allInFriendsSection.style.borderBottom = borderBottomOff
+    familyMembers.style.borderBottom = borderBottomOn
+    sameCity.style.borderBottom = borderBottomOff
+})
+
+sameCity.addEventListener('click', () => {
+    allInFriendsSection.style.borderBottom = borderBottomOff
+    familyMembers.style.borderBottom = borderBottomOff
+    sameCity.style.borderBottom = borderBottomOn
+})
 
 // ADD BIO POSTS SECTION
 
