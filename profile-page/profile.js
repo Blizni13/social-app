@@ -140,6 +140,42 @@ for (let i = 0; i < friendsDirection.length; i++) {
     })
 }
 
+// ADD BIO POSTS SECTION
+
+let addBioButton = document.getElementById('add-bio-submit')
+let bioText = document.getElementById('user-input-text')
+let bioForm = document.getElementById('bio-form')
+let addBioText = document.getElementById('add-bio-text')
+let saveBioTextButton = document.getElementById('bio-save')
+let cancelBioTextButton = document.getElementById('bio-cancel')
+
+if (bioText.innerText === '') {
+    addBioButton.style.display = 'block'
+    document.getElementById('user-input-info').style.borderBottom = 'none'
+}
+
+addBioButton.addEventListener('click', () => {
+    bioForm.style.display = 'block'
+    addBioButton.style.display = 'none'
+})
+
+saveBioTextButton.addEventListener('click', () => {
+    bioForm.style.display = 'none'
+    bioText.innerText = addBioText.value
+    bioText.style.display = 'block'
+    document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
+})
+
+cancelBioTextButton.addEventListener('click', () => {
+    bioForm.style.display = 'none'
+    if (bioText.innerText === '') {
+        addBioButton.style.display = 'block'
+    } else {
+        bioText.style.display = 'block'
+    }
+    document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
+})
+
 // input in about section
 
 let saveButton = document.getElementsByClassName('save')
