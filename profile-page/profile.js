@@ -85,6 +85,9 @@ posts.addEventListener('click', () => {
     photosSection.style.display = 'none'
     aboutSection.style.display = 'none'
     friendsSection.style.display = 'none'
+    for (let i = 0; i < document.getElementsByClassName('friend').length; i++) {
+        document.getElementsByClassName('friend')[i].style.display = 'block'
+    }
 })
 
 photos.addEventListener('click', () => {
@@ -101,6 +104,9 @@ photos.addEventListener('click', () => {
     photosSection.style.display = 'block'
     aboutSection.style.display = 'none'
     friendsSection.style.display = 'none'
+    for (let i = 0; i < document.getElementsByClassName('friend').length; i++) {
+        document.getElementsByClassName('friend')[i].style.display = 'block'
+    }
 })
 
 about.addEventListener('click', () => {
@@ -117,6 +123,9 @@ about.addEventListener('click', () => {
     photosSection.style.display = 'none'
     aboutSection.style.display = 'block'
     friendsSection.style.display = 'none'
+    for (let i = 0; i < document.getElementsByClassName('friend').length; i++) {
+        document.getElementsByClassName('friend')[i].style.display = 'block'
+    }
 })
 
 let friendsDirection = [friends, allFriends[0], allFriends[1]]
