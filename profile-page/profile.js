@@ -142,30 +142,54 @@ for (let i = 0; i < friendsDirection.length; i++) {
 
 // SELECT SECTION IN FRIENDS SECTION
 
-let allInFriendsSection = document.getElementById('all-friends')
-let familyMembers = document.getElementById('family-members') 
-let sameCity = document.getElementById('same-city')
+// all type of friends
+
+let sameCityFriends = document.getElementsByClassName('same-city')
+let familyFriends = document.getElementsByClassName('family')
+let allFriendsInFriendsSection = document.getElementsByClassName('friend')
+
+// underlines and border style
+
+let allFriendsSectionUnderline = document.getElementById('all-friends-section-underline') // in friends section
+let familyMembersSectionUnderline = document.getElementById('family-members-section-underline') 
+let sameCitySectionUnderline = document.getElementById('same-city-section-underline')
 let borderBottomOn = '3px solid rgb(36, 71, 143)'
 let borderBottomOff = 'none'
 
-allInFriendsSection.style.borderBottom = borderBottomOn
+allFriendsSectionUnderline.style.borderBottom = borderBottomOn
 
-allInFriendsSection.addEventListener('click', () => {
-    allInFriendsSection.style.borderBottom = borderBottomOn
-    familyMembers.style.borderBottom = borderBottomOff
-    sameCity.style.borderBottom = borderBottomOff
+allFriendsSectionUnderline.addEventListener('click', () => {
+    allFriendsSectionUnderline.style.borderBottom = borderBottomOn
+    familyMembersSectionUnderline.style.borderBottom = borderBottomOff
+    sameCitySectionUnderline.style.borderBottom = borderBottomOff
+    for (let i = 0; i < allFriendsInFriendsSection.length; i++) {
+        allFriendsInFriendsSection[i].style.display = 'block'
+    }
 })
 
-familyMembers.addEventListener('click', () => {
-    allInFriendsSection.style.borderBottom = borderBottomOff
-    familyMembers.style.borderBottom = borderBottomOn
-    sameCity.style.borderBottom = borderBottomOff
+familyMembersSectionUnderline.addEventListener('click', () => {
+    allFriendsSectionUnderline.style.borderBottom = borderBottomOff
+    familyMembersSectionUnderline.style.borderBottom = borderBottomOn
+    sameCitySectionUnderline.style.borderBottom = borderBottomOff
+    for (let i = 0; i < allFriendsInFriendsSection.length; i++) {
+        allFriendsInFriendsSection[i].style.display = 'none'
+    }
+    for (let i = 0; i < familyFriends.length; i++) {
+        familyFriends[i].style.display = 'block'
+    }
 })
 
-sameCity.addEventListener('click', () => {
-    allInFriendsSection.style.borderBottom = borderBottomOff
-    familyMembers.style.borderBottom = borderBottomOff
-    sameCity.style.borderBottom = borderBottomOn
+sameCitySectionUnderline.addEventListener('click', () => {
+    allFriendsSectionUnderline.style.borderBottom = borderBottomOff
+    familyMembersSectionUnderline.style.borderBottom = borderBottomOff
+    sameCitySectionUnderline.style.borderBottom = borderBottomOn
+    for (let i = 0; i < allFriendsInFriendsSection.length; i++) {
+        allFriendsInFriendsSection[i].style.display = 'none'
+    }
+
+    for (let i = 0; i < sameCityFriends.length; i++) {
+        sameCityFriends[i].style.display = 'block'
+    }
 })
 
 // ADD BIO POSTS SECTION
