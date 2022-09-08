@@ -314,6 +314,21 @@ body {
     margin-bottom: -1rem;
 }
 
+#container-posts-section #additional-info-posts-section #user-info #user-input-info {
+    border-bottom: 2px solid hsl(0, 0%, 86%);
+    padding-bottom: 0.6rem;
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+    text-align: center;
+}
+
+#container-posts-section #additional-info-posts-section #user-info #user-input-info #user-input-text {
+    width: 90%;
+    margin-left: 2rem;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
 #container-posts-section #additional-info-posts-section #user-info p {
     font-size: 2.3rem;
     margin-top: 0.8rem;
