@@ -217,7 +217,7 @@ header #info {
     position: absolute;
     width: 250px;
     background-color: white;
-    right: 23rem;
+    right: 22rem;
     font-size: 1.7rem;
     border-radius: 20px 20px 10px 10px;
     padding: 1rem;
@@ -293,7 +293,7 @@ header #messages {
     width: 250px;
     background-color: white;
     border-radius: 20px 20px 10px 10px;
-    right: 15rem;
+    right: 13rem;
     top: 6.8rem;
     padding: 1rem;
     font-size: 2rem;
@@ -395,8 +395,8 @@ header ul #other-pages-open img {
 header #other-pages {
     position: absolute;
     width: 130px;
-    font-size: 2rem;
-    right: 4.75rem;
+    font-size: 1.75rem;
+    right: 5rem;
     top: 8rem;
     display: none;
 }
@@ -409,7 +409,7 @@ header #other-pages .window {
 
 header #other-pages .fas.fa-caret-up {
     position: absolute;
-    right: 0.5rem;
+    right: 0.8rem;
     top: -1.3rem;
     font-size: 2.2rem;
     color: white;
@@ -427,19 +427,20 @@ header #other-pages .window:hover {
     background-color: hsl(0, 0%, 85%)
 }
 
-header #other-pages p {
+header #other-pages .window p {
     display: inline-block;
     font-family: 'Lato';
-    vertical-align: top;
+    vertical-align: middle;
+    font-size: 1.7rem;
 }
 
-header #other-pages i {
+header #other-pages .window i {
     font-size: 1.5rem;
     margin-right: 0.5rem;
     vertical-align: middle;
 }
 
-header #other-pages .fas.fa-door-open {
+header #other-pages .window .fas.fa-door-open {
     margin-right: 0.3rem;
     margin-left: -0.15rem;
 }
@@ -949,13 +950,14 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     /*HEADER ELEMENTS RESPONSIVE SETTINGS */
 
     header button[id="upload"] {
-        width: 180px;
-        font-size: 1.7rem;
+        width: 170px;
+        font-size: 1.5rem;
         right: 23rem;
+        height: 35px;
     }
 
     header ul .fas {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         top: -0.8rem;
         margin-right: -3rem;
     }
@@ -995,8 +997,40 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         padding-top: 0.1rem;
     }
 
+    /* notifications */
+
+    header #info {
+        width: 220px;
+        right: 14rem;
+    }
+
+     header #info h2 {
+        font-size: 2.3rem; 
+    } 
+
+    header #info .info-text .profile-wrapper {
+        width: 30px;
+        height: 30px;
+        margin-top: 0.6rem;
+    }
+
+    header #info .info-text p {
+        margin-left: 3.7rem;
+        margin-top: -3.2rem;
+    }
+
+    header #info .info-text .circle-notification {
+        right: 3rem;
+    }
+
+    header #info #close-notifications {
+        font-size: 2.6rem;
+    }
+
+    /* messages */
+
     header #messages {
-        right: 12rem;
+        right: 7rem;
         width: 220px;
         font-size: 1.5rem;
     }
@@ -1025,35 +1059,6 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         width: 8px;
         height: 8px;
     }
-
-    header #info {
-        width: 220px;
-        right: 18rem;
-    }
-
-     header #info h2 {
-        font-size: 2.3rem; 
-    } 
-
-    header #info .info-text .profile-wrapper {
-        width: 30px;
-        height: 30px;
-        margin-top: 0.6rem;
-    }
-
-    header #info .info-text p {
-        margin-left: 3.7rem;
-        margin-top: -3.2rem;
-    }
-
-    header #info .info-text .circle-notification {
-        right: 3rem;
-    }
-
-    header #info #close-notifications {
-        font-size: 2.6rem;
-    }
-
     /* OTHER PAGES WINDOW RESPONSIVE SETTINGS*/
     
     header ul #other-pages-open {
@@ -1063,24 +1068,31 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     }
 
     header #other-pages {
-        right: 4.2rem;
+        right: 4.5rem;
         top: 7rem;
-        font-size: 1.7rem;
         width: 120px;
+    }
+
+    header #other-pages .window p {
+        font-size: 1.5rem;
+    }
+
+    header #hover-notifications, header #hover-messages, header #hover-account {
+        top: 6.5rem;
     }
 
     header #hover-notifications {
         font-size: 1.3rem;
-        right: 6.8rem;
+        right: 14.5rem;
     }
     
     header #hover-messages {
         font-size: 1.3rem;
-        right: 3.7rem;
+        right: 9rem;
     }
     
     header #hover-account {
-        right: 0rem;
+        right: 3.4rem;
         font-size: 1.3rem;
         padding-inline: 0.5rem;
     }
@@ -1107,9 +1119,9 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     }
 
     #follow-users header p {
-        font-size: 1.75rem;
+        font-size: 1.6rem;
         right: 1.5rem;
-        top: 1rem
+        top: 1.1rem
     }
 
     #follow-users #users-card {
@@ -1207,14 +1219,6 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     /* ICONS AND OTHER WINDOWS IN HEADER RESPONSIVE SETTINGS */
 
-    header #messages {
-        right: 6rem;
-    }
-
-    header #info {
-        right: 10rem;
-    }
-
     header ul {
         gap: 4rem;
         margin-right: -3.5rem;
@@ -1225,11 +1229,38 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         right: 2.5rem;
     }
 
+    header #info {
+        right: 6rem;
+    }
+
+    header #messages {
+        right: 3rem;
+    }
+
+    header #info .info-text .circle-notification {
+        right: 2.4rem;
+    }
+
     header #other-pages {
-        right: 0.7rem;
+        right: 1rem;
         font-size: 1.5rem;
         width: 110px;
     }
+
+    /* HOVER WINDOWS */
+
+    header #hover-notifications {
+        right: 7rem;
+    }
+
+    header #hover-messages {
+        right: 3.5rem;
+    }
+
+    header #hover-account {
+        right: 0.2rem;
+    }
+
     
     /* POSTS, FOLLOW SECTION AND REPORT MESSAGE RESPONSIVE SETTINGS */
 
@@ -1256,17 +1287,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 }
 
 @media screen and (max-width: 770px) {
-
-    /* OTHER PAGES INFO WINDOWS RESPONSIVE SETTINGS */
-
-    header #hover-notifications {
-        right: 6.5rem;
-    }
     
-    header #hover-messages {
-        right: 3.3rem;
-    }
-
     /* POST SECTION, FOLLOW SECTION AND REPORT MESSAGE RESPONSIVE SETTINGS */
 
     #posts-container {
@@ -1361,22 +1382,19 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header button[id="upload"] {
         right: 12.5rem;
+        width: 140px;
+        font-size: 1.3rem;
+        height: 35px;
     }
     
     header #upload-files {
         right: 12rem;
     }
 
-    /* OTHER ELEMENTS IN HEADER RESPONSIVE SETTINGS */
+    /* OTHER ELEMENTS IN HEADER SETTINGS */
 
     header ul .fas {
-        font-size: 2.1rem;
-    }
-
-    header ul #other-pages-open {
-        width: 25px;
-        height: 25px;
-        top: -1.5rem;
+        font-size: 2.3rem;
     }
 
     header .notification-icon {
@@ -1386,10 +1404,35 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         padding-right: 0.3rem;
     }
 
+    header ul #other-pages-open {
+        width: 27px;
+        height: 27px;
+        top: -1.5rem;
+    }
+
+    /* HEADER OTHER PAGES WINDOW SETTINGS */
+
+    header #other-pages .window p {
+        font-size: 1.4rem;
+    }
+
+    header #hover-notifications, header #hover-messages, header #hover-account {
+        font-size: 1.1rem;
+    }
+
+    header #hover-notifications {
+        right: 7.3rem;
+    }
+
+    header #hover-messages {
+        right: 3.7rem;
+    }
+
+    /* FOLLOW SECTION HEADER */
+
     #follow-users header h3 {
         margin-left: -1.2rem;
     }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -1504,6 +1547,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         margin-left: 0.8rem;
     }
 
+    /* OTHER PAGES WINDOW SETTINGS */
+
     header #other-pages {
         font-size: 1.3rem;
         width: 100px;
@@ -1515,27 +1560,26 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         top: -1rem;
     }
 
-    header #other-pages i {
+    header #other-pages .window i {
         font-size: 1.2rem;
-        margin-top: -0.2rem;
+        margin-top: 0.25rem;
     }
 
     header #hover-notifications, header #hover-messages, header #hover-account {
         top: 5.1rem;
-        font-size: 1.15rem;
     }
 
     header #hover-notifications {
-        right: 6.2rem;
+        right: 6.6rem;
     }
     
     header #hover-messages {
-        right: 3.1rem;
+        right: 3.4rem;
     }
     
     header #hover-account {
         padding-inline: 0.3rem;
-        right: -0.2rem;
+        right: -0.1rem;
     }
 
     /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
