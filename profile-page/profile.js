@@ -161,9 +161,13 @@ addBioButton.addEventListener('click', () => {
 
 saveBioTextButton.addEventListener('click', () => {
     bioForm.style.display = 'none'
-    bioText.innerText = addBioText.value
-    bioText.style.display = 'block'
-    document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
+    if (addBioText.value !== '') {
+        bioText.innerText = addBioText.value
+        bioText.style.display = 'block'
+        document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
+    } else {
+        addBioButton.style.display = 'block'
+    }
 })
 
 cancelBioTextButton.addEventListener('click', () => {
@@ -172,8 +176,8 @@ cancelBioTextButton.addEventListener('click', () => {
         addBioButton.style.display = 'block'
     } else {
         bioText.style.display = 'block'
+        document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
     }
-    document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
 })
 
 // input in about section
