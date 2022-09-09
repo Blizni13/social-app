@@ -442,7 +442,7 @@ body {
     flex-wrap: wrap;
     column-gap: 1.4rem;
     padding-top: 7rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
     margin-top: -1.2rem;
 }
 
@@ -464,6 +464,7 @@ body {
 #container-posts-section .friends-about-section .friend {
     width: 120px;    
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 #container-posts-section .friends-about-section .friend img {
@@ -476,7 +477,7 @@ body {
     position: absolute;
     font-size: 1.5rem;
     left: 0.3rem;
-    top: 10.2rem;
+    top: 10.3rem;
 }
 
 /* ADD POST OPTION IN CONTAINER POSTS SECTION */
@@ -519,7 +520,7 @@ body {
 }
 
 #container-posts-section #add-post hr {
-    width: 113%;
+    width: 120%;
     margin-left: -2.7rem;
     margin-block: 1.5rem;
 }
