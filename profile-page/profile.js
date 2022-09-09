@@ -44,14 +44,6 @@ window.addEventListener('click', (event) => {
     }
 })
 
-// LIKE ANIMATION
-
-const likesList = document.getElementsByClassName('fa-thumbs-up')
-
-for (let i = 0; i < likesList.length; i++) {
-    likesList[i].addEventListener('click', () => likesList[i].classList.toggle('animation-like'))
-}
-
 // SELECT SECTION IN POSTS SECTION
 
 let posts = document.getElementById("posts")
@@ -63,7 +55,7 @@ let postsSection = document.getElementById('container-posts-section')
 let photosSection = document.getElementById('photos-section')
 let aboutSection = document.getElementById('about-section')
 let friendsSection = document.getElementById('friends-section')
-let allFriends = document.getElementsByClassName('all')
+let allFriends = document.getElementsByClassName('all-friends')
 
 posts.style.color = 'blue'
 underlines[0].style.display = 'block'
@@ -128,21 +120,20 @@ about.addEventListener('click', () => {
     }
 })
 
+// SEE ALL FRIENDS OPTION 
+
 let friendsDirection = [friends, allFriends[0], allFriends[1]]
 
 for (let i = 0; i < friendsDirection.length; i++) {
     friendsDirection[i].addEventListener('click', () => {
             underlines[0].style.display = 'none'
-            underlines[1].style.display = 'none'
             underlines[2].style.display = 'none'
             underlines[3].style.display = 'block'
             posts.style.color = 'black'
-            photos.style.color = 'black'
             about.style.color = 'black'
             friends.style.color = 'hsl(220, 60%, 35%)'
             postsSection.style.display = 'none'
             document.getElementById('posts-container').style.display = 'none'
-            photosSection.style.display = 'none'
             aboutSection.style.display = 'none'
             friendsSection.style.display = 'block'
             document.getElementById('all-friends-section-underline').style.borderBottom = '3px solid rgb(36, 71, 143)'
@@ -151,6 +142,18 @@ for (let i = 0; i < friendsDirection.length; i++) {
             document.documentElement.scrollTop = 0
     })
 }
+
+// SEE ALL PHOTOS OPTION
+
+document.getElementById('all-photos').addEventListener('click', () => {
+    underlines[0].style.display = 'none'
+    underlines[1].style.display = 'block'
+    posts.style.color = 'black'
+    photos.style.color = 'hsl(220, 60%, 35%)'
+    postsSection.style.display = 'none'
+    document.getElementById('posts-container').style.display = 'none'
+    photosSection.style.display = 'block'
+})
 
 // SELECT SECTION IN FRIENDS SECTION
 
@@ -230,13 +233,13 @@ saveBioTextButton.addEventListener('click', () => {
         bioText.style.display = 'block'
         document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
         if (bioText.offsetHeight > 60) {
-            document.getElementById('additional-info-posts-section').style.top = '0.5rem' 
+            document.getElementById('additional-info-posts-section').style.top = '0.7rem' 
             bioText.style.fontSize = '1.8rem'
-            document.getElementsByClassName("friends-about-section")[0].style.paddingBottom = '1.8rem'
+            document.getElementsByClassName("friends-about-section")[0].style.paddingBottom = '2.8rem'
         } else if (bioText.offsetHeight > 50){
-            document.getElementById('additional-info-posts-section').style.top = '0.25rem'
+            document.getElementById('additional-info-posts-section').style.top = '0.6rem'
         } else {
-            document.getElementById('additional-info-posts-section').style.top = '1.5rem'
+            document.getElementById('additional-info-posts-section').style.top = '1.9rem'
         }
     } else {
         addBioButton.style.display = 'block'
@@ -348,4 +351,12 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
     followOption[i].addEventListener('click', () => followText[i].innerText === 'Unfollow' ? followText[i].innerText = 'Follow' : followText[i].innerText = 'Unfollow')
     unfriendOption[i].addEventListener('click', () => {addFriendButton[i].style.display = 'block'; friendOptionsButton[i].style.opacity = 0})
     addFriendButton[i].addEventListener('click', () => addFriendButton[i].innerText === 'Cancel Request' ? addFriendButton[i].innerText = 'Add Friend' : addFriendButton[i].innerText = 'Cancel Request')
+}
+
+// LIKE ANIMATION
+
+const likesList = document.getElementsByClassName('fa-thumbs-up')
+
+for (let i = 0; i < likesList.length; i++) {
+    likesList[i].addEventListener('click', () => likesList[i].classList.toggle('animation-like'))
 }
