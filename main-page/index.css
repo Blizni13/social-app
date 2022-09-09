@@ -259,6 +259,42 @@ header #info .info-text p {
     font-size: 1.5rem;
     margin-top: -3.7rem;
     margin-left: 4.5rem;
+    width: 140px;
+}
+
+header #info .info-text .user-request {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.7rem;
+    margin-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+header #info .info-text .user-request [name="user-friend-action"], header #info .info-text .user-request [name="user-group-action"] {
+    width: 65px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+header #info .info-text .user-request #confirm, header #info .info-text .user-request #accept {
+    background-color: hsl(200, 100%, 35%);
+    color: linen;
+}
+
+header #info .info-text .user-request #remove, header #info .info-text .user-request #decline {
+    background-color: hsl(0, 0%, 90%)
+}
+
+header #info .info-text .user-request #confirm:hover, header #info .info-text .user-request #accept:hover {
+    background-color: hsl(200, 100%, 30%)
+}
+
+header #info .info-text .user-request #remove:hover, header #info .info-text .user-request #decline:hover  {
+    background-color: hsl(0, 0%, 86%)
 }
 
 header #info .info-text .circle-notification {
@@ -1017,6 +1053,17 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header #info .info-text p {
         margin-left: 3.7rem;
         margin-top: -3.2rem;
+        width: 110px;
+    }
+
+    header #info .info-text .user-request {
+        margin-left: 0rem;
+    }
+
+    header #info .info-text .user-request [name='user-friend-action'], header #info .info-text .user-request [name='user-group-action'] {
+        width: 50px;
+        height: 20px;
+        font-size: 1.1rem;
     }
 
     header #info .info-text .circle-notification {
@@ -1470,7 +1517,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     /* HEADER MESSAGES AND NOTIFICATIONS WINDOWS RESPONSIVE SETTINGS */
 
     header #info {
-        width: 170px;
+        width: 190px;
         font-size: 1.4rem;
         right: 8rem;
         top: 5rem;
@@ -1490,10 +1537,15 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.3rem;
         margin-left: 2.8rem;
         margin-top: -3rem;
+        width: 100px;
+    }
+
+    header #info .info-text .user-request {
+        margin-left: 1.1rem;
     }
 
     header #info .info-text .circle-notification {
-        right: 1rem;
+        right: 0.5rem;
     }
 
     header #messages {
