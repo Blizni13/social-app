@@ -415,6 +415,7 @@ body {
 #container-posts-section #additional-info-posts-section .photos-about-section {
     padding-left: 2.2rem;
     margin-top: 0.7rem;
+    padding-top: 6.5rem;
 }
 
 #container-posts-section #additional-info-posts-section .photos-about-section span {
@@ -423,7 +424,7 @@ body {
 
 #container-posts-section #additional-info-posts-section .photos-about-section h2 {
     left: 2.2rem;
-    margin-top: 0.5rem;
+    margin-top: -0.5rem;
 }
 
 /* friends info in additional info */
@@ -1171,7 +1172,7 @@ body {
     margin-inline: auto;
     border-radius: 10px;
     margin-top: 2.3rem;
-    padding: 13rem 0 2rem 3rem;
+    padding: 12rem 0 2rem 3rem;
     position: relative;
 }
 
@@ -1210,17 +1211,17 @@ body {
     top: 3.6rem;
 }
 
-.friends-about-section #friends-section-undersections {
+.friends-about-section #friends-section-subsections {
     display: flex;
     gap: 3rem;
     position: absolute;
-    top: 9rem;
+    top: 8rem;
     color: gray;
     font-weight: bold;
     left: 3rem;
 }
 
-.friends-about-section #friends-section-undersections p {
+.friends-about-section #friends-section-subsections p {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 10px;
@@ -1228,19 +1229,19 @@ body {
     padding-top: 10px;
 }
 
-.friends-about-section #friends-section-undersections p:active {
+.friends-about-section #friends-section-subsections p:active {
     background-color: hsl(0, 0%, 89%)
 }
 
-.friends-about-section #friends-section-undersections p:nth-of-type(1) {
+.friends-about-section #friends-section-subsections p:nth-of-type(1) {
     width: 110px;
 }
 
-.friends-about-section #friends-section-undersections p:nth-of-type(2) {
+.friends-about-section #friends-section-subsections p:nth-of-type(2) {
     width: 160px;
 }
 
-.friends-about-section #friends-section-undersections p:nth-of-type(3) {
+.friends-about-section #friends-section-subsections p:nth-of-type(3) {
     width: 100px;
 }
 
@@ -2311,4 +2312,23 @@ body {
         width: 400px;
         margin-left: 3.75rem;
     } 
+    .friends-about-section #friends-section-subsections {
+        gap: 1rem;
+    }
+
+    .friends-about-section #friends-section-subsections p {
+        font-size: 1.75rem;
+    }
+
+    .friends-about-section #friends-section-subsections p:nth-of-type(1) {
+        width: 95px;
+    }
+
+    .friends-about-section #friends-section-subsections p:nth-of-type(2) {
+        width: 140px;
+    }
+
+    .friends-about-section #friends-section-subsections p:nth-of-type(3) {
+        width: 85px;
+    }
 }

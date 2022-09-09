@@ -227,7 +227,7 @@ saveBioTextButton.addEventListener('click', () => {
         bioText.style.display = 'block'
         document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
         if (addBioText.value.length > 40) {
-            document.getElementById('additional-info-posts-section').style.top = '1rem' 
+            document.getElementById('additional-info-posts-section').style.top = '0.5rem' 
         } else {
             document.getElementById('additional-info-posts-section').style.top = '2rem'
         }
