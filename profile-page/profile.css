@@ -290,7 +290,7 @@ body {
 
 #container-posts-section #additional-info-posts-section {
     position: sticky;
-    top: 0.5rem;
+    top: 1.2rem;
     width: 450px;
     height: 915px;
 }
@@ -312,6 +312,7 @@ body {
 #container-posts-section #additional-info-posts-section #user-info h2 {
     font-size: 3rem;
     margin-bottom: -1rem;
+    margin-top: -1.4rem;
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info {
@@ -422,6 +423,7 @@ body {
 
 #container-posts-section #additional-info-posts-section .photos-about-section h2 {
     left: 2.2rem;
+    margin-top: 0.5rem;
 }
 
 /* friends info in additional info */
@@ -437,22 +439,23 @@ body {
 }
 
 #container-posts-section #additional-info-posts-section .friends-about-section h2 {
-    margin-top: -4.5rem;
+    margin-top: -5.5rem;
     margin-left: 0;
 }
 
 #container-posts-section #additional-info-posts-section .friends-about-section #friends-num {
-    margin-top: -1rem;
+    margin-top: -2rem;
     margin-left: 0;
 }
 
 #container-posts-section #additional-info-posts-section .friends-about-section .all {
     right: 4rem;
+    top: 2.6rem;
 }
 
 #container-posts-section .friends-about-section .friend {
     width: 120px;    
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 #container-posts-section .friends-about-section .friend img {
@@ -465,7 +468,7 @@ body {
     position: absolute;
     font-size: 1.5rem;
     left: 0.3rem;
-    top: 10.7rem;
+    top: 10.2rem;
 }
 
 /* ADD POST OPTION IN CONTAINER POSTS SECTION */
@@ -1137,6 +1140,7 @@ body {
 
 #about-section .friends-about-section {
     position: relative;
+    padding-top: 6rem;
 }
 
 #about-section .friends-about-section h2 {
