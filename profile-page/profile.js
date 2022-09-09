@@ -145,6 +145,9 @@ for (let i = 0; i < friendsDirection.length; i++) {
             photosSection.style.display = 'none'
             aboutSection.style.display = 'none'
             friendsSection.style.display = 'block'
+            document.getElementById('all-friends-section-underline').style.borderBottom = '3px solid rgb(36, 71, 143)'
+            document.getElementById('family-members-section-underline').style.borderBottom = 'none'
+            document.getElementById('same-city-section-underline').style.borderBottom = 'none'
             document.documentElement.scrollTop = 0
     })
 }
@@ -226,10 +229,14 @@ saveBioTextButton.addEventListener('click', () => {
         bioText.innerText = addBioText.value
         bioText.style.display = 'block'
         document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
-        if (addBioText.value.length > 40) {
+        if (bioText.offsetHeight > 60) {
             document.getElementById('additional-info-posts-section').style.top = '0.5rem' 
+            bioText.style.fontSize = '1.8rem'
+            document.getElementsByClassName("friends-about-section")[0].style.paddingBottom = '2.6rem'
+        } else if (bioText.offsetHeight > 50){
+            document.getElementById('additional-info-posts-section').style.top = '0.25rem'
         } else {
-            document.getElementById('additional-info-posts-section').style.top = '2rem'
+            document.getElementById('additional-info-posts-section').style.top = '1.5rem'
         }
     } else {
         addBioButton.style.display = 'block'
@@ -245,6 +252,13 @@ cancelBioTextButton.addEventListener('click', () => {
         document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
     }
 })
+
+// remaining characters in bio
+
+let charCount = (textarea) => {
+    let currNumOfCharacters = textarea.value.length
+    document.getElementById('num-of-characters').innerText = currNumOfCharacters
+}
 
 // input in about section
 

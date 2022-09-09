@@ -86,7 +86,8 @@
                         <p id="user-input-text"></p>
                         <input type="submit" value="Add Bio" id="add-bio-submit">
                         <div id="bio-form">
-                            <textarea placeholder="Add bio..." id="add-bio-text" rows="4" cols="40" maxlength="83"></textarea>
+                            <textarea placeholder="Add bio..." id="add-bio-text" rows="4" cols="40" maxlength="83" onkeyup="charCount(this)"></textarea>
+                            <p id="letters-counter"> <span id="num-of-characters">0</span> / 83 characters</p>
                             <input type="submit" id="bio-cancel" value="Cancel" class="bio-buttons">
                             <input type="submit" id="bio-save" value="Save" class="bio-buttons">
                         </div>
