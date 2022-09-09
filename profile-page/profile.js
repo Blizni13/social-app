@@ -232,7 +232,7 @@ saveBioTextButton.addEventListener('click', () => {
         if (bioText.offsetHeight > 60) {
             document.getElementById('additional-info-posts-section').style.top = '0.5rem' 
             bioText.style.fontSize = '1.8rem'
-            document.getElementsByClassName("friends-about-section")[0].style.paddingBottom = '2.6rem'
+            document.getElementsByClassName("friends-about-section")[0].style.paddingBottom = '1.8rem'
         } else if (bioText.offsetHeight > 50){
             document.getElementById('additional-info-posts-section').style.top = '0.25rem'
         } else {
