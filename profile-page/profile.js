@@ -44,6 +44,61 @@ window.addEventListener('click', (event) => {
     }
 })
 
+// EDIT CAPTION OPTION
+
+const changeCaptionForm = document.getElementsByClassName('change-caption-form')
+const editText = document.getElementsByClassName('edit-caption')
+const editTextarea = document.getElementsByClassName('change-caption-text')
+const captionText = document.getElementsByClassName('caption-text')
+const finishedEditing = document.getElementsByClassName('finished-editing')
+const cancel= document.getElementsByClassName('cancel')
+const caption = document.getElementsByClassName('caption')
+
+// functionality of edit text
+
+for (let i = 0; i < editText.length; i++) {
+    editText[i].addEventListener('click', () => {
+        if (caption[i].style.display === 'none') {
+            caption[i].style.display = 'block'
+        }
+        captionText[i].style.display = 'none'
+        changeCaptionForm[i].style.display = 'grid'
+    })
+}
+
+// value of input = caption text
+
+for (let i = 0; i < editTextarea.length; i++) {
+    editTextarea[i].value = captionText[i].innerText
+}
+
+// finished editing and cancel buttons functionality
+
+const changeCaptionForms = document.getElementsByClassName('change-caption-form')
+
+for (let i = 0; i < changeCaptionForm.length; i++) {
+    changeCaptionForms[i].addEventListener('submit', (event) => {
+        event.preventDefault()
+    })
+
+    finishedEditing[i].addEventListener('click', () => {
+        if (!editTextarea[i].value) {
+            caption[i].style.display = 'none'
+        }
+        captionText[i].innerText = editTextarea[i].value
+        captionText[i].style.display = 'block'
+        changeCaptionForm[i].style.display = 'none'
+    })
+
+    cancel[i].addEventListener('click', () => {
+        if(captionText[i].innerText === '') {
+            caption[i].style.display = 'none'
+        }
+        captionText[i].style.display = 'block'
+        changeCaptionForm[i].style.display = 'none'
+    })
+}
+
 // SELECT SECTION IN POSTS SECTION
 
 let posts = document.getElementById("posts")
