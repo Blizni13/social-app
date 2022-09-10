@@ -280,21 +280,40 @@ header #info .info-text .user-request [name="user-friend-action"], header #info 
     border-radius: 3px;
 }
 
-header #info .info-text .user-request #confirm, header #info .info-text .user-request #accept {
+header #info .info-text .user-request .confirm, header #info .info-text .user-request .accept {
     background-color: hsl(200, 100%, 35%);
     color: linen;
 }
 
-header #info .info-text .user-request #remove, header #info .info-text .user-request #decline {
+header #info .info-text .user-request .remove, header #info .info-text .user-request .decline {
     background-color: hsl(0, 0%, 90%)
 }
 
-header #info .info-text .user-request #confirm:hover, header #info .info-text .user-request #accept:hover {
+header #info .info-text .user-request .confirm:hover, header #info .info-text .user-request .accept:hover {
     background-color: hsl(200, 100%, 30%)
 }
 
-header #info .info-text .user-request #remove:hover, header #info .info-text .user-request #decline:hover  {
+header #info .info-text .user-request .remove:hover, header #info .info-text .user-request .decline:hover  {
     background-color: hsl(0, 0%, 86%)
+}
+
+header #info .info-text .user-request .after-remove, 
+header #info .info-text .user-request .after-confirm,
+header #info .info-text .user-request .after-accept,
+header #info .info-text .user-request .after-decline {
+    display: none;
+    position: absolute;
+    bottom: 1.5rem;
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+}
+
+header #info .info-text .user-request .after-confirm, header #info .info-text .user-request .after-accept {
+    color: hsl(120, 20%, 60%)
+}
+
+header #info .info-text .user-request .after-remove, header #info .info-text .user-request .after-decline {
+    color: hsl(0, 100%, 30%)
 }
 
 header #info .info-text .circle-notification {
@@ -552,6 +571,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     font-size: 2rem;
     position: absolute;
     right: 2rem;
+    top: 1.2rem;
     cursor: pointer;
 }
 

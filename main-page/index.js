@@ -59,6 +59,10 @@ const infoWindow = document.getElementById('info')
 const infoTexts = document.getElementsByClassName('info-text')
 const infoContent = document.getElementsByClassName('info-content')
 const circlesNotification = document.getElementsByClassName('circle-notification')
+const confirmFriend = document.getElementsByClassName('confirm')
+const removeFriend = document.getElementsByClassName('remove')
+const acceptGroup = document.getElementsByClassName('accept')
+const declineGroup = document.getElementsByClassName('decline')
 
 // open window
 
@@ -72,6 +76,57 @@ notificationSign.addEventListener('click', () => {
     document.getElementById('message-open').style.color = 'black'
     }
 })
+
+// prevent refreshing page by forms in notifications 
+
+for (let i = 0; i < document.getElementsByClassName('user-request').length; i++) {
+    document.getElementsByClassName('user-request')[i].addEventListener('submit', (event) => {
+        event.preventDefault()
+    })}
+
+// confirm - remove friend invitation
+
+for (let i = 0; i < confirmFriend.length; i++) {
+    confirmFriend[i].addEventListener('click', () => {
+        document.getElementsByClassName('after-confirm')[i].style.display = 'block'
+        confirmFriend[i].style.opacity = '0'
+        confirmFriend[i].style.pointerEvents = 'none'
+        removeFriend[i].style.opacity = '0'
+        removeFriend[i].style.pointerEvents = 'none'
+    })
+}
+
+for (let i = 0; i < removeFriend.length; i++) {
+    removeFriend[i].addEventListener('click', () => {
+        document.getElementsByClassName('after-remove')[i].style.display = 'block'
+        confirmFriend[i].style.opacity = '0'
+        confirmFriend[i].style.pointerEvents = 'none'
+        removeFriend[i].style.opacity = '0'
+        removeFriend[i].style.pointerEvents = 'none'
+    })
+}
+
+// accept - decline group invitation
+
+for (let i = 0; i < acceptGroup.length; i++) {
+    acceptGroup[i].addEventListener('click', () => {
+        document.getElementsByClassName('after-accept')[i].style.display = 'block'
+        acceptGroup[i].style.opacity = '0'
+        acceptGroup[i].style.pointerEvents = 'none'
+        declineGroup[i].style.opacity = '0'
+        declineGroup[i].style.pointerEvents = 'none'
+    })
+}
+
+for (let i = 0; i < declineGroup.length; i++) {
+    declineGroup[i].addEventListener('click', () => {
+        document.getElementsByClassName('after-decline')[i].style.display = 'block'
+        acceptGroup[i].style.opacity = '0'
+        acceptGroup[i].style.pointerEvents = 'none'
+        declineGroup[i].style.opacity = '0'
+        declineGroup[i].style.pointerEvents = 'none'
+    })
+}
 
 // close window
 
