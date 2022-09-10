@@ -58,78 +58,73 @@ body {
 
 /* NAVIGATION IN FIRST HEADER */
 
-#first-header a {
-    text-decoration: none;
-    color: black;
-}
-
 #first-header {
     border-bottom: 1px solid gray;
     padding-bottom: 1.6rem;
 }
 
-.navigation {
-    display: flex;
+#first-header a {
+    text-decoration: none;
+    color: black;
+}
+
+#first-header #navigation-window {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    right: 4rem;
-    height: 53.75px;
-    width: 53.75px;
+    gap: 2rem;
+    margin-left: 3rem;
+    width: 100px;
+    right: 7rem;
+    top: 26.2rem;
+}
+
+#first-header #navigation-window .navigation {
+    position: relative;
+    height: 55px;
+    width: 55px;
     background-color: hsl(0, 0%, 80%);
     border-radius: 25px;
-    padding-inline: 1rem;
-    overflow: hidden;
     transition-duration: 0.5s;
+    box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.2);
 }
 
-.navigation .fas.fa-house, .navigation .fas.fa-gear {
-    opacity: 1;
-    transition-duration: 1s;
+#first-header #navigation-window .navigation i, 
+#first-header #navigation-window .navigation i {
     font-size: 3rem;
-}
-
-#home {
-    top: 27rem;
-}
-
-#settings {
-    top: 34rem;
-}
-
-.navigation p {
-    font-size: 2rem;
-    font-family: 'Open Sans';
-    font-weight: bold;
-    opacity: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition-duration: 0.5s;
+    transition-delay: 0.3s;
 }
 
-.navigation #home-text {
-    margin-left: 2rem;
-}
-
-.navigation #settings-text {
-    margin-left: 1.5rem;
+#first-header #navigation-window .navigation span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins';
+    font-size: 0;
+    transition-duration: 0.5s;
 }
 
 /* navigation effects */
 
-#home:hover {
-    width: 110px;
+#first-header #navigation-window .navigation:hover {
+    width: 150px;
 }
 
-#settings:hover {
-    width: 120px;
-}
-
-#home:hover .fas.fa-house , #settings:hover .fas.fa-gear {
-    opacity: 0;
+#first-header #navigation-window .navigation:hover i {
+    font-size: 0;
     transition-delay: 0ms;
-    transition-duration: 0.3s;
+    transition-duration: 0s;
 }
 
-#home:hover p, #settings:hover p {
-    opacity: 1
+#first-header #navigation-window .navigation:hover span {
+    font-size: 2.3rem;
+    letter-spacing: 1px;
 }
 
 /* INFO SECTION IN FIRST HEADER */
@@ -1458,14 +1453,25 @@ body {
 
     /* header navigation settings */
 
-    #first-header #home {
-        left: 77rem;
-        top: 53.5rem;
+    #first-header #navigation-window {
+        top: 53.3rem;
+        gap: 0;
+        left: 21rem;
+        width: 600px;
+        pointer-events: none;
     }
 
-    #first-header #settings {
-        left: 26rem;
-        top: 53.5rem;
+    #first-header #navigation-window .navigation {
+        pointer-events: auto;
+    }
+
+    #first-header #navigation-window #settings {
+        margin-left: 50rem;
+        margin-top: -5.5rem;
+    }
+
+    #first-header #navigation-window #home {
+        margin-right: 50rem;
     }
 
     /* POSTS SECTION CONTENT RESPONSIVE SETTINGS */
@@ -1537,7 +1543,7 @@ body {
     }
 
     #first-header hr {
-        margin-left: 14rem;
+        margin-left: 15rem;
     }
 
     #first-header #informations {
@@ -1554,12 +1560,9 @@ body {
 
     /* HEADER NAVIGATION SETTINGS */
 
-    #first-header #home {
-        left: 68rem;
-    }
-
-    #first-header #settings {
-        left: 19rem;
+    #first-header #navigation-window {
+        width: 500px;
+        left: 19.5rem;
     }
 
     /* MAIN SECTION RESPONSIVE SETTINGS*/
@@ -1643,7 +1646,6 @@ body {
 
     #first-header hr {
         margin-left: 13.5rem;
-        margin-top: 25rem;
         width: 550px;
     }
 
@@ -1657,14 +1659,18 @@ body {
 
     /* header navigation settings */
 
-    #first-header #home {
-        left: 50rem;
-        top: 60.5rem;
+    #first-header #navigation-window {
+        width: 200px;
+        top: 53.2rem;
+        left: 27.4rem;
     }
 
-    #first-header #settings {
-        left: 26rem;
-        top: 60.5rem;
+    #first-header #navigation-window #home {
+        margin-right: 40rem;
+    }
+
+    #first-header #navigation-window #settings {
+        margin-left: 40rem;
     }
 
     /* MAIN SECTION SETTINGS*/
@@ -2011,6 +2017,7 @@ body {
 
     #first-header hr {
         margin-left: 11rem;
+        margin-top: 24.5rem;
         width: 450px;
     }
 
@@ -2041,12 +2048,18 @@ body {
 
     /* header navigation settings */
 
-    #first-header #home {
-        left: 42rem;
+    #first-header #navigation-window {
+        top: 60rem;
+        width: 215px;
+        left: 19.9rem;
     }
 
-    #first-header #settings {
-        left: 20rem;
+    #first-header #navigation-window #home {
+        margin-right: 20rem;
+    }
+
+    #first-header #navigation-window #settings {
+        margin-left: 20rem;
     }
 
     /* MAIN SECTION SETTINGS */
@@ -2118,7 +2131,6 @@ body {
 
     #first-header hr {
         margin-left: 4rem;
-        margin-top: 24rem;
         width: 400px;
     }
 
@@ -2128,14 +2140,8 @@ body {
 
     /* HEADER NAVIGATION SETTINGS */
 
-    #first-header #home {
-        left: 32rem;
-        top: 60rem;
-    }
-
-    #first-header #settings {
-        left: 10rem;
-        top: 60rem;
+    #first-header #navigation-window {
+        left: 9.7rem;
     }
 
     /* MAIN SECTION SETTINGS*/
