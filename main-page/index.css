@@ -9,7 +9,7 @@
     --header-color: rgb(245, 245, 245);
     --users-follow-color: rgb(240, 240, 240);
     --user-card-color: white;
-    --follow-button-color: rgb(235, 235, 235);
+    --add-button-color: rgb(225, 225, 225);
     --posts-header-color: rgb(240, 240, 240);
     --reactions-color: rgb(240, 240, 240);
     --interactions-color: rgb(240, 240, 240);
@@ -533,9 +533,9 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     opacity: 1
 }
 
-/* FOLLOW USERS SECTION */
+/* ADD USERS SECTION */
 
-#follow-users {
+#add-users {
     width: 400px;
     height: 350px;
     position: absolute;
@@ -549,7 +549,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     overflow: hidden;
 }
 
-#follow-users header {
+#add-users header {
     position: relative;
     height: 50px;
     z-index: 1;
@@ -557,17 +557,17 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     top: -1rem;
 }
 
-#follow-users header h3, #follow-users header p {
+#add-users header h3, #add-users header p {
     color: gray;
 }
 
-#follow-users header h3 {
+#add-users header h3 {
     font-size: 2.3rem;
     margin-left: -1.5rem;
     margin-top: 0.2rem;
 }
 
-#follow-users header p {
+#add-users header p {
     font-size: 2rem;
     position: absolute;
     right: 2rem;
@@ -575,7 +575,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     cursor: pointer;
 }
 
-#follow-users #users-card {
+#add-users #users-card {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -588,24 +588,24 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     padding-bottom: 0.5rem;
 }
 
-#follow-users #users-card .user {
+#add-users #users-card .user {
     height: 25%;
     position: relative;
 }
 
-#follow-users #users-card hr {
+#add-users #users-card hr {
     background-color: gray;
     border-color: gray;
     opacity: 0.2;
 }
 
-#follow-users #users-card .photo-wrapper {
+#add-users #users-card .photo-wrapper {
     position: relative;
     top: 50%;
     transform: translate(50%, -50%)
 }
 
-#follow-users #users-card .name {
+#add-users #users-card .name {
     position: relative;
     font-size: 2rem;
     color: black;
@@ -615,7 +615,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     bottom: 2rem;
 }
 
-#follow-users #users-card .followers {
+#add-users #users-card .followers {
     font-size: 1.5rem;
     position: relative;
     bottom: 50%;
@@ -627,37 +627,53 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     opacity: 0;
 }
 
-#follow-users #users-card button {
+#add-users #users-card .user .add-friend {
     position: absolute;
     left: 65%;
     top: 50%;
     transform: translateY(-50%);
-    width: 110px;
+    width: 11rem;
     height: 3.5rem;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    border-radius: 2rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
     border: none;
     opacity: 0;
-    transition-duration: 0.5s;
-    background-color: var(--follow-button-color);
+    transition-duration: 0.4s;
+    background-color: var(--add-button-color);
+    overflow: hidden;
 }
 
-/* FOLLOW-USERS EFFECTS*/
+#add-users #users-card .user .add-friend::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -120%;
+    background-color: white;
+    z-index: -1;
+    transform: skew(50deg);
+    transition-duration: 0.5s;
+}
 
-#follow-users #users-card .user:hover .name {
+/* ADD USERS EFFECTS*/
+
+#add-users #users-card .user:hover .name {
     bottom: 43%;
 }
 
-#follow-users #users-card .user:hover .followers, #follow-users #users-card .user:hover button {
+#add-users #users-card .user:hover .followers, #add-users #users-card .user:hover button {
     opacity: 1;
 }
 
-#follow-users #users-card .user button:hover {
+#add-users #users-card .user .add-friend:hover {
     cursor: pointer;
-    letter-spacing: 2px;
-    box-shadow: 0px 0px 5px 1px gray,
-    0px 0px 6px 3px gray; 
+    box-shadow: 0px 0px 10px 1px hsl(0, 0%, 86%),
+    0px 0px 20px 3px hsl(0, 0%, 90%); 
+}
+
+#add-users #users-card .user .add-friend:hover::before {
+    left: 120%;
 }
 
 /* POSTS SECTION */
@@ -999,7 +1015,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     #posts-container {
         left: 22rem;
     }
-    #follow-users {
+    #add-users {
         left: 87rem;
     }
 }
@@ -1009,7 +1025,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         left: 5rem;
     }
 
-    #follow-users {
+    #add-users {
         left: 70rem;
     }
 }
@@ -1073,7 +1089,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         right: 14rem;
     }
 
-     header #info h2 {
+    header #info h2 {
         font-size: 2.3rem; 
     } 
 
@@ -1177,7 +1193,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         padding-inline: 0.5rem;
     }
 
-    /* POST SECTION AND FOLLOW SECTION RESPONSIVE SETTINGS */
+    /* POST SECTION AND ADD SECTION SETTINGS */
 
     #posts-container {
         left: 10rem;
@@ -1185,54 +1201,54 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         top: 14rem;
     }
 
-    #follow-users {
+    #add-users {
         top: 14.2rem;
         left: 55rem;
         width: 300px;
         height: 250px;
     }
 
-    #follow-users header h3 {
+    #add-users header h3 {
         font-size: 1.75rem;
         margin-left: -2.2rem;
         margin-top: -0.5rem;
     }
 
-    #follow-users header p {
+    #add-users header p {
         font-size: 1.6rem;
         right: 1.5rem;
         top: 1.1rem
     }
 
-    #follow-users #users-card {
+    #add-users #users-card {
         height: 207px;
     }
 
-    #follow-users #users-card .photo-wrapper {
+    #add-users #users-card .photo-wrapper {
         width: 25px;
         height: 25px;
     }
 
-    #follow-users #users-card .name {
+    #add-users #users-card .name {
         font-size: 1.6rem;
         left: 4.7rem;
         bottom: 1.4rem;
     }
     
-    #follow-users #users-card .followers {
+    #add-users #users-card .followers {
         font-size: 1.3rem;
         left: 4.7rem;
         bottom: 2.7rem;
     }
 
-    #follow-users #users-card .user button {
+    #add-users #users-card .user .add-friend {
         width: 80px;
         height: 25px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
-    #follow-users #users-card button:hover {
-        box-shadow: 0px 0px 10px 1px gray!important; 
+    #add-users #users-card .user .add-friend::before {
+        width: 75%;
     }
 }
 
@@ -1348,7 +1364,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         left: 3rem;
     }
 
-    #follow-users {
+    #add-users {
         left: 44rem;
     }
   
@@ -1376,48 +1392,48 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         width: 430px;
     }
 
-    #follow-users {
+    #add-users {
         top: 11.5rem;
         left: 28%;
         width: 320px;
         height: 280px;
     }
 
-    #follow-users #users-card {
+    #add-users #users-card {
         height: 232px;
     }
 
-    #follow-users header p {
+    #add-users header p {
         top: 1.2rem;
     }
 
-    #follow-users header h3 {
+    #add-users header h3 {
         margin-top: 0;
     }
 
-    #follow-users #users-card .name {
+    #add-users #users-card .name {
         bottom: 1.7rem;
         left: 5.4rem;
         font-size: 1.8rem;
     }
 
-    #follow-users #users-card .user:hover .name {
+    #add-users #users-card .user:hover .name {
         bottom: 2.7rem;
     }
     
-    #follow-users #users-card .followers {
+    #add-users #users-card .followers {
         font-size: 1.3rem;
         left: 5.4rem;
         bottom: 3rem;
     }
 
-    #follow-users #users-card .user button {
+    #add-users #users-card .user .add-friend {
         width: 90px;
         height: 30px;
         left: 68%
     }
 
-    #follow-users #users-card .photo-wrapper {
+    #add-users #users-card .photo-wrapper {
         width: 30px;
         height: 30px;
     }
@@ -1510,8 +1526,13 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     /* FOLLOW SECTION HEADER */
 
-    #follow-users header h3 {
-        margin-left: -1.2rem;
+    #add-users header h3 {
+        margin-left: -0.7rem;
+    }
+
+    #add-users header p {
+        right: 1.7rem;
+        top: 1.3rem;
     }
 }
 
@@ -1699,7 +1720,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         top: 42rem;
     }
 
-    #follow-users {
+    #add-users {
         left: 8.5rem;
         top: 9.5rem;
     }
