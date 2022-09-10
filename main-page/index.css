@@ -674,6 +674,18 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: relative;
 }
 
+#posts-container .post .caption {
+    position: relative;
+    width: 100%;
+    background-color: White;
+    padding: 6rem 1.8rem 1rem 1.8rem;
+    z-index: -1;
+}
+
+#posts-container .post .caption .caption-text {
+    font-size: 1.8rem;
+}
+
 #posts-container .profile-wrapper {
     position: relative;
     width: 25px;
@@ -681,22 +693,23 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     bottom: 1px;
 }
 
-#posts-container header {
+#posts-container .post header {
     position: absolute;
     display: block;
     height: 50px;
     background-color: var(--posts-header-color);
     z-index: 1;
     pointer-events: none;
+    border-bottom: 1px solid hsl(0, 0%, 93%)
 }
 
-#posts-container header .profile-wrapper {
+#posts-container .post header .profile-wrapper {
     top: 50%;
     transform: translateY(-50%);
     left: -0.4rem;
 }
 
-#posts-container header p {
+#posts-container .post header p {
     position: absolute;
     font-size: 1.8rem;
     font-family: var(--header-font);
@@ -719,7 +732,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     top: 0.7rem;
 }
 
-#posts-container header .fas.fa-ellipsis {
+#posts-container .post header .fas.fa-ellipsis {
     font-size: 2.7rem;
     pointer-events: none;
 }
