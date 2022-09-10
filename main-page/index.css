@@ -690,18 +690,6 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: relative;
 }
 
-#posts-container .post .caption {
-    position: relative;
-    width: 100%;
-    background-color: White;
-    padding: 6rem 1.8rem 1rem 1.8rem;
-    z-index: -1;
-}
-
-#posts-container .post .caption .caption-text {
-    font-size: 1.8rem;
-}
-
 #posts-container .profile-wrapper {
     position: relative;
     width: 25px;
@@ -716,7 +704,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     background-color: var(--posts-header-color);
     z-index: 1;
     pointer-events: none;
-    border-bottom: 1px solid hsl(0, 0%, 93%)
+    border-bottom: 1px solid hsl(0, 0%, 91%)
 }
 
 #posts-container .post header .profile-wrapper {
@@ -756,6 +744,20 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 #posts-container .post header button:hover {
     background-color: hsl(0, 0%, 90%)
 }
+
+#posts-container .post .caption {
+    position: relative;
+    width: 100%;
+    background-color: var(--posts-header-color);
+    padding: 6rem 1.8rem 1rem 1.8rem;
+    z-index: -1;
+}
+
+#posts-container .post .caption .caption-text {
+    font-size: 1.8rem;
+}
+
+/* IMAGE SECTION */
 
 #posts-container .image-wrapper img {
     width: 100%;
