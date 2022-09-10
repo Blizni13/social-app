@@ -745,6 +745,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     background-color: hsl(0, 0%, 90%)
 }
 
+/* CAPTION SECTION */
+
 #posts-container .post .caption {
     position: relative;
     width: 100%;
@@ -909,7 +911,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: absolute;
     width: 150px;
     height: 75px;
-    background-color: rgb(240, 240, 240);
+    background-color: rgb(220, 220, 220);
     border-radius: 7px;
     top: 6rem;
     right: 2.6rem;
@@ -918,7 +920,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 }
 
 #posts-container .post .post-options i {
-    color: rgb(240, 240, 240);
+    color: rgb(220, 220, 220);
     position: absolute;
     right: 1rem;
     font-size: 2rem;
@@ -932,10 +934,11 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     font-size: 1.8rem;
     height: 35px;
     width: 100%;
+    background-color: inherit;
 }
 
 #posts-container .post .post-options button:hover {
-    background-color: hsl(0, 0%, 87%)
+    background-color: hsl(0, 0%, 82%)
 }
 
 #report-background {
