@@ -163,34 +163,86 @@ header #upload-files {
     z-index: 2;
 }
 
+header #upload-files #post-image-preview {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 150px;
+    width: 75%;
+    height: 200px;
+}
+
+header #upload-files #post-image-preview #post-image-preview-header {
+    position: relative;
+    width: 100%;
+    background-color: var(--header-color);
+    font-size: 1.1rem;
+    border-bottom: 1px solid hsl(0, 0%, 91%);
+    pointer-events: none;
+}
+
+header #upload-files #post-image-preview #post-image-preview-header .profile-wrapper {
+    width: 15px;
+    height: 15px;
+    margin-top: 0.25rem;
+    margin-left: 0.4rem;
+}
+
+header #upload-files #post-image-preview #post-image-preview-header p {
+    position: absolute;
+    top: 0.5rem;
+    left: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+header #upload-files #post-image-preview #post-image-preview-header i {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+}
+
+header #upload-files #post-image-preview #post-image-preview-caption {
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem;
+    display: none;
+    overflow-x: hidden;
+    pointer-events: none;
+}
+
+header #upload-files #post-image-preview #post-image-preview-caption-text {
+    font-size: 1rem;
+} 
+
+header #upload-files #post-image-preview #post-image-preview-photo {
+    background-size: cover;
+    width: 100%;
+    height: 177px;
+}
+
 header #upload-files form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     align-items: center;
-}
-
-header #upload-files form input[id='photo-video'] {
-    display: none;
 }
 
 header #upload-files form label[for="photo-video"] {
-    border-radius: 5px;
-    width: 48%;
-    height: 35px;
-    position: relative;
-    background-color: hsl(0, 0%, 90%);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.3rem;
+    width: 55px;
+    height: 55px;
+    font-size: 2.7rem;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 92%);
     cursor: pointer;
 }
 
-header #upload-files form label[for="photo-video"]::after {
-    content: 'Choose File';
-    font-size: 1.7rem;
+header #upload-files form label[for="photo-video"] i {
+    margin-top: -0.2rem;
+    pointer-events: none;
 }
 
 header #upload-files form textarea {
@@ -201,6 +253,12 @@ header #upload-files form textarea {
     border: none;
     border-radius: 5px;
     margin-inline: 1.2rem;
+    background-color: hsl(0, 0%, 92%);
+    color: black;
+}
+
+header #upload-files form textarea::-webkit-scrollbar {
+    display: none;
 }
 
 header #upload-files form button[type='submit'] {
@@ -209,6 +267,9 @@ header #upload-files form button[type='submit'] {
     border-radius: 3px;
     border: none;
     cursor: pointer;
+    background-color: hsl(0, 0%, 92%);
+    font-weight: bold;
+    font-family: 'Kanit'
 }
 
 /* NOTIFICATION PANEL */
@@ -1073,8 +1134,10 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         right: 23rem;
     }
 
-    header #upload-files form label[for="photo-video"]::after {
-        font-size: 1.4rem;
+    header #upload-files form label[for="photo-video"] {
+        width: 45px;
+        height: 45px;
+        font-size: 2.3rem;
     }
 
     /* NOTIFICATIONS AND MESSAGES RESPONSIVE SETTINGS */
@@ -1306,16 +1369,38 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         width: 150px;
     }
 
-    header #upload-files form label[for="photo-video"]::after {
-        font-size: 1.3rem;
+    header #upload-files #post-image-preview {
+        height: 150px;
     }
 
-    header #upload-files form label[for="photo-video"] {
-        width: 58%;
+    header #upload-files #post-image-preview #post-image-preview-photo {
+        height: 129px;
     }
 
-    header #upload-files form button[type="submit"] {
-        width: 40%;
+    header #upload-files #post-image-preview #post-image-preview-header p {
+        font-size: 0.8rem;
+        left: 2rem;
+    }
+
+    header #upload-files #post-image-preview #post-image-preview-header i {
+        top: 0.35rem;
+    }
+
+    header #upload-files #post-image-preview #post-image-preview-header .profile-wrapper {
+        width: 13px;
+        height: 13px;
+    }
+
+    header #upload-files #post-image-preview #post-image-preview-caption-text {
+        font-size: 0.9rem;
+    }
+
+    header #upload-files form textarea {
+        font-size: 1.1rem;
+    }
+
+    header #upload-files form button[type='submit'] {
+        font-size: 1.1rem;
     }
 
     /* ICONS AND OTHER WINDOWS IN HEADER RESPONSIVE SETTINGS */
@@ -1706,12 +1791,13 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         width: 120px;
     }
 
-    header #upload-files textarea {
-        font-size: 1.1rem;
+    header #upload-files #post-image-preview {
+        width: 95px;
     }
 
-    header #upload-files form label[for="photo-video"] {
-        width: 72%;
+    header #upload-files form textarea {
+        font-size: 0.9rem;
+        height: 50px;
     }
 
     header #upload-files form button[type='submit'] {

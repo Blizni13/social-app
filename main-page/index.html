@@ -22,10 +22,28 @@
 
                     <div id="upload-files">
                         <form action="upload" method="POST" enctype="multipart/form-data">
+                            <div id="post-image-preview">
+
+                                <div id="post-image-preview-header">
+                                    <img class='profile-wrapper' src="/images/Gryz-Szymon.jpeg">
+                                    <p>Szymon Gryz</p>
+                                    <i class="fas fa-ellipsis"></i>
+                                </div>
+
+                                <div id="post-image-preview-caption">
+                                    <p id="post-image-preview-caption-text"></p>
+                                </div>
+
+                                <div id="post-image-preview-photo">
+                                    
+                                </div>
+                            </div>
+
                             <label for="photo-video">
-                                <input id="photo-video" type="file" accept=".jpg, .mp4" name="image_upload">
+                                <i class="fas fa-cloud-arrow-up"></i>
+                                <input id="photo-video" type="file" accept=".jpg, .mp4" name="image_upload" style="display: none" onchange="prevImage(this)">
                             </label>
-                            <textarea placeholder="Caption..." style="resize: none;"></textarea>
+                            <textarea placeholder="Add caption..." style="resize: none;" onkeyup="changeCaption(this)" id="add-post-caption"></textarea>
                             <button type="submit">Upload</button>
                         </form>
                     </div>

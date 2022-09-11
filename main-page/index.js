@@ -7,14 +7,46 @@ uploadButton.onclick = function() {
     uploadWindow.style.display = 'block'
 }
 
+let uploadWindowElements = [
+    uploadButton,
+    uploadWindow,
+    document.getElementsByTagName('textarea')[0],
+    document.getElementsByTagName('form')[0] ,
+    document.getElementsByTagName('input')[1],
+    document.getElementsByTagName('label')[1],
+    document.getElementById('post-image-preview'),
+    document.getElementById('post-image-preview-photo')
+]
+
 window.onclick = function(event) {
-    if (event.target !== uploadButton && 
-        event.target !== document.getElementsByTagName('textarea')[0] &&
-        event.target !== document.getElementsByTagName('form')[0] &&
-        event.target !== document.getElementsByTagName('input')[1] &&
-        event.target !== document.getElementsByTagName('label')[1] &&
-        event.target !== uploadWindow) {
+    if (uploadWindowElements.every(el => el !== event.target)) {
         uploadWindow.style.display = 'none'
+    }
+    document.getElementById('post-image-preview-photo').style.backgroundImage = 'none'
+}
+
+// change content of caption
+
+let captionText = document.getElementById('post-image-preview-caption-text')
+
+function changeCaption(textarea) {
+    if (document.getElementById('add-post-caption').value === '') {
+        document.getElementById('post-image-preview-caption').style.display = 'none'
+        document.getElementById('post-image-preview').style.marginBottom = '0'
+    } else {
+        document.getElementById('post-image-preview-caption').style.display = 'block'
+        document.getElementById('post-image-preview').style.marginBottom = '20px'
+    }
+    captionText.innerText = textarea.value
+}
+
+// show prev of image 
+
+let placeForImage = document.getElementById('post-image-preview-photo')
+
+function prevImage(input) {
+    if(input.files.length) {
+    placeForImage.style.backgroundImage = `url(${URL.createObjectURL(input.files[0])})`
     }
 }
 
