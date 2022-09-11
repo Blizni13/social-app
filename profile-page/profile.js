@@ -72,6 +72,21 @@ for (let i = 0; i < editTextarea.length; i++) {
     editTextarea[i].value = captionText[i].innerText
 }
 
+// count number of characters
+
+let numOfCharactersLeft = document.getElementsByClassName('edit-num-of-characters-left')
+let max = 500
+
+for (let i = 0; i < numOfCharactersLeft.length; i++) {
+    numOfCharactersLeft[i].innerText = max - document.getElementsByClassName('change-caption-text')[i].value.length
+}
+
+function calcChar(textarea) {
+    for (let i = 0; i < numOfCharactersLeft.length; i++) {
+        numOfCharactersLeft[i].innerText = max - textarea.value.length
+    }
+}
+
 // finished editing and cancel buttons functionality
 
 const changeCaptionForms = document.getElementsByClassName('change-caption-form')
@@ -277,8 +292,12 @@ if (bioText.innerText === '') {
 }
 
 addBioButton.addEventListener('click', () => {
-    bioForm.style.display = 'block'
+    bioForm.style.display = 'grid'
     addBioButton.style.display = 'none'
+    if(innerWidth < 1000) {
+        document.getElementById('add-post').style.top = '110.5rem'
+        document.getElementById('posts-container').style.top = '125.5rem'
+    }
 })
 
 saveBioTextButton.addEventListener('click', () => {
@@ -299,6 +318,10 @@ saveBioTextButton.addEventListener('click', () => {
     } else {
         addBioButton.style.display = 'block'
     }
+    if (innerWidth < 1000) {
+        document.getElementById('add-post').style.top = '99rem'
+        document.getElementById('posts-container').style.top = '114rem'
+    }
 })
 
 cancelBioTextButton.addEventListener('click', () => {
@@ -309,13 +332,17 @@ cancelBioTextButton.addEventListener('click', () => {
         bioText.style.display = 'block'
         document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
     }
+    if (innerWidth < 1000) {
+        document.getElementById('add-post').style.top = '99rem'
+        document.getElementById('posts-container').style.top = '114rem'
+    }
 })
 
 // remaining characters in bio
 
 let charCount = (textarea) => {
     let currNumOfCharacters = textarea.value.length
-    document.getElementById('num-of-characters').innerText = currNumOfCharacters
+    document.getElementById('num-of-characters-bio').innerText = currNumOfCharacters
 }
 
 // input in about section

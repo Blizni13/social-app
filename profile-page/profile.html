@@ -91,9 +91,9 @@
                         <input type="submit" value="Add Bio" id="add-bio-submit">
                         <div id="bio-form">
                             <textarea placeholder="Add bio..." id="add-bio-text" rows="4" cols="40" maxlength="83" onkeyup="charCount(this)"></textarea>
-                            <p id="letters-counter"> <span id="num-of-characters">0</span> / 83 characters</p>
-                            <input type="submit" id="bio-cancel" value="Cancel" class="bio-buttons">
+                            <p id="letters-counter-bio"> <span id="num-of-characters-bio">0</span> / 83 characters</p>
                             <input type="submit" id="bio-save" value="Save" class="bio-buttons">
+                            <input type="submit" id="bio-cancel" value="Cancel" class="bio-buttons">
                         </div>
                     </div>
 
@@ -194,7 +194,8 @@
                     <div class="caption">
                         <p class="caption-text">Summer time.</p>
                         <form class="change-caption-form">
-                            <textarea type="text" class="change-caption-text" maxlength="100"></textarea>
+                            <textarea type="text" class="change-caption-text" maxlength="500" onkeyup="calcChar(this)"></textarea>
+                            <p class="letters-counter-edit-profile"> <span class="edit-num-of-characters-left"></span> characters remaining</p>
                             <input type="submit" class="finished-editing" value="Finished editing">
                             <input type="submit" class="cancel" value="Cancel">
                         </form>
@@ -267,7 +268,8 @@
                     <div class="caption">
                         <p class="caption-text">Work! 😎</p>
                         <form class="change-caption-form">
-                            <textarea class="change-caption-text"></textarea>
+                            <textarea class="change-caption-text" maxlength="500" onkeyup="calcChar(this)"></textarea>
+                            <p class="letters-counter-edit-profile"> <span class="edit-num-of-characters-left"></span> characters remaining</p>
                             <input type="submit" class="finished-editing" value="Finished editing">
                             <input type="submit" class="cancel" value="Cancel">
                         </form>
