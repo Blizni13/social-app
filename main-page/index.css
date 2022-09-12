@@ -53,7 +53,7 @@
     --search-upload-color: rgb(35, 35, 35);
     --upload-elements-color: rgb(50, 50, 50);
     --post-preview-border-color: rgb(60, 60, 60);
-    --notifications-number-color: rgb(110, 0, 0);
+    --notifications-number-color: rgb(120, 0, 0);
 
     --user-card-color: rgb(60, 60, 60);
     --add-button-color: rgb(50, 50, 50);
@@ -476,7 +476,7 @@ header .notification-icon {
     border-radius: 50%;
     background-color: var(--notifications-number-color);
     font-size: 1.7rem;
-    color: var(--text-color);
+    color: white;
     font-family: 'consolas';
     text-align: center;
     top: -0.5rem;

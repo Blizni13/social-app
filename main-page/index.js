@@ -121,9 +121,9 @@ notificationSign.addEventListener('click', () => {
     displayNumberIcons[0].style.display = 'none'
     document.getElementById('messages').style.display = 'none'
     document.getElementById('other-pages').style.display ='none'
-    notificationSign.style.color = 'gray'
-    if (document.getElementById('message-open').style.color !== 'black') {
-    document.getElementById('message-open').style.color = 'black'
+    notificationSign.style.opacity = 0.7
+    if (document.getElementById('message-open').style.opacity !== 1) {
+    document.getElementById('message-open').style.opacity = 1
     }
 })
 
@@ -182,7 +182,7 @@ for (let i = 0; i < declineGroup.length; i++) {
 
 document.getElementById('close-notifications').addEventListener('click', () => {
     infoWindow.style.display = 'none'
-    notificationSign.style.color = "black"
+    notificationSign.style.opacity = 1
 })
 
 for (let i = 0; i < infoTexts.length; i++) {
@@ -210,9 +210,9 @@ function() {
     displayNumberIcons[1].style.display = 'none'
     document.getElementById('info').style.display = 'none'
     document.getElementById('other-pages').style.display = 'none'
-    messageSign.style.color = 'gray'
-    if (document.getElementById('notification-open').style.color !== 'black') {
-    document.getElementById('notification-open').style.color = 'black'
+    messageSign.style.opacity = 0.7
+    if (document.getElementById('notification-open').style.opacity !== 1) {
+    document.getElementById('notification-open').style.opacity = 1
     }
 })
 
@@ -221,7 +221,7 @@ function() {
 document.querySelector('#close-messages').addEventListener('click',
 function() {
     messageWindow.style.display = 'none'
-    messageSign.style.color = "black"
+    messageSign.style.opacity = 1
 })
 
 // read message
