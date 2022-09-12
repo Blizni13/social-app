@@ -1146,7 +1146,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header #upload-files {
         width: 180px;
-        right: 23rem;
+        right: 22.5rem;
     }
 
     header #upload-files #show-hide-preview {

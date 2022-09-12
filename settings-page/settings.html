@@ -31,17 +31,38 @@
 
             <div id="info">
                 <h2>Notifications</h2>
-                <i id="close-notifications">+</i>                               
+                <i id="close-notifications">+</i>     
+
                 <div class="info-text">                                   
                     <img class="profile-wrapper" src="/images/pexels-charles-1851164.jpg">
                     <p class="info-content">Charles has a birthday today.</p>
                     <i class="circle-notification"></i>
                 </div>
+
                 <div class="info-text">                                   
                     <img class="profile-wrapper" src="/images/pexels-charles-1851164.jpg">
-                    <p class="info-content">Charles has a birthday today.</p>
+                    <p class="info-content">Charles invited you to friends.</p>
+                    <form class="user-request">
+                        <input type="submit" class="confirm" name="user-friend-action" value="Confirm">
+                        <span class="after-confirm">Invitation confirmed.</span>
+                        <input type="submit" class="remove" name="user-friend-action" value="Remove">
+                        <span class="after-remove">Invitation removed.</span>
+                    </form>
                     <i class="circle-notification"></i>
                 </div>
+
+                <div class="info-text">                                   
+                    <img class="profile-wrapper" src="/images/pexels-charles-1851164.jpg">
+                    <p class="info-content">Charles invited you to a group.</p>
+                    <form class="user-request">
+                        <input type="submit" class="accept" name="user-group-action" value="Accept">
+                        <span class="after-accept">Invitation accepted.</span>
+                        <input type="submit" class="decline" name="user-group-action" value="Decline">
+                        <span class="after-decline">Invitation declined.</span>
+                    </form>
+                    <i class="circle-notification"></i>
+                </div>  
+
             </div>
 
             <!-- OTHER PAGES WINDOW -->

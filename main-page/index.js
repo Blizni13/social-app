@@ -47,12 +47,14 @@ function changeCaption(textarea) {
         document.getElementById('post-image-preview').style.marginBottom = '0'
     } else {
         document.getElementById('post-image-preview-caption').style.display = 'block'
-        document.getElementById('post-image-preview').style.marginBottom = '30px'
+        document.getElementById('post-image-preview').style.marginBottom = '35px'
     }
-    if (textarea.value.length <= 50) {
+    if (textarea.value.length <= 40) {
         captionText.innerText = textarea.value
-    } else if (captionText.innerText.length === 50) {
-        captionText.innerText += '...'
+        console.log(captionText.innerText.length)
+        if(captionText.innerText.length === 40) {
+            captionText.innerText += '...'
+        }
     }
 }
 

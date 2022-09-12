@@ -174,6 +174,60 @@ header #info .info-text p {
     margin-left: 4.5rem;
 }
 
+header #info .info-text .user-request {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.7rem;
+    margin-left: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+header #info .info-text .user-request [name="user-friend-action"], header #info .info-text .user-request [name="user-group-action"] {
+    width: 65px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+}
+
+header #info .info-text .user-request .confirm, header #info .info-text .user-request .accept {
+    background-color: hsl(200, 100%, 35%);
+    color: linen;
+}
+
+header #info .info-text .user-request .remove, header #info .info-text .user-request .decline {
+    background-color: hsl(0, 0%, 90%)
+}
+
+header #info .info-text .user-request .confirm:hover, header #info .info-text .user-request .accept:hover {
+    background-color: hsl(200, 100%, 30%)
+}
+
+header #info .info-text .user-request .remove:hover, header #info .info-text .user-request .decline:hover  {
+    background-color: hsl(0, 0%, 86%)
+}
+
+header #info .info-text .user-request .after-remove, 
+header #info .info-text .user-request .after-confirm,
+header #info .info-text .user-request .after-accept,
+header #info .info-text .user-request .after-decline {
+    display: none;
+    position: absolute;
+    bottom: 1.5rem;
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+}
+
+header #info .info-text .user-request .after-confirm, header #info .info-text .user-request .after-accept {
+    color: hsl(120, 20%, 60%)
+}
+
+header #info .info-text .user-request .after-remove, header #info .info-text .user-request .after-decline {
+    color: hsl(0, 100%, 30%)
+}
+
 header #info .info-text .circle-notification {
     width: 8px;
     height: 8px;
@@ -464,6 +518,7 @@ main {
     background-color: hsl(200, 100%, 50%);
     margin-left: 117px; 
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 #settings-content form input[value="Change password"] {
