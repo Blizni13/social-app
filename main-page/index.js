@@ -49,10 +49,10 @@ function changeCaption(textarea) {
         document.getElementById('post-image-preview-caption').style.display = 'block'
         document.getElementById('post-image-preview').style.marginBottom = '30px'
     }
-    if (textarea.value.length < 50) {
+    if (textarea.value.length <= 50) {
         captionText.innerText = textarea.value
-    } else if (textarea.value.length === 50) {
-        captionText.innerText = captionText.innerText + '...'
+    } else if (captionText.innerText.length === 50) {
+        captionText.innerText += '...'
     }
 }
 
