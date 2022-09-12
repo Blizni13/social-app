@@ -230,7 +230,7 @@ for (let i = 0; i < allMessages.length; i++) {
     allMessages[i].addEventListener('click', () => {
         allMessages[i].style.fontWeight = 'normal'
         circlesMessage[i].style.display = 'none'
-        messagesContent[i].style.color = 'black'
+        messagesContent[i].style.color = 'var(--text-color)'
         if (numOfMessages > 0) {
         numOfMessages -= 1
         }
@@ -245,8 +245,8 @@ let openPagesWindow = document.getElementById('other-pages-open')
 openPagesWindow.onclick = function() {
     document.getElementById('info').style.display = 'none'
     document.getElementById('messages').style.display = 'none'
-    document.getElementById('message-open').style.color = 'black'
-    document.getElementById('notification-open').style.color = 'black'
+    messageSign.style.opacity = 1
+    notificationSign.style.opacity = 1
     otherPagesWindow.style.display = 'block'
 }
 
