@@ -4,21 +4,75 @@
     box-sizing: border-box;
 }
 
+*::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.7;
+}
+
 :root {
-    --background-color: rgb(0, 0, 0, 0.1);
+    --background-color: rgba(0, 0, 0, 0.1);
     --header-color: rgb(245, 245, 245);
-    --users-follow-color: rgb(240, 240, 240);
+    --window-color: rgb(220, 220, 220);
+    --window-element-hover-color: hsl(0, 0%, 82%);
+    --text-color: black;
+
+    --search-upload-color: rgb(220, 220, 220);
+    --upload-elements-color: hsl(0, 0%, 92%);
+    --post-preview-border-color: rgb(190, 190, 190);
+    --notifications-number-color: red;
+    
     --user-card-color: white;
     --add-button-color: rgb(225, 225, 225);
-    --posts-header-color: rgb(240, 240, 240);
-    --reactions-color: rgb(240, 240, 240);
-    --interactions-color: rgb(240, 240, 240);
+    --add-button-before-color: white;
+    --add-button-hover-first-shadow: hsl(0, 0%, 86%);
+    --add-button-hover-second-shadow: hsl(0, 0%, 90%);
+
+    --posts-border-bottom-color: hsl(0, 0%, 89%);
+    --post-options-button-hover-color: hsl(0, 0%, 90%);
+
+    --report-message-color: white;
+
     --comments-color: rgb(245, 245, 245);
-    --enter-comment-color: rgb(235, 235, 235);
     --comment-color: rgb(235, 235, 235);
-    --upload-file-color: rgb(220, 220, 220);
-    --search-color: rgb(235, 235, 235);
+
+    --accept-button-color: hsl(200, 100%, 35%);
+    --accept-button-hover-color: hsl(200, 100%, 30%);
+    --decline-button-color: hsl(0, 0%, 90%);
+    --decline-button-hover-color: hsl(0, 0%, 86%);
+
     --header-font: 'Kanit', sans-serif;
+}
+
+.darkmode {
+    --background-color: rgba(0, 0, 0, 0.9);
+    --header-color: rgb(50, 50, 50);
+    --window-color: rgb(40, 40, 40);
+    --window-element-hover-color: rgb(30, 30, 30);
+    --text-color: rgb(217, 217, 217);
+
+    --search-upload-color: rgb(35, 35, 35);
+    --upload-elements-color: rgb(50, 50, 50);
+    --post-preview-border-color: rgb(60, 60, 60);
+    --notifications-number-color: rgb(110, 0, 0);
+
+    --user-card-color: rgb(60, 60, 60);
+    --add-button-color: rgb(50, 50, 50);
+    --add-button-before-color: rgb(70, 70, 70);
+    --add-button-hover-first-shadow: rgb(40, 40, 40);
+    --add-button-hover-second-shadow: rgb(47, 47, 47);
+
+    --posts-border-bottom-color: rgb(37, 37, 37);
+    --post-options-button-hover-color: rgb(44, 44, 44);
+
+    --report-message-color: rgb(20, 20, 20);
+
+    --comments-color: rgb(55, 55, 55);
+    --comment-color: rgb(45, 45, 45);
+
+    --accept-button-color: hsl(200, 100%, 35%);
+    --accept-button-hover-color: hsl(200, 100%, 30%);
+    --decline-button-color: hsl(0, 0%, 90%);
+    --decline-button-hover-color: hsl(0, 0%, 86%);
 }
 
 html {
@@ -50,7 +104,7 @@ header {
 
 header a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
 }
 
 header input[type="text"] {
@@ -61,7 +115,8 @@ header input[type="text"] {
     padding-inline: 3.6rem 2rem;
     font-size: 1.8rem;
     outline: none;
-    background-color: var(--search-color);
+    background-color: var(--search-upload-color);
+    color: var(--text-color);
     font-family: var(--header-font);
     margin-left: 22.7rem;
 }
@@ -81,7 +136,8 @@ header label[for="search"] i {
     font-size: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    color: gray;
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 header ul {
@@ -97,6 +153,7 @@ header ul .fas {
     top: -0.4rem;
     right: 2.5rem;
     cursor: pointer;
+    color: var(--text-color)
 }
 
 header h3 {
@@ -110,15 +167,16 @@ header h3 {
 
 header button[id="upload"] {
     position: absolute;
-    background-color: var(--upload-file-color);
+    background-color: var(--search-upload-color);
+    color: var(--text-color);
+    font-family: var(--header-font);
     width: 225px;
     height: 45px;
     border-radius: 6px;
-    right: 30rem;
+    right: 38rem;
     font-size: 2rem;
     text-align: center;
     cursor: pointer;
-    font-family: var(--header-font);
     border: none;
     transition-duration: 0.4s;
 }
@@ -153,7 +211,7 @@ header button[id="upload"]:hover::before {
 
 header #upload-files {
     position: absolute;
-    background-color: hsl(0, 0%, 85%);
+    background-color: var(--window-color);
     border-radius: 5px;
     right: 30rem;
     top: 7.5rem;
@@ -170,6 +228,7 @@ header #upload-files #show-hide-preview {
     cursor: pointer;
     font-family: "Kanit";
     text-align: center;
+    color: var(--text-color)
 }
 
 /* class to toggle post-image-preview */
@@ -180,7 +239,7 @@ header #upload-files #show-hide-preview {
 
 header #upload-files #post-image-preview {
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--post-preview-border-color);
     max-width: 150px;
     width: 75%;
     height: 200px;
@@ -191,7 +250,7 @@ header #upload-files #post-image-preview #post-image-preview-header {
     width: 100%;
     background-color: var(--header-color);
     font-size: 1.1rem;
-    border-bottom: 1px solid hsl(0, 0%, 91%);
+    border-bottom: 1px solid var(--posts-border-bottom-color);
     pointer-events: none;
 }
 
@@ -208,25 +267,28 @@ header #upload-files #post-image-preview #post-image-preview-header p {
     left: 2.5rem;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--text-color)
 }
 
 header #upload-files #post-image-preview #post-image-preview-header i {
     position: absolute;
     right: 1rem;
     top: 0.5rem;
+    color: var(--text-color)
 }
 
 header #upload-files #post-image-preview #post-image-preview-caption {
     width: 100%;
-    background-color: white;
+    background-color: var(--header-color);
     padding: 0.5rem;
     display: none;
     overflow-x: hidden;
     pointer-events: none;
 }
 
-header #upload-files #post-image-preview #post-image-preview-caption-text {
+header #upload-files #post-image-preview #post-image-preview-caption #post-image-preview-caption-text {
     font-size: 1rem;
+    color: var(--text-color)
 } 
 
 header #upload-files #post-image-preview #post-image-preview-photo {
@@ -251,13 +313,14 @@ header #upload-files form label[for="photo-video"] {
     height: 55px;
     font-size: 2.7rem;
     border-radius: 50%;
-    background-color: hsl(0, 0%, 92%);
+    background-color: var(--upload-elements-color);
     cursor: pointer;
 }
 
 header #upload-files form label[for="photo-video"] i {
     margin-top: -0.2rem;
     pointer-events: none;
+    color: var(--text-color);
 }
 
 header #upload-files form textarea {
@@ -268,8 +331,8 @@ header #upload-files form textarea {
     border: none;
     border-radius: 5px;
     margin-inline: 1.2rem;
-    background-color: hsl(0, 0%, 92%);
-    color: black;
+    background-color: var(--upload-elements-color);
+    color: var(--text-color);
 }
 
 header #upload-files form textarea::-webkit-scrollbar {
@@ -282,9 +345,10 @@ header #upload-files form button[type='submit'] {
     border-radius: 3px;
     border: none;
     cursor: pointer;
-    background-color: hsl(0, 0%, 92%);
+    background-color: var(--upload-elements-color);
     font-weight: bold;
-    font-family: 'Kanit'
+    font-family: 'Kanit';
+    color: var(--text-color)
 }
 
 /* NOTIFICATION PANEL */
@@ -292,7 +356,7 @@ header #upload-files form button[type='submit'] {
 header #info {
     position: absolute;
     width: 250px;
-    background-color: white;
+    background-color: var(--window-color);
     right: 22rem;
     font-size: 1.7rem;
     border-radius: 20px 20px 10px 10px;
@@ -313,6 +377,7 @@ header #info i {
 
 header #info h2 {
     margin-bottom: 0.7rem;
+    color: var(--text-color)
 }
 
 header #info .info-text {
@@ -336,6 +401,7 @@ header #info .info-text p {
     margin-top: -3.7rem;
     margin-left: 4.5rem;
     width: 140px;
+    color: var(--text-color)
 }
 
 header #info .info-text .user-request {
@@ -357,20 +423,20 @@ header #info .info-text .user-request [name="user-friend-action"], header #info 
 }
 
 header #info .info-text .user-request .confirm, header #info .info-text .user-request .accept {
-    background-color: hsl(200, 100%, 35%);
+    background-color: var(--accept-button-color);
     color: linen;
 }
 
 header #info .info-text .user-request .remove, header #info .info-text .user-request .decline {
-    background-color: hsl(0, 0%, 90%)
+    background-color: var(--decline-button-color)
 }
 
 header #info .info-text .user-request .confirm:hover, header #info .info-text .user-request .accept:hover {
-    background-color: hsl(200, 100%, 30%)
+    background-color: var(--accept-button-hover-color)
 }
 
 header #info .info-text .user-request .remove:hover, header #info .info-text .user-request .decline:hover  {
-    background-color: hsl(0, 0%, 86%)
+    background-color: var(--decline-button-hover-color)
 }
 
 header #info .info-text .user-request .after-remove, 
@@ -396,7 +462,7 @@ header #info .info-text .circle-notification {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: var(--accept-button-color);
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -408,9 +474,9 @@ header .notification-icon {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background-color: red;
+    background-color: var(--notifications-number-color);
     font-size: 1.7rem;
-    color: white;
+    color: var(--text-color);
     font-family: 'consolas';
     text-align: center;
     top: -0.5rem;
@@ -422,7 +488,7 @@ header .notification-icon {
 header #messages {
     position: absolute;
     width: 250px;
-    background-color: white;
+    background-color: var(--window-color);
     border-radius: 20px 20px 10px 10px;
     right: 13rem;
     top: 6.8rem;
@@ -445,6 +511,7 @@ header #messages i {
 header #messages h2 {
     margin-bottom: 0.7rem;
     margin-left: 0.5rem;
+    color: var(--text-color)
 }
 
 header #messages .message {
@@ -466,20 +533,21 @@ header #messages .message h4 {
     position: absolute;
     top: 0.9rem;
     left: 5.7rem;
+    color: var(--text-color)
 }
 
 header #messages .message p {
     margin-top: -2.3rem;
     margin-left: 4.7rem;
     font-size: 1.4rem;
-    color: blue;
+    color: var(--accept-button-color);
 }
 
 header #messages .message .circle-message {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: var(--accept-button-color);
     top: 50%;
     transform: translate(0, -50%)
 }
@@ -487,7 +555,7 @@ header #messages .message .circle-message {
 /* MESSAGES AND NOTIFICATIONS ANIMATIONS */
 
 header #info .info-text:hover, header #messages .message:hover {
-    background-color: hsl(240, 0%, 93%)
+    background-color: var(--window-element-hover-color)
 }
 
 .photo-wrapper, .profile-wrapper, #other-pages-open {
@@ -535,7 +603,7 @@ header #other-pages {
 header #other-pages .window {
     padding: 0.5rem;
     padding-left: 1rem;
-    background-color: white;
+    background-color: var(--window-color);
 }
 
 header #other-pages .fas.fa-caret-up {
@@ -543,7 +611,7 @@ header #other-pages .fas.fa-caret-up {
     right: 0.8rem;
     top: -1.3rem;
     font-size: 2.2rem;
-    color: white;
+    color: var(--window-color);
 }
 
 header #other-pages #first-window {
@@ -555,7 +623,7 @@ header #other-pages #last-window {
 }
 
 header #other-pages .window:hover {
-    background-color: hsl(0, 0%, 85%)
+    background-color: var(--window-element-hover-color)
 }
 
 header #other-pages .window p {
@@ -616,7 +684,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     height: 350px;
     position: absolute;
     top: 16rem;
-    background-color: var(--users-follow-color);
+    background-color: var(--header-color);
     border-radius: 20px;
     padding: 1rem;
     left: 110rem;
@@ -634,7 +702,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 }
 
 #add-users header h3, #add-users header p {
-    color: gray;
+    color: var(--text-color)
 }
 
 #add-users header h3 {
@@ -684,7 +752,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 #add-users #users-card .name {
     position: relative;
     font-size: 2rem;
-    color: black;
+    color: var(--text-color);
     left: 7.4rem;
     transition: 0.5s;
     cursor: default;
@@ -698,7 +766,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     left: 7.4rem;
     cursor: default;
     font-weight: bold;
-    color: black;
+    color: var(--text-color);
     transition: 0.5s;
     opacity: 0;
 }
@@ -717,6 +785,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     transition-duration: 0.4s;
     background-color: var(--add-button-color);
     overflow: hidden;
+    color: var(--text-color);
 }
 
 #add-users #users-card .user .add-friend::before {
@@ -726,7 +795,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     height: 100%;
     top: 0;
     left: -120%;
-    background-color: white;
+    background-color: var(--add-button-before-color);
     z-index: -1;
     transform: skew(50deg);
     transition-duration: 0.5s;
@@ -744,8 +813,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
 #add-users #users-card .user .add-friend:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 10px 1px hsl(0, 0%, 86%),
-    0px 0px 20px 3px hsl(0, 0%, 90%); 
+    box-shadow: 0px 0px 10px 1px var(--add-button-hover-first-shadow),
+    0px 0px 20px 3px var(--add-button-hover-second-shadow); 
 }
 
 #add-users #users-card .user .add-friend:hover::before {
@@ -777,10 +846,10 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: absolute;
     display: block;
     height: 50px;
-    background-color: var(--posts-header-color);
+    background-color: var(--header-color);
     z-index: 1;
     pointer-events: none;
-    border-bottom: 1px solid hsl(0, 0%, 91%)
+    border-bottom: 1px solid var(--posts-border-bottom-color)
 }
 
 #posts-container .post header .profile-wrapper {
@@ -793,6 +862,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: absolute;
     font-size: 1.8rem;
     font-family: var(--header-font);
+    color: var(--text-color);
     top: 50%;
     transform: translateY(-50%);
     left: 5.5rem;
@@ -810,6 +880,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     height: 35px;
     right: 2.5rem;
     top: 0.7rem;
+    background-color: inherit;
+    color: var(--text-color)
 }
 
 #posts-container .post header .fas.fa-ellipsis {
@@ -818,7 +890,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 }
 
 #posts-container .post header button:hover {
-    background-color: hsl(0, 0%, 90%)
+    background-color: var(--post-options-button-hover-color)
 }
 
 /* CAPTION SECTION */
@@ -826,13 +898,14 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 #posts-container .post .caption {
     position: relative;
     width: 100%;
-    background-color: var(--posts-header-color);
+    background-color: var(--header-color);
     padding: 6rem 1.8rem 1rem 1.8rem;
     z-index: -1;
 }
 
 #posts-container .post .caption .caption-text {
     font-size: 1.8rem;
+    color: var(--text-color)
 }
 
 /* IMAGE SECTION */
@@ -844,9 +917,9 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 /* REACTIONS SECTION */
 
 #posts-container .reactions {
-    background-color: var(--reactions-color);
+    background-color: var(--header-color);
     height: 50px;
-    border-bottom: 0.2px solid hsl(240, 5%, 85%);
+    border-bottom: 0.2px solid var(--posts-border-bottom-color);
     padding-top: 1.3rem;
     margin-top: -1.1rem;
 }
@@ -868,6 +941,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: absolute;
     font-size: 2rem;
     margin-left: 7.5rem;
+    color: var(--text-color);
 }
 
 /* INTERACTIONS SECTION */
@@ -878,7 +952,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     height: 50px;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--interactions-color);
+    background-color: var(--header-color);
+    color: var(--text-color);
     font-size: 2.5rem;
     padding-inline: 2rem;
 }
@@ -926,7 +1001,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     padding: 1.8rem;
     border-radius: 1.5rem;
     font-size: 1.7rem;
-    background-color: var(--enter-comment-color);
+    background-color: var(--comment-color);
+    color: var(--text-color);
     border: none;
 }
 
@@ -947,6 +1023,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     bottom: 2.2rem;
     font-size: 2rem;
     cursor: pointer;
+    color: var(--text-color);
 }
 
 #posts-container .comments .fa-image {
@@ -987,7 +1064,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: absolute;
     width: 150px;
     height: 75px;
-    background-color: rgb(220, 220, 220);
+    background-color: var(--window-color);
     border-radius: 7px;
     top: 6rem;
     right: 2.6rem;
@@ -1002,6 +1079,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     font-size: 2rem;
     transform: rotate(-90deg);
     top: -1rem;
+    color: var(--window-color);
 }
 
 #posts-container .post .post-options button {
@@ -1011,10 +1089,11 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     height: 35px;
     width: 100%;
     background-color: inherit;
+    color: var(--text-color)
 }
 
 #posts-container .post .post-options button:hover {
-    background-color: hsl(0, 0%, 82%)
+    background-color: var(--window-element-hover-color)
 }
 
 #report-background {
@@ -1033,7 +1112,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     text-align: center;
     width: 350px;
     height: 180px;
-    background-color: white;
+    background-color: var(--report-message-color);
     border-radius: 10px;
 }
 
@@ -1041,13 +1120,15 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     position: absolute;
     top: 1rem;
     left: 50%;
-    transform: translate(-50%)
+    transform: translate(-50%);
+    color: var(--text-color)
 }
 
 #report-background #report-message p {
     margin-top: 6.6rem;
     cursor: default;
     font-size: 4rem;
+    color: var(--text-color)
 }
 
 /* ANIMATION OF LIKE */
@@ -1058,6 +1139,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     transform-origin: center left;
     border-radius: 50%;
     margin-top: -0.2rem;
+    color: var(--text-color)
 }
 
 .animation-like {
