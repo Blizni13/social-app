@@ -15,15 +15,27 @@ let uploadWindowElements = [
     document.getElementsByTagName('input')[1],
     document.getElementsByTagName('label')[1],
     document.getElementById('post-image-preview'),
-    document.getElementById('post-image-preview-photo')
+    document.getElementById('post-image-preview-photo'),
+    document.getElementById('show-hide-preview')
 ]
 
 window.onclick = function(event) {
     if (uploadWindowElements.every(el => el !== event.target)) {
         uploadWindow.style.display = 'none'
+        document.getElementById('post-image-preview-photo').style.backgroundImage = 'none'
+        document.getElementById('add-post-caption').value = ''
+        document.getElementById('post-image-preview-caption').style.display = 'none'
     }
-    document.getElementById('post-image-preview-photo').style.backgroundImage = 'none'
 }
+
+// show / hide preview
+
+let showHidePreview = document.getElementById('show-hide-preview')
+
+showHidePreview.addEventListener('click', () => {
+    document.getElementById('post-image-preview').classList.toggle('off')
+    showHidePreview.innerText === 'Hide image preview' ? showHidePreview.innerText = 'Show image preview' : showHidePreview.innerText = 'Hide image preview'
+})
 
 // change content of caption
 
@@ -35,9 +47,13 @@ function changeCaption(textarea) {
         document.getElementById('post-image-preview').style.marginBottom = '0'
     } else {
         document.getElementById('post-image-preview-caption').style.display = 'block'
-        document.getElementById('post-image-preview').style.marginBottom = '20px'
+        document.getElementById('post-image-preview').style.marginBottom = '30px'
     }
-    captionText.innerText = textarea.value
+    if (textarea.value.length < 50) {
+        captionText.innerText = textarea.value
+    } else if (textarea.value.length === 50) {
+        captionText.innerText = captionText.innerText + '...'
+    }
 }
 
 // show prev of image 

@@ -163,6 +163,21 @@ header #upload-files {
     z-index: 2;
 }
 
+header #upload-files #show-hide-preview {
+    font-size: 2.2rem;
+    top: 1rem;
+    width: 100%;
+    cursor: pointer;
+    font-family: "Kanit";
+    text-align: center;
+}
+
+/* class to toggle post-image-preview */
+
+.off {
+    display: none;
+}
+
 header #upload-files #post-image-preview {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1134,6 +1149,10 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         right: 23rem;
     }
 
+    header #upload-files #show-hide-preview {
+        font-size: 1.75rem;
+    }
+
     header #upload-files form label[for="photo-video"] {
         width: 45px;
         height: 45px;
@@ -1367,6 +1386,10 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header #upload-files {
         right: 14.3rem;
         width: 150px;
+    }
+
+    header #upload-files #show-hide-preview {
+        font-size: 1.4rem;
     }
 
     header #upload-files #post-image-preview {
@@ -1789,6 +1812,10 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header #upload-files {
         top: 5.5rem;
         width: 120px;
+    }
+
+    header #upload-files #show-hide-preview {
+        font-size: 1.1rem;
     }
 
     header #upload-files #post-image-preview {
