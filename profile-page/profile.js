@@ -5,7 +5,37 @@ window.onbeforeunload = () => window.scrollTo(0, 0)
 // CALCULATE HEIGHT FOR CONTAINER POSTS SECTION 
 
 window.onload = () => {
-    document.getElementById('container-posts-section').style.height = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 55 + 'px'
+    document.getElementById('container-posts-section').style.height = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 'px'
+}
+
+window.onresize = () => {
+    if (innerWidth < 1150) {
+        document.getElementById('container-posts-section').style.height = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 'px'
+    }
+    if (innerWidth > 1150) {
+        document.getElementById('container-posts-section').style.height = document.getElementById('posts-container').offsetHeight + document.getElementById('add-post').offsetHeight + 'px'
+    }
+    if (innerWidth > 1000) {
+        document.getElementById('additional-info-posts-section').style.marginBottom = '0'
+    }
+    
+    if (innerWidth < 850) {
+        if (document.getElementById('user-input-text').offsetHeight > 50) {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '2.5rem'
+        } else if (document.getElementById('user-input-text').offsetHeight > 20) {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '-0.3rem'
+        } else {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '1.8rem'
+        }
+    } else if (innerWidth < 1000) {
+        if (document.getElementById('user-input-text').offsetHeight > 50) {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '8.5rem'
+        } else if (document.getElementById('user-input-text').offsetHeight > 20) {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '6rem'
+        } else {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '7.5rem'
+        }
+    }
 }
 
 // REPORT AND DELETE OPTION
@@ -296,11 +326,13 @@ if (bioText.innerText === '') {
 
 addBioButton.addEventListener('click', () => {
     bioForm.style.display = 'grid'
+    bioForm.style.marginTop = '10px'
     addBioButton.style.display = 'none'
-    if(innerWidth < 1000) {
-        document.getElementById('add-post').style.top = '110.5rem'
-        document.getElementById('posts-container').style.top = '125.5rem'
-    }
+    if (innerWidth < 850) {
+        document.getElementById('additional-info-posts-section').style.marginBottom = '11rem'
+    } else if (innerWidth < 1000) {
+        document.getElementById('additional-info-posts-section').style.marginBottom = '16.8rem'
+    } 
 })
 
 saveBioTextButton.addEventListener('click', () => {
@@ -313,17 +345,33 @@ saveBioTextButton.addEventListener('click', () => {
             document.getElementById('additional-info-posts-section').style.top = '0.7rem' 
             bioText.style.fontSize = '1.8rem'
             document.getElementsByClassName("friends-about-section")[0].style.paddingBottom = '2.8rem'
-        } else if (bioText.offsetHeight > 50){
+            if (innerWidth < 850) {
+                document.getElementById('additional-info-posts-section').style.marginBottom = '2.5rem'
+            } else if (innerWidth < 1000) {
+                document.getElementById('additional-info-posts-section').style.marginBottom = '8.5rem'
+            }
+        } else if (bioText.offsetHeight > 40){
             document.getElementById('additional-info-posts-section').style.top = '0.6rem'
+            if (innerWidth < 850) {
+                document.getElementById('additional-info-posts-section').style.marginBottom = '2rem' //
+            } else if (innerWidth < 1000) {
+                document.getElementById('additional-info-posts-section').style.marginBottom = '8.5rem'
+            }
         } else {
             document.getElementById('additional-info-posts-section').style.top = '1.9rem'
+            if (innerWidth < 850) {
+                document.getElementById('additional-info-posts-section').style.marginBottom = '-0.3rem'
+            } else if (innerWidth < 1000) {
+                document.getElementById('additional-info-posts-section').style.marginBottom = '6rem'
+            }
         }
     } else {
         addBioButton.style.display = 'block'
-    }
-    if (innerWidth < 1000) {
-        document.getElementById('add-post').style.top = '99rem'
-        document.getElementById('posts-container').style.top = '114rem'
+        if (innerWidth < 850) {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '1.75rem' //
+        } else if (innerWidth < 1000) {
+            document.getElementById('additional-info-posts-section').style.marginBottom = '7.7rem'
+        }
     }
 })
 
@@ -335,9 +383,10 @@ cancelBioTextButton.addEventListener('click', () => {
         bioText.style.display = 'block'
         document.getElementById('user-input-info').style.borderBottom = '2px solid hsl(0, 0%, 86%)'
     }
-    if (innerWidth < 1000) {
-        document.getElementById('add-post').style.top = '99rem'
-        document.getElementById('posts-container').style.top = '114rem'
+    if (innerWidth < 850) {
+        document.getElementById('additional-info-posts-section').style.marginBottom = '1.8rem'
+    } else if (innerWidth < 1000) {
+        document.getElementById('additional-info-posts-section').style.marginBottom = '7.5rem'
     }
 })
 

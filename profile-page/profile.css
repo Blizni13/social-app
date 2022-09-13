@@ -54,10 +54,10 @@ html {
     --comments-color: rgb(55, 55, 55);
     --comment-color: rgb(45, 45, 45);
 
-    --accept-button-color: hsl(200, 100%, 35%);
-    --accept-button-hover-color: hsl(200, 100%, 30%);
-    --decline-button-color: hsl(0, 0%, 85%);
-    --decline-button-hover-color: hsl(0, 0%, 80%);
+    --accept-button-color: hsl(200, 100%, 30%);
+    --accept-button-hover-color: hsl(200, 100%, 25%);
+    --decline-button-color: hsl(0, 0%, 80%);
+    --decline-button-hover-color: hsl(0, 0%, 75%);
 
     --icons-color: rgb(210, 210, 210);
     --title-subtitle-color: white;
@@ -342,7 +342,7 @@ body {
     position: relative;
     width: 1200px;
     margin-inline: auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 /* ADDITIONAL INFO IN CONTAINER POSTS SECTION */
@@ -586,7 +586,7 @@ body {
 #container-posts-section #add-post {
     position: absolute;
     right: 10rem;
-    top: 2rem;
+    top: 0;
     padding-inline: 2.7rem;
     padding-bottom: 2rem;
     border-radius: 15px;
@@ -678,7 +678,7 @@ body {
     max-width: 542px;
     right: 9.7rem;
     border-radius: 1rem;
-    top: 19rem;
+    top: 17rem;
 }
 
 #container-posts-section #posts-container .post {
@@ -1787,9 +1787,10 @@ body {
     /* MAIN SECTION RESPONSIVE SETTINGS*/
     
     #container-posts-section #additional-info-posts-section {
-        position: absolute;
-        left: 24rem;
+        position: unset;
+        margin-left: 24rem;
         width: 500px;
+        margin-bottom: 7.5rem;
     }
 
     #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form #bio-cancel {
@@ -1804,6 +1805,11 @@ body {
        width: 142px;
     }
 
+    #container-posts-section #additional-info-posts-section .friends-about-section {
+        position: unset;
+        margin-bottom: 0;
+    }
+
     #container-posts-section #additional-info-posts-section .friends-about-section .friend:not(:nth-child(3n + 1)) {
         margin-left: 2.5rem;
     }
@@ -1813,15 +1819,16 @@ body {
     }
 
     #container-posts-section #add-post {
+        position: unset;
         width: 500px;
-        top: 99rem;
-        left: 24rem;
+        margin-left: 24rem;
+        margin-bottom: 2rem;
     }
 
     #container-posts-section #posts-container {
+        position: unset;
         width: 500px;
-        top: 114rem;
-        left: 24rem;
+        margin-left: 24rem;
     }
 
     #posts-container .post .caption .change-caption-form .finished-editing {
@@ -1907,8 +1914,9 @@ body {
     /* MAIN SECTION SETTINGS*/
     
     #container-posts-section #additional-info-posts-section {
-        left: 22.7rem;
         width: 400px;
+        margin-bottom: 1.8rem;
+        margin-left: 20.5rem;
     }
 
     /* user info in posts section settings */
@@ -2000,7 +2008,7 @@ body {
     #container-posts-section #add-post {
         width: 400px;
         top: 93rem;
-        left: 22.7rem;
+        margin-left: 20.5rem;
     }
 
     #container-posts-section #add-post input[type="text"] {
@@ -2018,7 +2026,7 @@ body {
 
     #container-posts-section #posts-container {
         width: 400px;
-        left: 22.7rem;
+        margin-left: 20.5rem;
         top: 108.5rem;
     }
 
@@ -2315,7 +2323,7 @@ body {
     #container-posts-section #additional-info-posts-section,
     #container-posts-section #add-post,
     #container-posts-section #posts-container {
-        left: 14.3rem;
+        margin-left: 14.3rem;
     }
 
     /* report message settings */
@@ -2397,7 +2405,7 @@ body {
     #container-posts-section #additional-info-posts-section,
     #container-posts-section #add-post,
     #container-posts-section #posts-container {
-        left: 4rem;
+        margin-left: 4rem;
     }
     
     /* PHOTOS SECTION */
