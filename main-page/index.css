@@ -69,10 +69,10 @@
     --comments-color: rgb(55, 55, 55);
     --comment-color: rgb(45, 45, 45);
 
-    --accept-button-color: hsl(200, 100%, 35%);
-    --accept-button-hover-color: hsl(200, 100%, 30%);
-    --decline-button-color: hsl(0, 0%, 90%);
-    --decline-button-hover-color: hsl(0, 0%, 86%);
+    --accept-button-color: hsl(200, 100%, 30%);
+    --accept-button-hover-color: hsl(200, 100%, 25%);
+    --decline-button-color: hsl(0, 0%, 80%);
+    --decline-button-hover-color: hsl(0, 0%, 75%);
 }
 
 html {
@@ -447,16 +447,16 @@ header #info .info-text .user-request .after-decline {
     display: none;
     position: absolute;
     bottom: 1.5rem;
-    font-size: 1.35rem;
-    letter-spacing: 0.5px;
+    font-size: 1.25rem;
+    font-family: 'Open Sans';
 }
 
 header #info .info-text .user-request .after-confirm, header #info .info-text .user-request .after-accept {
-    color: hsl(120, 20%, 60%)
+    color: hsl(120, 20%, 60%);
 }
 
 header #info .info-text .user-request .after-remove, header #info .info-text .user-request .after-decline {
-    color: hsl(0, 100%, 30%)
+    color: hsl(0, 100%, 30%);
 }
 
 header #info .info-text .circle-notification {
