@@ -9,6 +9,7 @@ let enableDarkMode = () => {
     // change icon of darkMode toggle to sun
     darkModeToggle.classList.remove('fa-moon')
     darkModeToggle.classList.add('fa-sun')
+    document.getElementById('hover-dark-mode').innerText = 'Lightmode'
 }
 
 let disableDarkMode = () => {
@@ -19,6 +20,7 @@ let disableDarkMode = () => {
     // change icon of darkMode toggle to moon
     darkModeToggle.classList.remove('fa-sun')
     darkModeToggle.classList.add('fa-moon')
+    document.getElementById('hover-dark-mode').innerText = 'Darkmode'
 }
 
 // check what is value of darkMode in our local when load the page
