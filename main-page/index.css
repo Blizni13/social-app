@@ -373,6 +373,7 @@ header #info i {
     font-size: 3rem;
     transform: rotate(45deg);
     cursor: pointer;
+    color: var(--text-color)
 }
 
 header #info h2 {
@@ -506,6 +507,7 @@ header #messages i {
     font-size: 3rem;
     transform: rotate(45deg);
     cursor: pointer;
+    color: var(--text-color)
 }
 
 header #messages h2 {
