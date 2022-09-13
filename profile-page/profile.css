@@ -9,18 +9,65 @@ html {
 }
 
 :root {
-    --posts-header-color: rgb(240, 240, 240);
-    --reactions-color: rgb(240, 240, 240);
-    --interactions-color: rgb(240, 240, 240);
+    --main-elements-color: rgb(240, 240, 240);
+    --window-color: rgb(220, 220, 220);
+    --window-element-hover-color: hsl(0, 0%, 82%);
+    --text-color: black;
+    --shadow-color: hsl(0, 0%, 80%);
+
+    --other-elements-color: rgb(230, 230, 230);
+    --other-elements-hover-color: rgb(220, 220, 220);
+
+    --posts-border-bottom-color: hsl(0, 0%, 89%);
+    --post-options-button-hover-color: hsl(0, 0%, 90%);
+
+    --report-message-color: white;
+
     --comments-color: rgb(251, 251, 251);
-    --enter-comment-color: rgb(235, 235, 235);
     --comment-color: rgb(235, 235, 235);
-    --upload-file-color: rgb(235, 235, 235);
-    --cancel-buttons-color: hsl(0, 0%, 85%);
-    --cancel-buttons-hover-color: hsl(0, 0%, 80%);
-    --accept-buttons-color: hsl(200, 100%, 35%);
-    --accept-buttons-hover-color: hsl(200, 100%, 30%);
+
+    --accept-button-color: hsl(200, 100%, 35%);
+    --accept-button-hover-color: hsl(200, 100%, 30%);
+    --decline-button-color: hsl(0, 0%, 85%);
+    --decline-button-hover-color: hsl(0, 0%, 80%);
     --accept-buttons-font-color: linen;
+
+    --brightness: 1;
+}
+
+.darkmode {
+    --clr-bg: rgba(0, 0, 0, 0.9);
+    --main-elements-color: rgb(50, 50, 50);
+    --window-color: rgb(40, 40, 40); 
+    --window-element-hover-color: rgb(30, 30, 30); 
+    --text-color: rgb(210, 210, 210);
+    --shadow-color: rgb(70, 70, 70);
+
+    --other-elements-color: rgb(45, 45, 45);
+    --other-elements-hover-color: rgb(41, 41, 41);
+
+    --posts-border-bottom-color: rgb(37, 37, 37);
+    --post-options-button-hover-color: rgb(44, 44, 44);
+    
+    --report-message-color: rgb(20, 20, 20);
+
+    --comments-color: rgb(55, 55, 55);
+    --comment-color: rgb(45, 45, 45);
+
+    --accept-button-color: hsl(200, 100%, 35%);
+    --accept-button-hover-color: hsl(200, 100%, 30%);
+    --decline-button-color: hsl(0, 0%, 85%);
+    --decline-button-hover-color: hsl(0, 0%, 80%);
+
+    --icons-color: rgb(210, 210, 210);
+    --title-subtitle-color: white;
+
+    --brightness: 0.85
+}
+
+*::-webkit-input-placeholder {
+    opacity: 0.7;
+    color: inherit;
 }
 
 .bold {
@@ -30,6 +77,7 @@ html {
 body {
     overflow-x: hidden;
     padding-bottom: 1rem;
+    background-color: var(--clr-bg)
 }
 
 .fas {
@@ -44,6 +92,7 @@ body {
 #background-image img {
     width: 100%;
     height: 100%;
+    filter: brightness(var(--brightness))
 }
 
 #foreground-image {
@@ -53,18 +102,19 @@ body {
     position: relative;
     left: 25rem;
     top: -5rem;
-    border: 5px solid white;
+    border: 5px solid var(--posts-border-bottom-color);
     overflow: hidden;
 }
 
 #foreground-image img {
     width: 100%;
+    filter: brightness(var(--brightness))
 }
 
 /* NAVIGATION IN FIRST HEADER */
 
 #first-header {
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--posts-border-bottom-color);
     padding-bottom: 1.6rem;
 }
 
@@ -89,10 +139,11 @@ body {
     position: relative;
     height: 55px;
     width: 55px;
-    background-color: hsl(0, 0%, 80%);
+    background-color: var(--other-elements-color);
     border-radius: 25px;
     transition-duration: 0.5s;
     box-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.2);
+    color: var(--text-color)
 }
 
 #first-header #navigation-window .navigation i, 
@@ -143,6 +194,7 @@ body {
 
 #first-header #informations h3 {
     font-size: 2.5rem;
+    color: var(--text-color)
 }
 
 #first-header #informations p {
@@ -154,6 +206,7 @@ body {
     margin-top: 1rem;
     width: 163px;
     position: relative;
+    filter: brightness(var(--brightness))
 }
 
 #first-header #informations .profiles-wrapper .fas.fa-ellipsis-vertical {
@@ -176,7 +229,8 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--posts-border-bottom-color);
+    object-fit: cover;
 }
 
 #first-header #informations .profile-friend:not(:first-of-type) {
@@ -197,6 +251,8 @@ body {
     cursor: pointer;
     border: none;
     transition-duration: 0.3s;
+    background-color: var(--other-elements-color);
+    color: var(--text-color);
 }
 
 #first-header button[type="submit"]::after, #first-header button[type="submit"]::before {
@@ -210,7 +266,7 @@ body {
     z-index: -1;
     transition-duration: 0.3s;
     background-color: inherit;
-    opacity: 0.4
+    opacity: 0.6
 }
 
 #first-header button[type="submit"]:hover {
@@ -229,6 +285,7 @@ body {
     width: 80%;
     margin-inline: auto;
     margin-top: -2.5rem;
+    border-color: var(--posts-border-bottom-color)
 }
 
 /* SECTIONS IN FIRST HEADER */
@@ -246,13 +303,14 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 10px;
+    color: var(--text-color);
 }
 
 #first-header #sections hr {
     position: absolute;
     width: 115px;
     height: 5px;
-    background-color: hsl(220, 60%, 35%);
+    background-color: var(--accept-button-color);
     bottom: -19px;
     border-radius: 100px;
     display: none;
@@ -275,7 +333,7 @@ body {
 }
 
 #first-header #sections p:active {
-    background-color: hsl(240, 0%, 90%);
+    background-color: var(--other-elements-hover-color);
 }
 
 /* ELEMENTS IN CONTAINER POSTS SECTION*/
@@ -301,19 +359,21 @@ body {
 #container-posts-section #additional-info-posts-section .friends-about-section {
     width: 100%;
     border-radius: 3px;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    box-shadow: 0px 1px 2px 1px var(--shadow-color);
 }
 
 /* user info in additional info */
 
 #container-posts-section #additional-info-posts-section #user-info {
     padding: 2rem;
+    background-color: var(--main-elements-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info h2 {
     font-size: 3rem;
-    margin-bottom: -1rem;
-    margin-top: -1.4rem;
+    margin-bottom: -1.5rem;
+    margin-top: -0.5rem;
+    color: var(--text-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info {
@@ -337,16 +397,17 @@ body {
     transform: translateX(-50%);
     border: none;
     border-radius: 3px;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--other-elements-color);
     font-weight: bold;
     cursor: pointer;
     display: none;
     margin-left: 50%;
     margin-top: 1rem;
+    color: var(--text-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #add-bio-submit:hover {
-    background-color: hsl(0, 0%, 87%)
+    background-color: var(--other-elements-hover-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form {
@@ -392,35 +453,37 @@ body {
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form #bio-save {
-    background-color: var(--accept-buttons-color);
+    background-color: var(--accept-button-color);
     color: var(--accept-buttons-font-color);
     grid-column: 3 / 4
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form #bio-cancel {
-    background-color: var(--cancel-buttons-color);
+    background-color: var(--decline-button-color);
     grid-column: 3 / 4;
     margin-left: 8rem;
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form #bio-save:hover {
-    background-color: var(--accept-buttons-hover-color)
+    background-color: var(--accept-button-hover-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form #bio-cancel:hover {
-    background-color: var(--cancel-buttons-hover-color)
+    background-color: var(--decline-button-hover-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info p {
     font-size: 2.3rem;
     margin-top: 0.8rem;
     margin-left: 3.5rem;
+    color: var(--text-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info .fas {
     font-size: 2rem;
     position: relative;
     top: 3rem;
+    color: var(--icons-color)
 }
 
 #container-posts-section #additional-info-posts-section #user-info .fas.fa-location-dot {
@@ -447,7 +510,7 @@ body {
 #container-posts-section #additional-info-posts-section .photos-about-section #all-photos {
     position: absolute;
     font-size: 2rem;
-    color: blue;
+    color: var(--accept-button-color);
     top: 1.2rem;
     right: 2rem;
     cursor: pointer;
@@ -456,7 +519,7 @@ body {
 }
 
 #container-posts-section #additional-info-posts-section .photos-about-section #all-photos:hover {
-    background-color: hsl(0, 0%, 92%)
+    background-color: var(--other-elements-color);
 }
 
 #container-posts-section #additional-info-posts-section .photos-about-section span {
@@ -483,6 +546,7 @@ body {
 #container-posts-section #additional-info-posts-section .friends-about-section h2 {
     margin-top: -5.5rem;
     margin-left: 0;
+    color: var(--text-color)
 }
 
 #container-posts-section #additional-info-posts-section .friends-about-section #friends-num {
@@ -512,6 +576,7 @@ body {
     font-size: 1.5rem;
     left: 0.3rem;
     top: 10.3rem;
+    color: var(--text-color)
 }
 
 /* ADD POST OPTION IN CONTAINER POSTS SECTION */
@@ -525,8 +590,9 @@ body {
     padding-inline: 2.7rem;
     padding-bottom: 2rem;
     border-radius: 15px;
-    box-shadow: 0px 0.9px 2px 1px hsl(0, 0%, 80%);
-    overflow: hidden
+    box-shadow: 0px 0.9px 2px 1px var(--shadow-color);
+    overflow: hidden;
+    background-color: var(--main-elements-color)
 }
 
 #container-posts-section #add-post #profile {
@@ -536,6 +602,7 @@ body {
     position: relative;
     bottom: -2rem;
     right: 1rem;
+    filter: brightness(var(--brightness))
 }
 
 #container-posts-section #add-post input[type="text"] {
@@ -546,17 +613,19 @@ body {
     font-size: 1.7rem;
     outline: none;
     border: none;
-    background-color: hsl(0, 00%, 90%);
+    background-color: var(--other-elements-color);
+    color: var(--text-color)
 }
 
 #container-posts-section #add-post input[type="text"]:hover {
-    background-color: hsl(0, 0%, 87%)
+    background-color: var(--other-elements-hover-color)
 }
 
 #container-posts-section #add-post hr {
     width: 120%;
     margin-left: -2.7rem;
     margin-block: 1.5rem;
+    border-color: var(--shadow-color);
 }
 
 /* add interactions section (lower) */
@@ -576,6 +645,7 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 10px;
+    color: var(--text-color)
 }
 
 #container-posts-section #add-post #add-interactions i {
@@ -598,6 +668,7 @@ body {
     height: 100%;
     position: absolute;
     border-radius: 50%;
+    filter: brightness(var(--brightness))
 }
 
 /* POSTS-SECTION IN CONTAINER POSTS SECTION */
@@ -613,7 +684,7 @@ body {
 #container-posts-section #posts-container .post {
     margin-bottom: 3rem;
     position: relative;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    box-shadow: 0px 1px 2px 1px var(--shadow-color);
 }
 
 /* post header elements */
@@ -622,8 +693,8 @@ body {
     position: relative;
     width: 100%;
     padding: 1.3rem;
-    background-color: var(--posts-header-color);
-    border-bottom: 1px solid hsl(0, 0%, 91%)
+    background-color: var(--main-elements-color);
+    border-bottom: 1px solid var(--posts-border-bottom-color)
 }
 
 #container-posts-section #posts-container .post header .profile-wrapper {
@@ -636,6 +707,7 @@ body {
     font-size: 1.8rem;
     margin-top: -2.4rem;
     margin-left: 4rem;
+    color: var(--text-color)
 }
 
 #container-posts-section #posts-container .post header button {
@@ -649,6 +721,7 @@ body {
     border-radius: 50%;
     border: none;
     padding: 1.85rem;
+    background-color: inherit;
 }
 
 #container-posts-section #posts-container .post header .fas.fa-ellipsis {
@@ -657,10 +730,11 @@ body {
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     pointer-events: none;
+    color: var(--text-color)
 }
 
 #container-posts-section #posts-container .post header button:hover {
-    background-color: hsl(0, 0%, 89%)
+    background-color: var(--post-options-button-hover-color)
 }
 
 /* caption in post*/
@@ -668,12 +742,13 @@ body {
 #posts-container .post .caption {
     position: relative;
     width: 100%;
-    background-color: var(--posts-header-color);
+    background-color: var(--main-elements-color);
     padding: 1rem 1.8rem 1rem 1.8rem;
 }
 
 #posts-container .post .caption .caption-text {
     font-size: 1.8rem;
+    color: var(--text-color)
 }
 
 #posts-container .post .caption .change-caption-form {
@@ -711,6 +786,7 @@ body {
     grid-column: 1 / 2;
     padding-top: 0.5rem;
     width: 250px;
+    color: var(--text-color)
 }
 
 #posts-container .post .caption .change-caption-form .finished-editing, #posts-container .post .caption .change-caption-form .cancel {
@@ -723,7 +799,7 @@ body {
 }
 
 #posts-container .post .caption .change-caption-form .finished-editing {
-    background-color: var(--accept-buttons-color);
+    background-color: var(--accept-button-color);
     color: var(--accept-buttons-font-color);
     width: 120px;
     grid-column: 2 / 3;
@@ -731,32 +807,33 @@ body {
 }
 
 #posts-container .post .caption .change-caption-form .cancel {
-    background-color: var(--cancel-buttons-color);
+    background-color: var(--decline-button-color);
     width: 70px;
     grid-column: 3 / 4;
 }
 
 #posts-container .post .caption .change-caption-form .finished-editing:hover {
-    background-color: var(--accept-buttons-hover-color);
+    background-color: var(--accept-button-hover-color);
 }
 
 #posts-container .post .caption .change-caption-form .cancel:hover {
-    background-color: var(--cancel-buttons-hover-color)
+    background-color: var(--decline-button-hover-color)
 }
 
 /* uploaded image wrapper in post */
 
 #container-posts-section #posts-container .post .image-wrapper img {
     width: 100%;
+    filter: brightness(var(--brightness))
 }
 
 /* reaction section in post */
 
 #container-posts-section #posts-container .post #reactions {
     height: 5rem;
-    border-bottom: 0.2px solid hsl(240, 5%, 85%);
+    border-bottom: 0.2px solid var(--posts-border-bottom-color);
     padding-top: 1.3rem;
-    background-color: var(--reactions-color)
+    background-color: var(--main-elements-color)
 }
 
 #container-posts-section #posts-container .post #reactions .profiles-wrapper {
@@ -782,6 +859,7 @@ body {
     position: absolute;
     font-size: 2rem;
     margin-left: 7.5rem;
+    color: Var(--text-color)
 }
 
 /* interactions section in post */
@@ -792,13 +870,14 @@ body {
     height: 5rem;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--interactions-color);
+    background-color: var(--main-elements-color);
     font-size: 2.5rem;
     padding-inline: 2rem;
 }
 
 #container-posts-section #posts-container #interactions .fas {
     cursor: pointer;
+    color: var(--text-color);
 }
 
 #container-posts-section #posts-container #interactions .fas.fa-message {
@@ -843,6 +922,7 @@ body {
     font-size: 2rem;
     margin-left: 7.5rem;
     z-index: 1;
+    color: var(--text-color)
 }
 
 .comments .comment-messages .comment .comment-content p::before {
@@ -855,7 +935,7 @@ body {
     z-index: -1;
     bottom: -0.25rem;
     border-radius: 10px;
-    border-top: 1px solid rgba(180, 180, 180, 0.5);
+    border-top: 1px solid var(--shadow-color);
 }
 
 #container-posts-section #posts-container .comments .comment-messages::-webkit-scrollbar {
@@ -874,8 +954,9 @@ body {
     padding: 1.8rem;
     border-radius: 1.5rem;
     font-size: 1.7rem;
-    background-color: var(--enter-comment-color);
+    background-color: var(--comment-color);
     border: none;
+    color: var(--text-color)
 }
 
 #container-posts-section #posts-container .comments input[type="file"] {
@@ -886,6 +967,7 @@ body {
     bottom: 2.2rem;
     font-size: 2rem;
     cursor: pointer;
+    color: var(--text-color)
 }
 
 #container-posts-section #posts-container .comments .fa-image {
@@ -900,7 +982,7 @@ body {
 
 #container-posts-section #posts-container .post .post-options {
     position: absolute;
-    background-color: rgb(220, 220, 220);
+    background-color: var(--window-color);
     border-radius: 10px;
     top: 6rem;
     right: 2.1rem;
@@ -914,7 +996,7 @@ body {
 }
 
 #container-posts-section #posts-container .post .post-options i {
-    color: rgb(220, 220, 220);
+    color: var(--window-color);
     position: absolute;
     right: 1rem;
     font-size: 2rem;
@@ -929,10 +1011,11 @@ body {
     height: 35px;
     width: 146%;
     background-color: inherit;
+    color: Var(--text-color)
 }
 
 #container-posts-section #posts-container .post .post-options button:hover {
-    background-color: hsl(0, 0%, 82%)
+    background-color: var(--window-element-hover-color)
 }
 
 #report-background {
@@ -951,7 +1034,7 @@ body {
     text-align: center;
     width: 350px;
     height: 180px;
-    background-color: white;
+    background-color: var(--report-message-color);
     border-radius: 10px;
     position: relative;
 }
@@ -962,18 +1045,20 @@ body {
     left: 50%;
     transform: translate(-50%);
     font-size: 5rem;
+    color: var(--text-color)
 }
 
 #report-background #report-message p {
     margin-top: 6.6rem;
     cursor: default;
     font-size: 4rem;
+    color: var(--text-color)
 }
 
 /* ANIMATION OF LIKE */
 
 #container-posts-section #posts-container #interactions .fa-thumbs-up {
-    color: black;
+    color: var(--text-color);
     transform-origin: center left;
     border-radius: 50%;
     font-size: 2.5rem;
@@ -1002,7 +1087,7 @@ body {
 
     100% {
         transform: rotate(0deg);
-        color: blue;
+        color: var(--accept-button-color);
     }
 }
 
@@ -1013,11 +1098,12 @@ body {
     display: flex;
     width: 1050px;
     border-radius: 5px;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    box-shadow: 0px 1px 2px 1px var(--shadow-color);
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 7.5rem 0 2rem 3.4rem;
     margin: 2rem auto;
+    background-color: var(--main-elements-color)
 }
 
 .photos-about-section h2 {
@@ -1025,6 +1111,7 @@ body {
     font-size: 3rem;
     left: 3rem;
     top: 2rem;
+    color: var(--text-color)
 }
 
 .photos-about-section img {
@@ -1039,6 +1126,7 @@ body {
     position: relative;
     width: 23%;
     cursor: pointer;
+    filter: brightness(var(--brightness))
 }
 
 .photos-about-section span::after {
@@ -1057,18 +1145,26 @@ body {
 
 #about-section #personal-info {
     width: 1200px;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    box-shadow: 0px 1px 2px 1px var(--shadow-color);
     margin-inline: auto;
     border-radius: 10px;
     margin-top: 2.3rem;
     position: relative;
     padding: 1.5rem 1rem 2.5rem 1rem;
+    background-color: var(--main-elements-color)
 }
 
 #about-section #personal-info h2 {
     font-size: 3rem;
     margin-bottom: -1.5rem;
     margin-left: 1rem;
+    color: var(--title-subtitle-color)
+}
+
+#about-section #personal-info h3 {
+    font-size: 2.5rem;
+    margin: 4rem 0rem -1rem 4rem;
+    color: var(--title-subtitle-color)
 }
 
 #about-section #personal-info p {
@@ -1076,24 +1172,21 @@ body {
     margin-left: 11.6rem;
     margin-top: 3rem;
     pointer-events: none;
+    color: var(--text-color)
 }
 
 #about-section #personal-info span {
     margin-left: 0.1rem;
 }
 
-#about-section #personal-info h3 {
-    font-size: 2.5rem;
-    margin: 4rem 0rem -1rem 4rem
-}
-
 #about-section #personal-info .fas {
     font-size: 2.9rem;
+    color: var(--icons-color);
 }
 
 #about-section #personal-info .right {
     left: 110rem;
-    background-color: hsl(0, 0%, 91%);
+    background-color: var(--other-elements-color);
     padding: 0.8rem;
     border-radius: 50%;
     font-size: 2.2rem;
@@ -1211,12 +1304,13 @@ body {
     position: relative;
     height: 45px;
     border-radius: 5px;
-    background-color: hsl(0, 0%, 90%);
-    outline-color: hsl(200, 0%, 80%);
+    background-color: var(--other-elements-color);
+    outline-color: var(--shadow-color);
     border: none;
     padding-inline: 1rem;
     font-size: 1.5rem;
     bottom: -1.3rem;
+    color: var(--text-color)
 }
 
 /* span and save / close buttons in about section */
@@ -1228,7 +1322,8 @@ body {
     border: none;
     font-size: 1.4rem;
     cursor: pointer;
-    background-color: hsl(0, 0%, 90%)
+    background-color: var(--other-elements-color);
+    color: var(--text-color)
 }
 
 #about-section #personal-info .change-value input[value = 'Save'] {
@@ -1255,7 +1350,7 @@ body {
 /* edit value effects in about section */
 
 #about-section #personal-info .right:hover {
-    background-color: hsl(0, 0%, 86%)
+    background-color: var(--other-elements-hover-color)
 }
 
 #about-section #personal-info .change-value input[type='text']:valid ~ span, #about-section #personal-info .change-value input[type='text']:focus ~ span {
@@ -1274,6 +1369,7 @@ body {
 #about-section .friends-about-section h2 {
     margin-top: 1.5rem;
     margin-left: 3rem;
+    color: var(--text-color)
 }
 
 #about-section .friends-about-section #friends-num {
@@ -1295,12 +1391,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 1200px;
-    box-shadow: 0px 1px 2px 1px hsl(0, 0%, 80%);
+    box-shadow: 0px 1px 2px 1px var(--shadow-color);
     margin-inline: auto;
     border-radius: 10px;
     margin-top: 2.3rem;
     padding: 12rem 0 2rem 3rem;
     position: relative;
+    background-color: var(--main-elements-color)
 }
 
 .friends-about-section h2 {
@@ -1308,6 +1405,7 @@ body {
     font-size: 3rem;
     margin-left: 3rem;
     margin-top: 1.4rem;
+    color: var(--text-color)
 }
 
 .friends-about-section #friends-num {
@@ -1321,7 +1419,7 @@ body {
 /* .all settings for all friends main section in a file */
 
 .friends-about-section .all-friends {
-    color: blue;
+    color: var(--accept-button-color);
     position: absolute;
     font-size: 2rem;
     cursor: pointer;
@@ -1329,7 +1427,7 @@ body {
 }
 
 .friends-about-section .all-friends:hover {
-    background-color: hsl(0, 0%, 92%);
+    background-color: var(--other-elements-color);
     border-radius: 10px;
 }
 
@@ -1354,6 +1452,7 @@ body {
     padding-bottom: 10px;
     cursor: pointer;
     padding-top: 10px;
+    color: var(--text-color)
 }
 
 .friends-about-section #friends-section-subsections p:active {
@@ -1384,13 +1483,15 @@ body {
     border-radius: 5px;
     box-shadow: 0px 0px 4px 0px hsla(0, 0%, 20%, 0.8);
     object-fit: cover;
+    filter: brightness(var(--brightness))
 }
 
 .friends-about-section .friend h4 {
     position: absolute;
     font-size: 2.3rem;
     left: 10rem;
-    top: 20%
+    top: 20%;
+    color: var(--text-color)
 }
 
 .friends-about-section .friend .number-of-friends {
@@ -1413,6 +1514,7 @@ body {
     border-radius: 50%;
     padding: 1.7rem;
     border: none;
+    background-color: inherit;
 }
 
 .friends-about-section .friend .friend-options-on .fas.fa-ellipsis-vertical {
@@ -1423,12 +1525,13 @@ body {
     padding: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg)
+    transform: translate(-50%, -50%) rotate(90deg);
+    color: var(--text-color)
 }
 
 
 .friends-about-section .friend .friend-options-on:hover {
-    background-color: hsl(0, 0%, 90%)
+    background-color: var(--other-elements-hover-color)
 }
 
 /* friend option window in friend section */
@@ -1438,7 +1541,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(0, 0%, 92%);
+    background-color: var(--window-color);
     width: 110px;
     height: 100px;
     position: absolute;
@@ -1458,15 +1561,17 @@ body {
     border-radius: 2px;
     padding-left: 3.5rem;
     cursor: pointer;
+    color: var(--text-color)
 }
 
 .friends-about-section .friend .friend-options-window .friend-option i {
     font-size: 1.5rem;
     left: 1rem;
+    color: var(--text-color)
 }
 
 .friends-about-section .friend .friend-options-window .friend-option:hover {
-    background-color: hsl(0, 0%, 85%)
+    background-color: var(--window-element-hover-color)
 }
 
 /* add friend button in friend section */
@@ -1482,10 +1587,12 @@ body {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    background-color: var(--other-elements-color);
+    color: var(--text-color)
 }
 
 .friends-about-section .friend .add-friend:hover {
-    background-color: hsl(0, 0%, 90%)
+    background-color: var(--other-elements-hover-color)
 }
 
 /* RESPONSIVE SETTINGS */

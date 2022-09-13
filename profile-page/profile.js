@@ -127,7 +127,7 @@ let aboutSection = document.getElementById('about-section')
 let friendsSection = document.getElementById('friends-section')
 let allFriends = document.getElementsByClassName('all-friends')
 
-posts.style.color = 'blue'
+posts.style.color = 'var(--accept-button-color)'
 underlines[0].style.display = 'block'
 aboutSection.style.display = 'none'
 photosSection.style.display = 'none'
@@ -138,10 +138,10 @@ posts.addEventListener('click', () => {
     underlines[1].style.display = 'none'
     underlines[2].style.display = 'none'
     underlines[3].style.display = 'none'
-    posts.style.color = 'hsl(220, 60%, 35%)'
-    photos.style.color = 'black'
-    about.style.color = 'black'
-    friends.style.color = 'black'
+    posts.style.color = 'var(--accept-button-color)'
+    photos.style.color = 'var(--text-color)'
+    about.style.color = 'var(--text-color)'
+    friends.style.color = 'var(--text-color)'
     postsSection.style.display = 'block'
     document.getElementById('posts-container').style.display = 'block' 
     photosSection.style.display = 'none'
@@ -157,10 +157,10 @@ photos.addEventListener('click', () => {
     underlines[1].style.display = 'block';
     underlines[2].style.display = 'none';
     underlines[3].style.display = 'none';
-    posts.style.color = 'black'
-    photos.style.color = 'hsl(220, 60%, 35%)'
-    about.style.color = 'black'
-    friends.style.color = 'black'
+    posts.style.color = 'var(--text-color)'
+    photos.style.color = 'var(--accept-button-color)'
+    about.style.color = 'var(--text-color)'
+    friends.style.color = 'var(--text-color)'
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
     photosSection.style.display = 'block'
@@ -176,10 +176,10 @@ about.addEventListener('click', () => {
     underlines[1].style.display = 'none'
     underlines[2].style.display = 'block';
     underlines[3].style.display = 'none';
-    posts.style.color = 'black'
-    photos.style.color = 'black'
-    about.style.color = 'hsl(220, 60%, 35%)'
-    friends.style.color = 'black'
+    posts.style.color = 'var(--text-color)'
+    photos.style.color = 'var(--text-color)'
+    about.style.color = 'var(--accept-button-color)'
+    friends.style.color = 'var(--text-color)'
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
     photosSection.style.display = 'none'
@@ -200,16 +200,16 @@ for (let i = 0; i < friendsDirection.length; i++) {
             underlines[1].style.display = 'none'
             underlines[2].style.display = 'none'
             underlines[3].style.display = 'block'
-            posts.style.color = 'black'
-            about.style.color = 'black'
-            photos.style.color = 'black'
-            friends.style.color = 'hsl(220, 60%, 35%)'
+            posts.style.color = 'var(--text-color)'
+            about.style.color = 'var(--text-color)'
+            photos.style.color = 'var(--text-color)'
+            friends.style.color = 'var(--accept-button-color)'
             postsSection.style.display = 'none'
             document.getElementById('posts-container').style.display = 'none'
             photosSection.style.display = 'none'
             aboutSection.style.display = 'none'
             friendsSection.style.display = 'block'
-            document.getElementById('all-friends-section-underline').style.borderBottom = '3px solid rgb(36, 71, 143)'
+            document.getElementById('all-friends-section-underline').style.borderBottom = '3px solid var(--accept-button-color)'
             document.getElementById('family-members-section-underline').style.borderBottom = 'none'
             document.getElementById('same-city-section-underline').style.borderBottom = 'none'
             document.documentElement.scrollTop = 0
@@ -221,7 +221,7 @@ for (let i = 0; i < friendsDirection.length; i++) {
 document.getElementById('all-photos').addEventListener('click', () => {
     underlines[0].style.display = 'none'
     underlines[1].style.display = 'block'
-    posts.style.color = 'black'
+    posts.style.color = 'var(--text-color)'
     photos.style.color = 'hsl(220, 60%, 35%)'
     postsSection.style.display = 'none'
     document.getElementById('posts-container').style.display = 'none'
@@ -241,7 +241,7 @@ let allFriendsInFriendsSection = document.getElementsByClassName('friend')
 let allFriendsSectionUnderline = document.getElementById('all-friends-section-underline') // in friends section
 let familyMembersSectionUnderline = document.getElementById('family-members-section-underline') 
 let sameCitySectionUnderline = document.getElementById('same-city-section-underline')
-let borderBottomOn = '3px solid rgb(36, 71, 143)'
+let borderBottomOn = '3px solid var(--accept-button-color)'
 let borderBottomOff = 'none'
 
 allFriendsSectionUnderline.style.borderBottom = borderBottomOn
@@ -432,7 +432,7 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
             }
         }
     }
-    favouriteOption[i].addEventListener('click', () => favouriteHearts[i].style.color === 'red' ? favouriteHearts[i].style.color = 'black' : favouriteHearts[i].style.color = 'red')
+    favouriteOption[i].addEventListener('click', () => favouriteHearts[i].style.color === 'red' ? favouriteHearts[i].style.color = 'var(--text-color)' : favouriteHearts[i].style.color = 'red')
     followOption[i].addEventListener('click', () => followText[i].innerText === 'Unfollow' ? followText[i].innerText = 'Follow' : followText[i].innerText = 'Unfollow')
     unfriendOption[i].addEventListener('click', () => {addFriendButton[i].style.display = 'block'; friendOptionsButton[i].style.opacity = 0})
     addFriendButton[i].addEventListener('click', () => addFriendButton[i].innerText === 'Cancel Request' ? addFriendButton[i].innerText = 'Add Friend' : addFriendButton[i].innerText = 'Cancel Request')
