@@ -1,4 +1,4 @@
 if (localStorage.darkMode === 'enabled') {
-    document.body.classList.add('darkmode')
+    document.body.classList.add('dark-mode')
 }
 
