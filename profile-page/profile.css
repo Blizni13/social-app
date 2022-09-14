@@ -15,7 +15,7 @@ html {
     --text-color: black;
     --shadow-color: hsl(0, 0%, 80%);
 
-    --other-elements-color: rgb(230, 230, 230);
+    --other-elements-color: rgb(225, 225, 225);
     --other-elements-hover-color: rgb(220, 220, 220);
 
     --posts-border-bottom-color: hsl(0, 0%, 89%);
@@ -35,7 +35,7 @@ html {
     --brightness: 1;
 }
 
-.darkmode {
+.dark-mode {
     --clr-bg: rgba(0, 0, 0, 0.9);
     --main-elements-color: rgb(50, 50, 50);
     --window-color: rgb(40, 40, 40); 

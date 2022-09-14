@@ -45,7 +45,7 @@
     --header-font: 'Kanit', sans-serif;
 }
 
-.darkmode {
+.dark-mode {
     --background-color: rgba(0, 0, 0, 0.9);
     --header-color: rgb(50, 50, 50);
     --window-color: rgb(40, 40, 40);
