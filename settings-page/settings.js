@@ -109,7 +109,7 @@ hobbyEducation.style.display = 'none'
 contact.style.display = 'none'
 closePeople.style.display = 'none'
 changePassword.style.display = 'none'
-activateForm[0].style.borderLeft = '2px solid black'
+activateForm[0].style.borderLeft = '2px solid var(--border-clr)'
 activateForm[0].style.fontWeight = 'bold'
 
 for (let i = 0 ; i < forms.length; i++) {
@@ -120,7 +120,7 @@ for (let i = 0 ; i < forms.length; i++) {
             activateForm[j].style.fontWeight = '400'
         }
         forms[i].style.display = 'block'
-        activateForm[i].style.borderLeft = '2px solid black'
+        activateForm[i].style.borderLeft = '2px solid var(--border-clr)'
         activateForm[i].style.fontWeight = 'bold'
     })
 }
@@ -160,7 +160,7 @@ const declineGroup = document.getElementsByClassName('decline')
 notificationSign.addEventListener('click', () => {
     notificationWindow.style.display = 'block'
     document.getElementById('notification-icon').style.display = 'none'
-    notificationSign.style.color = 'gray'
+    notificationSign.style.opacity = 0.7
 })
 
 // closing window
@@ -168,7 +168,7 @@ notificationSign.addEventListener('click', () => {
 document.getElementById('close-notifications').addEventListener('click', () => {
     notificationWindow.style.display = 'none'
     document.getElementById('other-pages').style.display = 'none'
-    notificationSign.style.color = "black"
+    notificationSign.style.opacity = 1
 })
 
 for (let i = 0; i < infoTexts.length; i++) {
@@ -243,8 +243,8 @@ let otherPagesWindow = document.getElementById('other-pages')
 openPagesWindow.onclick = () => {
     otherPagesWindow.style.display = 'block'
     document.getElementById('info').style.display = 'none'
-    if (document.getElementById('notification-open').style.color !== 'black') {
-        document.getElementById('notification-open').style.color = 'black'
+    if (document.getElementById('notification-open').style.opacity !== 1) {
+        document.getElementById('notification-open').style.opacity = 1
     }
 }
 
