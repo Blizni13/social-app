@@ -390,7 +390,6 @@ body {
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #user-input-text {
     width: 90%;
     margin-left: 2rem;
-    font-size: 2.3rem;
     overflow: hidden;
     text-align: center;
 }
@@ -579,7 +578,7 @@ body {
     position: absolute;
     font-size: 1.5rem;
     left: 0.3rem;
-    top: 10.3rem;
+    top: 10.5rem;
     color: var(--text-color)
 }
 
@@ -1794,7 +1793,8 @@ body {
         position: unset;
         margin-left: 24rem;
         width: 500px;
-        margin-bottom: 7.5rem;
+        height: unset;
+        margin-bottom: 2rem;
     }
 
     #container-posts-section #additional-info-posts-section #user-info #user-input-info #bio-form #bio-cancel {
@@ -1810,7 +1810,7 @@ body {
     }
 
     #container-posts-section #additional-info-posts-section .friends-about-section {
-        position: unset;
+        position: static;
         margin-bottom: 0;
     }
 
@@ -1823,7 +1823,7 @@ body {
     }
 
     #container-posts-section #add-post {
-        position: unset;
+        position: static;
         width: 500px;
         margin-left: 24rem;
         margin-bottom: 2rem;
