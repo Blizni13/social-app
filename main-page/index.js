@@ -7,6 +7,15 @@ uploadButton.onclick = function() {
     uploadWindow.style.display = 'block'
 }
 
+window.onresize = () => {
+    if (innerWidth < 680) {
+        uploadButton.innerText = 'Photo/video'
+    }
+    if (innerWidth > 690) {
+        uploadButton.innerText = 'Upload photo/video'
+    }
+}
+
 let uploadWindowElements = [
     uploadButton,
     uploadWindow,

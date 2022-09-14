@@ -213,7 +213,7 @@ header #upload-files {
     position: absolute;
     background-color: var(--window-color);
     border-radius: 5px;
-    right: 30rem;
+    right: 38.25rem;
     top: 7.5rem;
     display: none;
     padding-inline: 1rem;
@@ -357,7 +357,7 @@ header #info {
     position: absolute;
     width: 250px;
     background-color: var(--window-color);
-    right: 22rem;
+    right: 28rem;
     font-size: 1.7rem;
     border-radius: 20px 20px 10px 10px;
     padding: 1rem;
@@ -491,7 +491,7 @@ header #messages {
     width: 250px;
     background-color: var(--window-color);
     border-radius: 20px 20px 10px 10px;
-    right: 13rem;
+    right: 20rem;
     top: 6.8rem;
     padding: 1rem;
     font-size: 2rem;
@@ -597,7 +597,7 @@ header #other-pages {
     position: absolute;
     width: 130px;
     font-size: 1.75rem;
-    right: 5rem;
+    right: 14rem;
     top: 8rem;
     display: none;
 }
@@ -646,9 +646,13 @@ header #other-pages .window .fas.fa-door-open {
     margin-left: -0.15rem;
 }
 
+header #darkmode-toggle {
+    width: 30px;
+}
+
 /* ICONS TO INFORM WHAT WILL BE DISPLAYED */
 
-header #hover-notifications, header #hover-messages, header #hover-account {
+header #hover-notifications, header #hover-messages, header #hover-account, header #hover-dark-mode  {
     font-size: 1.5rem;
     background-color: black;
     color: hsl(0, 0%, 84%);
@@ -664,18 +668,22 @@ header #hover-notifications, header #hover-messages, header #hover-account {
 }
 
 header #hover-notifications {
-    right: 20.2rem;
+    right: 29.2rem;
 }
 
 header #hover-messages {
-    right: 12.4rem;
+    right: 21.4rem;
 }
 
 header #hover-account {
-    right: 3.5rem;
+    right: 12.4rem;
 }
 
-header #notification-open:hover ~ #hover-notifications, header #message-open:hover ~ #hover-messages, header #other-pages-open:hover ~ #hover-account {
+header #hover-dark-mode {
+    right: 2.1rem;
+}
+
+header #notification-open:hover ~ #hover-notifications, header #message-open:hover ~ #hover-messages, header #other-pages-open:hover ~ #hover-account, header #darkmode-toggle:hover ~ #hover-dark-mode {
     opacity: 1
 }
 
@@ -1168,7 +1176,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     100% {
         transform: rotate(0deg);
-        color: blue;
+        color: var(--accept-button-color);
     }
 }
 
@@ -1209,21 +1217,33 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header ul .fas {
         font-size: 2.5rem;
         top: -0.8rem;
+    }
+
+    header ul {
+        gap: 3rem;
         margin-right: -3rem;
     }
 
     header input[type="text"] {
-        font-size: 1.7rem;
-        margin-left: 18.8rem;
+        font-size: 1.5rem;
+        margin-left: 16.4rem;
         width: 190px;
+        height: 35px;
+        padding-inline: 3rem;
     }
     
     header label[for="search"] {
-        left: 21rem;
+        left: 18.4rem;
+        height: 35px;
+    }
+
+    header label[for="search"] i {
+        font-size: 1.1rem;
     }
 
     header h3 {
         font-size: 3.1rem;
+        left: 1.4rem;
     }
 
     /* UPLOAD PHOTO - VIDEO RESPONSIVE SETTINGS */
@@ -1257,7 +1277,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header #info {
         width: 220px;
-        right: 14rem;
+        right: 16rem;
     }
 
     header #info h2 {
@@ -1286,6 +1306,13 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.1rem;
     }
 
+    header #info .info-text .user-request .after-remove, 
+    header #info .info-text .user-request .after-confirm, 
+    header #info .info-text .user-request .after-accept, 
+    header #info .info-text .user-request .after-decline {
+        font-size: 1.1rem;
+    }
+
     header #info .info-text .circle-notification {
         right: 3rem;
     }
@@ -1297,7 +1324,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     /* messages */
 
     header #messages {
-        right: 7rem;
+        right: 11rem;
         width: 220px;
         font-size: 1.5rem;
     }
@@ -1335,7 +1362,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     }
 
     header #other-pages {
-        right: 4.5rem;
+        right: 7.5rem;
         top: 7rem;
         width: 120px;
     }
@@ -1344,24 +1371,26 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.5rem;
     }
 
-    header #hover-notifications, header #hover-messages, header #hover-account {
+    header #hover-notifications, header #hover-messages, header #hover-account, header #hover-dark-mode {
         top: 6.5rem;
+        font-size: 1.3rem;
     }
 
     header #hover-notifications {
-        font-size: 1.3rem;
-        right: 14.5rem;
+        right: 16rem;
     }
     
     header #hover-messages {
-        font-size: 1.3rem;
-        right: 9rem;
+        right: 11.5rem;
     }
     
     header #hover-account {
-        right: 3.4rem;
-        font-size: 1.3rem;
-        padding-inline: 0.5rem;
+        right: 6.2rem;
+    }
+
+    header #hover-dark-mode {
+        right: 0.2rem;
+        padding-inline: 0.3rem;
     }
 
     /* POST SECTION AND ADD SECTION SETTINGS */
@@ -1381,7 +1410,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     #add-users header h3 {
         font-size: 1.75rem;
-        margin-left: -2.2rem;
+        margin-left: -0.5rem;
         margin-top: -0.5rem;
     }
 
@@ -1425,34 +1454,28 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
 @media screen and (max-width: 890px) {
 
-    /* HEADER RESPONSIVE SETTINGS  */
+    /* HEADER SETTINGS */
 
     header input[type="text"] {
-        width: 160px;
-        height: 40px;
-        font-size: 1.4rem;
-        padding-left: 2.8rem;
-        margin-left: 17.5rem;
+        width: 158px;
+        font-size: 1.3rem;
+        margin-left: 13.7rem;
     }
-    
+
     header label[for="search"] {
-        left: 19.5rem;
-        height: 40px;
-        width: 25px;
+        left: 15.7rem;
     }
 
-    header label[for="search"] i{
-        font-size: 1.2rem;
-        left: 1rem;
+    header h3 {
+        font-size: 2.7rem;
     }
 
-    /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
+    /* UPLOAD PHOTO / VIDEO SETTINGS */
 
     header button[id="upload"] {
-        width: 145px;
-        font-size: 1.4rem;
-        height: 40px;  
-        right: 14.5rem;
+        right: 20.4rem;
+        width: 134px;
+        font-size: 1.3rem;
     }
 
     header button[id="upload"]:hover {
@@ -1468,7 +1491,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     }
 
     header #upload-files {
-        right: 14.3rem;
+        right: 19.6rem;
         width: 150px;
     }
 
@@ -1513,21 +1536,27 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     /* ICONS AND OTHER WINDOWS IN HEADER RESPONSIVE SETTINGS */
 
     header ul {
-        gap: 4rem;
         margin-right: -3.5rem;
+        gap: 2.7rem;
     }
 
     header ul .fas {
         top: -0.7rem;
         right: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    header ul #other-pages-open {
+        width: 26px;
+        height: 26px;
     }
 
     header #info {
-        right: 6rem;
+        right: 14rem;
     }
 
     header #messages {
-        right: 3rem;
+        right: 8.5rem;
     }
 
     header #info .info-text .circle-notification {
@@ -1535,7 +1564,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     }
 
     header #other-pages {
-        right: 1rem;
+        right: 6.5rem;
         font-size: 1.5rem;
         width: 110px;
     }
@@ -1543,15 +1572,21 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     /* HOVER WINDOWS */
 
     header #hover-notifications {
-        right: 7rem;
+        right: 13.5rem;
     }
 
     header #hover-messages {
-        right: 3.5rem;
+        right: 9.8rem;
     }
 
     header #hover-account {
+        right: 5.2rem;
+    }
+
+    header #hover-dark-mode {
         right: 0.2rem;
+        padding-inline: 0.2rem;
+        font-size: 1.2rem;
     }
 
     
@@ -1580,7 +1615,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 }
 
 @media screen and (max-width: 770px) {
-    
+
     /* POST SECTION, FOLLOW SECTION AND REPORT MESSAGE RESPONSIVE SETTINGS */
 
     #posts-container {
@@ -1655,33 +1690,36 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header h3 {
         font-size: 2.4rem;
-        left: 1.8rem;
+        left: 1rem;
     }
 
     header input[type="text"] {
-        margin-left: 13rem;
-        width: 160px;
+        margin-left: 12.4rem;
+        width: 140px;
+        padding-left: 2.4rem;
+        padding-right: 1rem;
     }
 
     header label[for='search'] {
-        left: 15.3rem;
+        left: 14.5rem;
     }
 
     header label[for="search"] i {
         left: 0.7rem;
+        font-size: 1rem;
     }
 
     /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
 
     header button[id="upload"] {
-        right: 12.5rem;
-        width: 140px;
+        right: 20.5rem;
+        width: 90px;
         font-size: 1.3rem;
         height: 35px;
     }
     
     header #upload-files {
-        right: 12rem;
+        right: 17.4rem;
     }
 
     /* OTHER ELEMENTS IN HEADER SETTINGS */
@@ -1709,16 +1747,25 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 1.4rem;
     }
 
-    header #hover-notifications, header #hover-messages, header #hover-account {
+    header #hover-notifications, header #hover-messages, header #hover-account, header #hover-dark-mode {
         font-size: 1.1rem;
     }
 
     header #hover-notifications {
-        right: 7.3rem;
+        right: 14.3rem;
     }
 
     header #hover-messages {
-        right: 3.7rem;
+        right: 10.4rem;
+    }
+
+    header #hover-account {
+        right: 5.6rem;
+    }
+
+    header #hover-dark-mode {
+        right: 0;
+        padding-inline: 0.5rem;
     }
 
     /* FOLLOW SECTION HEADER */
@@ -1743,26 +1790,23 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
     header h3 {
         font-size: 1.8rem;
-        left: 1.4rem;
     }
 
     header input[type="text"] {
-        width: 124px;
+        width: 115px;
         height: 30px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding-left: 2rem;
-        margin-left: 9.5rem;
+        margin-left: 9rem;
         padding-right: 1rem;
+        margin-top: 0.3rem;
     }
 
     header label[for="search"] {
-        left: 11.5rem;
+        left: 11rem;
         height: 30px;
         width: 20px;
-    }
-
-    header label[for="search"] i {
-        font-size: 1rem;
+        margin-top: 0.3rem;
     }
 
     /* HEADER MESSAGES AND NOTIFICATIONS WINDOWS RESPONSIVE SETTINGS */
@@ -1770,7 +1814,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header #info {
         width: 190px;
         font-size: 1.4rem;
-        right: 8rem;
+        right: 12rem;
         top: 5rem;
     }
 
@@ -1800,7 +1844,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     }
 
     header #messages {
-        right: 4rem;
+        right: 8rem;
         width: 170px;
         top: 5rem;
     }
@@ -1838,12 +1882,18 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         font-size: 2rem;
         top: -0.8rem;
         right: 1.5rem;
-        margin-right: -0.5rem;
+        margin-right: 0rem;
+    }
+
+    header ul #darkmode-toggle {
+        width: 21px;
+        margin-left: -2rem;
+        margin-right: 1rem;
     }
 
     header ul {
         gap: 2.7rem;
-        margin-right: -4rem;
+        margin-right: -3rem;
     }
 
     header #other-pages-open {
@@ -1855,7 +1905,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     header #other-pages {
         font-size: 1.3rem;
         width: 100px;
-        right: 0.2rem;
+        right: 5.2rem;
         top: 6rem
     }
 
@@ -1868,34 +1918,41 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         margin-top: 0.25rem;
     }
 
-    header #hover-notifications, header #hover-messages, header #hover-account {
+    header #hover-notifications, header #hover-messages, header #hover-account, header #hover-dark-mode {
         top: 5.1rem;
     }
 
     header #hover-notifications {
-        right: 6.6rem;
+        right: 12.3rem;
     }
     
     header #hover-messages {
-        right: 3.4rem;
+        right: 8.6rem;
     }
     
     header #hover-account {
         padding-inline: 0.3rem;
+        right: 4.6rem;
+    }
+
+    header #hover-dark-mode {
         right: -0.1rem;
     }
 
     /* UPLOAD PHOTO / VIDEO RESPONSIVE SETTINGS */
 
     header button[id="upload"] {
-        font-size: 1rem;
-        width: 110px;
+        font-size: 1.1rem;
         height: 30px;
+        width: 75px;
+        right: 18rem;
+        margin-top: 0.3rem;
     }
 
     header #upload-files {
         top: 5.5rem;
         width: 120px;
+        right: 15.7rem;
     }
 
     header #upload-files #show-hide-preview {
