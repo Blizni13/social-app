@@ -646,8 +646,13 @@ header #other-pages .window .fas.fa-door-open {
     margin-left: -0.15rem;
 }
 
-header #darkmode-toggle {
+header #dark-mode-toggle {
     width: 30px;
+    transition-duration: 0.75s;
+}
+
+header #dark-mode-toggle:hover {
+    transform: rotate(190deg)
 }
 
 /* ICONS TO INFORM WHAT WILL BE DISPLAYED */
@@ -683,7 +688,7 @@ header #hover-dark-mode {
     right: 2.1rem;
 }
 
-header #notification-open:hover ~ #hover-notifications, header #message-open:hover ~ #hover-messages, header #other-pages-open:hover ~ #hover-account, header #darkmode-toggle:hover ~ #hover-dark-mode {
+header #notification-open:hover ~ #hover-notifications, header #message-open:hover ~ #hover-messages, header #other-pages-open:hover ~ #hover-account, header #dark-mode-toggle:hover ~ #hover-dark-mode {
     opacity: 1
 }
 
@@ -1843,6 +1848,14 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         right: 0.5rem;
     }
 
+    header #info .info-text .user-request .after-remove, 
+    header #info .info-text .user-request .after-confirm, 
+    header #info .info-text .user-request .after-accept, 
+    header #info .info-text .user-request .after-decline {
+        font-size: 1rem;
+        right: 3rem;
+    }
+
     header #messages {
         right: 8rem;
         width: 170px;
@@ -1885,7 +1898,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
         margin-right: 0rem;
     }
 
-    header ul #darkmode-toggle {
+    header ul #dark-mode-toggle {
         width: 21px;
         margin-left: -2rem;
         margin-right: 1rem;

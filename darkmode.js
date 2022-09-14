@@ -1,5 +1,5 @@
 let darkMode = localStorage.getItem('darkMode')
-let darkModeToggle = document.getElementById('darkmode-toggle')
+let darkModeToggle = document.getElementById('dark-mode-toggle')
 
 let enableDarkMode = () => {
     // add class of darkmode to our file
