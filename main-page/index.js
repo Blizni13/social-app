@@ -42,7 +42,7 @@ window.onclick = function(event) {
 let showHidePreview = document.getElementById('show-hide-preview')
 
 showHidePreview.addEventListener('click', () => {
-    document.getElementById('post-image-preview').classList.toggle('off')
+    document.getElementById('post-image-preview').classList.toggle('on')
     showHidePreview.innerText === 'Hide image preview' ? showHidePreview.innerText = 'Show image preview' : showHidePreview.innerText = 'Hide image preview'
 })
 

@@ -218,7 +218,6 @@ body {
     right: 0.3rem;
     transform: rotate(90deg);
     color: gray;
-    background-color: rgba(0, 0, 0, 0.5);
     width: 39px;
     height: 39px;
     border-radius: 50%;
@@ -235,6 +234,10 @@ body {
 
 #first-header #informations .profile-friend:not(:first-of-type) {
     margin-left: -1rem;
+}
+
+#first-header #informations .profile-friend:last-of-type {
+    filter: brightness(0.5)
 }
 
 /* EDIT PROFILE BUTTON WITH TRANSITIONS IN FIRST HEADER */
@@ -389,6 +392,7 @@ body {
     margin-left: 2rem;
     font-size: 2.3rem;
     overflow: hidden;
+    text-align: center;
 }
 
 #container-posts-section #additional-info-posts-section #user-info #user-input-info #add-bio-submit {
