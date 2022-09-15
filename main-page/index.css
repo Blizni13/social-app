@@ -234,7 +234,12 @@ header #upload-files #show-hide-preview {
     cursor: pointer;
     font-family: "Kanit";
     text-align: center;
-    color: var(--text-color)
+    color: var(--text-color);
+    transition-duration: 0.3s;
+}
+
+header #upload-files #show-hide-preview:hover {
+    opacity: 0.8;
 }
 
 /* class to toggle post-image-preview */
@@ -324,6 +329,10 @@ header #upload-files form label[for="photo-video"] {
     cursor: pointer;
 }
 
+header #upload-files form label[for="photo-video"]:hover {
+    background-color: var(--post-options-button-hover-color)
+}
+
 header #upload-files form label[for="photo-video"] i {
     margin-top: -0.2rem;
     pointer-events: none;
@@ -356,6 +365,10 @@ header #upload-files form button[type='submit'] {
     font-weight: bold;
     font-family: 'Kanit';
     color: var(--text-color)
+}
+
+header #upload-files form button[type='submit']:hover {
+    background-color: var(--post-options-button-hover-color)
 }
 
 /* NOTIFICATION PANEL */
@@ -578,6 +591,7 @@ header #info .info-text:hover, header #messages .message:hover {
     height: 100%;
     position: absolute;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 header ul #other-pages-open {
@@ -729,7 +743,7 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 
 #add-users header h3 {
     font-size: 2.3rem;
-    margin-left: -1.5rem;
+    margin-left: -1rem;
     margin-top: 0.2rem;
 }
 
@@ -739,6 +753,11 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     right: 2rem;
     top: 1.2rem;
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#add-users header p:hover {
+    opacity: 0.8
 }
 
 #add-users #users-card {
@@ -768,7 +787,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
 #add-users #users-card .photo-wrapper {
     position: relative;
     top: 50%;
-    transform: translate(50%, -50%)
+    transform: translate(50%, -50%);
+    cursor: pointer;
 }
 
 #add-users #users-card .name {
