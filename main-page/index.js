@@ -61,7 +61,7 @@ function changeCaption(textarea) {
     if (textarea.value.length <= 40) {
         captionText.innerText = textarea.value
         console.log(captionText.innerText.length)
-        if(captionText.innerText.length === 40) {
+        if (captionText.innerText.length === 40 || (captionText.innerText.length === 39 && captionText.innerHTML[39] === ' ')) {
             captionText.innerText += '...'
         }
     }
@@ -291,11 +291,3 @@ function() {
     document.querySelector('#report-background').style.display = 'none'
     document.getElementsByTagName('body')[0].style.overflowY = 'auto'
 })
-
-// LIKE ANIMATION
-
-const likesList = document.getElementsByClassName('fa-thumbs-up')
-
-for (let i = 0; i < likesList.length; i++) {
-    likesList[i].addEventListener('click', () => likesList[i].classList.toggle('animation-like'))
-}

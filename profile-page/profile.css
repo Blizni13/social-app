@@ -671,7 +671,8 @@ body {
     height: 100%;
     position: absolute;
     border-radius: 50%;
-    filter: brightness(var(--brightness))
+    filter: brightness(var(--brightness));
+    cursor: pointer;
 }
 
 /* POSTS-SECTION IN CONTAINER POSTS SECTION */

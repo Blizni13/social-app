@@ -88,7 +88,7 @@ body {
     font-size: 5rem;
 }
 
-#bold {
+.bold {
     font-weight: bold;
 }
 
@@ -878,6 +878,8 @@ header #notification-open:hover ~ #hover-notifications, header #message-open:hov
     top: 50%;
     transform: translateY(-50%);
     left: -0.4rem;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 #posts-container .post header p {

@@ -433,11 +433,3 @@ for (let i = 0; i < friendOptionsButton.length; i++) {
     unfriendOption[i].addEventListener('click', () => {addFriendButton[i].style.display = 'block'; friendOptionsButton[i].style.opacity = 0})
     addFriendButton[i].addEventListener('click', () => addFriendButton[i].innerText === 'Cancel Request' ? addFriendButton[i].innerText = 'Add Friend' : addFriendButton[i].innerText = 'Cancel Request')
 }
-
-// LIKE ANIMATION
-
-const likesList = document.getElementsByClassName('fa-thumbs-up')
-
-for (let i = 0; i < likesList.length; i++) {
-    likesList[i].addEventListener('click', () => likesList[i].classList.toggle('animation-like'))
-}
